@@ -59,7 +59,7 @@ D: OK, and in regards to how severe the pain is on a scale of 1 to 10, 10 being 
 P: I'd say it's like a seven or eight. It's pretty bad.
 
 D: OK, and with the pain, do you have any other associated symptoms?
-
+ 
 P: I feel a little lightheaded and I'm having some trouble breathing.
 
 D: OK. Have you had any loss of consciousness?
