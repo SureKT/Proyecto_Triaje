@@ -1,216 +1,181 @@
-# Clasificación de Triaje de Urgencias con IA
+# Triaje IA — Sistema de clasificación automática de urgencias
 
-Sistema de clasificación automática del nivel de triaje en urgencias hospitalarias a partir de transcripciones de entrevistas médico-paciente, usando procesamiento de lenguaje natural (NLP) y aprendizaje automático.
+Pipeline de procesamiento de texto con LLM y Machine Learning para clasificar el nivel de triaje (1–5) de pacientes en urgencias a partir de transcripciones de entrevista médico-paciente.
 
----
-
-## Descripción del proyecto
-
-El triaje determina la prioridad de atención de un paciente en urgencias. Este proyecto entrena un modelo de IA capaz de leer la transcripción de una entrevista clínica y predecir el nivel de urgencia según el **Sistema Español de Triaje (SET)**, equivalente al Manchester Triage System (MTS):
-
-| Nivel | Color | Denominación | Tiempo máx. atención |
-|-------|-------|--------------|----------------------|
-| 1 | Rojo | Resucitación / Inmediato | Inmediato |
-| 2 | Naranja | Emergencia | 10 min |
-| 3 | Amarillo | Urgencia | 60 min |
-| 4 | Verde | Menos urgente | 120 min |
-| 5 | Azul | No urgente | 240 min |
+Orquestado con **Apache Airflow**. LLM local con **Ollama**. Persistencia en **Postgres** y **MinIO**.
 
 ---
 
-## Estructura del repositorio
+## Requisitos previos
+
+- Docker y Docker Compose instalados
+- Ollama instalado en el host con el modelo descargado:
+  ```bash
+  ollama pull llama3.1:70b-instruct-q4_K_M
+  ```
+- GPU con soporte CUDA (recomendado: 16 GB VRAM)
+
+---
+
+## Cómo ejecutar el sistema
+
+```bash
+# 1. Clonar el repositorio
+git clone <url-repositorio>
+cd Proyecto_Triaje
+
+# 2. Copiar y rellenar variables de entorno
+cp .env.example .env
+
+# 3. Levantar todos los servicios
+docker compose up -d
+
+# 4. Acceder a las interfaces
+#    Airflow:  http://localhost:8080   (admin / admin por defecto)
+#    MinIO:    http://localhost:9001
+```
+
+### Ejecutar el pipeline completo — Fase 1
+
+Activar los DAGs en orden desde la UI de Airflow o via CLI:
+
+```bash
+docker compose exec airflow-webserver airflow dags trigger dag_text_ingestion
+# Esperar a que termine, luego continuar en orden:
+docker compose exec airflow-webserver airflow dags trigger dag_llm_enrichment
+docker compose exec airflow-webserver airflow dags trigger dag_dataset_builder
+docker compose exec airflow-webserver airflow dags trigger dag_model_training
+docker compose exec airflow-webserver airflow dags trigger dag_evaluation
+```
+
+### Probar una predicción nueva — Fase 2
+
+```bash
+curl -X POST http://localhost:8000/predecir \
+  -F "file=@ruta/a/nueva_entrevista.txt"
+```
+
+Respuesta esperada:
+
+```json
+{
+  "GUID": "abc-123",
+  "nivel_triaje": 3,
+  "score_urgencia": 62.5,
+  "justificacion": "Dolor moderado-severo (7/10), fiebre alta, primer episodio agudo"
+}
+```
+
+---
+
+## Estructura del proyecto
 
 ```
-Proyecto_Triaje_IA/
-├── text/                   # Transcripciones brutas de entrevistas médico-paciente
-│   ├── CAR*.txt            # Cardiología        (  5 casos)
-│   ├── DER*.txt            # Dermatología       (  1 caso )
-│   ├── GAS*.txt            # Gastroenterología  (  6 casos)
-│   ├── GEN*.txt            # General            (  1 caso )
-│   ├── MSK*.txt            # Musculoesquelético ( 46 casos)
-│   └── RES*.txt            # Respiratorio       (213 casos)
-│
-├── data/                   # (pendiente) Dataset estructurado y etiquetado
-│   ├── raw/                # Copias originales sin tocar
-│   ├── processed/          # Features extraídas por caso
-│   └── labeled/            # Dataset final con etiqueta de triaje
-│
-├── notebooks/              # (pendiente) Análisis exploratorio y experimentos
-├── src/                    # (pendiente) Código fuente modular
-│   ├── parse.py            # Parser de transcripciones → features estructuradas
-│   ├── label.py            # Etiquetado automático asistido por LLM
-│   ├── train.py            # Entrenamiento de modelos
-│   └── evaluate.py         # Métricas y evaluación
-│
-├── models/                 # (pendiente) Modelos entrenados serializados
+Proyecto_Triaje/
+├── text/                        # Transcripciones originales (272 ficheros .txt)
+├── dags/                        # DAGs de Airflow
+│   ├── dag_text_ingestion.py    # Ingesta de .txt → Postgres + MinIO
+│   ├── dag_llm_enrichment.py    # Extracción de entidades y etiquetado con LLM
+│   ├── dag_dataset_builder.py   # Construcción del CSV de entrenamiento
+│   ├── dag_model_training.py    # Entrenamiento y guardado del modelo ML
+│   ├── dag_evaluation.py        # Evaluación con métricas y matriz de confusión
+│   └── dag_prediction.py        # Predicción sobre nuevas entrevistas (Fase 2)
+├── services/                    # Microservicios Python (FastAPI)
+│   ├── preprocessor/            # Limpieza y normalización del texto
+│   ├── llm_enrichment/          # Llamadas a Ollama: entidades, etiqueta, score
+│   ├── dataset_builder/         # Generación del CSV estructurado
+│   ├── ml_trainer/              # Entrenamiento y serialización del modelo
+│   └── ml_predictor/            # Endpoint de predicción (Fase 2)
+├── sql/
+│   └── schema.sql               # Esquema de tablas Postgres
+├── docs/
+│   └── arquitectura.md          # Documentación funcional completa
+├── docker-compose.yml
+├── .env.example
+├── ROADMAP.md                   # Guía interna de desarrollo y división de tareas
 └── README.md
 ```
 
 ---
 
-## Datos disponibles
+## Descripción de los servicios
 
-### Formato de las transcripciones
+### Airflow (puerto 8080)
+Orquestador único del sistema. Ejecuta todos los DAGs (Fase 1 y Fase 2), gestiona dependencias entre tareas, registra logs por tarea y ejecuta reintentos automáticos. Cada tarea actualiza el estado de la entrevista en Postgres con timestamps de inicio y fin.
 
-Cada fichero `.txt` contiene un diálogo estructurado entre médico (`D:`) y paciente (`P:`). Las entrevistas recogen:
+### API Python / FastAPI (puerto 8000)
+Conjunto de microservicios invocados por los DAGs de Airflow. Cada servicio cubre una única etapa del pipeline: preprocesado de texto, llamada al LLM, construcción del dataset, entrenamiento del modelo y predicción. El endpoint `/predecir` actúa como punto de entrada para la Fase 2: recibe el fichero, crea el registro en Postgres, lanza `dag_prediction` via la API REST de Airflow y devuelve el resultado.
 
-- **Motivo de consulta** — síntoma principal y duración
-- **Características del síntoma** — localización, intensidad (escala 1-10), irradiación, factores agravantes/atenuantes
-- **Síntomas asociados** — disnea, fiebre, náuseas, pérdida de consciencia, etc.
-- **Antecedentes personales** — patologías previas, cirugías, hospitalizaciones
-- **Medicación actual** y alergias
-- **Historia social** — tabaco, alcohol, drogas, ocupación, convivencia
-- **Antecedentes familiares** — enfermedades relevantes en familiares de primer grado
+### Postgres (puerto 5432)
+Fuente de verdad del estado del sistema. Almacena el estado de cada entrevista a lo largo de todo el pipeline, las entidades extraídas, las etiquetas asignadas por el LLM, los scores de urgencia, las predicciones del modelo y las valoraciones finales.
 
-### Distribución por especialidad
+### MinIO (puertos 9000 / 9001)
+Almacenamiento de objetos compatible con S3. Tres buckets:
+- `textos-originales/` — ficheros `.txt` tal como se ingieren
+- `datasets/` — CSVs generados para entrenamiento
+- `modelos/` — modelos ML serializados y artefactos de evaluación
 
-| Especialidad | Prefijo | Casos |
-|-------------|---------|-------|
-| Respiratorio | `RES` | 213 |
-| Musculoesquelético | `MSK` | 46 |
-| Cardiología | `CAR` | 5 |
-| Gastroenterología | `GAS` | 6 |
-| Dermatología | `DER` | 1 |
-| General | `GEN` | 1 |
-| **Total** | | **272** |
-
-> **Nota:** El dataset actual está sesgado hacia casos respiratorios y musculoesqueléticos. Ver sección de construcción del dataset para estrategias de balanceo.
+### Ollama (puerto 11434, en el host)
+LLM local que procesa las transcripciones y devuelve JSON estructurado con entidades clínicas, nivel de triaje, score de urgencia y justificación. Corre en el host (no en Docker) para acceder directamente a la GPU. Los contenedores lo alcanzan via `host.docker.internal:11434`.
 
 ---
 
-## Plan de desarrollo
+## Descripción de los DAGs de Airflow
 
-### Fase 1 — Construcción del dataset
-> Objetivo: obtener un CSV estructurado y etiquetado, listo para entrenar.
-
-- [ ] **1.1** Parser de transcripciones: extraer features clínicas en formato estructurado
-- [ ] **1.2** Etiquetado de triaje: asignación de nivel 1-5 a cada caso (proceso semi-automático con LLM + revisión manual)
-- [ ] **1.3** Validación y limpieza: detectar duplicados, casos incompletos, errores de etiquetado
-- [ ] **1.4** Balanceo de clases: aumentación de datos y/o submuestreo para distribuir niveles de triaje
-
-### Fase 2 — Análisis exploratorio (EDA)
-> Objetivo: entender la distribución de datos antes de modelar.
-
-- [ ] **2.1** Distribución de niveles de triaje por especialidad
-- [ ] **2.2** Frecuencia de síntomas por nivel de triaje
-- [ ] **2.3** Análisis de longitud y estructura de las transcripciones
-- [ ] **2.4** Detección de features más discriminativas
-
-### Fase 3 — Preprocesamiento NLP
-> Objetivo: transformar texto libre en representaciones utilizables por los modelos.
-
-- [ ] **3.1** Limpieza textual: normalización, eliminación de disfluencias (`uh`, `um`, repeticiones)
-- [ ] **3.2** Extracción de entidades clínicas (NER): síntomas, medicamentos, patologías
-- [ ] **3.3** Representaciones de texto: TF-IDF, embeddings (BioBERT / ClinicalBERT)
-- [ ] **3.4** Features estructuradas: edad, sexo, escala de dolor, duración, síntomas binarios
-
-### Fase 4 — Modelado
-> Objetivo: entrenar y comparar modelos de clasificación multiclase (5 niveles de triaje).
-
-- [ ] **4.1** Baselines: Regresión Logística, Random Forest, SVM con TF-IDF
-- [ ] **4.2** Modelos de secuencia: LSTM / GRU sobre embeddings
-- [ ] **4.3** Fine-tuning de modelos transformer: BioBERT, ClinicalBERT, o multilingual BERT
-- [ ] **4.4** Enfoque híbrido: features estructuradas + representación textual
-
-### Fase 5 — Evaluación
-> Objetivo: medir el rendimiento con métricas clínicamente relevantes.
-
-- [ ] **5.1** Métricas: accuracy, macro-F1, matriz de confusión por nivel
-- [ ] **5.2** Análisis de errores: confusión entre niveles adyacentes (clínicamente aceptable) vs. saltos graves
-- [ ] **5.3** Validación cruzada estratificada por especialidad
-- [ ] **5.4** Interpretabilidad: SHAP / LIME para explicar predicciones
-
-### Fase 6 — Despliegue (opcional)
-- [ ] **6.1** API REST con FastAPI
-- [ ] **6.2** Interfaz web mínima para demo
+| DAG | Función | Estado resultante |
+|---|---|---|
+| `dag_text_ingestion` | Lee los `.txt` de `text/`, sube a MinIO, crea registros en Postgres con GUID único | `INGESTED` |
+| `dag_llm_enrichment` | Envía cada texto al LLM, extrae entidades, asigna nivel de triaje y score_urgencia | `ENRICHED` |
+| `dag_dataset_builder` | Consolida los datos de Postgres en CSV y lo guarda en MinIO | `DATASET_READY` |
+| `dag_model_training` | Carga el CSV, entrena Random Forest, serializa el modelo en MinIO, registra métricas | `MODEL_TRAINED` |
+| `dag_evaluation` | Valida el modelo con validación cruzada, genera matriz de confusión | `EVALUATED` |
+| `dag_prediction` | Carga el modelo entrenado, predice el nivel de triaje de una nueva entrevista | `PREDICTED` |
 
 ---
 
-## Construcción del dataset
+## Variables de entorno
 
-### Estrategia de etiquetado
+Copiar `.env.example` a `.env` y completar los valores:
 
-Las transcripciones **no tienen etiqueta de triaje** asignada. El etiquetado se hará en dos pasos:
+```env
+# Postgres
+POSTGRES_USER=triaje
+POSTGRES_PASSWORD=triaje_pass
+POSTGRES_DB=triaje_db
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
 
-#### Paso A — Etiquetado automático asistido por LLM
+# MinIO
+MINIO_ROOT_USER=minioadmin
+MINIO_ROOT_PASSWORD=minioadmin123
+MINIO_ENDPOINT=http://minio:9000
+MINIO_BUCKET_TEXTOS=textos-originales
+MINIO_BUCKET_DATASETS=datasets
+MINIO_BUCKET_MODELOS=modelos
 
-Se usará la API de Claude para leer cada transcripción y asignar un nivel de triaje provisional basándose en criterios clínicos del SET/MTS:
+# Ollama (corre en el host, no en Docker)
+OLLAMA_BASE_URL=http://host.docker.internal:11434
+OLLAMA_MODEL=llama3.1:70b-instruct-q4_K_M
 
-```python
-# Pseudocódigo del proceso de etiquetado
-for cada transcripcion en text/:
-    features = extraer_features(transcripcion)   # síntomas, edad, dolor, etc.
-    nivel_propuesto = llm_clasificar(transcripcion, criterios_SET)
-    guardar(features, nivel_propuesto, confianza)
+# Airflow
+AIRFLOW_UID=50000
+AIRFLOW__CORE__EXECUTOR=LocalExecutor
+AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://triaje:triaje_pass@postgres/triaje_db
+AIRFLOW__CORE__FERNET_KEY=
+
+# API interna
+API_BASE_URL=http://api:8000
 ```
 
-**Criterios de asignación de nivel** que el LLM debe seguir:
-
-| Señal clínica | Nivel sugerido |
-|--------------|----------------|
-| Pérdida de consciencia, parada cardiorrespiratoria | 1 |
-| Dolor torácico + disnea + edad >40, sospecha SCA o TEP | 2 |
-| Dolor moderado-severo (≥7/10), fiebre alta, primer episodio agudo | 3 |
-| Dolor leve-moderado (<7/10), crónico reagudizado, sin signos de alarma | 4 |
-| Consulta no urgente, síntomas leves, sin factores de riesgo | 5 |
-
-#### Paso B — Revisión y validación manual
-
-- Al menos el 20% de los casos etiquetados deben ser revisados por un experto clínico o comparados con literatura.
-- Se documentará el acuerdo inter-anotador (Cohen's Kappa) si hay más de un revisor.
-- Los casos con baja confianza del LLM se marcan para revisión prioritaria.
-
-### Extracción de features estructuradas
-
-Cada transcripción se convierte en un registro con las siguientes columnas:
-
-| Feature | Tipo | Descripción |
-|---------|------|-------------|
-| `id` | str | Identificador del fichero (`CAR0001`) |
-| `especialidad` | cat | Prefijo de especialidad |
-| `edad` | int | Edad del paciente |
-| `sexo` | cat | M / F |
-| `motivo_consulta` | text | Síntoma principal (texto libre resumido) |
-| `dolor_intensidad` | int | Escala 1-10 (0 si no aplica) |
-| `dolor_duracion_horas` | float | Duración del síntoma principal en horas |
-| `disnea` | bool | Presencia de dificultad respiratoria |
-| `fiebre` | bool | Fiebre referida o medida |
-| `perdida_consciencia` | bool | Síncope o pérdida de consciencia |
-| `irradiacion` | bool | Dolor irradiado |
-| `sintomas_neurologicos` | bool | Deficit motor, sensitivo, confusión |
-| `antecedentes_cardiacos` | bool | Cardiopatía previa |
-| `fumador` | bool | Consumo activo de tabaco |
-| `transcripcion_completa` | text | Texto limpio del diálogo completo |
-| `nivel_triaje` | int | **Etiqueta objetivo** (1-5) |
-
-### Balanceo del dataset
-
-Con 272 casos actuales y mayoría en RES/MSK, se esperan pocos casos de nivel 1-2. Estrategias:
-
-1. **Aumentación textual**: parafrasear casos de niveles minoritarios con LLM
-2. **Síntesis de casos**: generar casos sintéticos realistas para niveles 1 y 2 guiados por criterios clínicos
-3. **Submuestreo** de nivel 4-5 si hay superrepresentación
-4. **Weighted loss** en el entrenamiento para compensar el desbalance
-
 ---
 
-## Tecnologías previstas
+## Gestión de errores
 
-| Área | Herramienta |
-|------|-------------|
-| Lenguaje | Python 3.11+ |
-| NLP / Embeddings | `transformers` (HuggingFace), `spaCy`, `scikit-learn` |
-| Modelos | BioBERT, ClinicalBERT, `sklearn` classifiers |
-| Etiquetado LLM | Anthropic API (Claude) |
-| Análisis de datos | `pandas`, `matplotlib`, `seaborn` |
-| Tracking experimentos | MLflow o Weights & Biases |
-| API (opcional) | FastAPI |
+| Escenario | Comportamiento |
+|---|---|
+| El LLM no responde | La tarea de Airflow reintenta hasta 3 veces con backoff exponencial. Si agota reintentos, el estado queda en `ERROR_ENRICHMENT` y se registra en Postgres. |
+| Un microservicio Python no está disponible | Airflow marca la tarea como `failed`, registra el error en sus logs y en Postgres. |
+| El modelo no está entrenado al llegar Fase 2 | `dag_prediction` comprueba la existencia del modelo en MinIO antes de ejecutar. Si no existe, responde con error controlado `MODEL_NOT_FOUND`. |
+| Fallo en la ingesta de un fichero concreto | El fichero se marca individualmente como `ERROR_INGESTION` sin detener el resto del batch. |
 
----
-
-## Referencias
-
-- **Sistema Español de Triaje (SET):** Sociedad Española de Medicina de Urgencias y Emergencias (SEMES)
-- **Manchester Triage System:** Mackway-Jones et al.
-- **BioBERT:** Lee et al., 2019 — *BioBERT: a pre-trained biomedical language representation model*
-- **ClinicalBERT:** Alsentzer et al., 2019 — *Publicly Available Clinical BERT Embeddings*
+Todos los errores quedan registrados en el campo `Estado` de la tabla `Entrevista` y en los logs nativos de Airflow.
