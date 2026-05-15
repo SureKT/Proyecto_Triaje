@@ -1,0 +1,163 @@
+D: ¿Qué puedo hacer por ti hoy?
+
+P: Hola, sí. Gracias por recibirme. Acabo de llegar hoy porque he estado teniendo durante la última semana esta tos y recientemente también comenzó a notar que he estado teniendo un poco de diarrea también.
+
+D: ¿Cuándo empezó la tos?
+
+P: La tos comenzó hace unos 5 días. Y se puso peor, pero ahora creo que es un poco mejor.
+
+D: ¿Qué hay de la diarrea?
+
+P: La diarrea comenzó hace sólo dos días y tengo que ir casi 8 a 10 veces en los últimos dos días.
+
+D: ¿Y cómo es tu taburete? ¿Está completamente acuosa?
+
+P: Sí, la mayoría es aguada.
+
+D: ¿Y de qué color es?
+
+P: Solo color normal, no, no es oscuro ni nada por el estilo.
+
+D: Vale, ¿alguna sangre que hayas notado, algo rojo?
+
+P: Sin sangre.
+
+D: Y has tenido esta tos, pero tu tos está mejorando. ¿Cómo es la tos? ¿Es tos seca o tos húmeda?
+
+P: Es más como una tos seca.
+
+D: ¿Has tosido algo, como sangre o cualquier otro moco?
+
+P: No, no he tosido nada.
+
+D: De acuerdo. Y aparte de la tos, ¿has tenido otros síntomas como la gripe? ¿Has tenido moqueo o congestión nasal? ¿Dolor de garganta? ¿Alguno de esos síntomas?
+
+P: No, ninguno de esos. Pero yo también he estado teniendo un poco de dolor de cabeza en los últimos días.
+
+D: ¿Dónde está, dónde está tu dolor de cabeza?
+
+P: Justo como en mi frente, en ambos lados.
+
+D: ¿Qué se siente?
+
+P: Sensación de dolor.
+
+D: ¿Y qué tan grave es tu dolor de cabeza de 1 a 10, siendo 10 el peor dolor de cabeza de la historia?
+
+P: En este momento, probablemente un 5, pero probablemente fue como un 7 ayer.
+
+D: ¿Sientes que tus dolores de cabeza mejoran?
+
+P: Ahora mismo, como hoy tomé Tylenol así que no sé si es mejor por eso.
+
+D: Ya veo. ¿Y ha tomado otros medicamentos para ayudar con sus síntomas?
+
+P: No.
+
+D: Vale, ¿has tenido fiebre o escalofríos?
+
+P: Sé que no he sentido fiebre, escalofríos.
+
+D: ¿Ha tenido algún dolor en el pecho o alguna dificultad para respirar?
+
+P: No.
+
+D: OK, uhm, ¿has tenido náusea o vómitos?
+
+P: No, nada de eso.
+
+D: Vale, ¿te duele el estómago?
+
+P: Um como un poco de incomodidad con ir tanto al baño.
+
+D: ¿Y algún dolor muscular en tu cuerpo?
+
+P: No.
+
+D: Vale, ¿algún adormecimiento u hormigueo en tus brazos o pies?
+
+P: No, nada de eso.
+
+D: ¿Algún cambio en tu sentido del olfato?
+
+P: Uhm, tal vez un poco, realmente no tengo .. Sí, diría que en los últimos días, tal vez un poco como si hubiera sido capaz de oler menos.
+
+D: ¿Algún cambio en tu sentido del gusto?
+
+P: Uh no.
+
+D: De acuerdo. ¿Ha estado en contacto con alguien que cree que podría estar potencialmente enfermo?
+
+P: Uh, no, no que yo sepa. Me voy a trabajar, como en persona. Desafortunadamente no puedo trabajar desde casa. Pero he estado notando a alguien enfermo a mi alrededor.
+
+D: ¿Y qué haces por trabajo?
+
+P: Así que trabajo en una tienda de autos.
+
+D: De acuerdo. ¿Y usas una máscara y mantienes el distanciamiento social?
+
+P: Sí, la mayoría de las veces diría que somos bastante estrictos, estrictos con eso. Uhm, a veces cuando estamos en nuestra oficina me quito la máscara, pero generalmente cuando estamos viendo a otras personas o muy cerca, mantenemos las máscaras puestas.
+
+D: De acuerdo. ¿Y tú, supongo, con quién vives en casa?
+
+P: Vivo con mi esposa.
+
+D: ¿Crees que pudo haber tenido alguna exposición?
+
+P: No, ha estado bien y no tiene síntomas. Y ella es, ella es una maestra de escuela. Ahora mismo que está trabajando desde Canadá.
+
+D: Vale, ¿y tú fumas algo? ¿O has fumado en el pasado?
+
+P: Sí, lo hago, o solía fumar entre los 20 y los 30, pero dejé de fumar.
+
+D: ¿Cuánto fumaste entonces?
+
+P: Probablemente medio paquete al día.
+
+D: ¿Y por cuántos años?
+
+P: Sólo como 15, 15 años.
+
+D: Vale, ¿fumas marihuana o has fumado en el pasado?
+
+P: Lo he intentado un par de veces. Realmente no me gusta, así que no.
+
+D: ¿Alguna droga recreativa?
+
+P: No.
+
+D: ¿Alcohol?
+
+P: Probablemente tome una cerveza todos los días.
+
+D: ¿Tiene alguna condición médica con la que se le haya diagnosticado?
+
+P: Tomo medicamentos para la presión arterial y el colesterol alto.
+
+D: ¿Qué tomas?
+
+P: Uhm, tomo este medicamento llamado, creo que es como un Lipitor. Y luego tomo Ramipril para la presión arterial.
+
+D: ¿Alguna alergia a los alimentos, alergias ambientales o alguna alergia a los medicamentos?
+
+P: No que yo sepa, no.
+
+D: ¿Alguna condición médica que funcione en la familia?
+
+P: Creo que la diabetes, y para mi familia, pero no la tengo, y creo que eso es más o menos por el lado de mi padre. Por parte de mi madre y había alguien, como si mi tía tuviera cáncer de ovario.
+
+D: Vale, ¿y tú, supongo que te has olvidado de preguntar antes, has tenido alguna cirugía o hospitalización?
+
+P: Me operaron para sacarme el apéndice a los 20 y desde entonces, no. No hay cirugías ni hospitalizaciones.
+
+D: De acuerdo. Muy bien, y supongo que esas son todas las preguntas que tengo para ti. No has tenido ninguna dificultad para respirar, ¿verdad?
+
+P: No,
+
+D: No, está bien. ¿Estás bien? Y has tenido diarrea durante dos días. ¿Cómo está tu apetito y has estado comiendo y bebiendo bien?
+
+P: Uhm apetitos bastante bien, como me siento como, he tenido más hambre, con la carga me siento como que, necesito comer más.
+
+D: También es importante con la diarrea beber muchos líquidos y asegurarse de que usted no está perdiendo minerales importantes y no está perdiendo como el sodio o el potasio en la diarrea y otras cosas como el calcio que podrían crear problemas. Por lo tanto, continúe comiendo bien y continúe bebiendo mucha agua. Supongo que lo que haremos es hacer un hisopo COVID sólo para comprobar si tienes COVID o no. También haremos algunos laboratorios para ver cómo están sus electrolitos, hacer sus signos vitales para ver si tiene fiebre, medir su ritmo cardíaco y hacer un examen físico y luego ir desde allí. Y me iré... hablaré con mi asistente también y volveremos y discutiremos el plan de gestión contigo.
+
+P: Bien, suena bien. Muchas gracias.

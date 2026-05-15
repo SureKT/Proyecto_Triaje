@@ -1,0 +1,229 @@
+D: ¿Qué te trae por aquí hoy?
+
+P: Solo he tenido dificultades para respirar por el pasado, quiero decir ocho, nueve meses. Y mi esposa acaba de decirme que entre. Es sólo que estaba preocupada por eso y pensé en entrar y comprobarlo.
+
+D: Está bien, así que ha estado pasando durante los últimos ocho a nueve meses. ¿Ha ido empeorando?
+
+P: Sí, eso creo. Yo diría que sí, sí. Así que,
+
+D: Lo siento, continúa.
+
+P: Por lo tanto, era sólo um, me siento como si me faltara la respiración más fácilmente ahora.
+
+D: Vale, ¿y es falta de aliento con las actividades? ¿O te falta el aliento con uh, sentado o descansando también?
+
+P: Así que cuando estoy, cuando estoy, con actividad.
+
+D: Con actividad, está bien. Y la tos que estás teniendo, ¿es tos húmeda o tos seca?
+
+P: Es una tos seca.
+
+D: De acuerdo. ¿Y traes algún material, como cualquier esputo amarillo o verde?
+
+P: No, no.
+
+D: ¿Alguna sangre?
+
+P: Um, no, sin sangre.
+
+D: Nada de sangre, vale. Y con tu falta de aliento, ¿es que estás teniendo dificultad para respirar profundamente, o encuentras que estás tomando respiraciones más rápidas y poco profundas?
+
+P: Um, sólo, supongo, uh, respiraciones poco profundas.
+
+D: Está bien, está bien. Y um, así que esto es en los últimos ocho o nueve meses. ¿Ha notado algún otro síntoma, como dolor de pecho, mareos o desmayos? ¿No?
+
+P: No.
+
+D: De acuerdo. ¿Y tus síntomas empeoran cuando estás tumbado, como cuando duermes?
+
+P: No.
+
+D: No. ¿Y alguna vez te despiertas jadeando por aire?
+
+P: No.
+
+D: De acuerdo. ¿Y has intentado algo que te haya ayudado a aliviar algunos de estos síntomas?
+
+P: Lo siento, ¿podrías decir eso otra vez?
+
+D: Uh, ¿has intentado algo como en el mostrador, para ayudarte a aliviar estos síntomas?
+
+P: No, no lo he hecho.
+
+D: ¿Has viajado últimamente?
+
+P: No.
+
+D: ¿Has estado en contacto con alguien que haya estado enfermo?
+
+P: No, en realidad no. Fui a la farmacia a buscar mis medicamentos, pero esa es la única vez que interactúo con alguien fuera de mi casa.
+
+D: ¿Y qué, qué medicamentos tomas?
+
+P: Solo tomo aspirinas.
+
+D: Aspirina, está bien. ¿Le han diagnosticado alguna afección médica?
+
+P: Tuve un ataque al corazón.
+
+D: Bueno, ¿cuándo fue eso?
+
+P: El año pasado.
+
+D: El año pasado, bueno, lo siento mucho y um, ¿te dieron algún medicamento para seguir después de eso?
+
+P: Sí, sí, sí, había un par de otros medicamentos también. Algo um, algo, algo -pril. Y creo que hay rosuvastatina.
+
+D: Vale, ¿y sigues tomándolas?
+
+P: Sí, me quedo con eso. A veces olvido que lo hago, trato de tomarlos todo lo que puedo.
+
+D: Vale, y también toma la aspirina. Muy bien, ¿has notado alguna fiebre o escalofríos?
+
+P: No.
+
+D: ¿Náuseas o vómitos?
+
+P: Nop.
+
+D: ¿Y algún dolor en el pecho?
+
+P: Uh, no.
+
+D: No, está bien. ¿Algún aumento de la fatiga?
+
+P: No.
+
+D: ¿Alguna diarrea o estreñimiento?
+
+P: No.
+
+D: ¿Algún entumecimiento u hormigueo en alguna parte?
+
+P: No.
+
+D: ¿Alguna confusión o memoria, como pérdida de memoria?
+
+P: No, no lo creo.
+
+D: ¿Algún problema para orinar?
+
+P: Um, no.
+
+D: Vale, ¿has notado alguna hinchazón en tus pies, tobillos, piernas?
+
+P: No.
+
+D: De acuerdo. ¿Y cómo ha sido tu apetito?
+
+P: Ha sido, ha sido lo mismo.
+
+D: Vale, ¿y algún cambio significativo de peso? ¿Has perdido peso?
+
+P: No.
+
+D: No. ¿Alguna exposición a humos o polvo dentro de tu entorno?
+
+P: Um, no en este momento. Cuando era joven, sí.
+
+D: Vale, ahora lo hiciste, ¿así que tuviste exposición a humos o polvo?
+
+P: Solía trabajar en una mina.
+
+D: ¿Una mina?
+
+P: Sí, un montón de químicos y cosas así.
+
+D: De acuerdo. ¿Y alguna exposición a animales o mascotas?
+
+P: Uh, no.
+
+D: Además de su historial médico de tener un ataque al corazón y algo de presión arterial, ¿alguna otra condición médica?
+
+P: Solo tengo presión arterial alta.
+
+D: Vale, ¿alguna alergia a algún medicamento o alguna alergia ambiental?
+
+P: No.
+
+D: De acuerdo. ¿Alguna hospitalización además de cuando tuviste un ataque al corazón, antes?
+
+P: No.
+
+D: ¿Alguna cirugía?
+
+P: No.
+
+D: De acuerdo. ¿Te dijeron cuál era la causa de tu ataque al corazón?
+
+P: Dijeron que era mi dieta.
+
+D: Dijeron dieta, está bien.
+
+P: Sí, algo sobre el colesterol.
+
+D: ¿Necesitaste algún stent, o tuviste que hacerte una cirugía de bypass o algo así?
+
+P: Se pusieron, creo que se pusieron stents.
+
+D: Stents, está bien. ¿Algún historial familiar de alguna enfermedad cardíaca o pulmonar?
+
+P: Sí, mi mamá tuvo insuficiencia cardíaca.
+
+D: Vale, ¿y cuántos años tenía cuando tuvo su insuficiencia cardíaca?
+
+P: Era joven, tenía 55 años.
+
+D: 55, está bien. Um, y actualmente, en este momento, o lo siento, ¿tienes algún historial familiar de algún cáncer, algún cáncer de pulmón o algo por el estilo?
+
+P: No.
+
+D: ¿Y actualmente trabajas o estás jubilado?
+
+P: Estoy jubilado.
+
+D: De acuerdo. ¿Y cómo es tu situación de vida en este momento? ¿Vives con alguien?
+
+P: Vivo con mi esposa.
+
+D: Vale, ¿y fumas?
+
+P: Uh, no.
+
+D: ¿Alguna vez has fumado?
+
+P: Lo hice cuando era joven.
+
+D: ¿Cuánto tiempo dirías que fumaste?
+
+P: Yo diría que 45 años.
+
+D: ¿Y cuánto fumarías en un día promedio?
+
+P: Um, sobre un paquete al día.
+
+D: ¿Alguna droga recreativa como la marihuana?
+
+P: No.
+
+D: ¿Y bebes alcohol?
+
+P: Sí, lo sé. Beberé un vaso por la noche, todas las noches.
+
+D: Y un vaso de, ¿qué beberías?
+
+P: Oh, sólo una copa de vino, vino blanco.
+
+D: Vale, esas son todas las preguntas que tengo para ti hoy. ¿Alguna pregunta para mí?
+
+P: No.
+
+D: Vale, así que sí, definitivamente hay como la tos y la falta de aliento son definitivamente preocupantes, y han estado pasando durante mucho tiempo. ¿Alguna vez has tenido sudores nocturnos o algo así?
+
+P: No.
+
+D: De acuerdo. Así que hay algunas cosas en las que pensamos con la falta crónica de aliento y una tos. Uno podría ser sólo un diagnóstico de EPOC con su larga historia de fumar. Y esta prueba de función pulmonar, obtener una radiografía, radiografía de tórax también. Otra cosa que tenemos que cuidar es el cáncer de pulmón. Y ya que has estado fumando durante mucho tiempo, aunque hayas dejado de fumar, lo cual es realmente genial, pero ese largo historial de fumar, especialmente con um, que trabajas en una mina, esas son algunas cosas que significan que también podemos hacer pruebas, y así podemos requerir como una radiografía de tórax, e incluso um, una tomografía computarizada de tus pulmones también. Um, así que sí, primero vamos a hacer un par de pruebas, hacer un examen físico, obtener sus signos vitales, hacer un poco de análisis de sangre y hacer algunos de esos análisis y luego también vamos a hacer un examen de hisopo COVID para usted también, por si acaso. ¿Te parece bien?
+
+P: Sí.
+
+D: Muy bien, estaremos con usted en breve.

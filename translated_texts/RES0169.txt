@@ -1,0 +1,136 @@
+D: ¿Qué te trae por hoy?
+
+P: He estado teniendo esta fiebre, los últimos dos días y he tenido una tos también y mi nariz es, sigue corriendo.
+
+D: De acuerdo. ¿Y cuándo empezó la fiebre?
+
+P: Creo que la fiebre empezó hace dos días.
+
+D: ¿Cómo? ¿Mediste tu temperatura mágica?
+
+P: Sí, era 38 punto.5 cuando lo comprobé.
+
+D: ¿Y lo has estado viendo los últimos días? ¿Se ha puesto mejor o peor?
+
+P: Ha sido casi lo mismo los dos días.
+
+D: Y tu tos, ¿cuándo empezó?
+
+P: La tos comenzó hace cuatro días.
+
+D: Vale, ¿es tos húmeda o tos seca?
+
+P: Ha estado seco.
+
+D: He estado sacando sangre o moco o algo así.
+
+P: No, y yo tampoco he tenido tos antes. Esto es nuevo.
+
+D: Vale, y la nariz escalofriante, ¿qué tipo de secreción, o qué tal lo que sale de tu nariz?
+
+P: Es bastante acuoso y claro.
+
+D: Vale, vale, ¿y cuándo empezó eso?
+
+P: Sí, sí, lo siento que comenzó hace cuatro días también, así que al mismo tiempo que la tos.
+
+D: ¿Ha tenido otros síntomas, como tener una nariz congestionada que tenga congestión en los senos nasales, dolor de garganta? ¿Ojos rojos? ¿Ojos llorosos y llorosos? Estornudando, cualquiera de esos síntomas.
+
+P: No hay nada de eso.
+
+D: ¿Alguna dificultad para respirar?
+
+P: No.
+
+D: ¿Te duele el pecho?
+
+P: No.
+
+D: Vale, ¿alguna jaqueca?
+
+P: Sí, he tenido un poco de dolor de cabeza, en realidad. Bueno, sólo esta mañana.
+
+D: ¿Qué tan malo es?
+
+P: Es bastante suave. Algo así de simple, así que he tenido dolores de cabeza como este antes. No lo es, no es gran cosa.
+
+D: ¿Y tienes fatiga o dolores musculares?
+
+P: Sin dolores musculares, pero sí, he estado fatigado un par de días. Dos o tres días.
+
+D: ¿Algún cambio en tu sentido del olfato?
+
+P: No.
+
+D: ¿Cambios en tu sentido del gusto?
+
+P: No.
+
+D: ¿Te duele el estómago o tienes diarrea?
+
+P: Nada de eso.
+
+D: ¿De acuerdo? Muy bien, ¿alguna condición médica con la que te hayan diagnosticado?
+
+P: Uh. No, he estado, he estado sano.
+
+D: Vale, ¿alguna cirugía o hospitalización?
+
+P: No, no he tenido nada como eso antes.
+
+D: De acuerdo. ¿Y toma algún medicamento?
+
+P: No, no lo estoy.
+
+D: Bien, ¿y alergias a alimentos o medicamentos, o alergias ambientales?
+
+P: Creo que tengo alergia a la penicilina. Lo tengo, tuve un sarpullido cuando era más joven cuando tuve eso.
+
+D: Vale, ¿y lo haces actualmente? ¿Lo dejarías ahora mismo?
+
+P: Sí, así que vivo con mi madre.
+
+D: Vale, ¿tienes mascotas en casa?
+
+P: No, solo nosotros dos, vivimos en una casa en la ciudad.
+
+D: Bien, de acuerdo. ¿Y tú o tu mamá vais a la escuela o al trabajo?
+
+P: Sí, he estado yendo a la escuela. Sé con algunos de los bloqueos y lo que no las escuelas estaban abiertas así que hemos estado yendo. Han sido muy cautelosos con los protocolos covid. Y mi madre ha estado trabajando desde casa.
+
+D: Vale, bien. ¿Sientes que tú o tu madre pueden haber tenido contacto con alguien que podría haber estado potencialmente enfermo?
+
+P: Uhm, quiero decir, tal vez en la escuela o algo así, pero no puedo pensar en nadie que haya estado enfermo.
+
+D: Vale, vale, ¿has viajado a algún lugar fuera de la provincia?
+
+P: No.
+
+D: De acuerdo. Y, uh, supongo que un par de otras preguntas más generales. ¿Te sientes segura en casa?
+
+P: Sí, lo sé. Tenemos una buena relación.
+
+D: Me alegro, me alegro, y cualquier cosa que discutamos será confidencial entre tú y yo, a menos que haya algo de lo que puedas hablar que pueda hacerte daño o dañar a alguien más. ¿Te sientes seguro en la escuela?
+
+P: Sí, lo sé. Me gusta la escuela. Ha sido divertido.
+
+D: Eso es bueno, eso es bueno. ¿Y has estado consumiendo la droga? ¿Intentó algo?
+
+P: No, he oído hablar de otras personas. Quiero decir, en la secundaria haciendo cosas así, pero no he estado por ahí nada como eso.
+
+D: Está bien, está bien. ¿Algo de alcohol?
+
+P: No.
+
+D: Bien, ¿eres sexualmente activa?
+
+P: No.
+
+D: Muy bien. Y uh, vamos a ver así .. Has tenido fiebre, tos y moqueo nasal durante los últimos días. ¿Y has ido a la escuela? ¿En los últimos dos días o no?
+
+P: Sé que me he tomado los últimos días libres, sólo que he estado tan cansado y no me siento bien, así que, sí, bien.
+
+D: Está bien, está bien. Así que sí, suena como si tuvieras algún tipo de infección viral que podría ser potencialmente covidia, pero también podría ser otro tipo de otra enfermedad viral, al igual que el resfriado común o la gripe. Así que pediré que hagamos un hisopo covidido y los resultados vuelvan en 24 a 48 horas y traten de aislarse lo más posible. No vayas a la escuela, no conozcas a otra gente. Trata de alejarte de tu madre también. Y basándote en los resultados, recibirás más orientación de las enfermeras de salud pública, y deberías continuar descansando y bebiendo mucha agua. Tal vez tomar Tylenol o Advil si eso te hace sentir mejor y con suerte tus síntomas mejorarán. Si no es así, si siente que sus síntomas persisten durante días o semanas, o si tiene síntomas que empeoran, definitivamente vuelva o llámenos.
+
+P: Bien, gracias.
+

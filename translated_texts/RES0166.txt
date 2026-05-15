@@ -1,0 +1,210 @@
+D: ¿Qué te trae por aquí hoy?
+
+P: Me ha faltado el aliento desde esta mañana, y no sé qué está pasando.
+
+D: Acaba de empezar esta mañana.
+
+P: Sí.
+
+D: ¿Y te despertaste sin aliento o fue después de que te despertaste y estábamos haciendo actividades?
+
+P: Fue cuando estaba haciendo actividades.
+
+D: Vale, ¿y qué hacías antes de tener la falta de aliento?
+
+P: Estaba yendo a la cocina a hacer el desayuno.
+
+D: Vale, ¿y puedes describir la falta de aliento? ¿Es más para que estés teniendo problemas, respiraciones profundas, o estás tomando respiraciones rápidas poco profundas? ¿Cómo lo describirías?
+
+P: Uhm? Supongo que respirando poco profundo y rápido, siento que he corrido un maratón y sólo sí y todo lo que he hecho es caminar hasta la cocina.
+
+D: Bien, ¿y esto te ha pasado antes?
+
+P: No.
+
+D: ¿No? De acuerdo. ¿Tienes otros síntomas como dolor de garganta, dolor de pecho, algo así?
+
+P: No.
+
+D: Así que es sólo la falta de aliento.
+
+P: Sí, eso es.
+
+D: De acuerdo. Y así que empezó esta mañana, ¿aún continúa, o es, eh?
+
+P: Todavía está ahí.
+
+D: Vale, ¿es peor en absoluto de lo que fue esta mañana?
+
+P: Más o menos lo mismo, diría yo.
+
+D: Vale, ¿estás teniendo algún tipo de molestia torácica o algo con la respiración?
+
+P: Tal vez cuando respire profundamente, entonces sí. Es que me siento como un dolor agudo.
+
+D: De acuerdo. ¿Cómo has estado teniendo escalofríos, fiebre o algo así?
+
+P: No.
+
+D: Vale, ¿algún mareo o desmayo?
+
+P: No.
+
+D: Vale, ¿sientes que tu corazón se está acelerando?
+
+P: No.
+
+D: Vale, y, ¿y has intentado algo que te haya ayudado a mejorar esos síntomas, como descansar o acostarte? ¿Algo así?
+
+P: No, no lo he intentado mucho. Acaba de empezar esta mañana, así que decidí entrar. Ahora mismo.
+
+D: De acuerdo. ¿Has viajado últimamente?
+
+P: Um, no.
+
+D: ¿Alguien ha contactado a alguien que haya estado enfermo recientemente?
+
+P: No lo creo.
+
+D: De acuerdo.
+
+P: Acabo de decir lo siento, acabo de salir del hospital así que tal vez podría haber tenido algún contacto. Hay algo de exposición allí.
+
+D: Vale, ¿entonces cuándo saliste del hospital?
+
+P: Uhm, hace dos días.
+
+D: Hace dos días, ¿y para qué estabas en el hospital?
+
+P: Uhm? Tenía, me rompí la cadera.
+
+D: Vale, ¿y te operaste la cadera?
+
+P: No. No pensaban que lo fuera, se necesitaba cirugía.
+
+D: Vale, ¿cuánto tiempo estuviste en el hospital?
+
+P: Unos 4 días.
+
+D: Cuatro días, está bien. Y en esos cuatro días, ¿qué estaban haciendo por ti allí?
+
+P: Sólo trato de ayudarme a hacer fisioterapia y ayudarme a levantarme y salir de la cama.
+
+D: De acuerdo.
+
+P: Y como darme medicamentos para el dolor.
+
+D: ¿Y desde que, o como cuando te fuiste a casa hoy, organizaste cualquier tipo de cuidado en casa para ti o algo así?
+
+P: Sí, lo hicieron. Una enfermera viene una vez al día.
+
+D: Vale, ¿y qué tal fisioterapia?
+
+P: Sí, no lo sé. En realidad no han venido y le pregunté a la enfermera y ella dijo que iba a investigarlo. Tal vez algo salió mal allí.
+
+D: Vale, y después de que te hayan dado el alta, ¿te has estado moviendo, o si has estado bastante inmovilizado?
+
+P: Lo intento, pero ha sido difícil, especialmente los primeros días. No creo que haya hecho mucho. Pero desde entonces, he estado, he estado tratando de moverme un poco más.
+
+D: De acuerdo. ¿Has notado algún tipo de hinchazón en tus piernas?
+
+P: Uh, no.
+
+D: No, ¿nada de eso?
+
+P: No.
+
+D: ¿Ha tenido anteriormente algún tipo de coágulo, como trombosis venosa profunda o embolia pulmonar? ¿Algo así?
+
+P: No.
+
+D: ¿Ha tenido algún diagnóstico previo de cáncer?
+
+P: Lo hice en el pasado. Hace unos 10 años tuve leucemia.
+
+D: Leucemia, está bien. ¿Y sigues recibiendo algún tipo de tratamiento o ves a un oncólogo o a un mitólogo?
+
+P: No, ya no.
+
+D: ¿Ya no? De acuerdo. ¿Estás experimentando algún tipo de tos con sangre o algo por el estilo?
+
+P: Uhm, no.
+
+D: No. De acuerdo. ¿Sientes algún dolor en tus gorras?
+
+P: No.
+
+D: No, está bien. Muy bien, aparte de eso, ¿estás teniendo algún síntoma de náuseas y vómitos?
+
+P: Uhm, no, no lo sé.
+
+D: Vale, ¿alguna fiebre o escalofríos?
+
+P: No.
+
+D: De acuerdo. ¿Sudores nocturnos o fatiga?
+
+P: No.
+
+D: De acuerdo. ¿Alguna diarrea o estreñimiento?
+
+P: No. Ninguno de esos.
+
+D: De acuerdo. Y además del cáncer, ¿alguna condición médica previa con la que te hayan diagnosticado?
+
+P: No, estaba bastante saludable antes de eso.
+
+D: Vale, ¿alguna historia de algún trastorno de coagulación o coagulación en absoluto?
+
+P: No.
+
+D: De acuerdo. ¿Toma algún medicamento actualmente?
+
+P: No, no, ya no.
+
+D: Vale, ¿alguna alergia a algún medicamento?
+
+P: Uhm, no.
+
+D: De acuerdo. ¿Algún historial familiar de problemas pulmonares o cardíacos?
+
+P: Um, sin problemas pulmonares o cardíacos, no.
+
+D: De acuerdo. ¿Y ahora mismo trabajas en absoluto?
+
+P: Sí, lo sé. Soy banquero.
+
+D: El banquero está bien. Uhm. ¿Y cómo es tu situación de vida? ¿Dónde vives con alguien o adentro? ¿Dónde vives?
+
+P: Vivo en casa con mi marido y mis dos hijos.
+
+D: Vale, ¿y lo fumas todo?
+
+P: No, no lo sé.
+
+D: De acuerdo. ¿Y usas drogas recreativas como marihuana?
+
+P: Uh, a veces voy a tener marihuana con mis amigos, pero realmente no he hecho eso desde que comenzó la pandemia.
+
+D: Bien, ¿y bebes alcohol?
+
+P: Sí, vengo. Tomaré dos o tres vasos de cerveza el fin de semana.
+
+D: De acuerdo. Muy bien, así que estas son todas estas preguntas que tuve para ti hoy. Luego haremos un examen físico completo. ¿Tiene alguna pregunta o preocupación?
+
+P: No.
+
+D: Vale, así que sí, ahora mismo una de las principales cosas que queremos descartar, especialmente desde que tuviste la repentina falta de aliento hoy después de un historial de secreción reciente y la fractura de cadera o lesión, y estás inmovilizado tenemos que asegurarnos de que no has desarrollado un coágulo que ha viajado a tus pulmones. Así que vamos a hacer un examen físico completo y hacer algunos análisis de sangre al principio y luego ver si necesita algún medicamento para si necesita trombolisis para romper el coágulo. Podríamos hacer algunas imágenes también, así que sí, bueno, empezaremos con eso, y luego partiremos de ahí.
+
+P: Claro.
+
+D: Así que estarás aquí unas horas hasta que hagamos todas esas cosas y veamos si necesitas algún ingreso en el hospital.
+
+P: Claro.
+
+D: Muy bien.
+
+P: Gracias.
+
+D: Bienvenido, cuídate.
+

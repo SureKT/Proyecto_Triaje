@@ -1,0 +1,229 @@
+D: ¿Qué te trae por aquí hoy?
+
+P: Estoy aquí porque he tenido esta tos durante las últimas dos semanas y no va a desaparecer.
+
+D: Vale, y, ¿de verdad está empeorando?
+
+P: En realidad no, sólo ha sido lo mismo.
+
+D: ¿Cómo describirías la tos? ¿Es una tos húmeda o una tos seca?
+
+P: Es una tos seca.
+
+D: Vale, ¿estás trayendo algo de esputo o sangre?
+
+P: Uh no.
+
+D: ¿Lo describirías como una tos de ladrido, tos dura o tos amortiguada?
+
+P: En realidad no.
+
+D: No, está bien. Antes de empezar a toser, ¿tenías otros síntomas, como goteo nasal, congestión, dolor de garganta, algo así?
+
+P: Uh, no.
+
+D: Vale, ¿así que es sólo la tos?
+
+P: Sí.
+
+D: De acuerdo. ¿Tienes fiebre o escalofríos?
+
+P: Nop.
+
+D: Vale, ¿y la tos es constante, o va y viene?
+
+P: Supongo que está ahí todo el día.
+
+D: Está ahí todo el día, ¿de acuerdo? ¿Y es provocada por alguna actividad o, o simplemente viene por sí misma?
+
+P: Viene por sí mismo.
+
+D: Vale, ¿y ha mejorado o se ha quedado por ahí igual?
+
+P: Se ha mantenido igual.
+
+D: De acuerdo. ¿Te ha pasado esto antes, donde has tenido tos durante mucho tiempo?
+
+P: No.
+
+D: No, está bien. ¿Tienes otros síntomas como dolor de pecho, dolor de garganta?
+
+P: No.
+
+D: De acuerdo. ¿Algún viaje reciente o contacto con alguien que haya estado enfermo?
+
+P: No lo creo, no. Acabo de ir a mi, fui a ver a mi médico de familia um, para algunas recetas.
+
+D: De acuerdo.
+
+P: Hace tres semanas.
+
+D: Hace tres semanas, está bien. ¿Algún dolor de cabeza?
+
+P: No.
+
+D: ¿Náuseas o vómitos?
+
+P: No.
+
+D: ¿Algún sudor nocturno?
+
+P: No, nada de eso.
+
+D: ¿Alguna fatiga?
+
+P: No.
+
+D: No. ¿Alguna dificultad para respirar?
+
+P: No.
+
+D: ¿Y no hay dolor en el pecho?
+
+P: No.
+
+D: ¿Alguna diarrea o estreñimiento?
+
+P: No.
+
+D: De acuerdo. ¿Alguna sibilancia?
+
+P: No.
+
+D: Vale, ¿algún cambio en tu peso recientemente?
+
+P: No, no, no lo creo.
+
+D: ¿Algún cambio, perdón, algún problema con tu micción?
+
+P: No.
+
+D: ¿Estás durmiendo bien o la tos te mantiene despierto de noche?
+
+P: Um, es, no es así, no ha interrumpido mi sueño.
+
+D: Vale, ¿y cómo ha sido tu apetito?
+
+P: No, todo está bien.
+
+D: Vale, ¿y alguna pérdida de tu sentido del gusto o del olfato?
+
+P: No.
+
+D: No, está bien. Um, cualquier exposición a cualquier humo o polvo dentro de su ambiente, o animales o mascotas?
+
+P: No.
+
+D: Um, y de lo contrario, ¿tiene alguna condición médica como asma, EPOC, algo así?
+
+P: Entré, entré a hacerme un chequeo hace tres semanas, y descubrí que tenía presión arterial alta. Ya sabes, quien hubiera pensado y luego mi doctor me empezó a tomar esta píldora llamada ramipril y uh, he estado revisando mi presión arterial de forma regular, y es sí, ha sido bueno. Pero aparte de eso, estoy muy saludable.
+
+D: Vale, ¿y no hay asma?
+
+P: Nada de asma.
+
+D: De acuerdo. ¿Y alguna alergia a algún medicamento o alergia ambiental?
+
+P: Sólo penicilina.
+
+D: Sólo penicilina. ¿Y ha tomado antibióticos o penicilina recientemente?
+
+P: No.
+
+D: No, y um, ¿qué medicamentos estás tomando?
+
+P: Sólo, sólo esa.
+
+D: ¿Sólo el ramipril?
+
+P: También tomo, también tomo una multivitamina.
+
+D: Multivitamínico, está bien. ¿Ha sido hospitalizado antes o ha tenido alguna cirugía?
+
+P: No.
+
+D: No, está bien. ¿Algún historial familiar de problemas pulmonares o cardíacos?
+
+P: No, no, no lo creo.
+
+D: De acuerdo. ¿Algún cáncer?
+
+P: Sí, el cáncer de páncreas y el cáncer de colon corren en la familia.
+
+D: Vale, ¿y ese es algún pariente directo, como tu mamá o tu papá o tus hijos?
+
+P: Mis abuelos están del lado de mi madre.
+
+D: Y actualmente, ¿trabajas o estás jubilado?
+
+P: Soy abogado.
+
+D: De acuerdo. ¿Y trabajas desde casa ahora mismo? ¿O vas en persona?
+
+P: Sí, he estado trabajando desde casa.
+
+D: Has estado trabajando desde casa, ¿de acuerdo? ¿Y cómo es tu situación en casa ahora mismo? ¿Vives con alguien? ¿Vives en una casa o un apartamento?
+
+P: Vivo, vivo en un apartamento. Yo, um, vivo solo que acabo de conseguir, me divorcié hace dos años y desde entonces he estado, he estado viviendo solo.
+
+D: Está bien, lo siento. ¿Y hay algún tipo de alérgeno como polvo o algún moho o algo así en tu hogar?
+
+P: No, nada de eso.
+
+D: Vale, ¿y actualmente fumas algo?
+
+P: A veces.
+
+D: A veces, ¿con qué frecuencia dirías que fumas?
+
+P: Um, tal vez uh, dos o tres cigarrillos. Tal vez tres o cuatro días a la semana.
+
+D: Vale, ¿y cuánto tiempo llevas fumando?
+
+P: Um, así que yo, solía fumar mucho cuando era joven y luego renuncié. Y luego empecé de nuevo hace dos años.
+
+D: De acuerdo. Vale, ¿y usas alguna droga recreativa como marihuana?
+
+P: No, no lo sé.
+
+D: Vale, ¿y bebes alcohol?
+
+P: Sí.
+
+D: ¿Cuánto dirías que bebes en un día promedio?
+
+P: Más de lo que me gustaría mencionar. Yo, sí, yo, tal vez 5 o 6 cervezas al día.
+
+D: Vale, y um, ¿es algo que es nuevo para ti, o que ha estado pasando durante años?
+
+P: Una vez más, eso comenzó hace unos dos años, así que.
+
+D: Um, y uh, ¿usas, así que ninguna otra droga recreativa, ¿verdad?
+
+P: No, nada más.
+
+D: Sí, así que definitivamente podemos hablar más sobre el consumo de alcohol definitivamente, especialmente cuando hay gente pasando por momentos estresantes. Puede haber un aumento en el consumo de sustancias, incluyendo alcohol, así que definitivamente tenemos muchos recursos que podemos discutir hoy si quieres.
+
+P: Sí, me gustaría mucho. Gracias.
+
+D: De nada. Sí, pero esas son todas las preguntas que tuve por hoy. Definitivamente haremos un examen físico, pero parece que has estado tosiendo las últimas dos semanas.
+
+P: Sí.
+
+D: Sin ningún otro síntoma. Vale, ¿tienes alguna pregunta para mí?
+
+P: Um no.
+
+D: Así que lo que haremos es, ya que has tenido esta tos durante las últimas dos semanas, definitivamente queremos hacer un hisopo COVID, por si acaso. Has estado trabajando desde casa, pero si hubo algún contacto potencial, normalmente, vuelve en 24 a 48 horas.
+
+P: De acuerdo.
+
+D: Aparte de eso, a veces con un historial de fumar, puedes tener algo llamado EPOC. Podemos, al igual que después de los exámenes físicos y todo, potencialmente podemos discutir haciendo pruebas de función pulmonar también. Y sí, pero aparte de eso, también puede ser como una tos seca, puede ser sólo una infección viral del tracto respiratorio superior que tarda dos o más semanas en resolverse. En ese caso, en realidad no lo haríamos.
+
+P: Claro.
+
+D: Um, sí, así que vamos a hacer el examen físico y luego ir desde allí.
+
+P: Suena genial.
+
+D: Muy bien, cuídate.

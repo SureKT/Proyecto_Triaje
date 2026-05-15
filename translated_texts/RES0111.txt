@@ -1,0 +1,181 @@
+D: ¿En qué puedo ayudarle hoy?
+
+P: Hola, estoy aquí porque he tenido este horrible dolor de garganta durante los últimos cuatro días. No parece estar mejorando y creo que estoy teniendo fiebre ahora.
+
+D: ¿Has comprobado tu temperatura?
+
+P: No, no he comprobado mi temperatura, sólo estoy muy caliente.
+
+D: Comprobaremos eso aquí entonces. Y, uh, ¿lo haces, OK así que has tenido este dolor de garganta durante cuatro días y una fiebre. ¿Ha tenido alguna dificultad para tragar?
+
+P: Sí, no, como si pudiera beber bien, pero es muy difícil para mí comer alimentos sólidos ahora mismo.
+
+D: ¿Por qué es eso?
+
+P: Oh, sólo duele.
+
+D: Sí, está bien, pero no es que no puedas um, no puedes como, ¿no sientes que se está atascando?
+
+P: No, no, nada de eso.
+
+D: ¿Has notado algún cambio en tu voz? ¿Te parece que tu voz es más ronca?
+
+P: Um un poco uh pero creo que eso es sólo porque trato de no hablar tanto ya que mi garganta está tan dolorida.
+
+D: Vale, vale, ¿y has tenido un goteo de nariz?
+
+P: No, nada de moqueo.
+
+D: ¿Una tos?
+
+P: No.
+
+D: De acuerdo. ¿Ha tenido alguna dificultad para respirar?
+
+P: No.
+
+D: ¿Te duele el pecho?
+
+P: No.
+
+D: Cualquier tipo de congestión, ¿sientes que tu nariz está congestionada o te duele las mejillas o la cabeza cuando te inclinas?
+
+P: No.
+
+D: No, está bien. Todo lo que tienes es dolor de garganta y esta fiebre, OK y um, OK. ¿Tienes dolor de cabeza?
+
+P: Um, sin dolores de cabeza.
+
+D: ¿Sientes que has estado confundido o que no te sientes a ti mismo?
+
+P: No, nada de eso.
+
+D: De acuerdo. ¿Algún cambio en tu audición o en tu visión?
+
+P: No.
+
+D: Vale, ¿algún um y sientes que tu corazón late muy rápido?
+
+P: Uh no.
+
+D: ¿Sientes falta de aliento?
+
+P: Nop.
+
+D: ¿Algún dolor de barriga?
+
+P: No.
+
+D: ¿Náuseas o vómitos?
+
+P: Uh no.
+
+D: Vale, ¿alguna diarrea o estreñimiento?
+
+P: No.
+
+D: ¿Alguna fatiga?
+
+P: No.
+
+D: ¿Pérdida de peso? No es intencional.
+
+P: Sin pérdida de peso, no.
+
+D: Uh y uh ¿tiene alguna condición médica?
+
+P: Uhm no, no lo creo.
+
+D: Vale, ¿estás al día con tus vacunas?
+
+P: Sí, la única que no he recibido es la vacuna contra el VPH.
+
+D: Vale, vale, vale, ¿te dieron la vacuna contra la gripe?
+
+P: Oh, no lo conseguí este año.
+
+D: Bueno, te recomendamos que te compres tus vacunas y también la vacuna contra el VPH. Es mejor vacunarse contra el VPH antes. Es un poco menos efectivo a medida que pasas de cierta edad, obviamente aún no estás cerca de eso, pero tampoco creo que esté cubierto después de los 26 años, así que es mejor que lo hagas antes. Y volvamos a tus síntomas, entonces. ¿Has tenido alguna cirugía?
+
+P: Me quitaron el apéndice cuando tenía 13 años.
+
+D: ¿Algo más?
+
+P: No.
+
+D: Vale, ¿estás tomando algún medicamento, incluso en el mostrador?
+
+P: No, sólo tomo mis multivitaminas.
+
+D: ¿Estás viviendo solo o vives con alguien?
+
+P: Vivo con mis padres y mis dos hermanos.
+
+D: ¿Y te sientes segura en casa?
+
+P: Sí.
+
+D: De acuerdo. ¿Eres sexualmente activa actualmente?
+
+P: No.
+
+D: De acuerdo. ¿Planeas ser sexualmente activa en un futuro próximo?
+
+P: No, no antes de terminar la secundaria.
+
+D: Está bien, está bien. ¿Estás bebiendo alcohol?
+
+P: No.
+
+D: Bien, ¿fumas?
+
+P: No.
+
+D: ¿Has probado marihuana o alguna droga recreativa?
+
+P: No lo he hecho.
+
+D: De acuerdo. ¿Las cosas van bien, estás en la escuela ahora mismo?
+
+P: Sí, estoy en décimo grado.
+
+D: De acuerdo. ¿Va todo bien?
+
+P: Sí, yo diría que sí.
+
+D: ¿Algún acoso en la escuela?
+
+P: No.
+
+D: Vale, ¿alguna preocupación por la depresión o la ansiedad?
+
+P: No.
+
+D: OK OK OK y uh uh viajaste a alguna parte recientemente?
+
+P: No, he estado en la escuela y en casa.
+
+D: ¿Así que no es virtual, es en persona?
+
+P: Así que la mitad del día es en persona y la otra mitad es virtual.
+
+D: ¿Estás bien y estás manteniendo distanciamiento social en la escuela, usando una máscara?
+
+P: Sí, pero a veces supongo que no sé si tienes que beber agua o algo así, nos lo quitamos.
+
+D: Sí, claro, está bien. Um y uhm, supongo que um bien. ¿Qué iba a preguntar? Así que nada de viajes, ¿de acuerdo? ¿Sientes que has estado en contacto con alguien que podría estar enfermo o tener a Covid?
+
+P: No lo creo.
+
+D: No, está bien, está bien. ¿Y te has mirado la garganta? ¿Se ve hinchado o rojo?
+
+P: Sí, parece bastante hinchado y rojo.
+
+D: Bueno, esas son todas las preguntas, oh una pregunta más en realidad. ¿Tienes alguna condición médica que funcione en la familia?
+
+P: No, no lo creo. Tal vez como presión arterial alta.
+
+D: De acuerdo, bueno, esas son todas las preguntas que tuve. Haremos un examen físico, echaremos un vistazo dentro de tu garganta. Teniendo en cuenta los síntomas que tienes, suena como si tuvieras una inflamación o hinchazón de la garganta que podría ser causada por bacterias o virus. Podría ser algo como um mono, o podría ser um garganta estreptocócica. Podría ser otras cosas también. Viendo que tus síntomas están algo superpuestos con los síntomas de Covid, también nos gustaría hacer una prueba de Covid. Haremos una prueba rápida de estreptococos aquí también um sólo para descartarlo y luego um uh le pediremos a cuarentena para los próximos 14 días um hasta o al menos hasta que sus hisopos covididos están de vuelta o sus síntomas mejoran um y le haremos saber acerca de um el manejo basado en el resultado de la prueba de estreptococos. ¿Tienes alguna pregunta?
+
+P: No, eso suena genial, gracias.
+
+D: Bien, suena bien.

@@ -1,0 +1,198 @@
+D: ¿En qué puedo ayudarle?
+
+P: Estoy aquí porque me he sentido extrañamente sin aliento y tengo fiebre o tos.
+
+D: Vale, ¿cuándo empezó la falta de aliento y ahora estás sin aliento?
+
+P: Empezó sobre uh, supongo que podría empezar ayer. Y un poco, pero está mejorando.
+
+D: Empezó ayer, bueno, me alegro, está mejorando. ¿Cuándo empezó la tos?
+
+P: Empezó alrededor de la misma hora.
+
+D: Está bien, lo es. ¿Tos seca o tos húmeda?
+
+P: Es una tos seca.
+
+D: Bien, ¿verdad? ¿Esta tos es nueva o si has tenido una tos antes?
+
+P: No, es algo nuevo.
+
+D: Vale, ¿has sacado alguna, sé que dijiste que fue pero has sacado alguna sangre?
+
+P: No.
+
+D: Vale, ¿y has tenido sibilancias?
+
+P: No.
+
+D: De acuerdo. Y también mencionaste una fiebre. ¿Has comprobado tu temperatura hoy o ayer?
+
+P: Sí, fue a las 38 de anoche.
+
+D: ¿Te sientes febril hoy también?
+
+P: Sí, un poco.
+
+D: De acuerdo, y uh. ¿Así que has tenido algún síntoma infeccioso, como moqueo o ojos rojos?
+
+P: No.
+
+D: ¿Qué tal un resfriado o sensación de congestión?
+
+P: No, no, es sólo una tos.
+
+D: ¿Tos? De acuerdo. ¿Y qué, estabas cerca de algún disparador ayer o alrededor de cualquier cosa que fuera fuera de lo normal para ti?
+
+P: Tengo un aviso de que esto me pasa cada vez que voy a la casa de mi novio, así que empecé a salir, empecé a salir con alguien nuevo hace unos seis meses y cada vez que voy a su casa, un par de horas más tarde me gusta desarrollar estos síntomas, sólo un poco raro. Pensé que me estaba resfriando. Pero ahora que ha pasado como tres veces, estoy pensando que tal vez tengas algún tipo de alergia como tal vez, no lo sé. Tal vez es como si, sólo soy alérgico a algo. Tal vez sus plantas o algo así. No lo sé.
+
+D: Vale, ¿y sucede cada vez que vas a su casa?
+
+P: Sí, sí. Casi que sí, es como si no te hubiera gustado. No he estado en su casa muy a menudo debido a la pandemia. Pero sí, cada vez que voy me siento un poco mal después.
+
+D: Veo que está bien y, ¿hay algún otro ambiente en el que puedas pensar dónde sucede esto o que estos síntomas ocurran en cualquier otro punto?
+
+P: No, no lo creo.
+
+D: De acuerdo. ¿Y has tenido dolor de garganta?
+
+P: No.
+
+D: ¿Qué tal alguna pérdida de olor o sabor?
+
+P: No.
+
+D: Vale, ¿y has tenido algún dolor en el pecho?
+
+P: No, no. No lo he hecho.
+
+D: K, ¿y has tenido náusea o vómitos?
+
+P: No.
+
+D: Muy bien, ¿y algún dolor abdominal o diarrea?
+
+P: No.
+
+D: ¿Algún problema urinario como micción dolorosa o frecuencia?
+
+P: No.
+
+D: ¿Has tenido dolores musculares o corporales?
+
+P: Sí, sí. Sólo actuar diferente sensación de dolor y un poco cansado estas pasadas bien como 12 a 14 horas.
+
+D: Veo bien, así que ha sido algo así como por todas partes o hay músculos particulares dolor o nuestra parte del cuerpo?
+
+P: No, es como por todas partes.
+
+D: Vale, ¿y tú también te has fatigado?
+
+P: Oh, sí.
+
+D: De acuerdo. ¿Has tenido dolores de cabeza?
+
+P: No.
+
+D: ¿Algún cambio en la piel o sarpullidos?
+
+P: Uh, no.
+
+D: Muy bien. ¿Y qué hay de cualquier sudor nocturno o escalofríos? Sé que mencionaste fiebres.
+
+P: No, me he estado sintiendo caliente.
+
+D: Vale, quiero decir, ¿cómo fue tu peso en los últimos meses? ¿Es como si hubieras perdido peso o aumentado de peso o estuvieras en la misma posición?
+
+P: Algo así.
+
+D: De acuerdo. Y uh, en el pasado, ¿te han diagnosticado alguna condición médica?
+
+P: No, estoy bastante saludable.
+
+D: Está bien, ya ves. Sí, ¿no has tenido asma en el pasado ni nada por el estilo?
+
+P: No.
+
+D: Vale, ¿alguna alergia a medicamentos que conozcas o cosas ambientales como polvo o polen?
+
+P: No, no. Por eso me sorprendí un poco. Normalmente estoy bien y paso mucho tiempo al aire libre así que, no lo sé. Sí, me sorprendió cuando esto pasó cuando fui a su casa.
+
+D: OK, ¿alguna vez has tenido este tipo de síntomas si estás como sí o cerca de humo o algo así, tal vez podrías estar inhalando o incluso si estás fuera en el frío?
+
+P: No.
+
+D: Vale, y tienes síntomas estacionales como a lo largo del año te pican los ojos. ¿Como un moqueo nasal?
+
+P: No, no. Eso no me ha pasado a mí.
+
+D: Bien, ¿y toma algún medicamento?
+
+P: Sólo tomo una píldora anticonceptiva.
+
+D: ¿Y cuándo, cuánto tiempo has estado en eso?
+
+P: Unos tres años.
+
+D: De acuerdo. ¿Y alguna cirugía o hospitalización previa?
+
+P: Oh, no.
+
+D: Muy bien, ¿y puedes contarme un poco sobre dónde vives actualmente y dos con los que vives?
+
+P: Vivo solo, ¿eh? Tengo un apartamento al lado de la Universidad.
+
+D: Vale, ¿y cualquier potencial para estar cerca de alguien que haya estado enfermo como tu novio o su familia o en cualquier otro lugar?
+
+P: No, acabo de visitarlo y voy de compras. He estado estudiando en línea. Sí, no lo creo. Normalmente soy muy cuidadoso, no lo soy. Sí, no estoy manteniendo el distanciamiento social con mi novio. Está en mi círculo social, pero sí, aparte de eso nadie creo que sí.
+
+D: De acuerdo. ¿Y has viajado a alguna parte?
+
+P: No.
+
+D: Muy bien, entonces, ¿estás trabajando o yendo a la escuela?
+
+P: Voy a la escuela.
+
+D: De acuerdo, genial y uh. ¿Y actualmente eres sexualmente activa?
+
+P: Sí.
+
+D: Vale, y estás usando anticonceptivo. ¿Estás usando condones?
+
+P: Sí. Vale, ¿alguna preocupación por alguna infección de transmisión sexual en este momento?
+
+P: No. No, soy muy cuidadoso.
+
+D: ¿De acuerdo? ¿Y fumas cigarrillos?
+
+P: No.
+
+D: ¿Bebes alcohol?
+
+P: A veces, si, como durante fiestas y esas cosas, pero realmente no he estado bebiendo mucho porque no hay nada pasando.
+
+D: Bien, sí, ya veo. ¿Y usa alguna droga recreativa?
+
+P: No.
+
+D: Muy bien, entonces umm en la familia ¿hay un historial de algún problema pulmonar o algún problema cardíaco?
+
+P: Sólo presión arterial alta. Mi mamá y mi papá lo tienen.
+
+D: De acuerdo. Así que también quería preguntar por la casa del novio. ¿Hay mascotas en la casa?
+
+P: Oh, sí. Sí, tiene un lindo loro. Y también tiene un gato.
+
+D: Vale, ¿y tienes mascotas en tu casa?
+
+P: No, no lo sé.
+
+D: Oh, está bien. Así que creo que eso era todo lo que quería preguntar sobre la historia de hoy, ¿había algo más que olvidé mencionar o querías mencionar?
+
+P: No lo creo, no.
+
+D: Vale, suena como que potencialmente podría ser causado por un alérgeno como el que podría ser de un animal como un loro o un gato que está causando sólo una reacción y que está trayendo estos síntomas en como llamada neumonitis de hipersensibilidad, pero también no podemos descartar el asma, así como ser un desencadenante de tipo de tos y falta de aliento es estar alrededor de los alérgenos también, así que vamos a ordenar una prueba de función pulmonar, y tal vez algunas, uh, imágenes y radiografía de tórax y vamos a ir de allí.
+
+P: Genial, gracias.
+

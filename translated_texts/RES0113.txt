@@ -1,0 +1,201 @@
+D: ¿Qué puedo hacer por ti hoy?
+
+P: Sí, así que estoy aquí porque he tenido esta fiebre, esta tos, y ahora me duele la cabeza. Eso ha estado pasando durante los últimos cuatro días y sólo quiero asegurarme de que no es nada demasiado serio.
+
+D: Sí, sí, eso es genial. Así que, ¿puedes decirme si mediste la temperatura?
+
+P: No, en realidad no lo he medido, sólo siento calor y escalofríos.
+
+D: Vale, pero podemos llevar tus signos vitales aquí y dijiste que has tenido tos durante los últimos cuatro días, tos seca o tos húmeda.
+
+P: Ha estado bastante seco.
+
+D: Um, cualquier uh no hay sangre o cualquier um esputo um que se acerca, ¿verdad?
+
+P: No, no.
+
+D: OK y la tos ha empeorado o mejorado o lo mismo, ¿ha sido lo mismo desde los últimos cuatro días?
+
+P: Es que en realidad está empeorando.
+
+D: Vale, ¿hay algo que lo haga mejor o peor?
+
+P: No, no lo creo.
+
+D: De acuerdo. ¿Has intentado algo para tu tos?
+
+P: He intentado descongestionar como supresores de la tos pero no parece haber ayudado.
+
+D: De acuerdo. Vale, y luego háblame de tu dolor de cabeza. ¿Eso también empezó hace cuatro días?
+
+P: Sí.
+
+D: ¿Y dónde está exactamente?
+
+P: Así que es como en la parte delantera de mi cabeza.
+
+D: ¿Y se siente como uh, cómo se siente? ¿Es como una sensación palpitante? ¿Una banda como la sensación? ¿Es afilada, es aburrida?
+
+P: Se siente bastante palpitante en este momento.
+
+D: ¿Es a ambos lados o a la izquierda o a la derecha?
+
+P: Es que parece que es de ambos lados.
+
+D: Si tuvieras que darle un número de 1 a 10 con 10 siendo el dolor más severo de la historia, ¿qué número le darías?
+
+P: Le daría como un siete.
+
+D: Oh wow, está bien. ¿Y cómo ha cambiado en los últimos cuatro días?
+
+P: Se ha puesto un poco peor.
+
+D: Um es uh es, lo que iba a decir, es constante o va y viene?
+
+P: Parece bonito, parece bastante constante.
+
+D: ¿Has tomado algo por ello?
+
+P: Traté como un Tylenol para ello y parece ayudar un poco.
+
+D: ¿Hay alguna hora del día en que sea peor? Antes de acostarse, al final del día, despertarse, ¿algo así?
+
+P: No, nada de eso.
+
+D: ¿Ha tenido un dolor de cabeza similar en el pasado?
+
+P: Sí, supongo que sí, un poco en el pasado, pero también fue cuando estaba como enferma.
+
+D: Claro, ¿te despierta en mitad de la noche?
+
+P: No, no me ha despertado.
+
+D: Vale, supongo que aparte del dolor de cabeza, te preguntaré sobre la tos y la fiebre, te preguntaré si has tenido otros síntomas. ¿Has tenido alguna confusión?
+
+P: No, no hay confusión.
+
+D: ¿Algún cambio en su visión o en su audición?
+
+P: No.
+
+D: ¿Tienes algo de enrojecimiento en los ojos?
+
+P: No.
+
+D: ¿Alguna pérdida de gusto o de olfato?
+
+P: No
+
+D: ¿Hay moqueo o congestión nasal?
+
+P: Uh nop.
+
+D: Vale, ¿algún dolor de garganta?
+
+P: No.
+
+D: De acuerdo. ¿Dolor en el pecho o dificultad para respirar?
+
+P: No.
+
+D: ¿Alguna palpitación? ¿Sientes que tu corazón se acelera?
+
+P: No.
+
+D: Vale, ¿algún dolor de barriga?
+
+P: Sin dolor de barriga.
+
+D: ¿Diarrea?
+
+P: No.
+
+D: Vale, ¿algún dolor o dolor en tu cuerpo?
+
+P: No.
+
+D: ¿Algún sarpullido que hayas notado?
+
+P: No, no hay sarpullidos.
+
+D: ¿Alguna decoloración de los dedos de los pies o de los dedos de los pies?
+
+P: No lo creo.
+
+D: Vale, vale ¿y tienes alguna condición médica?
+
+P: No, creo que estoy sano de lo contrario.
+
+D: Vale, bien, ¿y has tenido alguna hospitalización o cirugía?
+
+P: Uh, no.
+
+D: Vale, ¿qué hay de los medicamentos? ¿Estás tomando algo? ¿Sobre el mostrador o no?
+
+P: Uh tomo algunas multivitaminas, eso es todo.
+
+D: ¿Algún historial familiar de problemas pulmonares o cardíacos o cualquier otra cosa, o cánceres?
+
+P: No.
+
+D: ¿Y actualmente vives solo o vives con otra persona o con otras personas?
+
+P: Vivo con mi marido y nuestra hija.
+
+D: Vale, ¿has tenido alguna, has viajado a alguna parte?
+
+P: No, no recientemente.
+
+D: ¿Has... qué quieres decir con recientemente?
+
+P: Como he viajado en los últimos dos años.
+
+D: Está bien, está bien. ¿Ha tenido algún contacto con alguien que pudiera estar enfermo? ¿Tú o tu marido o tu hija?
+
+P: No, no lo creo.
+
+D: ¿Has salido de la casa?
+
+P: Solo para hacer cosas esenciales como los comestibles y el banco y cosas así.
+
+D: ¿Llevas una máscara y mantienes el distanciamiento social?
+
+P: Sí.
+
+D: Vale, vale, ¿bebes alcohol?
+
+P: Bebo como de vez en cuando, tomo una copa de vino.
+
+D: Vale, ¿cómo, supongo que con qué frecuencia dirías?
+
+P: Una vez a la semana.
+
+D: De acuerdo. ¿Y fumas?
+
+P: No, ya no.
+
+D: ¿Cuánto fumaste en el pasado?
+
+P: Me gustaría tener media cajetilla, pero solo fumé entre los 20 y los 25 años.
+
+D: De acuerdo. ¿Fuma marihuana o tiene algún alimento con marihuana?
+
+P: No.
+
+D: ¿Alguna droga recreativa?
+
+P: No.
+
+D: ¿Y dijiste que no tienes antecedentes familiares de ningún problema?
+
+P: No.
+
+D: Sí, está bien, creo que esas son todas las preguntas que tenía para ti. Así que parece que has tenido fiebre, tos, y un um y un dolor de cabeza que ha empeorado en los últimos cuatro días y tu dolor de cabeza es bastante malo, un siete de cada diez. Um y uh podría ser que usted tiene uh algún tipo de infección, uh incluyendo um, con Covid siendo una de las posibilidades, y así um continuar tomando Tylenol y um monitorear su uh fiebre. Si sigue empeorando, o te das cuenta de que tus síntomas no están mejorando, deberías volver, deberías, también haremos un Covid, también enviaremos una solicitud para un hisopo de Covid. Te pediremos que te pongas en cuarentena durante los próximos 14 días e intentes alejarte de tu marido e hija también, si puedes en casa. Um y uh supongo que un par de otras preguntas que quería hacer y debería haber hecho antes, ¿tiene alguna rigidez en su cuello o alguna dificultad para mover su cuello?
+
+P: No, nada de eso.
+
+D: Vale, vale, ¿y tienes alguna pregunta?
+
+P: No, eso es todo. Muchas gracias.
+
+D: Genial.

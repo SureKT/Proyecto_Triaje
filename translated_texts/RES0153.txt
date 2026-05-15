@@ -1,0 +1,175 @@
+D: ¿En qué puedo ayudarle hoy?
+
+P: Hola, he estado teniendo este dolor de garganta durante los últimos tres o cuatro días.
+
+D: Vale, ¿y estás teniendo dolor con tragar?
+
+P: Um sí, un poco me he dado cuenta uh con tragar especialmente sólidos también.
+
+D: Vale, ¿has notado algún cambio en tu voz? ¿Como tener una voz de papa caliente o sentir que tu garganta se está cerrando?
+
+P: Um no cerrar, pero como definitivamente hago uh, tal vez un poco de ronca, pero no demasiado. Principalmente es sólo el dolor lo que me preocupa.
+
+D: Vale, ¿y has tenido una tos?
+
+P: No, no he tenido tos en absoluto.
+
+D: De acuerdo. ¿Y has tenido alguna hinchazón del cuello?
+
+P: En realidad me he dado cuenta como un poco de hinchazón del cuello justo en la parte delantera de ambos, sí, justo en la parte delantera.
+
+D: Vale, ¿es a ambos lados de tu cuello o algo así en el medio?
+
+P: Yo diría que es más uh en ambos lados.
+
+D: De acuerdo.
+
+P: Y como en la parte delantera, frente a mi cuello.
+
+D: Vale, ¿y te has dado cuenta de que dentro de los últimos tres cuatro días también?
+
+P: Sí.
+
+D: De acuerdo. ¿Has tenido fiebre o escalofríos?
+
+P: Uhm, he tenido fiebre en el último día como si me hubiera estado sintiendo caliente. No tuve la oportunidad de quitarme la temperatura. Um y también uh sólo para corregirme yo, es más así que la hinchazón es sólo en un lado. Me he dado cuenta de esta grumosidad en un lado de mi cuello.
+
+D: Bien, gracias, sí. Lo veremos durante el examen físico. Bien, así que sí, ¿has tenido fiebre los últimos dos días?
+
+P: Sí, yo diría que sí.
+
+D: De acuerdo. ¿Y has tenido dolores de cabeza?
+
+P: Um no, sin dolores de cabeza.
+
+D: Muy bien, ¿y has tenido algún enrojecimiento o secreción ocular?
+
+P: No, nada de eso.
+
+D: ¿Has tenido un moqueo nasal?
+
+P: No.
+
+D: Vale, ¿y alguna pérdida de olor o pérdida de gusto?
+
+P: No, nada de eso.
+
+D: De acuerdo. ¿Has tenido alguna dificultad para respirar o alguna dificultad para respirar?
+
+P: Uh no, sin falta de aliento.
+
+D: ¿Has tenido sibilancias?
+
+P: No, nada de sibilancias.
+
+D: De acuerdo. ¿Has tenido algún dolor en el pecho?
+
+P: No hay dolor en el pecho.
+
+D: Muy bien, ¿algún mareo o sensación de que te ibas a desmayar?
+
+P: Nop.
+
+D: Vale, ¿sientes que estás respirando más rápido o que tu corazón late más rápido?
+
+P: Uh, no, realmente no he sentido que no.
+
+D: De acuerdo. ¿Has tenido algún dolor de barriga?
+
+P: No.
+
+D: ¿Qué tal náusea o vómitos?
+
+P: No, no, no he sentido eso en absoluto.
+
+D: Vale, ¿has tenido diarrea?
+
+P: No.
+
+D: ¿Has tenido algún problema urinario?
+
+P: No.
+
+D: De acuerdo. ¿Ha tenido algún cambio en la piel o sarpullido en alguna parte?
+
+P: No, no es que me haya dado cuenta.
+
+D: Muy bien, ¿has tenido dolores musculares o corporales?
+
+P: Nop.
+
+D: De acuerdo. ¿Has tenido algún síntoma como este antes?
+
+P: No, no que yo recuerde. Um tal vez cuando tenía como 7 años de edad como si hubiera tenido como un dolor de garganta.
+
+D: Vale, así que hace un tiempo, sí, ¿y te han diagnosticado alguna condición médica antes?
+
+P: No.
+
+D: De acuerdo. ¿Tomas algún medicamento o algo sobre el mostrador?
+
+P: He intentado como Tylenol frío, pero realmente no funcionó.
+
+D: Vale, ¿y alguna alergia a medicamentos o al medio ambiente?
+
+P: No.
+
+D: ¿Están actualizadas sus vacunas?
+
+P: Sí, están todos al día.
+
+D: Bien, excelente, ¿y has tenido alguna hospitalización o cirugía?
+
+P: No, he estado muy saludable.
+
+D: Muy bien, excelente, ¿y has viajado a alguna parte recientemente?
+
+P: No, me he quedado en casa, principalmente en la escuela virtual.
+
+D: Vale, ¿has estado cerca de alguien que ha estado enfermo?
+
+P: Um mi hermana ella acaba de volver de la universidad y ella se quejaba de como un dolor de garganta uh hace dos semanas.
+
+D: Bien, ya veo. ¿Con quién vives actualmente y dónde vives?
+
+P: Así que estoy viviendo con mis padres y mi hermana, en una casa en las afueras de la ciudad.
+
+D: De acuerdo. ¿Y tu hermana está mejor ahora o qué pasó con ella?
+
+P: Sí, sí, no estoy seguro, creo que fue al médico, ahora lo está haciendo mejor. Ella consiguió algunos medicamentos, pero no sé qué eran.
+
+D: Bien, ya veo. Um y uh sé que algunas personas en su grupo de edad a veces experimentan con uh como fumar o algo así. ¿Fumas cigarrillos o alguno de tus amigos?
+
+P: No, no he hecho eso.
+
+D: Vale, este mismo tipo de preguntas para el cannabis y el alcohol. ¿Has experimentado con alguna de esas sustancias o alguna droga recreativa?
+
+P: No, para nada.
+
+D: Vale, ¿y actualmente eres sexualmente activa?
+
+P: No.
+
+D: De acuerdo. ¿Y cómo va la escuela?
+
+P: La escuela va bien, como si fuera raro ajustarme a todas las cosas en línea, pero ahora me siento como si tuviera el truco.
+
+D: Bien, excelente. Um y um alguna preocupación por um como la seguridad en casa? Cualquier cosa de lo que hablemos es confidencial.
+
+P: No, tengo una familia muy cariñosa.
+
+D: Bien, eso es genial. Um y yo sólo queríamos terminar aquí con tu historia familiar. ¿Alguien de la familia tiene problemas cardíacos o pulmonares?
+
+P: No, son bastante saludables, mi mamá y mi papá.
+
+D: Vale, ¿y alguna otra condición que tenga la familia?
+
+P: No, no lo creo.
+
+D: De acuerdo. Eso era todo lo que quería preguntar sobre la historia de hoy. ¿Tenías alguna otra pregunta para mí o algo que no te haya preguntado sobre lo que querías mencionar?
+
+P: No, nada de lo que quería preguntar, solo me preguntaba si necesitaba algún medicamento.
+
+D: Vale, sí, así que es posible, así que basándonos en tus síntomas actualmente sugiere que es una causa bacteriana con... ya que no tienes tos y parece que suena a agrandamiento de los ganglios linfáticos. Vamos a mirar y ver si hay exudados o o purulencia en su um, que podemos ver en su garganta, así como comprobar la temperatura y hacer una prueba rápida de estreptococos. Veamos si esa es la causa, y si es así, um entonces sí, habrá un curso de antibióticos um será necesario, pero um vamos a uh esperar a um el examen físico y luego el uh la prueba rápida.
+
+P: Muy bien, suena bien.

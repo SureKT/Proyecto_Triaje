@@ -1,0 +1,163 @@
+D: ¿Cómo puedo ayudarte hoy?
+
+P: Hola, así que acabo de llegar hoy porque he estado sintiendo um, como mi cabeza ha estado sufriendo durante los últimos tres o cuatro días y también me sentí muy frío durante todo el día durante los últimos días también, así que, um, terminé comprobando mi temperatura justo ayer por la tarde y fue um, 38.7 grados Celsius.
+
+D: De acuerdo. Háblame del dolor de cabeza, ¿dónde está exactamente?
+
+P: Sí, así que es algo así como la parte delantera de mi frente y como que va a un lado de mi templo.
+
+D: ¿Y cómo se siente?
+
+P: Se siente como un dolor constante. He tenido migrañas antes, pero les gusta, no es como la sensación pulsante que suelo tener con ellos.
+
+D: Ya veo. Vale, ¿y qué tan grave es el dolor, si tuvieras que calificarlo de 1 a 10?
+
+P: Más que severo. Definitivamente es menos grave que mis migrañas, pero es constante. Es, ha estado allí durante los últimos cuatro días y yo diría que probablemente un 6 de 10.
+
+D: ¿Hiciste algo por el dolor? ¿Tomaste algún medicamento? ¿Algo que lo mejore?
+
+P: Sí, tomé un Tylenol, tomé Advil. Ayuda como unas horas y luego vuelve.
+
+D: ¿Y algo que empeore el dolor?
+
+P: Um, definitivamente creo que, si descanso, es mejor si, pero si soy como, como si no pudiera, no puedo concentrarme en el trabajo o como cualquier cosa.
+
+D: De acuerdo. Y aparte de la fiebre y los dolores de cabeza, ¿has tenido tos?
+
+P: No, no tose.
+
+D: ¿Secreción nasal o congestión?
+
+P: No.
+
+D: ¿Dolor de garganta?
+
+P: No, en realidad no.
+
+D: ¿Cambios en tu sentido del olfato?
+
+P: De hecho, siento que estoy perdiendo mi olor hoy.
+
+D: ¿Y el sentido del gusto?
+
+P: Acabo de desayunar hoy, así que el desayuno estaba bien. Yo no, uh, pero sí, definitivamente sentido del olfato.
+
+D: Vale, ¿y alguna dificultad para respirar?
+
+P: No.
+
+D: Vale, ¿algún dolor en el pecho?
+
+P: No.
+
+D: ¿Sientes que tu corazón está acelerado?
+
+P: No.
+
+D: ¿Alguna diarrea o estreñimiento?
+
+P: No.
+
+D: ¿Náuseas o vómitos?
+
+P: No.
+
+D: ¿Dolor en el vientre?
+
+P: No.
+
+D: ¿Te duelen los músculos o las articulaciones?
+
+P: No, nada de eso.
+
+D: Vale, ¿sientes que tienes el cuello rígido?
+
+P: No.
+
+D: ¿Algún entumecimiento u hormigueo en los brazos o dedos de los pies?
+
+P: No.
+
+D: ¿Algún um, sudores nocturnos o pérdida de peso, no intencional?
+
+P: No, sólo he estado ganando peso.
+
+D: De acuerdo. ¿Algún líquido en tus piernas, algún tipo de hinchazón?
+
+P: No, nada de eso en realidad.
+
+D: Vale, ¿alguna condición médica con la que te hayan diagnosticado?
+
+P: Sí, así que tengo diabetes tipo 2. Acabo de empezar a tomar medicación con metformina.
+
+D: ¿Cuándo empezaste a tomar metformina?
+
+P: Así que creo que han pasado unos dos meses.
+
+D: Vale, ¿cómo va eso para ti? ¿Lo estás tolerando bien?
+
+P: Sí, lo he tolerado bien. Es sólo que ellos, dijeron que estoy al borde de la diabetes, como mi nivel, así que solo quieren actuar, um, proactivamente.
+
+D: Sí, eso es bueno. ¿Alguna otra condición médica?
+
+P: No, eso es, eso es todo.
+
+D: ¿Algún otro medicamento que no sea metformina que usted tome? ¿Algo sobre el mostrador?
+
+P: Um, así que tomo, cuando mis migrañas se ponen mal, como lo hago, he tomado naproxeno antes.
+
+D: De acuerdo. ¿Cirugías?
+
+P: Nada de cirugías.
+
+D: ¿Hospitalización?
+
+P: Uh no.
+
+D: ¿Alguna alergia a medicamentos, alimentos o al medio ambiente?
+
+P: No a ningún medicamento, pero tengo alergia a los cacahuetes.
+
+D: Vale, ¿qué pasa?
+
+P: Me pongo como una reacción anafiláctica.
+
+D: Está bien, está bien. ¿Y algún historial familiar de alguna condición médica?
+
+P: Uh, por el lado de mi padre, les gusta todo, como todos los hombres parecen tener diabetes, así que es bueno que estoy empezando con la medicación. Por parte de mi madre, están muy saludables. No creo que mi madre tenga ninguna condición médica.
+
+D: Vale, bien. ¿Y vives solo actualmente o vives con otras personas?
+
+P: Sí, así que vivo con mi esposa, vivo con mis dos hijos, un hijo y una hija.
+
+D: Y um, ¿usted o alguno de ellos ha tenido alguna exposición a alguien que posiblemente podría estar enfermo?
+
+P: Mi esposa es maestra de escuela, y sí tenían en persona. Es profesora de secundaria, y tienen clases en persona. Así que sí, no lo sé, pero se ha estado sintiendo bien. Mis hijos también se sienten bien.
+
+D: Vale, ¿y has viajado a algún lugar fuera de la provincia?
+
+P: No.
+
+D: Vale, ¿y actualmente fumas o alguna vez fumaste en el pasado?
+
+P: No, nunca he fumado. Fumo marihuana sólo, tal vez una o dos veces al mes con algunos amigos.
+
+D: Vale, ¿alguna droga recreativa?
+
+P: Lo siento, no.
+
+D: Um, ¿alcohol?
+
+P: Sí, probablemente bebo un par de cervezas durante el fin de semana.
+
+D: De acuerdo, lo tengo. De acuerdo. Bueno, dados sus síntomas, um, nos gustaría hacer un hisopo COVID, sólo en, o pedir un hisopo COVID para ser hecho a través de la salud pública, um, sólo para, sólo para descartarlo. Sus síntomas suenan como, o se superponen con algunos de los síntomas que se ven en los pacientes que tienen COVID. Podría ser que tuvieras... sólo... supongo que como tu dolor de cabeza y fiebre. También me gustaría hacer un examen físico para ver que no pasa nada más. Pero mientras tanto, me gustaría que te aislaras y te mantuvieras alejado del resto de tu familia también, al menos hasta que los resultados estén fuera. Y luego cuando los resultados están fuera, si es positivo, usted recibirá más directrices de la salud pública en cuanto a lo que usted necesita hacer.
+
+P: Vale, suena bien, y trabajo desde casa, así que no necesito hacerlo.
+
+D: Oh, eso es bueno. Vale, entonces trabajas desde casa.
+
+P: Muy bien.
+
+D: Bien.
+
+P: Gracias.

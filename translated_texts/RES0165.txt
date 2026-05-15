@@ -1,0 +1,178 @@
+D: ¿Qué te trae por aquí hoy?
+
+P: Solo he tenido tos y dolor de garganta durante los últimos dos días y me preocupaba que pudiera tener COVID así que pensé en entrar. Sólo para asegurarme de que todo está bien.
+
+D: Vale, bueno, es una buena idea que hayas venido, así que ha estado pasando durante los últimos dos días. ¿Empezaste a tener la tos primero o el dolor de garganta o ambos al mismo tiempo?
+
+P: Empezó con dolor de garganta hace dos noches y luego empeoró en la mañana cuando me desperté y luego desarrollé la tos, como hace un día, un día y medio.
+
+D: ¿Puedes describir tu tos? ¿Es una tos húmeda o una tos seca?
+
+P: Es una tos seca.
+
+D: Vale, ¿vas a tener algún tipo de? ¿Estás trayendo algo de sangre o esputo?
+
+P: No.
+
+D: No está bien. Y, uh. Así que esto empezó hace dos días. ¿Es constante, tus síntomas son constantes? ¿O van y vienen?
+
+P: No, no son constantes. Como que van y vienen.
+
+D: Vale, ¿y ocurren cuando te estás esforzando o puede suceder? ¿O suceden en algún momento durante el día en la mañana o la noche, o simplemente al azar?
+
+P: Es bastante aleatorio.
+
+D: De acuerdo. ¿Estás mejorando o empeorando los síntomas?
+
+P: Uhm? Tal vez un poco peor. Me siento como si también, um, ahora estoy teniendo como un, una nariz moqueada.
+
+D: ¿También la nariz escalofriante? Vale, ¿cuándo empezó eso?
+
+P: Uhm, tal vez como si no lo supiera ahora mismo, como hace una hora o dos.
+
+D: Vale, ¿has tenido alguna exposición reciente a alguien que haya estado enfermo recientemente?
+
+P: Uhm? Tal vez. Yo, yo trabajo en un hospital. Pero siempre mantengo el distanciamiento social y trato de ser muy cuidadoso.
+
+D: De acuerdo, y uh. ¿Ha probado algún medicamento en el mostrador para ayudar con estos síntomas?
+
+P: No.
+
+D: De acuerdo. ¿Tiene otros síntomas como. ¿Corta de aliento, dolor en el pecho, mareos o algo así?
+
+P: No.
+
+D: No. De acuerdo. ¿Y el dolor de garganta está teniendo problemas o dolor mientras traga algo de comida?
+
+P: No es tan malo.
+
+D: No tan mal.
+
+P: Es sólo irritación en mi garganta.
+
+D: De acuerdo. ¿Alguna ronca en tu voz?
+
+P: No.
+
+D: Bueno, está bien. ¿Has viajado en absoluto recientemente utside de la provincia?
+
+P: No.
+
+D: ¿Algún dolor de cabeza?
+
+P: No.
+
+D: ¿Náuseas, vómitos?
+
+P: No.
+
+D: ¿Tienes fiebre o escalofríos?
+
+P: Ahora lo sé.
+
+D: No está bien. ¿Alguna fatiga o malestar?
+
+P: Tal vez un poco. No está tan mal.
+
+D: Vale, ¿algún dolor muscular?
+
+P: Uhm? Sí, un poco.
+
+D: Vale, ¿y cuándo empezó eso?
+
+P: ¿Tal vez hace dos días?
+
+D: Vale, ¿y está por todo tu cuerpo o en ciertos lugares?
+
+P: Se acabó.
+
+D: ¿Has probado algún medicamento para el dolor?
+
+P: No, no lo he hecho.
+
+D: De acuerdo. ¿Algún cambio en la evacuación intestinal, como el estreñimiento o la diarrea?
+
+P: No.
+
+D: ¿Algún cambio en tu apetito?
+
+P: No.
+
+D: Vale, ¿has perdido algún peso significativo últimamente?
+
+P: Uh, no.
+
+D: De acuerdo. ¿Tiene alguna enfermedad del pasado con la que se le haya diagnosticado?
+
+P: No, estoy bastante saludable.
+
+D: De acuerdo. ¿Alguna alergia a la medicación?
+
+P: No.
+
+D: ¿Alguna alergia ambiental?
+
+P: No.
+
+D: OK, cualquier anterior, lo siento? ¿Estás tomando algún medicamento ahora mismo?
+
+P: Uhm? No lo estoy, no.
+
+D: ¿Alguna hospitalización o cirugías pasadas?
+
+P: Um, no.
+
+D: No. Bien, y cualquier historia familiar de cualquier enfermedad pulmonar o cardíaca.
+
+P: Sólo presión arterial alta. Mi mamá lo tiene.
+
+D: De acuerdo. Uhm, y actualmente, ¿estás trabajando?
+
+P: Estaba trabajando antes de que empezaran los síntomas.
+
+D: Vale, ¿y qué haces por trabajo?
+
+P: Trabajo como custodio en el hospital.
+
+D: Vale, ¿y has estado aislándote y ya te han hecho la prueba de hisopo COVID?
+
+P: No, no lo he hecho.
+
+D: Vale, así que sí podemos hacer eso por ti hoy después de un examen físico.
+
+P: Claro.
+
+D: En este momento, ¿cómo es tu situación de vida?
+
+P: Vivo solo.
+
+D: Vale, ¿y vives como un apartamento o una casa?
+
+P: Apartamento.
+
+D: Bien, y cualquier nueva exposición en su casa al polvo, nuevas, alfombras, animales, ¿algo así?
+
+P: No.
+
+D: No, está bien. ¿Y fumas?
+
+P: Solía hacerlo, ya no lo hago. Fumé cuando estaba en el instituto. Tal vez un par de veces.
+
+D: ¿Y fumas marihuana?
+
+P: No.
+
+D: ¿Algo de alcohol?
+
+P: Una vez al día, tal vez una clase de vino por la noche.
+
+D: Sí, así que esas son todas las preguntas que tenía para ti hoy. ¿Tiene alguna pregunta o preocupación?
+
+P: No.
+
+D: Vale, así que sí, parece que has estado teniendo estos síntomas durante los últimos días. Parecen un poco virales en la naturaleza con su tos seca y secreción nasal, dolor de garganta. Y a veces con estas enfermedades virales, puede tomar algún tiempo para que los síntomas desaparezcan, especialmente la tos. Así que hoy vamos a hacer una prueba de hisopo COVID para usted hoy, ya que muchos de los síntomas se superponen y recibirá el resultado en los próximos uno a dos días y será contactado por la salud pública para más instrucciones. En cuanto a la administración, creo que puede hacerse cargo de los medicamentos de venta libre como Tylenol frío, beber muchos líquidos y mantenerse hidratado. Y si los síntomas empeoran, puede ponerse en contacto con nosotros de nuevo.
+
+P: Claro, gracias.
+
+D: Bienvenido, cuídate.
+

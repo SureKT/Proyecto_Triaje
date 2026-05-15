@@ -1,0 +1,238 @@
+D: ¿Qué te trae por aquí hoy?
+
+P: Hola, estoy, estoy aquí porque tengo esta tos que he tenido durante la última semana y media, y normalmente no vengo con síntomas de esta menor, pero porque estamos en medio de una pandemia, pensé que debería entrar y hacerme un chequeo.
+
+D: Vale, sí, así que ha estado pasando por más de una semana. ¿Puedes describirme qué tipo de tos estás teniendo? ¿Es como una tos húmeda o una tos seca?
+
+P: Es una tos seca.
+
+D: Vale, ¿y ha ido empeorando durante el periodo de tiempo que describiste?
+
+P: Um, es algo así como lo mismo.
+
+D: Es lo mismo. Um, te has dado cuenta, aunque es como seco, ¿has sacado algún tipo de esputo o flema en absoluto?
+
+P: No, no, no, no recientemente. Pero sí, en el primer par de días, los primeros dos, tres días.
+
+D: Vale, ¿y has notado algún tipo de tinte amarillento a verdoso?
+
+P: No, estaba aguado.
+
+D: Watery, está bien. ¿Has notado algo de sangre? ¿Has estado tosiendo sangre?
+
+P: Uh, no.
+
+D: Vale, ¿y tu tos es constante o va y viene?
+
+P: Um, como que va y viene. Hay momentos en los que tose mucho y luego se va.
+
+D: Vale, ¿y hay un patrón en ello? ¿Toses más cuando te esfuerzas o en algún momento, a cierta hora del día?
+
+P: Es peor cuando estoy fumando.
+
+D: Cuando fumas, está bien. ¿Y cuánto duran esos episodios?
+
+P: ¿Un par de segundos, tal vez?
+
+D: Vale, ¿y esto te ha pasado antes?
+
+P: Sí. Creo que, um, sí, normalmente no le presto mucha atención. Sabes, creo que debe haber pasado el año pasado o el año anterior. Se va por su cuenta.
+
+D: Vale, ¿y hay algo que lo haga mejor o peor?
+
+P: Um, yo um, tomo este jarabe para la tos, sobre el jarabe de venta libre, que ayuda.
+
+D: De acuerdo. ¿Y has descubierto que ha estado ayudando a mejorar tu tos en los últimos días?
+
+P: Se va por un par de horas y luego vuelve.
+
+D: Ya veo. ¿Te mantiene despierto de noche?
+
+P: No, no, no.
+
+D: No, está bien. ¿Tienes otros síntomas como falta de aliento, dolor de garganta, moqueo nasal, algo así?
+
+P: Tuve esos síntomas en los primeros dos o tres días, pero luego desapareció, y luego sólo tuve esta tos que se quedó.
+
+D: Está bien, está bien. ¿Y has estado en contacto con alguien que haya estado enfermo a tu alrededor?
+
+P: Um, mi hija tenía los resfriados.
+
+D: ¿Cuándo fue eso?
+
+P: Por último, hace dos semanas.
+
+D: ¿Hace dos semanas? De acuerdo. ¿Y cómo es que ahora se fue solo, o tuvo que ir al médico?
+
+P: Um, no, como que se fue por su cuenta.
+
+D: De acuerdo. ¿Ha viajado recientemente fuera de la provincia o del país?
+
+P: No.
+
+D: No, está bien. Y además de la tos, ¿tienes dolores de cabeza?
+
+P: No.
+
+D: ¿Náuseas o vómitos?
+
+P: No.
+
+D: ¿Tienes fiebre o escalofríos?
+
+P: Ya no.
+
+D: Ya no, ¿cuándo fue la última vez que tuviste fiebre o escalofríos?
+
+P: Creo que tuve como un muy, debe haber sido 37,4, um, en los primeros, dos, tres días. Pero mejoró muy rápido.
+
+D: De acuerdo, ya veo. ¿Algún sudor nocturno?
+
+P: No.
+
+D: No, está bien. ¿Alguna, um, te sientes cansado durante todo el día?
+
+P: Ya no.
+
+D: Ya no, está bien. Así que cualquier tipo de dolor en el pecho, o sensación de que su corazón está acelerando?
+
+P: No.
+
+D: No. ¿Algún mareo o desmayo?
+
+P: No.
+
+D: ¿Algún cambio en sus deposiciones?
+
+P: Um, no.
+
+D: No, ¿así que no hay estreñimiento, diarrea?
+
+P: No.
+
+D: Vale, ¿algún cambio en tu micción?
+
+P: No.
+
+D: No, está bien. ¿Has tenido que perder el trabajo o trabajas actualmente?
+
+P: Sí, pero he estado trabajando desde casa.
+
+D: De acuerdo.
+
+P: No tenía que perderme el trabajo, así que.
+
+D: De acuerdo. ¿Y algún cambio en tu sueño o apetito?
+
+P: No.
+
+D: Vale, ¿alguna pérdida de sentido del gusto o del olfato?
+
+P: Um, inicialmente, supongo que los primeros días de tos, mi nariz estaba un poco congestionada, así que sí, no podía oler muy bien, pero desde entonces ha estado bien.
+
+D: Vale, ¿pero no pierdes el gusto?
+
+P: Sin pérdida de gusto, no.
+
+D: De acuerdo. ¿Algún cambio significativo reciente en tu peso en los últimos meses?
+
+P: No.
+
+D: Vale, ¿y alguna exposición en tu hogar al polvo, humos? ¿Algún animal en la casa?
+
+P: No.
+
+D: De acuerdo. Y de lo contrario, ¿tiene alguna condición médica con la que se le haya diagnosticado en el pasado?
+
+P: No, estoy bastante saludable.
+
+D: Bastante saludable, de acuerdo. ¿Alguna alergia, ya sea a medicamentos o al medio ambiente?
+
+P: Soy alérgico a la penicilina.
+
+D: Por la penicilina, está bien. ¿Y qué tipo de reacción tienes a la penicilina?
+
+P: Me dijeron que tuve un sarpullido cuando era niño. Realmente no lo recuerdo.
+
+D: Vale, ¿y tomas algún medicamento de forma regular?
+
+P: No.
+
+D: No, está bien. ¿Y ha sido hospitalizado en el pasado o ha tenido alguna cirugía?
+
+P: Me quitaron el apéndice hace cinco años.
+
+D: Hace cinco años, está bien. ¿Alguna complicación después de eso?
+
+P: No.
+
+D: De acuerdo. ¿Algún historial familiar de enfermedades pulmonares, cardíacas, cánceres?
+
+P: Cáncer de colon.
+
+D: ¿Cáncer de colon?
+
+P: Sí, mi padre y mi abuelo lo tenían.
+
+D: Vale, ¿y tú, has hecho algún examen recientemente?
+
+P: Oh, sí, tuve el mío hecho hace siete años.
+
+D: Hace siete años, está bien. ¿Y hubo algún hallazgo en absoluto?
+
+P: No.
+
+D: No, está bien. Um, actualmente así que trabajas desde casa, así que, ¿cómo es tu casa y situación de vida? ¿Con quién vives, y dónde, vives como un apartamento?
+
+P: Vivo en un apartamento con mi esposa y mi hija.
+
+D: Vale, y, ¿tienen algún síntoma? ¿O están bien?
+
+P: Bueno, mi hija ya no tiene síntomas. Ella hizo lo que mencioné, tiene algunos síntomas de gripe hace dos semanas. Mi esposa ha estado sana.
+
+D: Vale, ¿y tu hija va a la escuela ahora mismo o va a ir a la escuela desde casa?
+
+P: La escuela de casa.
+
+D: Escuela desde casa, está bien. ¿Y fumas algo? Así que mencionaste que tus síntomas empeoran con fumar.
+
+P: Sí.
+
+D: ¿Cuánto dirías que fumas en un día promedio?
+
+P: Um, yo no, lo intento, he estado tratando de reducir, así que, fumo como 3 o 4 cigarrillos a la semana. Solía fumar mucho más antes.
+
+D: ¡Vaya, sí, eso es muy bueno! Es un gran progreso, es muy difícil dejarlo, pero es genial ver que estás tratando de dejarlo. ¿Cuánto dirías que fumabas?
+
+P: Bueno, medio paquete. Medio paquete al día, pero en los últimos tres años he estado tratando de reducirlo. Comencé a fumar cuando tenía 20 años, así que han pasado 30 años.
+
+D: Vale, así que 30 años, vale. Y, ¿estás usando algo para ayudarte a dejar de fumar o lo estás haciendo sin ningún medicamento, o como, ¿has usado algo en el pasado que haya funcionado para ti?
+
+P: Um, no yo, fui a mi doctor y me dijo que lo probara por mi cuenta primero y si estoy luchando con ello para volver, pero lo he estado haciendo muy gradualmente, así que está, va bien.
+
+D: Vale, y eso está muy bien. Y sí, si usted, en absoluto, necesita cualquier recurso para ayudarle a dejar de fumar, es genial que usted está haciendo muy bien, pero si usted necesita hablar más sobre ello o necesita más recursos que podemos proporcionar para usted. Aparte de fumar cigarrillos, ¿usas alguna droga recreativa como marihuana?
+
+P: No.
+
+D: No. ¿Qué tal alcohol?
+
+P: Solo bebo los fines de semana. Tal vez una copa o dos de vino.
+
+D: De acuerdo, y uh sí. Así que esas eran todas las preguntas que tenía para ti hoy. ¿Tiene alguna pregunta o preocupación?
+
+P: No.
+
+D: ¿No?
+
+P: Estaba, supongo que estaba preocupado por la tos, es solo que, estaba preocupado de que pudiera ser COVID.
+
+D: Sí, así que definitivamente en este momento, cualquiera de estos síntomas, como COVID puede tener un montón de diferentes síntomas um, así que definitivamente deberíamos asegurarnos de que nosotros, para comprobar si usted tiene COVID o no y vamos a conseguir un examen de hisopo COVID hecho para usted hoy, y los resultados volverán en 24 a 48 horas. Y en ese tiempo, tendrás que aislarte incluso en tu propia casa. Trate de usar una máscara alrededor de los miembros de su familia, um, tratando de comer por separado y utilizar todos esos métodos, y, y luego después de que la prueba vuelva, usted puede ser contactado por la salud pública si es positivo y tipo de dar más instrucciones sobre qué hacer. Y no necesariamente tiene que ser COVID tampoco, puede ser sólo otro virus uh, como puede ser sólo su resfriado común que ha estado pasando. Así que parece que tus síntomas han mejorado. A menudo, una tos puede ser lo último que se puede ir, puede tomar hasta dos semanas o más para que la tos se alivie, pero parece que no estás teniendo ningún síntoma sistémico como ninguna fiebre o cualquier otra cosa en este momento, así que es, es uh, eso es, eso es bastante bueno.
+
+P: Genial, me alegro.
+
+D: Muy bien, sí.
+
+P: Gracias.
+
+D: De nada. Cuídate.
+
