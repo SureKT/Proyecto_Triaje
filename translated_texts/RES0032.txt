@@ -1,0 +1,179 @@
+D: ¿Qué te trae por aquí hoy?
+
+P: Sí, he tenido esta tos y no va a desaparecer.
+
+D: Vale, ¿y por cuánto tiempo has estado teniendo esta tos?
+
+P: Creo que empezó hace un mes.
+
+D: Vale, ¿y es tos seca o tos húmeda?
+
+P: Estoy hablando de flemas, si a eso te refieres.
+
+D: Sí, ¿así que estás trayendo flema cuando toses?
+
+P: Sí.
+
+D: ¿Y de qué color es?
+
+P: Me parece bastante oscuro y a veces rojo.
+
+D: ¿Crees que hay sangre en tu flema?
+
+P: Sí, la oscuridad parece sangre, así que eso es lo que me asustó y quería que viniera hoy.
+
+D: Vale, y, ¿cuánta flema dirías que estás poniendo como por cada vez que toses?
+
+P: Yo diría que cada vez que tose, estoy trayendo al menos una cucharadita de esputo oscuro.
+
+D: De acuerdo. Y así comenzó hace cuatro semanas. ¿Ha sido una constante como si estuvieras tosiendo constantemente o va y viene?
+
+P: Está ahí casi todo el tiempo, pero especialmente mal por la mañana.
+
+D: De acuerdo. ¿Y recuerdas si algo cambió o hiciste algo diferente, o algo que pasó antes de empezar a tener esta tos?
+
+P: Uh, tuve un resfriado hace unas semanas, pero, era sólo un goteo de nariz y parece que la tos ha estado por ahí.
+
+D: De acuerdo. ¿Y te das cuenta de que ha estado empeorando?
+
+P: Sí, la tos ha estado empeorando.
+
+D: ¿Y has tenido episodios anteriores de esto?
+
+P: He tenido una tos de fumadores ahora durante varios años, pero es realmente este último mes que se ha puesto muy mal y lo tengo todo el día.
+
+D: De acuerdo. ¿Y estás tosiendo todos los días o cada dos días? ¿Con qué frecuencia dirías que estás tosiendo?
+
+P: Uh, todos los días.
+
+D: ¿Diario? Vale, ¿hay algo que haga que tu tos desaparezca o empeore?
+
+P: Nada que realmente lo haga peor o mejor.
+
+D: Vale, ¿y tienes otros síntomas como falta de aliento o moqueo nasal, dolor de garganta, algo así?
+
+P: No se me ocurre nada, sólo esta tos que me ha estado molestando.
+
+D: De acuerdo. ¿Y has viajado fuera del país recientemente?
+
+P: Sí, he estado trabajando en Filipinas durante los últimos tres años.
+
+D: Y, uh, ¿has estado experimentando alguna fiebre o escalofríos o sudores nocturnos?
+
+P: Me sentí como, uh, un poco caliente. Podría tener fiebre ahora, así que sí, sin escalofríos.
+
+D: ¿Qué tal sudores nocturnos?
+
+P: También he estado sudando más por la noche. Sí, tengo que levantarme y cambiarme el pijama a veces.
+
+D: De acuerdo. ¿Y con qué frecuencia ha estado sucediendo esto?
+
+P: Um, estoy cambiando mi pijama y a veces son las sábanas, uh, tal vez un par de veces por semana.
+
+D: Vale, ¿y últimamente te has estado sintiendo más cansado, más fatigado?
+
+P: Sí, mi energía acaba de ser realmente baja. He estado muy fatigado.
+
+D: ¿Y descubres que alguna vez has tenido dolor en el pecho o falta de aliento?
+
+P: A veces tengo un poco de dolor en el lado derecho de mi pecho.
+
+D: Es este dolor, ¿qué tipo de dolor es?
+
+P: Diría que es como una especie de, uh es un tipo de apuñalamiento de, uh, uh dolor y realmente sólo lo noto cuando tomo una respiración profunda.
+
+D: De acuerdo. ¿Y qué tal falta de aliento, has estado experimentando algo así?
+
+P: Sólo me falta el aliento cuando voy a caminar o a mi cuarto piso.
+
+D: ¿Algún cambio en tu piel que hayas notado, como cualquier sarpullido?
+
+P: No hay sarpullidos.
+
+D: ¿Y qué hay de tu sueño? ¿Has estado durmiendo lo suficiente a diario?
+
+P: Solo que sudar por la noche ha sido molesto porque a veces me despierta, pero aparte de ese sueño ha estado bien.
+
+D: Vale, ¿y qué hay de tu apetito?
+
+P: Me siento como si hubiera estado comiendo bien. Dieta regular.
+
+D: ¿Y ha tenido algún cambio significativo de peso recientemente?
+
+P: Sí, he bajado como 15 libras en los últimos meses y realmente no he hecho ningún cambio en mi dieta o ejercicio, así que no lo he estado intentando.
+
+D: De acuerdo. ¿Alguna infección reciente?
+
+P: Sólo el frío que estaba hablando de eso hace unas semanas, y ahí es donde la nariz se fue.
+
+D: Vale, ¿y tú, o aquí o cuando trabajabas en Filipinas, has estado expuesto a alguien con tuberculosis?
+
+P: Creo que algunas de las personas que estaba ayudando de hecho tenían tuberculosis.
+
+D: Vale, ¿y te han hecho una prueba de la piel de tuberculosis?
+
+P: He tenido uno en el pasado, pero realmente no puedo recordar la última vez y fue normal, sin embargo, cuando lo tuve hace unos años.
+
+D: Vale, ¿pero nada desde que volviste?
+
+P: No, la última prueba debe ser hace al menos unos años.
+
+D: De acuerdo. Y en términos de sólo en su entorno, en el trabajo y en casa, ¿está expuesto a cualquier moho o cualquier mascota?
+
+P: No hay mascotas en casa, y tampoco creo que haya moho en la casa.
+
+D: ¿Nota algún tipo de hormigueo o entumecimiento en sus extremidades o alguna debilidad muscular?
+
+P: Yo, quiero decir, estoy muy cansado todo el tiempo y me siento débil de esa manera, pero, sin debilidad muscular.
+
+D: ¿Y le han diagnosticado previamente alguna condición médica como presión arterial alta, diabetes, algo más?
+
+P: Solo una bronquitis crónica con tos de fumadores.
+
+D: De acuerdo. ¿Y toma algún medicamento?
+
+P: Sí, tomo, uh, un inhalador agonista beta, un corticoesteroides inhalado y otro tipo de inhalador antimuscarínico.
+
+D: Vale, ¿y tienes alguna alergia a algún medicamento?
+
+P: Sin alergias.
+
+D: ¿Alguna alergia a cualquier exposición ambiental?
+
+P: No lo creo, no.
+
+D: ¿Alguna hospitalización en el pasado?
+
+P: No.
+
+D: ¿Y alguna cirugía en el pasado?
+
+P: Sin cirugías.
+
+D: ¿Y has estado en contacto con alguien que está enfermo? Sé que usted mencionó en Filipinas, que estuvo expuesto a algunas personas con tuberculosis, pero ¿algo desde entonces?
+
+P: No es que pueda pensar que todo el mundo ha estado sano.
+
+D: Bien, y en su familia, ¿ha habido algún antecedente de cánceres o ataques cardíacos? ¿Algún problema médico?
+
+P: Sin ataques cardíacos, pero mi padre murió de cáncer de pulmón cuando tenía 67 años.
+
+D: ¿Y actualmente vives en un edificio de apartamentos? ¿Hay alguien con quien vivas?
+
+P: Sí, vivo con mi novia en un apartamento.
+
+D: Vale, ¿y trabajas actualmente?
+
+P: Sí, he estado haciendo algunos trabajos de vivienda en las Filipinas, los últimos siete, varios años.
+
+D: De acuerdo. ¿Y bebes actualmente?
+
+P: No, no bebo alcohol.
+
+D: ¿Alguna droga recreativa como la marihuana?
+
+P: No.
+
+D: ¿Alguna y fumas cigarrillos?
+
+P: Sí, fumo cigarrillos, he fumado la mayor parte de mi vida, similar a mi padre, probablemente de 1 a 2 paquetes por día.

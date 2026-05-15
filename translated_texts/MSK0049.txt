@@ -1,0 +1,233 @@
+D: ¿En qué puedo ayudarle?
+
+P: Estoy aquí porque he estado teniendo un poco de dolor en mi rodilla izquierda durante los últimos dos meses y no está mejorando. Se siente rígido y um simplemente no he sido capaz de uh, ya sabes, utilizarlo tan bien, así como lo estaba usando antes um y es sólo limitado algunas de mis actividades diarias.
+
+D: Vale, y dónde está, así que, el dolor está en tu rodilla izquierda. ¿Dónde sientes este dolor específicamente? ¿Está en la parte delantera de la rodilla, los lados o la espalda? ¿Podría señalarlo?
+
+P: Se siente como si estuviera sobre todo en el frente.
+
+D: De acuerdo.
+
+P: Como en el fondo de esa um rótula.
+
+D: Vale, ¿y dijiste que el dolor empezó hace dos meses?
+
+P: Sí, bueno, siempre ha sido un poco tierno. Pero ahora es más doloroso.
+
+D: De acuerdo. Y entonces, ¿ha ido empeorando?
+
+P: Yo diría que sí, lentamente empeorando.
+
+D: De acuerdo. Y cuando tienes dolor en la rodilla izquierda, ¿cuánto dura normalmente?
+
+P: Usualmente duele mientras lo hago, mientras lo muevo, o justo después, pero si me descanso, el dolor eventualmente desaparece. Pero cuando me levanto por la mañana, ese porro se siente rígido. Y luego cuando empiezo a usarlo, usándolo más, es menos rígido, pero se vuelve doloroso.
+
+D: Vale, ¿entonces tienes algo de rigidez por la mañana?
+
+P: Sí.
+
+D: Bien, ¿y cuánto tiempo dura? ¿Como 30 minutos, 60 minutos o más?
+
+P: ¿La rigidez o el dolor?
+
+D: Sí, la rigidez.
+
+P: La rigidez desaparece en unos 15 a 30 minutos.
+
+D: Vale, ¿y cómo describirías el dolor, um en términos de su carácter?
+
+P: Se siente, se siente uh, supongo que la mayoría de las veces es como un tipo de dolor aburrido, pero puede ser agudo.
+
+D: Vale, ¿y hay algo que empeore el dolor?
+
+P: Sólo que con mucha actividad empeora.
+
+D: ¿Y sientes que irradia en cualquier otro lugar?
+
+P: No.
+
+D: Vale, y cómo describirías la gravedad de tu dolor en una escala de 10 siendo el peor dolor que has sentido, y 1 siendo un tipo de dolor muy mínimo.
+
+P: Uhm, yo le daría tal vez uh 7.
+
+D: De acuerdo. ¿Y has tenido alguna lesión en la rodilla antes?
+
+P: No, no que se me ocurra.
+
+D: No, está bien. ¿Y has estado teniendo alguna pérdida de peso recientemente?
+
+P: No, aumento de peso.
+
+D: Aumento de peso, OK. ¿Cuánto peso has ganado en los últimos uh varios meses?
+
+P: En los últimos seis meses, diría que he ganado unos 20 libras.
+
+D: OK, ¿has tenido cambios en tu dieta y o ejercicio?
+
+P: Supongo que he estado comiendo un poco más, pero no hay cambios en el ejercicio.
+
+D: De acuerdo. ¿Has tenido fiebre o escalofríos?
+
+P: No.
+
+D: Vale, ¿qué tal si sudamos de noche?
+
+P: Nada de sudores nocturnos.
+
+D: Vale, ¿has tenido algún cambio en tu visión o audición?
+
+P: No.
+
+D: De acuerdo. ¿Has tenido algún cambio en tu... sentido del olfato o sentido del gusto?
+
+P: No.
+
+D: Vale, ¿has tenido un moqueo nasal o un dolor de garganta?
+
+P: No.
+
+D: ¿Ha tenido tos o alguna dificultad para respirar?
+
+P: No hay nada de eso.
+
+D: Vale, ¿qué tal silbidos?
+
+P: Sin sibilancias.
+
+D: Muy bien, ¿algún dolor en el pecho o palpitaciones en el corazón?
+
+P: No.
+
+D: Muy bien, ¿has tenido alguna aturdimiento o mareos?
+
+P: No.
+
+D: Muy bien, ¿y alguna confusión o pérdida de memoria?
+
+P: No.
+
+D: Muy bien, ¿y has tenido algún cambio en el apetito, como una pérdida de apetito?
+
+P: Uh no, yo, en todo caso, tuve una ganancia en el apetito.
+
+D: Muy bien, ¿has tenido náusea o vómitos?
+
+P: No.
+
+D: ¿Qué tal algún dolor abdominal?
+
+P: No.
+
+D: Muy bien. ¿Y qué tal algún problema urinario?
+
+P: No hay problemas urinarios.
+
+D: ¿Algún cambio en tus hábitos intestinales, como diarrea o sangre en las heces?
+
+P: No.
+
+D: Muy bien, ¿y has tenido sarpullidos o cambios en la piel o cambios en el cabello o las uñas?
+
+P: No, nada de eso.
+
+D: Bien, ¿y algún otro dolor en las articulaciones? ¿O tienes o tienes alguna inflamación articular?
+
+P: Tengo un poco de hinchazón en las articulaciones. Es que no es muy visible, pero parece un poco más hinchada que mi izquierda, lo siento, que mi rodilla derecha.
+
+D: De acuerdo. ¿Así que sólo un poco de hinchazón en la rodilla izquierda, pero no hay otras articulaciones?
+
+P: No.
+
+D: Vale, ¿y te han diagnosticado alguna afección médica antes?
+
+P: Tengo diabetes, presión arterial alta y colesterol alto. Y tengo sobrepeso.
+
+D: Vale, ¿tomas algún medicamento para alguna de esas condiciones?
+
+P: Estoy tomando insulina para la diabetes. Estoy en Ramipril para la presión arterial alta y también estoy en una estatina para el colesterol.
+
+D: Vale, ¿y tienes alguna alergia a los medicamentos?
+
+P: No.
+
+D: Muy bien, y uh, ¿has tenido alguna cirugía en el pasado?
+
+P: No.
+
+D: Muy bien, ¿y tus vacunas están al día?
+
+P: Creo que sí.
+
+D: Muy bien, ¿y podrías contarme un poco sobre tu situación actual, como con quién vives y dónde estás?
+
+P: Vivo con mi marido en una casa del centro.
+
+D: Vale, ¿y estás trabajando actualmente?
+
+P: No, me retiré temprano.
+
+D: Vale, ¿bebes alcohol?
+
+P: Tomaré una copa de vino cada noche.
+
+D: Vale, ¿unas 7 copas por semana?
+
+P: Sí.
+
+D: Vale, ¿y fumas cigarrillos?
+
+P: No, no lo sé.
+
+D: Muy bien, ¿qué tal el uso de cualquier droga recreativa como el cannabis o uh o cualquier otra cosa?
+
+P: No.
+
+D: Muy bien. ¿Y hay alguna, eh, como musculoesquelética o como condiciones autoinmunes que corren en la familia?
+
+P: Uhm no hay problemas musculoesqueléticos uh que, sé que la diabetes funciona en la familia.
+
+D: Vale, vale, así que eso era todo lo que quería preguntar sobre la historia. Así que a continuación sólo quería hacer un examen físico, y sólo mirando la rodilla izquierda, ¿estás viendo algún um hinchazón o enrojecimiento uh en la rodilla?
+
+P: Parece un poco más hinchado que mi rodilla derecha.
+
+D: Vale, ¿pero estás viendo algo de enrojecimiento?
+
+P: Sin enrojecimiento.
+
+D: Vale, ¿y hay algún cambio de temperatura? ¿La rodilla se siente caliente o caliente?
+
+P: No.
+
+D: Vale, y si presionas a lo largo de la línea de las articulaciones, ¿sientes algún dolor?
+
+P: Uhm sí, se siente un poco tierno.
+
+D: De acuerdo. ¿Y qué tal el dolor por cualquiera de los músculos, como los músculos del muslo o los tendones o los músculos de la pantorrilla?
+
+P: No, están bien.
+
+D: Vale, ¿y qué tal algún dolor por la rótula o la rótula?
+
+P: Eso es un poco más doloroso.
+
+D: Vale, ¿y eres capaz de doblar tu rodilla... como flexionarla, enderezarla?
+
+P: Puedo hacer eso, es doloroso cuando lo hago.
+
+D: De acuerdo. Um y uh y entonces, ¿qué tal si caminas, ¿tienes una marcha antálgica o o una cojera?
+
+P: Uhm no, no, bueno, supongo que estoy poniendo más peso en mi rodilla derecha así que podría parecer a algunas personas que tengo una ligera cojera.
+
+D: De acuerdo. ¿Y algún problema con mover la cadera o el tobillo?
+
+P: Uh no.
+
+D: Bueno, creo que eso era todo lo que quería preguntar y comprobar hoy. ¿Tienes alguna pregunta?
+
+P: Um sí, así que um cómo usted, ¿cómo puedo tratar mi rodilla?
+
+D: Sí, por supuesto, por lo que suena como um esto podría ser más probable osteoartritis um de la rodilla izquierda, que uh es algo que sería mejor tratar con uh tratando de mantenerse tan activo como puedas, pero también el ritmo de sus actividades también, por lo que no estás um haciendo tanto que al día siguiente estás en una cantidad significativa de dolor, pero es importante recordar que um actividad ayudará a um con mantener su rodilla móvil, pero también um realmente ayudar a reducir el dolor también, y también uh podría utilizar Tylenol um como un medicamento para ella. Yo no recomendaría ibuprofeno o AINEs a largo plazo, aunque podrías tomarlos si estás teniendo un brote agudo de tu dolor. Um y luego también como agentes tópicos como um como Voltaren o algo así que usted podría poner en su rodilla y um si es realmente malo y sigue um en, podemos considerar algo como una inyección de esteroides también.
+
+P: Vale, sí, eso suena bien. Gracias.
+
+D: Muy bien, gracias.

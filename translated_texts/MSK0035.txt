@@ -1,0 +1,259 @@
+D: ¿En qué puedo ayudarle?
+
+P: Estaba esquiando ayer y me caí del brazo y ahora son mis manos muy dolorosas y se ve hinchada y magullada. Así que pensé que debía entrar y comprobarlo.
+
+D: Sí, ciertamente bien y así te caíste mientras esquiabas, así que usaste tu mano para sujetar la caída, como con tu mano con la muñeca extendida hacia atrás?
+
+P: Sí. Sí, así que sí tenía el brazo extendido y me caí justo sobre él.
+
+D: Bien, ¿y sintió dolor de inmediato?
+
+P: Sí.
+
+D: Vale, ¿y durante la caída lesionaste alguna otra parte de tu cuerpo como tu codo o hombro o incluso tu cabeza?
+
+P: No, no lo creo. No tuve, no tengo ningún dolor en ningún otro lugar.
+
+D: De acuerdo. Uhm y como si fueras capaz de mover tu muñeca actualmente?
+
+P: Puedo, pero es muy doloroso.
+
+D: Vale, y entonces, ¿cuándo sucedió esto, fue ayer?
+
+P: Ah, sí, fue ayer.
+
+D: Vale, ¿y cómo describirías el dolor, es un dolor agudo, dolor sordo, dolor?
+
+P: Es bastante agudo.
+
+D: Sharp, OK ¿y sientes el dolor irradiar en cualquier otro lugar como abajo en tu mano o arriba en tu brazo?
+
+P: Uhm no es bastante local el dolor. Sí, es bonito, está justo debajo de la zona del pulgar y sólo un poco en mi muñeca y en el lado derecho.
+
+D: De acuerdo. ¿Hay algo que hayas hecho que lo haya hecho mejor? ¿Has probado algún medicamento o helado o cremas tópicas?
+
+P: He estado tomando ibuprofeno para el dolor e intento no moverlo demasiado y eso ha estado ayudando un poco.
+
+D: De acuerdo. ¿Y el dolor es constante o intermitente?
+
+P: Es constante.
+
+D: De acuerdo. Y, ¿has hecho algo que haya empeorado el dolor?
+
+P: Um, supongo que moverlo.
+
+D: De acuerdo. ¿Y cuál es la gravedad del dolor en una escala de 1 a 10, siendo 10 el peor dolor que has sentido?
+
+P: Le doy como cinco o seis.
+
+D: Vale, ¿has tenido una lesión como esta en tu muñeca o en tu mano antes?
+
+P: No.
+
+D: Muy bien, ¿y tienes algún síntoma neurológico, como entumecimiento, hormigueo, o pérdida sensorial sobre cualquier área?
+
+P: No.
+
+D: Bien, ¿y qué tal debilidad muscular?
+
+P: No.
+
+D: Muy bien. ¿Y has estado teniendo fiebre o escalofríos?
+
+P: Nada de eso.
+
+D: ¿Has estado teniendo dolores de cabeza?
+
+P: No.
+
+D: ¿Qué hay de cualquier cambio sensorial como cambios en su visión o audición o pérdida del olfato o pérdida del gusto?
+
+P: No, nada de eso.
+
+D: Vale, ¿has tenido un resfriado o te has sentido congestionado?
+
+P: No.
+
+D: ¿Ha tenido dolor de garganta o tos?
+
+P: No.
+
+D: ¿Has tenido alguna dificultad para respirar o sibilancias?
+
+P: No.
+
+D: ¿Has tenido algún dolor en el pecho?
+
+P: No.
+
+D: ¿Has tenido palpitaciones en el corazón o te sientes como si tu corazón estuviera acelerado?
+
+P: Uh nop.
+
+D: ¿Ha tenido mareos o desmayos?
+
+P: No.
+
+D: Vale, sí, ¿y entonces perdiste el conocimiento durante el otoño?
+
+P: No.
+
+D: De acuerdo. ¿Y has tenido náuseas o vómitos?
+
+P: No.
+
+D: ¿Algún dolor abdominal?
+
+P: No.
+
+D: ¿Algún cambio en sus hábitos intestinales como diarrea, estreñimiento o sangre en las heces?
+
+P: Uhm nop.
+
+D: De acuerdo. ¿Y qué hay de cualquier problema urinario como dolor o frecuencia?
+
+P: No hay nada de eso.
+
+D: Muy bien y, ¿ha tenido dolores musculares o corporales o como cualquier otro dolor musculoesquelético además de la muñeca?
+
+P: No.
+
+D: De acuerdo. ¿Y has tenido alguna pérdida de apetito o fatiga?
+
+P: No.
+
+D: Muy bien, ¿y has tenido algún sudor nocturno?
+
+P: No.
+
+D: ¿Y ha tenido alguna pérdida inesperada de peso en los últimos meses?
+
+P: Uhm no.
+
+D: De acuerdo. ¿Y se le ha diagnosticado alguna enfermedad en el pasado o ve a un médico regularmente por alguna razón?
+
+P: Uh no.
+
+D: Vale, entonces, ¿tomas algún medicamento, recetado regularmente o sin receta?
+
+P: Uh nop.
+
+D: Muy bien, ¿y has tenido alguna hospitalización o cirugía en el pasado?
+
+P: No.
+
+D: De acuerdo. ¿Y tienes alguna alergia?
+
+P: No.
+
+D: Muy bien, ¿y sus vacunas están al día?
+
+P: Creo que sí, creo que solo necesito coger el Gardasil.
+
+D: De acuerdo. ¿Has conseguido la primera dosis de eso todavía, o todavía estás esperando para conseguirlo?
+
+P: Todavía estoy esperando para conseguirlo.
+
+D: De acuerdo. ¿Y podrías contarme un poco sobre tu situación de vida actual como con quién vives y dónde estás?
+
+P: Vivo sola en un apartamento en el centro.
+
+D: ¿Estás en la escuela o estás trabajando ahora mismo?
+
+P: Estoy en la escuela.
+
+D: Vale, ¿y has estado cerca de alguien que ha estado enfermo?
+
+P: No, nadie ha estado enfermo a mi alrededor. Realmente no he estado saliendo de mi casa.
+
+D: Veo que está bien. ¿Y has viajado a alguna parte recientemente?
+
+P: Uh nop.
+
+D: Muy bien. Y sólo mantenerse activo, lo que es bueno. ¿Haces otras actividades además del esquí?
+
+P: Me gusta hacer snowboard en invierno, acampar, jugar al tenis y al voleibol.
+
+D: Vale, genial, sí, suena divertido. ¿Y como fumas cigarrillos?
+
+P: No, no lo sé.
+
+D: Vale, ¿bebes alcohol?
+
+P: Tomaré una cerveza de vez en cuando.
+
+D: Vale, ¿cuántas veces es de vez en cuando, como cuántas bebidas por semana?
+
+P: Oh. No tantos, tal vez tenga como dos cada dos semanas.
+
+D: ¿Veo bien y usted usa cannabis o algún producto de cannabis?
+
+P: Voy a tomar un comestible de vez en cuando también, como tal vez una vez al mes.
+
+D: Bien, ¿y qué hay del uso de otras drogas recreativas?
+
+P: No.
+
+D: Muy bien, y en la familia, ¿hay algún historial de problemas neurológicos o musculoesqueléticos?
+
+P: No.
+
+D: ¿Qué tal cualquier condición autoinmune como el hipotiroidismo?
+
+P: No.
+
+D: OK así que a continuación te pediré que eches un vistazo a la muñeca para la porción del examen físico. ¿Estás viendo alguna hinchazón o enrojecimiento?
+
+P: No, no veo nada de eso.
+
+D: Bien, y si tocas las articulaciones alrededor de la muñeca en ambos lados, es la muñeca derecha, ¿se siente caliente?
+
+P: No, en realidad. Sí, así es.
+
+D: De acuerdo. Muy bien, pero no hay hinchazón allí.
+
+P Uhm. Tal vez hay un poco de hinchazón en comparación con mi izquierda.
+
+D: Vale, ¿y estás notando alguna atrofia muscular o alguna deformidad en la muñeca?
+
+P: Supongo que hay un pequeño moretón.
+
+D: Vale, ¿y hay alguna protuberancia si pones tu dedo encima de los bordes óseos?
+
+P: Uhm no hay protuberancias pero sólo un tipo general de hinchazón en la zona que hace que parezca elevada.
+
+D: Muy bien, y si palpar o presionar en algunas áreas de la muñeca ¿hay alguna zona que usted está sintiendo dolor como en la cabeza radial distal, el cúbito distal, uh o cualquier área de la muñeca?
+
+P: Uhm hay un poco de dolor en el radio distal, sin duda.
+
+D: Vale, vale, vale y esto está en la parte posterior de la mano o en el lado de la palma.
+
+P: Está en el lado de la palma.
+
+D: De acuerdo. ¿Sientes dolor si empujas la caja de cosas anatómicas, así que está en la base del pulgar en sí, la base del pulgar en la parte posterior de tu mano?
+
+P: Base del pulgar, um no, no siento ningún dolor allí.
+
+D: De acuerdo. Y luego. OK, así que no hay dolor en el snuffbox anatómico dorsal y en términos de rango de movimiento ¿eres capaz de flexionar y extender la muñeca?
+
+P: Lo estoy.
+
+D: Vale, y entonces, ¿qué tal si lo mueves de lado a lado, desviándolo?
+
+P: Puedo hacer todas estas cosas, me duele mucho.
+
+D: Bien, ¿puedes hacer un puño?
+
+P: Sí.
+
+D: Muy bien, ¿y tienes algún problema en el codo o eres capaz de flexionar y extender el codo OK?
+
+P: Puedo flexionar y extender bien.
+
+D: Bien, creo que eso fue todo lo que quería comprobar hoy. ¿Tienes alguna pregunta o preocupación?
+
+P: Uhm no, ¿solo necesito algún tipo de cirugía para esto, y necesito un Rayo X? ¿Cómo trato de tratar esto?
+
+D: Sí, así que creo que yo, X-Ray sería el primer paso aquí porque de lo que estás describiendo, y particularmente con el mecanismo de la lesión y donde estás sintiendo dolor puede ser una causa común de una fractura radial radial distal que es uno de los huesos del antebrazo. Así que sí, necesitaremos una radiografía para ver si hay una fractura radial distal. Y no suena así en este momento, pero otra cosa que buscará en el Rayo X de las manos también es una fractura de escafoides para asegurarse de que está bien, pero no tenía ningún dolor en el área del escafoides, que es tranquilizador, pero todavía queremos imaginar y asegurarnos, aunque lo más probable sería la fractura radial distal y si ese es el caso, entonces habrá como que tendremos que ir a un yeso por un período de tiempo. Y dependiendo de la cantidad de compromiso articular que hay, podría haber la posibilidad de una cirugía, pero no puede comentar demasiado sobre eso todavía. Vamos a tener que obtener las imágenes primero.
+
+P: Vale, vale, eso suena bien. Gracias.

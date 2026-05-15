@@ -1,0 +1,280 @@
+D: Me preguntaba si podríamos empezar con usted diciéndonos qué le trajo aquí.
+
+P: Claro, he tenido este terrible dolor de cabeza durante los últimos cuatro días. No parece estar mejorando, y me siento caliente como si tuviera fiebre. He estado tosiendo mucho, así que me preocupa tener COVID, así que estoy aquí.
+
+D: De acuerdo. Así que empezaré con los dolores de cabeza. ¿Cuándo empezó exactamente eso?
+
+P: El dolor de cabeza empezó, así que la tos empezó hace cuatro días. El dolor de cabeza comenzó poco después, así que diría que más tarde durante ese día y luego la fiebre que he tenido para, la fiebre que creo que he tenido durante los últimos dos días. Aunque no me he tomado la temperatura.
+
+D: De acuerdo. Entonces, la tos empezó hace cuatro días. ¿La tos ha mejorado, empeorado o se ha mantenido igual?
+
+P: La tos se ha mantenido igual.
+
+D: Vale, ¿traes algo de flema o esputo con la tos?
+
+P: Um, no es realmente flema, pero a veces toso, como trozos de como. Sabes pequeñas partes que parecen sangre o algo así.
+
+D: Vale, ¿así que estás viendo algo como rojo cuando estás tosiendo?
+
+P: Mmmm
+
+D: Vale, ¿y cuánto de esto estás viendo como, es como una cantidad de cucharadita o más?
+
+P: Oh, es muy poco. Es como un poco más grande que la punta de un lápiz.
+
+D: Oh, OK, ¿estás, OK, estás viendo esto como una especie de pañuelos después de algo así?
+
+P: Sí.
+
+D: Vale, ¿y algún desencadenante para la tos que puedas pensar?
+
+P: No, parece estar ahí todo el día. Um, realmente no se pone mejor conmigo tratando de descansar o no.
+
+D: Vale, ¿y la tos también está ahí por la noche?
+
+P: Sí, definitivamente está ahí por la noche.
+
+D: ¿Está interfiriendo con el sueño?
+
+P: Ah, sí, no he estado durmiendo bien.
+
+D: Vale, ¿y con tu tos has tenido alguna dificultad para respirar?
+
+P: Um, no.
+
+D: Muy bien, y ahora, ¿qué tal sibilancias?
+
+P: Sin sibilancias.
+
+D: De acuerdo. Y con este dolor de cabeza cuando vino por primera vez, ¿experimentaste un dolor de cabeza como el peor de tu vida, o una sensación de palmaditas de Trueno?
+
+P: No, no es tan malo, pero parece estar ahí todo el día.
+
+D: Vale, ¿has tenido dolores de cabeza como este antes?
+
+P: No, nunca he tenido dolores de cabeza en el pasado.
+
+D: Vale, ¿el dolor de cabeza está asociado con alguna náusea o vómito?
+
+P: No.
+
+D: Vale, ¿y el dolor de cabeza es peor en la mañana cuando te levantas por primera vez?
+
+P: No.
+
+D: Vale, ¿y tiene que empeorar si te acuestas?
+
+P: No.
+
+D: Vale, ¿y este dolor de cabeza ha ido empeorando, manteniéndose igual, mejorando?
+
+P: Es casi lo mismo.
+
+D: De acuerdo. Um y, um y no has revisado la temperatura todavía, dijiste, ¿pero te sentiste caliente?
+
+P: Sí, así es.
+
+D: ¿Algún otro síntoma que hayas estado experimentando?
+
+P: No que se me ocurra.
+
+D: Vale, sólo hay algunos otros que quería preguntar sobre ser exhaustivos. ¿Ha tenido algún dolor en los ojos o en los oídos?
+
+P: No.
+
+D: ¿Qué tal una descarga de tus ojos u oídos?
+
+P: No, nada de eso.
+
+D: Muy bien, ¿has tenido algún cambio en tu sentido del olfato o en tu sentido del gusto?
+
+P: No.
+
+D: Muy bien, ¿y has tenido un moqueo en la nariz?
+
+P: Um no.
+
+D: ¿Y qué tal un dolor de garganta?
+
+P: No.
+
+D: Vale, y, ¿has tenido escalofríos?
+
+P: No hay escalofríos.
+
+D: ¿Qué tal sudores nocturnos?
+
+P: No hay nada de eso.
+
+D: Ya veo, ¿de acuerdo y en los últimos meses ha cambiado tu peso?
+
+P: Ah no, no es que me haya dado cuenta.
+
+D: Vale, ¿te has estado sintiendo cansado o fatigado?
+
+P: No.
+
+D: Vale, ¿y has tenido algún dolor en el pecho?
+
+P: Um no.
+
+D: Muy bien, ¿y qué tal palpitaciones en el corazón?
+
+P: Ninguno.
+
+D: Muy bien, en cualquier episodio de sentirse realmente mareado o mareado.
+
+P: No.
+
+D: Vale, ¿y qué tal si te desmayas o sientes como si pudieras desmayarte?
+
+P: No, nada de eso.
+
+D: De acuerdo. ¿Y has tenido algún dolor abdominal?
+
+P: No, no hay dolor abdominal.
+
+D: ¿Alguna diarrea o estreñimiento?
+
+P: No.
+
+D: ¿Qué tal cualquier micción dolorosa o sentimiento como si necesitara orinar con mucha frecuencia?
+
+P: Ah, no, nada de eso.
+
+D: Vale, ¿y has tenido algún cambio en la piel como sarpullidos o algo así?
+
+P: No.
+
+D: Vale, ¿y qué tal si te duelen los músculos o las articulaciones o en general como dolores corporales?
+
+P: Mmm no, no es que yo no. No que yo haya notado, no.
+
+D: Vale, ¿hay algo con respecto a tu salud pasada para lo que veas a un médico regularmente?
+
+P: Um No. Ah, en realidad creo que en un momento, um, estaba preocupado por algo llamado hipercolesterolemia familiar porque corría en la familia. Pero creo que esos resultados eran normales.
+
+D: Vale, entonces, ¿tomas una medicación de estatinas entonces?
+
+P: Sí, tomo una dosis baja de estatina.
+
+D: Vale, ¿y cuándo fue tu último examen de lípidos?
+
+P: Creo que fue hace dos años.
+
+D: Ya veo, ¿y recuerdas si el LDL era normal en ese momento?
+
+P: Ah, sí, era normal.
+
+D: Vale, pero desde el, fue hace unos dos años, podría valer la pena hoy sólo para comprobar también un panel de lípidos sólo para ser seguro, pero eso será algo que podemos hablar más al final, así que si eso está bien.
+
+P: Claro, sí, eso sería genial.
+
+D: Bien, ¿y alguna otra condición médica?
+
+P: No.
+
+D: De acuerdo. ¿Has tenido alguna cirugía antes?
+
+P: Cesárea.
+
+D: ¿Cuántos hijos tienes?
+
+P: Ah, sólo uno.
+
+D: Vale, ¿y hubo alguna complicación con la cesárea?
+
+P: No hay complicaciones.
+
+D: Vale, ¿alguna razón para hospitalizarte?
+
+P: Nop.
+
+D: Vale, ¿alguna alergia a los medicamentos?
+
+P: No.
+
+D: Muy bien, ¿algún medicamento aparte de la estatina que tomes?
+
+P: Nop.
+
+D: Bien, y en cuanto a su historia familiar, ¿ha habido gente que haya tenido ataques al corazón tempranos o accidentes cerebrovasculares en la familia?
+
+P: No.
+
+D: Vale, pero tienes hipercolesterolemia familiar, ¿tienes miembros de la familia que tengan eso?
+
+P: Sí, está bien, así que mis tías lo tuvieron, así como mi madre.
+
+D: De acuerdo. ¿Y ha habido alguna enfermedad pulmonar en la familia?
+
+P: Um, no hay condiciones pulmonares.
+
+D: ¿Qué tal cualquier malignidad o cáncer?
+
+P: Había cáncer de colon en el lado de mi padre de la familia, pero no estoy muy seguro de quién lo tenía.
+
+D: Vale, ¿has oído hablar de alguien con cáncer de mama?
+
+P: Cáncer de mama no.
+
+D: Muy bien, ¿y el cáncer de ovario?
+
+P: No hay cáncer de ovario.
+
+D: De acuerdo. Y a continuación quería hacer algunas preguntas sobre sus hábitos personales y de estilo de vida, pero primero, ¿podrías contarme un poco sobre tu situación de vida ahora mismo?
+
+P: Vivo con mi marido y mi único hijo.
+
+D: Vale, y lo siento, ¿cuántos años tiene tu hijo?
+
+P: Tiene 10 años.
+
+D: Vale, ¿alguien en la casa ha estado enfermo recientemente?
+
+P: No.
+
+D: Vale, ¿y qué tal si hay alguien en el trabajo?
+
+P: En el trabajo no. Nadie ha estado enfermo.
+
+D: Vale, ¿has viajado a alguna parte últimamente?
+
+P: Fuimos hasta que sólo fuimos a um como un, fuimos en un sendero de senderismo que estaba fuera de la ciudad recientemente y había mucha gente allí y y no estábamos usando máscaras, pero parecía que estábamos manteniendo una buena distancia entre nosotros para que esa fuera mi única preocupación.
+
+D: De acuerdo. ¿Estaba la gente muy cerca el uno del otro en los senderos cuando caminaba en la caminata?
+
+P: Ahh no como todo el tiempo, pero habría momentos en que conoces a la gente como que te cepilla para tratar de adelantarte o algo así.
+
+D: Veo que está bien. ¿Y fumas cigarrillos?
+
+P: No.
+
+D: ¿Fumas marihuana?
+
+P: Um no.
+
+D: Vale, ¿y bebes alcohol?
+
+P: Yo no.
+
+D: ¿Usas alguna otra droga recreativa?
+
+P: Um no.
+
+D: De acuerdo, eso era todo lo que quería preguntar. Oh, en realidad una cosa que quería, me olvidé de preguntar era, ¿tienes rigidez en el cuello?
+
+P: No, no es que me haya dado cuenta.
+
+D: De acuerdo. Así que esa era la última pregunta que quería hacer. ¿Había algo que quisieras decirme que tal vez me olvidé?
+
+P: No, creo que lo cubriste todo. Sólo me pregunto, ¿y tú? ¿Crees que es COVID o algo más?
+
+D: Bueno, es definitivamente una posibilidad con los síntomas que estás teniendo, ya que pueden ser tan no específicos para covid que puede ser un montón de síntomas que se superponen. Así que con el dolor de cabeza lo que suena como que podrías tener fiebre y y esta tos que suena como que es bastante malo si estás trayendo algo de sangre, suena como si hubieras irritado algunos de los bronquiolos con la tos. Así que vamos a comprobar para eso y comprobar un hisopo nasal PCR para COVID. No lo soy, pero también haremos pruebas para otras enfermedades virales y bacterianas también. No suena como si tuvieras meningitis ahora solo basándote en los síntomas en los que no tienes rigidez en el cuello, pero ciertamente será algo que tendremos en mente mientras estamos haciendo nuestras investigaciones.
+
+P: Muy bien, gracias.
+
+D: De nada. Empezaremos con eso.
+
+P: Vale, suena genial.
+

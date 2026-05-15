@@ -1,0 +1,185 @@
+D: ¿Puedes contarme un poco sobre lo que te trae por aquí hoy?
+
+P: Sí, tengo tos.
+
+D: Vale, ¿y qué tipo de tos es como una tos seca? ¿O es más como tos productiva?
+
+P: Parece que siempre traigo algo de pólvora cuando tose.
+
+D: Vale, ¿y de qué color es esta pinza?
+
+P: Es verde, a veces amarillento.
+
+D: Vale, ¿y has notado algún tipo de sangre en la tos?
+
+P: Bueno, nada de sangre.
+
+D: No, vale, ¿y cuánto de la pólvora o el esputo dirías que traes todos los días?
+
+P: Un par de kleenexes. Usaré, pero no tanto.
+
+D: De acuerdo. ¿Y cuándo empezó esto?
+
+P: Es muy difícil decir que he tenido tos en los últimos años, pero siento que está empeorando.
+
+D: Vale, ¿y tu tos es constante o va y viene?
+
+P: Toso todo el día, pero me parece que es peor por la mañana.
+
+D: Vale, ¿y hay algo que te traiga tos?
+
+P: No se me ocurre nada que desencadene la tos, pero peor cuando me levanto por la mañana.
+
+D: De acuerdo. Y mencionaste que has estado teniendo esta tos en los últimos años. ¿Ha ido empeorando?
+
+P: Sí, diría que la tos está empeorando los últimos años. Lentamente, sin embargo.
+
+D: Vale, ¿y has tenido episodios anteriores de esta tos con esputo como pólvora, material puntiagudo antes?
+
+P: Sí, he estado teniendo esto en curso durante los últimos años.
+
+D: ¿Hay algo que hagas o hayas intentado que haya hecho que tu tos mejore o empeore?
+
+P: Si respiro profundamente, entonces parece empeorar la tos y uh nada realmente ayuda a que la tos desaparezca.
+
+D: Vale, y aparte de eso, ¿has estado teniendo otros síntomas, como moqueo nasal, dolor de garganta, dificultad para respirar, algo así?
+
+P: Uh, no.
+
+D: Vale, ¿y has viajado recientemente fuera del país?
+
+P: No he viajado a ninguna parte.
+
+D: Vale, ¿y has notado algún otro síntoma como fiebres o escalofríos?
+
+P: Sin fiebre y sin escalofríos.
+
+D: Vale, ¿algún sudor nocturno?
+
+P: No hay sudores nocturnos.
+
+D: Vale, ¿un aumento de la fatiga o simplemente sentirse cansado en general?
+
+P: Sí, estos últimos meses por energía han sido bajos. Me he estado sintiendo mucho más cansado de lo habitual.
+
+D: Vale, ¿y has notado algún tipo de hinchazón en tus manos, pies, tobillos?
+
+P: Creo que siempre están un poco hinchados, pero podría haber ganado unas cuantas libras a lo largo de los años.
+
+D: OK y, ¿has estado teniendo palpitaciones como un corazón acelerado o algún dolor en el pecho?
+
+P: Um, sin dolor en el pecho.
+
+D: Bien, y ¿qué tal falta de aire?
+
+P: Um. Sólo tengo problemas para respirar si camino unas cuantas cuadras o subo unos cuantos tramos de escaleras a mi apartamento.
+
+D: De acuerdo. ¿Has estado teniendo algún tipo de problemas urinarios?
+
+P: Ummm sólo de noche parece que tengo que levantarme mucho para usar el baño.
+
+D: Vale, ¿y qué hay de tus deposiciones, estreñimiento o diarrea?
+
+P: No hay problemas intestinales.
+
+D: Bien, ¿y has estado durmiendo lo suficiente?
+
+P: Sí, diría o lo siento, no, mi sueño ha sido pobre.
+
+D: Bien, ¿y descubres que te despiertas durante la noche para respirar o algo así?
+
+P: No, no he tenido que despertar en medio de la noche sin aliento ni nada por el estilo.
+
+D: Vale, ¿y alguna vez tienes que usar varias almohadas?
+
+P: No, solo usé una almohada.
+
+D: De acuerdo. ¿Y has notado que has tenido alguna pérdida de peso significativa o aumento de peso en los últimos meses?
+
+P: Quizás perdí 5 libras en los últimos meses. No estaba ni siquiera, no he estado tratando de perder peso pero no me duele, aunque como he ganado unas cuantas libras con los años, así que no me importa.
+
+D: ¿Y cómo ha sido tu apetito?
+
+P: Uh, el apetito ha sido bueno, siento que he estado comiendo normalmente.
+
+D: De acuerdo. ¿Y has tenido alguna infección reciente?
+
+P: No hay infecciones recientes.
+
+D: Vale, y creo que ya lo mencioné antes, pero ¿alguien conoce algún dolor de garganta por moqueo nasal, alguno de esos síntomas virales?
+
+P: Um, sin moqueo nasal, sin dolor de garganta, me he estado sintiendo bien.
+
+D: Impresionante, ¿y has estado expuesto a alguien con tuberculosis en el pasado?
+
+P: Um no, en realidad me hice una prueba de tuberculosis para el trabajo y era normal.
+
+D: De acuerdo. ¿Y te han diagnosticado alguna condición médica, como presión arterial alta, diabetes?
+
+P: Mi presión arterial ha sido alta y eso fue diagnosticado en los últimos años.
+
+D: De acuerdo. ¿Y toma algún medicamento para su presión arterial?
+
+P: Sí, tomo Lisinopril.
+
+D: ¿Y tienes alguna alergia a algún medicamento?
+
+P: No se me ocurre nada.
+
+D: Vale, ¿y has estado hospitalizada alguna vez antes?
+
+P: Uh, no.
+
+D: ¿Y tienes algún contacto enfermo cerca de alguien que haya estado enfermo a tu alrededor recientemente?
+
+P: No hay contactos enfermos. Y lo siento por las hospitalizaciones tuve una cesárea para el nacimiento de mi hija y estuve en el hospital por unos días para eso.
+
+D: Vale, ¿pero nada más?
+
+P: No.
+
+D: ¿Y has tenido otras cirugías aparte de tu cesárea?
+
+P: No sólo la cesárea.
+
+D: Bien, en términos de su historia familiar, ¿alguien ha tenido problemas cardiovasculares o cánceres?
+
+P: Mi padre tuvo un ataque al corazón cuando tenía 78 años. Y, desafortunadamente, murió de eso, pero no tenía cáncer en la familia.
+
+D: Vale, ¿algo como el asma en la familia?
+
+P: No que se me ocurra.
+
+D: Bien, y actualmente, ¿dónde vives? ¿Vives en un apartamento, en una casa?
+
+P: Vivo en un apartamento con mi marido y nuestra hija.
+
+D: Vale, ¿y actualmente trabajas?
+
+P: Sí, trabajo en el supermercado local.
+
+D: De acuerdo. Y sólo en tu rutina diaria, ¿cómo dirías, cómo es tu dieta y ejercicio?
+
+P: Um dieta Por lo general, comeré una o dos comidas al día y a veces merendar durante el día también, pero comemos una variedad de carnes y verduras, y por lo que creo que nuestra dieta es bastante buena. Pero el ejercicio no tiene tiempo para eso actualmente.
+
+D: Vale, ¿y usas alguna droga recreativa como marihuana?
+
+P: Um noo, yo nunca usaría eso.
+
+D: Bien, ¿qué tal alcohol?
+
+P: Una copa de vino. Tengo tres o cuatro noches a la semana.
+
+D: Vale, y es como una copa llena de vino o simplemente, ¿cuánto dirías?
+
+P: Un vaso de vino es para mí. Yo diría que es como 5 o 6 onzas como un vaso típico de vino.
+
+D: ¿Fumas algo?
+
+P: Fumo cigarrillos, sí.
+
+D: Vale, ¿y cuánto fumas un día promedio?
+
+P: Um sobre un paquete, uno o dos paquetes de cigarrillos por día durante los últimos 40 años.
+
+D: Está bien, está bien.

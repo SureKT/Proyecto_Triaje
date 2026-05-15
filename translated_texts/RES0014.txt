@@ -1,0 +1,227 @@
+D: ¿Qué te trae por hoy?
+
+P: Esta tarde, sólo estoy aquí porque he estado experimentando algo de falta de aliento, así como un poco de tos.
+
+D: Vale, ¿cuándo empezó?
+
+P: Así que creo que empezó hace unos tres meses y creo que ha estado empeorando.
+
+D: De acuerdo. ¿Con qué frecuencia estás experimentando la falta de aliento?
+
+P: Siento que muchas veces, especialmente afuera cuando estoy en el frío o de noche cuando salgo por la noche, mi pecho se siente un poco apretado también al mismo tiempo.
+
+D: Bien, ¿y cuánto tiempo dura?
+
+P: Yo diría que dura hasta una hora cada vez que estoy fuera en el frío y luego una vez que vuelvo. Así que yo diría que dura al menos una hora.
+
+D: Vale, ¿algo más lo empeora, como el polvo? Ya sabes, ¿poner algo así?
+
+P: A veces cuando estoy cerca del polvo, a veces cuando estoy corriendo durante la clase de gimnasia, el aumento de la actividad lo empeora.
+
+D: Está bien, está bien. Y si usted describiera la calidad de sus dificultades respiratorias, ¿es más como un tipo de sensación ardiente? ¿Es como si no pudieras respirar? ¿Qué se siente?
+
+P: Creo que es más bien un no puedo recuperar el aliento y siento que mi garganta es como cerrarme y no puedo respirar profundamente.
+
+D: Vale, sí, eso da miedo. Y uno a 10, 10 siendo el peor, ¿qué tan mala es tu falta de aliento?
+
+P: Se puede llegar a decir como un 8 a veces. Puede ser bastante aterrador. Y a veces, como que siento pesadez en mi pecho también cuando sucede.
+
+D: Sí, y la tos, ¿ha estado pasando tanto tiempo como tu falta de aliento?
+
+P: Diría que casi el mismo período de tiempo como 3 meses, pero no siempre tose. Va y viene.
+
+D: Vale, y para tu tos, ¿es como los mismos disparadores, el frío, el polvo, cosas así?
+
+P: Sí, yo diría que sí.
+
+D: ¿Y alguna vez has tosido sangre?
+
+P: No, no lo sé. Es sobre todo una tos seca. No tose nada.
+
+D: OK así que no hay esputo o flema, ¿no? Vale, ¿alguna vez te has sentido sibilante?
+
+P: Yo escucho como un sonido extraño cuando exhalo a veces, creo que puede ser sibilancia.
+
+D: Está bien, está bien. ¿Tienes dolor de garganta?
+
+P: No, no tengo dolor de garganta, no.
+
+D: ¿No? Um, ¿qué tal un goteo de nariz o una nariz congestionada?
+
+P: No, nada de eso.
+
+D: ¿Algún cambio en tu olor?
+
+P: No, no hay cambios en mi olor, no.
+
+D: De acuerdo. ¿Qué tal escuchar?
+
+P: Uh, ninguna audiencia está bien.
+
+D: Vale, y como si ningún pus o líquido saliera de tu oreja o algo por el estilo, ¿verdad?
+
+P: No.
+
+D: ¿Sin dolor de oído?
+
+P: No.
+
+D: Vale, ¿y qué hay de tu visión, todo bien ahí?
+
+P: Sí, todo está bien.
+
+D: Vale, ¿alguna fiebre?
+
+P: No sé de fiebre, no lo he comprobado, pero algunas noches sí, especialmente en la última semana me he despertado con un poco de frío. No lo he comprobado.
+
+D: Vale, ¿así que te despertaste sintiendo frío, algún sudor nocturno?
+
+P: Uh no.
+
+D: Vale, ¿alguna pérdida de peso?
+
+P: No, no.
+
+D: ¿Qué tal cambios en la piel? ¿Te has dado cuenta de un sarpullido en alguna parte?
+
+P: No es que me haya dado cuenta de que no, no hay sarpullidos.
+
+D: OK y cualquier dolor en el pecho en absoluto?
+
+P: No, solo que a veces cuando tose mucho siento un poco de tensión y pesadez ahí dentro. Pero ahí es cuando estoy tosiendo mucho.
+
+D: Sí, ¿y algún sentimiento como el de tu corazón?
+
+P: Nop.
+
+D: ¿No? De acuerdo. ¿Y qué tal hinchazón? ¿Has notado hinchazón en algún lugar del cuerpo?
+
+P: No, nada de eso.
+
+D: ¿No? Vale, vale, ¿qué tal si tu falta de aliento empeora cuando te duermes?
+
+P: No, nada de eso. Creo que es principalmente peor si salgo en el frío o estoy como corriendo, haciendo más actividades.
+
+D: ¿Alguna vez te despierta de noche?
+
+P: No, nunca.
+
+D: ¿Y náusea o vómitos?
+
+P: No, no hay náuseas ni vómitos.
+
+D: Vale, ¿qué tal si cambias tu deposición intestinal?
+
+P: No, las evacuaciones intestinales son normales.
+
+D: ¿Qué tal en términos de orinar, algún cambio allí?
+
+P: No, no.
+
+D: ¿Algún dolor de cabeza?
+
+P: No.
+
+D: ¿No? ¿Algún mareo o desmayo?
+
+P: No.
+
+D: ¿Confusión, pérdida de memoria?
+
+P: No, nada de eso.
+
+D: Vale, ¿estás bien si no estás sano?
+
+P: Sí, no tengo ninguna otra condición, recuerdo que mis médicos dijeron que tenía fiebre del heno antes, pero eso es todo.
+
+D: ¿Cuándo fue eso?
+
+P: Creo que fue hace más de tres años.
+
+D: Vale, ¿alguna cirugía reciente?
+
+P: No.
+
+D: ¿No? ¿Estás tomando algún medicamento?
+
+P: A veces tomo un poco de Tylenol para el resfriado de Tylenol, a veces para los síntomas. No creo que realmente haya ayudado.
+
+D: ¿No? Vale, ¿tienes alguna alergia? ¿No sólo a los medicamentos, sino a cualquier otra cosa?
+
+P: Como la fiebre del heno, pero nada más que pueda pensar, no.
+
+D: De acuerdo. ¿Estás al día con todas tus vacunas?
+
+P: Por lo que sé, sí, todo está al día.
+
+D: ¿Algún historial familiar de enfermedades pulmonares?
+
+P: No lo creo. Mi hermana, creo que estaba diciendo que podría tener asma y también tiene eczema. Nadie más en la familia tiene otras condiciones.
+
+D: ¿Ni siquiera como enfermedades del corazón, cáncer?
+
+P: No, no, no que yo sepa.
+
+D: Vale, vale, ¿has estado en contacto con alguien que haya estado enfermo recientemente?
+
+P: No.
+
+D: No, ¿y algún viaje recientemente?
+
+P: No, he estado aquí en Ontario.
+
+D: Vale, ¿y dónde vives?
+
+P: Así que actualmente vivo en Londres, pero hace poco me mudé a un nuevo piso hace unos dos meses.
+
+D: Hace dos meses, OK. ¿Es más un piso más viejo?
+
+P: No, es bastante nuevo. Pero una cosa que noté, no sé si esto tiene algo que ver con eso, pero mi compañero de piso en realidad fuma. A veces eso realmente puede irritarme y hacerme toser más a veces por la noche.
+
+D: Sí, ¿alguna mascota?
+
+P: No, no tengo mascotas.
+
+D: Bien, ¿y fumas?
+
+P: No, no fumo, no.
+
+D: De acuerdo. ¿Y fumas marihuana?
+
+P: No, nunca probé marihuana.
+
+D: Vale, ¿alguna droga recreativa?
+
+P: No, no fumo marihuana ni cigarrillos.
+
+D: Bien, ¿qué tal alcohol? ¿Bebes alcohol?
+
+P: Um, al igual que, tal vez a veces en las fiestas, pero muy raramente. Tal vez diría una vez al mes.
+
+D: Está bien, está bien. ¿Y hay algo que quieras discutir hoy que me haya perdido?
+
+P: Uh, así que no, creo que todo eso fue como la falta de aliento me estaba asustando mucho. Pero sí, sólo la tos, pero aparte de eso sólo quiero saber lo que está pasando.
+
+D: Vale, sí, y mencionaste que por lo demás estás sano así que no tienes antecedentes de asma ni nada por el estilo, ¿verdad?
+
+P: No, nadie me dijo eso, pero mi hermana tiene asma, así que me preguntaba, ¿quizás?
+
+D: ¿Alguna vez has experimentado falta de aliento cuando eras más joven con ejercicio?
+
+P: En realidad no. Tal vez como la cantidad normal. Como si estuviera corriendo demasiado, siento falta de aliento, pero creo que ha empeorado en los últimos meses.
+
+D: ¿Alguna vez te hicieron imágenes en el pasado como una radiografía de tórax o investigaciones como una prueba de función pulmonar?
+
+P: No, no recuerdo haber hecho nada de eso.
+
+D: Vale, bien, bien, esas son todas las preguntas que tenía para ti. Si usted no tenía nada más que añadir, supongo que vamos a concluir diciendo que lo que usted tiene, tenemos un diagnóstico diferencial para esto. Parece que lo que tienes es asma. Desde que tus síntomas comenzaron hace tres meses cuando te mudaste a un piso con tus amigos, y parece que este fumar y el frío está desencadenando eso, así que te prepararemos una prueba de función pulmonar para empezar y veremos si los broncodilatadores te ayudarán con tus síntomas. Y si no lo hace, también descartaremos otras cosas como la neumonía o la rinitis alérgica. ¿Qué te parece?
+
+P: Sí, eso suena bien.
+
+D: Vale, suena genial. Bueno, nos vemos pronto entonces.
+
+P: Muy bien, gracias.
+
+D: Cuídate.
+
+P: Tú también.

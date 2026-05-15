@@ -1,0 +1,175 @@
+D: ¿Qué te trae por aquí hoy?
+
+P: Hola, he estado teniendo este dolor de espalda durante el último mes, así que me gustaría algo para ello y ya sabes, imagine si es posible sólo para averiguar lo que es.
+
+D: Lo has tenido durante el último mes, ¿es la primera vez que tienes este dolor de espalda?
+
+P: Sí, sí.
+
+D: Bien, ¿y dónde tienes exactamente el dolor de espalda?
+
+P: Está en mi parte inferior de la espalda.
+
+D: Vale, y qué tipo de dolor estás experimentando, ¿es como un dolor punzante agudo o es un dolor dolorido?
+
+P: Es un poco aburrido y adolorido, pero a veces siento que tengo espasmos en la espalda.
+
+D: Vale, ¿y con qué frecuencia estás recibiendo estos espasmos?
+
+P: Yo diría que como dos o tres veces a la semana.
+
+D: De acuerdo. ¿Y es este dolor de espalda constante, o viene y va?
+
+P: Es bastante constante, pero empeora con ciertas cosas.
+
+D: Así que hace un mes, cuando empezó antes de entonces, ¿te lastimaste en absoluto o, estabas haciendo algo que causó el dolor o el dolor se produjo gradualmente?
+
+P: Así que trabajo en esta fábrica donde muevo un montón de cajas y creo que podría haber levantado una caja muy pesada o levantada en una posición inadecuada porque ahí es cuando, esa noche es cuando mi espalda comenzó a doler.
+
+D: Vale, ya veo, ¿y cuánto tiempo has trabajado en este papel?
+
+P: Durante los últimos 30 años.
+
+D: Muy bien. ¿Y el dolor ha empeorado o ha permanecido igual desde que empezó?
+
+P: Yo diría que es bonito. Ha sido bastante similar al comienzo.
+
+D: De acuerdo. ¿Y el dolor de espalda se mueve a alguna parte, como por ejemplo, si te derriba las piernas?
+
+P: No está bien. ¿Has intentado algo que te haya ayudado?
+
+P: He probado algunos analgésicos tópicos, y ya sabes esos geles de fuego y hielo y creo que a veces eso ayuda, pero siempre es temporal.
+
+D: De acuerdo. ¿Y qué tipo de cosas hacen que tu dolor empeore, agachándote en lugar de estirarte hacia atrás?
+
+P: Sí, agacharme así cuando flexiono la espalda que me duele más que si lo enderezo.
+
+D: De acuerdo. ¿La flexión duele más y qué pasa con la flexión hacia los lados?
+
+P: Um un poco más hacia mi lado derecho.
+
+D: De acuerdo. ¿Y tienes otros síntomas, como entumecimiento u hormigueo en las extremidades o en la espalda?
+
+P: No.
+
+D: ¿Y cualquier tipo de entumecimiento o pérdida de sensibilidad en el área de las nalgas o justo debajo de la parte inferior de la espalda?
+
+P: Um no
+
+D: De acuerdo. ¿Y fiebres o escalofríos?
+
+P: Nop.
+
+D: ¿Algún sudor nocturno?
+
+P: No.
+
+D: ¿Algún cambio en la piel o sarpullidos?
+
+P: No.
+
+D: Cualquiera, ¿ha estado enfermo recientemente con síntomas de tos fría?
+
+P: No.
+
+D: ¿Sientes dolor en algún otro lugar, en otros músculos o articulaciones?
+
+P: Um no.
+
+D: ¿Ha tenido recientemente algún cambio en su peso?
+
+P: No.
+
+D: De acuerdo. Y luego. ¿Algún tipo de cambio en tus deposiciones?
+
+P: No.
+
+D: De acuerdo. ¿Algún tipo de problema con la micción?
+
+P: No.
+
+D: ¿Y alguna retención urinaria o fecal o incontinencia?
+
+P: No.
+
+D: Cierto, así que es sólo este dolor que ha estado allí durante el último mes, se quedó alrededor de la misma. En términos de su historial médico se le ha diagnosticado con el. ¿Tiene alguna condición médica en el pasado?
+
+P: Tengo una presión arterial alta para la que tomo un poco de Ramipril.
+
+D: De acuerdo. ¿Alguna alergia a algún medicamento?
+
+P: No.
+
+D: ¿Está bien y está usando algún otro medicamento?
+
+P: No.
+
+D: ¿Ha sido hospitalizado o ha tenido alguna cirugía en el pasado?
+
+P: No.
+
+D: De acuerdo. ¿Tiene antecedentes familiares de alguna afección musculoesquelética o reumatológica?
+
+P: No.
+
+D: ¿Algún cáncer en la familia?
+
+P: No.
+
+D: Y por lo que actualmente está trabajando o tuvo que tomar tiempo fuera del trabajo?
+
+P: Me estoy tomando un tiempo libre hasta que averigüe qué es este dolor de espalda.
+
+D: De acuerdo. Y actualmente, ¿cómo es tu situación de vida?
+
+P: Vivo en un apartamento con mi esposa y nuestro hijo adolescente.
+
+D: De acuerdo. ¿Y fumas algo?
+
+P: Solía fumar. No he fumado en más de 10 años.
+
+D: De acuerdo. ¿Y bebes alcohol?
+
+P: Bebo de vez en cuando, tomaré una cerveza el fin de semana.
+
+D: ¿Alguna droga recreativa como la marihuana?
+
+P: No.
+
+D: De acuerdo. Muy bien, así que voy a hacer algunas preguntas, tal vez conseguir que hagas algunos movimientos y ver lo que más duele.
+
+P: De acuerdo.
+
+D: Así que cuando presionas la mano hacia abajo, por la columna vertebral. ¿Te duele en la parte baja de la espalda con palpación?
+
+P: Um, me duele justo en el medio, uh, justo por encima de la zona de las nalgas un lugar como mi cola casi está
+
+D: Ya veo. Y, uh, cualquier tipo de dolor con acostarse y luego levantar las piernas rectas sin doblar las rodillas.
+
+P: Puedo intentarlo. Eso duele un poco, sí.
+
+D: ¿Y te duele en la parte baja de la espalda o cerca de la parte delantera de las caderas?
+
+P: Eso me duele en la parte inferior de la espalda.
+
+D: ¿Y cualquier tipo de enrojecimiento o hinchazón que hayas notado? Sé que está atrás, así que podría ser más difícil de ver.
+
+P: No, no veo nada de eso.
+
+D: De acuerdo. ¿Y eres tú, has cambiado tu marcha, has cambiado en absoluto, o es que eres capaz de caminar sin una cojera ni nada?
+
+P: Puedo caminar sin cojeras.
+
+D: De acuerdo. Muy bien, y luego, agacharse dijiste que duele más que estar de pie o extender la espalda, ¿verdad?
+
+P: Sí.
+
+D: De acuerdo. Muy bien, así que esas son todas las preguntas que tuve para ti hoy. ¿Tienes alguna pregunta para mí?
+
+P: No, ¿cómo puedo tratar esto?
+
+D: Sí, seguro. Así que esto ha estado sucediendo durante el último mes. Suena más a lo que se llama dolor de espalda mecánico y debido a la naturaleza de su trabajo que ha estado levantando objetos pesados durante los últimos 30 o más años, por lo general es algo que ocurre con trabajo repetitivo, repetitivo, y trabajo extenuante como que afecta su espalda. Y lo que estás describiendo con la flexión parece más dolor proveniente de los discos mismos en lugar de las facetas en la parte posterior. Así que cada vez que flexionas tienes algo de compresión de tus discos. Así que lo que tenemos que hacer ahora mismo es que ha pasado un mes casi y entonces generalmente obtenemos imágenes si el dolor no mejora después de seis semanas de manejo conservador. Así que lo que podemos intentar es darle un poco de control del dolor primero, y algunos medicamentos antiinflamatorios, y luego, además de probar un poco de fisioterapia, algunos ejercicios para ayudarle con el dolor de espalda. Y entonces si el dolor no mejora y ya que no hay banderas rojas que estaban demasiado preocupados por ahora con su dolor de espalda podemos esperar para obtener algunas imágenes. Pero primero nos gustaría probar algo de la gestión conservadora. ¿Te parece bien?
+
+P: Sí, eso suena genial. Gracias.
+
+D: De nada, de acuerdo, cuídate.

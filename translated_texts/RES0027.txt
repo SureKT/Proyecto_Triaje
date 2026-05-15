@@ -1,0 +1,252 @@
+D: Me preguntaba si podrías decirme qué te trajo.
+
+P: Claro, he estado tosiendo los últimos tres días y parece que no puedo parar. Me está afectando el sueño, así que realmente me gusta arreglar esto.
+
+D: OK, ah es la tos, con la tos has estado trayendo algún esputo?
+
+P: No, está seco. Está muy seco.
+
+D: Vale, ¿has sacado algo de sangre?
+
+P: No hay sangre.
+
+D: OK y la tos comenzó hace tres días. ¿Ha empeorado, mejorado, se ha mantenido igual?
+
+P: Ah, ya sabes, parece que está empeorando, y ahora incluso me siento caliente como si tuviera fiebre o algo así.
+
+D: Ya veo. ¿Hay algún desencadenante asociado con la tos como salir al frío, inhalación de humo o polvo o mascotas?
+
+P: No, no es que me haya dado cuenta.
+
+D: Vale, ¿has intentado algo para ayudar con la tos?
+
+P: Lo intenté con el jarabe para la tos, pero no está ayudando.
+
+D: Vale, y mencionaste la tos interrumpiendo tu sueño. ¿Tiene la tos constante todo el día o hay momentos particulares del día en que es peor?
+
+P: Es sólo todo el día.
+
+D: Veamos, ¿y mencionaste que empezaste a sentir calor cuando te diste cuenta?
+
+P: Eso fue justo hoy.
+
+D: Justo hoy, ¿te has tomado la temperatura?
+
+P: No, no lo he hecho.
+
+D: Vale, ¿y has estado experimentando algún otro síntoma?
+
+P: Mmm. He estado muy cansada, pero no sé si eso es porque no consigo dormir.
+
+D: Bueno, porque la tos te mantiene despierto. Um, así que has tenido algún dolor de cabeza?
+
+P: Tal vez un ligero dolor de cabeza, pero también no estoy muy seguro de si eso es porque he estado tosiendo y está poniendo tensión en mi cabeza.
+
+D: Vale, ¿qué tal cualquier descarga como moco o lágrimas de tus ojos u oídos?
+
+P: No, nada de eso.
+
+D: Vale, ¿qué tal algún dolor alrededor de tus ojos u oídos?
+
+P: No.
+
+D: Vale, ¿has tenido un goteo de nariz?
+
+P: Mmmm, no, no.
+
+D: Muy bien. Y en el último mes aproximadamente, ¿ha tenido algún resfriado como síntomas con secreción nasal, dolor de cabeza, dolor de garganta o tos?
+
+P: Ah no.
+
+D: Vale, ¿así que han sido estos últimos días?
+
+P: Sí.
+
+D: Um, bien, ¿y tienes dolor de garganta ahora?
+
+P: Um, no.
+
+D: Bien y, ¿cómo ha estado tu apetito?
+
+P: Mi apetito ha estado bien. Yo también es difícil de comer porque estoy tosiendo mucho.
+
+D: Vale, ¿has tenido algún problema con tragar, como ser doloroso?
+
+P: No, bueno, no, no. Yo diría que no.
+
+D: Bien, um an en los últimos meses. ¿Has tenido alguna pérdida de peso?
+
+P: Um no hay pérdida de peso.
+
+D: Muy bien, ¿y has tenido escalofríos?
+
+P: Tal vez un poco anoche ahora que lo pienso.
+
+D: Vale, ¿y si sudamos de noche?
+
+P: Un poco anoche.
+
+D: Vale, ¿así que estuviste un poco frío y luego sudoroso anoche?
+
+P: Sí, un poco.
+
+D: ¿Estás bien y te sientes caliente hoy?
+
+P: Sí.
+
+D: ¿Has tenido algún dolor en el pecho?
+
+P: No, no hay dolor en el pecho.
+
+D: Muy bien, y ¿qué tal falta de aire?
+
+P: No.
+
+D: Muy bien, ¿algún silbido?
+
+P: No.
+
+D: Muy bien, ¿y has tenido algún caso en el que te sintieras como si tu corazón estuviera apurado o latiendo fuera de tu pecho?
+
+P: No.
+
+D: Muy bien, y cualquier caso en el que te sintieras como si fueras a desmayarte, o tal vez desmayarte?
+
+P: No.
+
+D: Bien, ¿te has sentido mareado?
+
+P: No, nada de mareos.
+
+D: Muy bien y ¿has tenido alguna pérdida o de tu sentido del gusto o pérdida de tu sentido del olfato?
+
+P: Um no.
+
+D: De acuerdo. ¿Y has tenido diarrea?
+
+P: Sin diarrea.
+
+D: Muy bien, ¿y qué tal náusea o vómitos?
+
+P: No.
+
+D: De acuerdo. ¿Así que has estado fatigado? ¿Has tenido dolores musculares o de cuerpo?
+
+P: Un poco de ambos, sí.
+
+D: Veo bien y ¿ha tenido alguna micción dolorosa o ha sentido la necesidad de orinar con frecuencia?
+
+P: No.
+
+D: Vale, ¿y algún sarpullido o cambio de piel?
+
+P: Ah no.
+
+D: Muy bien, um en lo que respecta a su salud pasada. ¿Le han diagnosticado alguna afección médica antes?
+
+P: Tengo hipotiroidismo.
+
+D: Veo que está bien y, ¿está tomando algún medicamento para eso?
+
+P: Estoy en Synthroid.
+
+D: Bien, genial, ¿cuándo fue tu última prueba de TSH?
+
+P: Creo que lo hice hace seis meses.
+
+D: Vale, ¿y había alguna preocupación con el alcance en ese momento?
+
+P: No, creo que fue normal.
+
+D: Muy bien excelente, ¿tomas algún otro medicamento o en el mostrador?
+
+P: Tomo esta multivitamina. No puedo recordar su nombre, pero es algo que tomo todos los días.
+
+D: Vale, ¿alguna alergia a los medicamentos?
+
+P: No.
+
+D: Muy bien, ¿y has tenido alguna cirugía antes?
+
+P: Me quitaron el apéndice cuando era adolescente.
+
+D: Vale, ¿y alguna complicación con esa cirugía?
+
+P: No.
+
+D: Muy bien, um así que a continuación me preguntaba si podrías contarme un poco sobre tu situación de vida?
+
+P: Claro, vivo con mi marido y dos hijos que son adolescentes. Yo, vivimos en una casa adosada, y nos mudamos recientemente.
+
+D: Vale, ¿y alguien en la casa ha estado enfermo?
+
+P: Mi marido ha estado vomitando durante los últimos dos días y creo que también se sentía un poco caliente.
+
+D: Vale, ¿ha sido evaluado por un médico?
+
+P: No, traté de traerlo hoy, pero se negó.
+
+D: Veo que está bien. ¿Ha estado cerca de alguien que haya estado enfermo que usted sepa, como en el trabajo o algo así?
+
+P: Trabaja en esta compañía de TI. No hay muchos de ellos y todos tienen sus propios cubículos, así que ya sabes, tal vez en el comedor o algo así, pero aparte de eso, no lo creo.
+
+D: Bien, ¿y tú? ¿Alguna otra exposición o contactos enfermos o tal vez en el trabajo o algo así?
+
+P: Um así que hago cosas de marketing en línea, pero trabajo desde casa.
+
+D: De acuerdo. ¿Y tus hijos han estado bien?
+
+P: Sí, lo han sido. Han estado sanos.
+
+D: Muy bien. ¿Y fumas cigarrillos?
+
+P: No.
+
+D: ¿Y bebes alcohol?
+
+P: Tomaré una copa de vino con la cena de vez en cuando.
+
+D: Bien, ¿tú y lo que es de vez en cuando?
+
+P: Tal vez cada tres o cuatro días.
+
+D: Vale, ¿así que un par de tragos por semana?
+
+P: Sí.
+
+D: Muy bien, ¿y fumas marihuana?
+
+P: He fumado marihuana. No lo hago regularmente.
+
+D: No, vale, ¿y usas alguna otra droga recreativa?
+
+P: No.
+
+D: ¿Alguien de la familia ha tenido una afección pulmonar o una afección cardíaca antes?
+
+P: Mi hermana, que es 15 años mayor que yo, tuvo un ataque al corazón hace poco.
+
+D: Oh, siento oír eso. ¿Sabes lo que pasó?
+
+P: Sabes, no estoy muy seguro de que no siempre coma lo más sano, y no hace mucho ejercicio. Así que creo que tal vez eso tuvo algo que ver con eso.
+
+D: Vale, ¿y tus padres tuvieron algún problema cardíaco?
+
+P: No, ambos estaban sanos y murieron hace unos años, pero murieron de vejez, supongo que se puede decir.
+
+D: De acuerdo. ¿Algún cáncer en la familia?
+
+P: No.
+
+D: Muy bien, así que creo que eso es todo lo que quería cubrir sobre la historia de hoy. ¿Hay algo que quieras decirme que tal vez no pregunte?
+
+P: No, sólo tenía curiosidad si crees que tenía COVID?
+
+D: Ciertamente una de las cosas más importantes que estoy considerando después de escuchar acerca de sus síntomas de tener esta tos y fiebre y estar cansado estos últimos días, especialmente con su marido estar enfermo de náuseas, vómitos, y no sentirse bien. Dicho esto, podría ser otro tipo de enfermedad viral, o posiblemente una infección bacteriana. Pero sin duda vamos a ordenar algunas investigaciones, algunos análisis de sangre, un hisopo nasal PCR que en realidad se prueba para COVID, así como un tórax X Ray para empezar. Y esperaremos a que vuelvan algunos de esos resultados.
+
+P: Vale, sí, eso suena bien.
+
+D: Muy bien, así que vamos a empezar.
+
+P: Bien, gracias.
+

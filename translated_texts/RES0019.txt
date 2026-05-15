@@ -1,0 +1,231 @@
+D: Me preguntaba si podrías decirme qué te trajo.
+
+P: Claro, sabes que me he sentido un poco caliente durante los últimos días y tengo este terrible, terrible dolor de cabeza. Y sólo mi cerebro se siente nebuloso. Así que pensé que debería venir a que lo revisaran.
+
+D: Vale, ¿ya veo cuándo empezaron exactamente estos síntomas?
+
+P: Así que empezaron hace unos 3 días. Pero está empeorando.
+
+D: De acuerdo. Y en términos del dolor de cabeza, ¿te duele la cabeza en algún lugar en particular?
+
+P: Yo diría que sobre todo los lados de mi cabeza.
+
+D: Vale, ¿y cuánto tiempo ha estado pasando el dolor de cabeza?
+
+P: La misma cantidad de tiempo, como los últimos tres días.
+
+D: Vale, y um, ¿cómo describirías el dolor de cabeza? ¿Es como afilada, es como una empuñadura de vicio? ¿Es pulsante, presión como sensación o nada de eso?
+
+P: Sabes que se siente calambreso.
+
+D: De acuerdo. ¿Y ha habido algo que desencadene el dolor de cabeza o lo empeore?
+
+P: No lo creo. Nada ayuda, dormir no ayuda, moverse no ayuda. Siempre está ahí.
+
+D: Vale, ¿el dolor de cabeza empeora con estar acostado?
+
+P: Uh, no, yo no lo diría, no.
+
+D: Vale, ¿y sientes dolor en el cuello o en los hombros o en la espalda?
+
+P: No, no.
+
+D: De acuerdo. Y, ¿dirías que este dolor de cabeza, que es como el peor dolor de cabeza de tu vida o el tipo de sensación de aplaudir?
+
+P: Uh, no, no.
+
+D: Vale, ¿has tenido dolores de cabeza como este antes en el pasado?
+
+P: No, nunca.
+
+D: De acuerdo. Y, ¿cómo calificaría usted en términos de severidad, con 10 siendo el más severo que usted podría tener posiblemente y uno no siendo doloroso en absoluto? ¿Cómo lo calificarías?
+
+P: Diría que le daría alrededor de un 6 o siete.
+
+D: De acuerdo. ¿Y has tenido náuseas o vómitos?
+
+P: No.
+
+D: Vale, ¿y qué tal alguna sensibilidad a la luz cuando la estás viendo o sensibilidad al sonido?
+
+P: No.
+
+D: Vale, ¿y has tenido algún síntoma ocular como secreción, lagrimeo o picazón?
+
+P: No, nada de eso.
+
+D: Vale, y entonces mencionaste que también tenías fiebre. ¿Comprobaste tu temperatura?
+
+P: En realidad no, no, no revisé mi temperatura, sólo me siento caliente.
+
+D: Vale, nos aseguraremos de comprobarlo hoy en la clínica. ¿Y has estado experimentando algún otro síntoma?
+
+P: Al igual que la niebla cerebral de la que estaba hablando, ya sabes. No recuerdo, recuerdo cosas, pero es como si estuviera haciendo todo bajo el agua.
+
+D: Oh, está bien. ¿Has estado confundido o preocupado por tu memoria?
+
+P: No, no he olvidado las cosas. Se siente como si fuera muy lento en hacer las cosas.
+
+D: Ya veo, ¿y cómo ha sido tu energía? ¿Has tenido una fatiga significativa?
+
+P: Sí, diría que estoy significativamente más cansado de lo que solía estar.
+
+D: Vale, ¿cómo ha estado tu sueño?
+
+P: Mi sueño ha sido bastante normal. Me acuesto a la misma hora, me despierto a la misma hora. Sí, yo diría que no hay problema allí.
+
+D: Vale, con esta fatiga, ¿has tenido algún dolor?
+
+P: Algunos dolores musculares, diría que sobre todo en mis brazos y sólo en mis piernas, sí.
+
+D: Vale, ¿y has tenido tos?
+
+P: Sin tos, no.
+
+D: Muy bien, ¿qué tal falta de aire?
+
+P: No hay falta de aliento tampoco.
+
+D: Vale, ¿has experimentado algún dolor en el pecho?
+
+P: No.
+
+D: Vale, ¿qué tal cualquier período en el que te sientas como si tu corazón estuviera acelerado?
+
+P: No.
+
+D: Vale, ¿y tienes sibilancias?
+
+P: No hay sibilancias.
+
+D: Vale, ¿y has tenido alguna pérdida de sabor u olfato?
+
+P: Um, no.
+
+D: Vale, bien, ¿has notado algún sarpullido?
+
+P: Tampoco hay sarpullidos.
+
+D: Muy bien. ¿Y has tenido algún dolor abdominal?
+
+P: No, no.
+
+D: Vale, ¿has tenido diarrea?
+
+P: No, no hay diarrea.
+
+D: Vale, ¿y algo de estreñimiento?
+
+P: No.
+
+D: Muy bien, y entonces ¿qué hay de cualquier problema urinario como la micción dolorosa o ir con frecuencia?
+
+P: No, no hay cambios.
+
+D: De acuerdo. ¿Y actualmente eres sexualmente activa?
+
+P: Lo estoy.
+
+D: De acuerdo. ¿Podría hablarme de su pareja o pareja?
+
+P: Claro, yo sólo mi marido, um no usamos protección. Pero estoy tomando la píldora anticonceptiva.
+
+D: Vale, ¿y has tenido una infección de transmisión sexual antes?
+
+P: No.
+
+D: Vale, ¿y supongo que algo como secreción vaginal o molestias vaginales?
+
+P: No.
+
+D: De acuerdo. Y, a continuación, sólo quería hacer algunas preguntas sobre su salud pasada. ¿Le han diagnosticado alguna enfermedad en el pasado?
+
+P: No.
+
+D: Vale, ¿así que nada de diabetes, presión arterial alta, algo así?
+
+P: No.
+
+D: Muy bien, ¿y toma algún medicamento regularmente como receta o en el mostrador?
+
+P: Yo no.
+
+D: Muy bien, ¿así que es sólo el anticonceptivo?
+
+P: Oh, lo siento, sí. Sólo las píldoras anticonceptivas.
+
+D: Sí, vale, no te preocupes, ¿y alguna alergia?
+
+P: Sólo alergias estacionales.
+
+D: Bien, ¿y las vacunas están al día?
+
+P: Sí, lo son.
+
+D: Muy bien, y en la casa, ¿hay alguien que esté enfermo ahora mismo?
+
+P: No, nadie está enfermo.
+
+D: Vale, ¿qué tal en el trabajo?
+
+P: Soy profesor. Así que trabajo con muchos niños, pero nadie que yo conozca ha estado enfermo.
+
+D: Vale, ¿y has viajado a alguna parte recientemente?
+
+P: No.
+
+D: Muy bien. ¿Y fumas cigarrillos?
+
+P: Yo no.
+
+D: De acuerdo. ¿Fumas marihuana?
+
+P: Yo no.
+
+D: Muy bien. ¿Usaste alguna droga recreativa?
+
+P: A veces tomo algunos comestibles de marihuana, pero eso es todo.
+
+D: Vale, y, ¿los compras en un dispensario?
+
+P: Sí.
+
+D: Vale, ¿así que para una de las tiendas de Ontario?
+
+P: Sí.
+
+D: OK genial sí porque nunca podrías estar seguro de dónde más, cuál es la dosis, así que es bueno obtenerla de las tiendas apropiadas, seguro.
+
+P: Bien.
+
+D: ¿Bebes alcohol?
+
+P: Sí, tomaré una copa de vino con la cena.
+
+D: ¿Está bien? ¿Esto es a diario?
+
+P: La mayoría de los días diría, tal vez como cuatro o cinco días de los siete días de la semana.
+
+D: Bien, ya veo. ¿Y alguien de tu familia ha tenido síntomas similares en el pasado a los que tienes o alguna enfermedad pulmonar en el pasado?
+
+P: No, nada de eso.
+
+D: Vale, ¿qué tal alguna enfermedad del corazón?
+
+P: Mi padre murió a los 75 de un ataque al corazón.
+
+D: Vale, ¿y qué tal algún cáncer en la familia?
+
+P: Ninguna que yo sepa.
+
+D: De acuerdo. Así que creo que fueron todas las preguntas que quería hacer sobre la historia de hoy. ¿Había algo más de lo que pensaras que me estaba perdiendo o de lo que querías hablarme?
+
+P: No, no lo creo. Pero, ¿qué crees que tengo?
+
+D: Así que con la agudeza de sus síntomas, comenzando con los últimos días y empeorando, especialmente con una fiebre que ahora hemos documentado de 38.8 y una especie de sensación, uh, cansado de dolores y dolores de cabeza, me preocupa que usted tiene posiblemente una infección viral, y una de esas posibilidades podría ser COVID-19, pero también podría ser la gripe. Podría ser algo así como el resfriado común, como el adenovirus. Así que ciertamente haremos una muestra de PCR COVID, así como ordenar algunos trabajos de laboratorio general para buscar signos de infección, como un CBC y un recuento de glóbulos blancos. Pero um, por ahora vamos a conseguir esas pruebas ordenadas. ¿Tienes alguna pregunta?
+
+P: Vale, sí, eso suena genial. ¿Crees que yo también podría tener ya sabes, meningitis o algo así? Porque estaba leyendo en línea en Google y eso fue lo primero que surgió.
+
+D: Oh, sí, tienes toda la razón, así que, lo siento, seguiremos adelante e investigaremos eso también y podríamos necesitar hacer una punción lumbar o algún análisis de sangre para buscar signos de infección que podrían ser necesarios para ser tratados con antibióticos.
+
+P: Vale, bien, eso suena bien, gracias.

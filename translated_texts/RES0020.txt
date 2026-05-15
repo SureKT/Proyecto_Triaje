@@ -1,0 +1,267 @@
+D: ¿Podrías decirme qué te trajo hoy?
+
+P: Claro, sabes que he tenido este dolor en el pecho desde anoche. Y también estoy teniendo dificultades para respirar así que pensé que debería comprobarlo.
+
+D: Vale, y así el dolor en el pecho vino anoche. ¿Estabas haciendo algo antes de que llegara?
+
+P: No, estaba a punto de irme a la cama y de repente sentí este dolor calambreso en mi pecho.
+
+D: Vale, ¿y dónde se encuentra este dolor?
+
+P: Yo diría que como el centro de mi pecho.
+
+D: Vale, ¿el dolor ha estado sucediendo constantemente desde anoche?
+
+P: Sí, yo diría que sí.
+
+D: Vale, ¿ha cambiado de carácter? Dijiste que tenía calambres, ¿pero se sintió como algo más?
+
+P: Um, no. Sólo un calambre, sí.
+
+D: Ya veo, ¿sentiste el dolor en cualquier otro lugar, o lo sientes justo en el centro de tu pecho?
+
+P: Ah, sí, el centro de mi pecho yendo a alrededor de mi área de la garganta tal vez.
+
+D: Vale, ya veo y cualquier cosa que hayas hecho, ¿ha empeorado el dolor?
+
+P: Supongo que respirando profundamente.
+
+D: Vale, ¿y qué tal si cambias de posición, el dolor empeora si te acuestas plano o si te inclinas hacia adelante?
+
+P: No.
+
+D: Vale, ¿y has tenido alguna vez un dolor como este en tu pecho antes?
+
+P: No.
+
+D: Vale, ¿y el dolor ha ido empeorando, mejorando, permaneciendo igual?
+
+P: Ha sido lo mismo.
+
+D: Vale, ¿has tomado algo por ello, para ayudar con el dolor?
+
+P: No.
+
+D: Vale, y la falta de aliento que mencionaste, ¿cuándo empezó?
+
+P: Alrededor de la misma hora.
+
+D: Vale y, ¿es este problema respirar como después de caminar una cierta distancia o esforzarse?
+
+P: No, es él, es sólo que siempre está allí.
+
+D: Vale, ¿y has notado algún cambio en los sonidos de tu respiración, como un silbido o silbido?
+
+P: Sí, tal vez un pequeño sibilancia.
+
+D: Vale, ¿crees que estás respirando más rápido?
+
+P: No.
+
+D: Vale, ¿has tenido tos?
+
+P: Sin tos, no.
+
+D: Muy bien, ¿y no has estado trayendo ningún esputo o sangre?
+
+P: No.
+
+D: Ok y, ¿has tenido dolor de garganta?
+
+P: Sin dolor de garganta.
+
+D: Muy bien, así que has tenido este dolor en el pecho desde anoche y falta de aliento que comenzó alrededor de una hora similar anoche. ¿Ha tenido otros síntomas?
+
+P: Sólo un poco de fatiga, algo de cansancio.
+
+D: Muy bien, ¿y eso empezó al mismo tiempo?
+
+P: Eso comenzó unos días antes, como dos días antes.
+
+D: Vale, ¿ha habido algún cambio en tu sueño o algún evento estresante que te esté cansando?
+
+P: No.
+
+D: Vale, ¿y has tenido algún dolor de cabeza?
+
+P: No, sin dolores de cabeza.
+
+D: ¿Qué tal cualquier síntoma ocular como secreción o dolor ocular?
+
+P: No, nada de eso.
+
+D: ¿Algún enrojecimiento de tu ojo?
+
+P: Nop.
+
+D: Muy bien, ¿has tenido un goteo de nariz?
+
+P: No.
+
+D: Muy bien, ¿y has sentido que tu corazón está acelerado?
+
+P: No.
+
+D: Vale, ¿has tenido una pérdida de sabor u olfato?
+
+P: Nop.
+
+D: ¿Y has tenido una disminución en tu apetito?
+
+P: Um, no.
+
+D: Ya veo, ¿y has tenido algún cambio en tu peso en los últimos meses?
+
+P: No.
+
+D: Muy bien y, ¿has tenido diarrea o estreñimiento?
+
+P: No.
+
+D: Muy bien, ¿y qué tal náusea o vómitos?
+
+P: Uh, ninguno.
+
+D: ¿Algún dolor abdominal?
+
+P: No.
+
+D: Muy bien, ¿y qué hay de cualquier confusión o preocupación en torno a la memoria?
+
+P: No.
+
+D: Muy bien, y, ¿algún dolor muscular o dolor?
+
+P: Tal vez leves dolores musculares.
+
+D: ¿Has tenido alguna debilidad?
+
+P: No.
+
+D: Vale, ¿y algún sarpullido que hayas notado en alguna parte?
+
+P: No, ninguno.
+
+D: Vale, ¿y has tenido fiebre?
+
+P: Um, nop.
+
+D: ¿Qué tal un poco de escalofríos?
+
+P: Sin escalofríos.
+
+D: Muy bien, ¿y luego sudor de noche?
+
+P: No.
+
+D: Muy bien, ¿y tienes alguna condición médica para la que veas a un médico regularmente?
+
+P: No, en realidad lo siento, tengo diabetes.
+
+D: Vale, ¿eso es el tipo 2?
+
+P: Tipo 2.
+
+D: Vale, ¿y estás tomando algún medicamento para eso o es un tipo de dieta o estilo de vida controlado?
+
+P: Estoy en insulina para eso.
+
+D: Vale, ¿y usas una escala deslizante o tienes un régimen que usas?
+
+P: Lo he hecho, así que tengo una actuación larga y corta, así que me tomo la actuación larga antes de irme a la cama y luego la actuación corta antes de las comidas.
+
+D: Ya veo. Así que eso suena como un gran, un gran plan. ¿Toma algún otro medicamento?
+
+P: Sí, tomo algunas vitaminas y ya sabes, como vitamina D y calcio, pero eso es todo.
+
+D: Vale, ¿alergias?
+
+P: Soy alérgico a la penicilina.
+
+D: Vale, ¿has tomado antibióticos recientemente por alguna razón?
+
+P: No.
+
+D: Vale, ¿y tus vacunas están al día?
+
+P: Creo que sí. Creo que lo único que tengo que ver es si estoy al día con mi neumovax.
+
+D: Vale, genial, sí, me estaba preguntando sobre eso para que podamos investigarlo sin duda. ¿Y sabes si has tenido la vacuna Zoster o Shingles?
+
+P: Sí, la tenía.
+
+D: Ok genial um, y um siguiente me preguntaba si podrías contarme un poco sobre tu situación de vida?
+
+P: Claro, vivo con mi marido. Vivimos en una casa adosada de 3 dormitorios. Es un hogar bastante nuevo.
+
+D: Bien, genial. ¿Recientemente te mudaste allí?
+
+P: Sí, lo hicimos.
+
+D: De acuerdo, genial. ¿Y no hay preocupaciones con alfombras viejas o estar expuesto a algo como polvo o mohos o algo así en el hogar?
+
+P: No, nada de eso.
+
+D: Ok, y um, ¿su marido ha estado enfermo en absoluto?
+
+P: No, ha estado bien.
+
+D: Vale, ¿y tienes mascotas en casa?
+
+P: Tenemos un gato.
+
+D: Vale, ¿y tienes alguna alergia a las mascotas?
+
+P: No.
+
+D: Muy bien, ¿y cómo te mantienes económicamente en este momento?
+
+P: Ambos estamos retirados, pero tenemos nuestros ahorros RESP.
+
+D: Oh excelente, ok, y para tu ocupación anterior, ¿estaste expuesto a algún producto químico o como asbesto o inhalantes de los que estés al tanto?
+
+P: No, no, nada de eso.
+
+D: Vale, ¿y fumas cigarrillos?
+
+P: Yo no.
+
+D: ¿Bebes alcohol?
+
+P: Tengo tal vez una copa o dos copas de vino durante los fines de semana.
+
+D: Vale, ¿y fumas marihuana o usas algún producto de cannabis?
+
+P: No, no lo sé.
+
+D: Bien, ¿y qué hay del uso de otras drogas recreativas?
+
+P: No, no, nada de eso.
+
+D: Vale, y, ¿alguien de tu familia ha tenido una enfermedad cardíaca antes?
+
+P: Mi madre falleció cuando tenía 80 años, tenía algunos problemas valvulares.
+
+D: Vale, vale, ¿y alguien de la familia ha tenido un ataque al corazón antes?
+
+P: No, no que yo sepa.
+
+D: Muy bien, y, ¿alguien tiene alguna enfermedad pulmonar?
+
+P: No.
+
+D: Muy bien, ¿y luego algún cáncer que corra en la familia?
+
+P: ¿Cáncer? No, no.
+
+D: Vale, creo que eso es todo lo que quería cubrir sobre la historia de hoy. ¿Hay algo más que te gustaría decirme que era, que tal vez no pregunté?
+
+P: No, creo que me hiciste todas esas otras preguntas, me pregunto qué te gusta, ¿qué crees que tengo?
+
+D: Sí, por supuesto, así que podría ser algo relacionado con el corazón. Yo no, y a veces especialmente las personas en su grupo de edad que tienen diabetes pueden tener dolor de pecho y síntomas que podrían ser inespecíficos. Y así lo haremos, lo comprobaremos con seguridad. Conseguiremos un electrocardiograma y algo de trabajo de laboratorio con la troponina y también un Rayo X torácico para que podamos investigarlo. Y también el tórax X Ray podría ayudarnos a ver si tienes algo en los pulmones, como una posible neumonía o, tal vez una infección viral también, que podría incluir algo como COVID-19. Así que pediremos un hisopo nasal PCR también para probarlo. Y así mientras tanto, porque vamos a hacer esa prueba, requiere auto cuarentena durante 14 días así que, si es posible, eso significaría distanciarse de su marido en la casa también para ese período de 14 días, pero los resultados deben volver de esa prueba dentro de los próximos días. Y lo siento, también si es positivo, tendremos que notificar a la salud pública también para que se pueda hacer el rastreo de contacto apropiado.
+
+P: Ok, ok, bien, muchas gracias.
+
+D: De nada. Haremos que las investigaciones comiencen ahora.
+
+P: Claro, suena bien.

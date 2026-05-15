@@ -1,0 +1,270 @@
+D: Encantado de conocerte. ¿Cómo te llamas?
+
+P: Me llamo Scott. Es un placer conocerte a ti también.
+
+D: Muy bien, um así que Scott. ¿Cuántos años tienes?
+
+P: 15.
+
+D: Vale, ¿qué te trae por hoy?
+
+P: Um, he tenido dolor de garganta por un par de semanas y no va a desaparecer.
+
+D: Un par de semanas. Vale, ¿unas dos semanas, tres semanas?
+
+P: Sí, de dos a tres semanas.
+
+D: Vale, ¿cómo se siente, es como una sensación de ardor? ¿Es más como una sensación de comezón? ¿Qué se siente?
+
+P: Yo diría que es algo así como quemarse o quemarse o rascarse.
+
+D: Vale, ¿y te duele cuando tragas?
+
+P: Sí, sí, uh, si me duele la garganta cuando estoy comiendo o Um uh o tragando como líquido también, pero las cosas frías parecen hacer que se sienta un poco mejor.
+
+D: Vale, bien, ¿y te duele el cuello también?
+
+P: Um. Un poco tierno, he notado algunos bultos en la parte delantera de mi cuello que han estado un poco doloridos.
+
+D: Vale, ¿y es más que nada dolorido, algo así como la línea media? ¿O es más bien un lado contra el otro?
+
+P: Yo diría que tal vez el lado derecho está un poco más dolorido, pero creo que puedo sentirlo en ambos lados de mi cuello.
+
+D: Vale, y qué tan mal dirías que tu incomodidad es de 1 a 10, 10 siendo la peor.
+
+P: Um. Yo diría que tal vez dos o tres si me muevo el cuello puedo sentirlo más, pero de lo contrario apenas puedo notar que está ahí.
+
+D: Vale, ¿así que no te impide dormir, ir a la escuela, jugar, cosas así?
+
+P: No, es más bien el dolor de garganta al tragar.
+
+D: De acuerdo. De acuerdo. ¿Has notado alguna fiebre?
+
+P: Lo he hecho. Sí, me sentí caliente y revisé mi temperatura esta mañana y fueron 38.7, creo que lo fue. ¿Eso es fiebre?
+
+D: Sí, diría que es fiebre. También podemos hacer otro control de temperatura hoy.
+
+P: OK
+
+D: Sí, pero eso definitivamente suena a fiebre. ¿Has notado sarpullidos en alguna parte?
+
+P: Sí, he tenido esta erupción roja que he notado en mi pecho y en el abdomen.
+
+D: Vale, ¿qué tan grande es? ¿Es más de un centímetro?
+
+P: Uh huh. Sí, está bastante bien, quiero decir, está como, um esparcido por un área como si no fuera todo continuo, supongo. Puedes ver parches o manchas.
+
+D: OK y, ¿se ha criado?
+
+P: No, es que no se ha criado.
+
+D: De acuerdo. Vale, ¿te pica?
+
+P: No, no me pica.
+
+D: ¿Dolor?
+
+P: No, no doloroso.
+
+D: ¿Está sangrando o rezumando algo como pus?
+
+P: Um no, no es, nada de eso, es sólo rosa y rojo y es sólo una especie de aparece en el último poco tiempo. Lo he notado en mis um como manos un poco también.
+
+D: Vale, ¿y dijiste que esto empezó cuando fue antes del dolor de garganta o después?
+
+P: No me gusta recordar el comienzo. Creo que el dolor de garganta comenzó primero y tal vez un sarpullido vino un poco más tarde.
+
+D: Vale, vale, ¿y has notado que tus glándulas están hinchadas?
+
+P: Creo que sí, um tal vez eso es lo que está hinchado en mi cuello.
+
+D: Está bien, está bien. ¿Qué tal toser?
+
+P: No, no he tenido tos no.
+
+D: ¿Y qué tal una nariz congestionada o un moqueo?
+
+P: Nada de eso.
+
+D: Bien, ¿dolor de cuerpo?
+
+P: Sí, sin duda sentí dolores musculares.
+
+D: ¿De acuerdo, miembros superiores o miembros inferiores?
+
+P: Digo que tengo todo un cuerpo, siento que mis músculos y articulaciones están doloridos.
+
+D: Vale, sí, ¿y o tienes dolores de cabeza?
+
+P: Uh. No, realmente no he tenido ningún dolor de cabeza.
+
+D: No está bien. ¿Y cómo está tu apetito? ¿Sigues comiendo bien?
+
+P: Um. Podría ser un poco ah podría haber sido un poco hacia abajo. Es solo que no me he estado sintiendo tan bien, así que probablemente he comido menos las últimas semanas, sí.
+
+D: ¿Has estado cerca de alguien que haya estado enfermo recientemente?
+
+P: Sí, en realidad creo que algunos de mis amigos o había alguien en mi clase de gimnasia sabía que sonaba como si tuvieran síntomas similares.
+
+D: Vale, vale, ¿y cuándo fue esto?
+
+P: Ahora que lo pienso, probablemente hace tres o cuatro semanas.
+
+D: Vale, ¿y alguna vez fueron tratados por eso? ¿Han visto a un médico?
+
+P: No estoy seguro.
+
+D: No, está bien. No te preocupes.
+
+P: Sólo recuerdo que estaban fuera de la escuela porque estaban enfermos.
+
+D: Vale, sí, ¿algún problema con tus ojos?
+
+P: No.
+
+D: No, ¿nada como costras o pus saliendo de tus ojos? Ojo rojo, ¿algo así?
+
+P: Um. No, eso bueno, ¿podrían haberse visto tal vez un poco más rojo, rojo que lo usual pero no he notado nada en términos de picazón o descarga um.
+
+D: De acuerdo. ¿Náuseas o vómitos?
+
+P: Nada de náuseas o vómitos.
+
+D: Vale, ¿qué tal tus taburetes? ¿Han sido normales? ¿Has tenido diarrea, estreñimiento, algo así?
+
+P: No hay cambios en los hábitos intestinales.
+
+D: ¿Qué tal orina?
+
+P: Eso ha estado bien.
+
+D: Está bien, está bien. ¿Alguna vez has tenido estos síntomas?
+
+P: Quiero decir que he tenido dolor de garganta en el pasado, pero no mientras me siento así.
+
+D: Sí. Vale, ¿cuándo fue la última vez que tuviste dolor de garganta?
+
+P: No sé, tal vez cuando era niño.
+
+D: De acuerdo.
+
+P: Ha pasado mucho tiempo.
+
+D: Sí, ¿como una especie de estreptococo, o más viral?
+
+P: Sí, recuerdo haber recibido antibióticos cuando era más joven.
+
+D: Vale, vale, ¿y de lo contrario estás sano? ¿Tiene alguna condición médica?
+
+P: Me diagnosticaron asma.
+
+D: Vale, ¿y estás tomando algún medicamento para eso?
+
+P: Um sí, así que yo, yo sólo uso ah Ventolin según sea necesario, pero de lo contrario oh y luego tomo Flovent diariamente tan um.
+
+D: De acuerdo.
+
+P: Creo que ese es, hay un par de inhaladores que tomo.
+
+D: Vale, vale, ¿y algún otro medicamento?
+
+P: Uh, a veces voy a tomar um como Reactine o algún otro tipo de píldora para la alergia, pero eso es todo.
+
+D: Vale, ¿qué eres alérgico también?
+
+P: Um mayormente alergias estacionales, me molestan como um sí, como alergias estacionales y polvo, tal vez.
+
+D: De acuerdo. ¿Y estás al día con todas tus vacunas?
+
+P: Sí, mi mamá me hace vacunarme contra la gripe todos los años.
+
+D: Vale, bien. Y es, OK, ¿has visto a otro doctor para los síntomas? ¿Has estado nervioso por eso? ¿Alguna prueba de sangre hecha para ello?
+
+P: No, pensé que me habría sentido mejor por ahora y así que no he visto a nadie pero ha estado pasando ahora, no parece mejorar. Así que quiero venir a ver a alguien.
+
+D: Sí, seguro. ¿Has intentado algo por tus síntomas? ¿Algún medicamento, algo por encima del mostrador?
+
+P: Sí, he probado un poco de Tylenol y es, creo que lo que es Advil? Y eso definitivamente se ayuda con algunos de los dolores y dolores, pero han vuelto enseguida.
+
+D: ¿Algún historial familiar de problemas pulmonares, problemas cardíacos?
+
+P: Um, No. Nada de eso, um no.
+
+D: Sí, está bien. ¿Qué tal cánceres?
+
+P: Creo que mi abuelo tenía un cáncer de páncreas.
+
+D: Está bien, está bien. Um, bien, ¿entonces vives en casa, correcto?
+
+P: Sí, vivo con mis padres y mi hermana menor. Tiene 12 años.
+
+D: Tiene 12 años, ¿está sana?
+
+P: Sí, lo es.
+
+D: Bien, ¿han viajado recientemente?
+
+P: No, hemos estado, hemos estado en casa.
+
+D: Vale, vale, ¿y fumas?
+
+P: No, no fumo.
+
+D: No, ¿qué tal marihuana?
+
+P: Lo he intentado una o dos veces, pero fueron sólo esas dos veces, nada que haga o use regularmente.
+
+D: Vale, ¿y qué tal alcohol?
+
+P: No, nada de alcohol.
+
+D: Nada de alcohol. Bien, ¿eres sexualmente activa?
+
+P: No, no lo estoy.
+
+D: No, está bien. ¿Hay alguna posibilidad de que? O realmente lamento que deba reformular eso. ¿Has besado a alguien recientemente?
+
+P: Um I. Bueno, supongo que ahora tengo una novia. Um que nosotros, con los que empecé a salir hace unos dos meses.
+
+D: Está bien, está bien.
+
+P: Y supongo que sí.
+
+D: Está bien, está bien, está bien. ¿Ha tenido alguno de estos síntomas?
+
+P: Bueno, ella estaba, no se sentía bien por un tiempo atrás, pero, no creo que fuera tan malo para ella.
+
+D: De acuerdo. En realidad, ¿y ahora está mejor?
+
+P: Sí, ahora está mejor.
+
+D: De acuerdo. Vale, así que mencionaste que no eres sexualmente activa. Si fueras a estarlo, asegúrate de usar protección. Um y OK. Así que todo en
+¿Está bien entonces? Nadie, nadie enfermo en casa que mencionaste, ¿verdad?
+
+P: Sí, nadie, nadie enfermo en casa.
+
+D: De acuerdo. ¿Y la escuela va bien?
+
+P: Sí, las escuelas han estado yendo bien en su mayor parte ha sido duro estas últimas semanas sintiéndome así.
+
+D: Sí, seguro. ¿Y tú y tu novia tenéis una relación exclusiva?
+
+P: Uh. Creo que sí.
+
+D: Vale, te lo pregunto porque hay algo llamado lo que puedes estar familiarizado con um se llama la enfermedad de los besos. En terminología médica, se llama mono, como causado por un virus llamado EBV, y por lo que podría ser que por lo que estamos cubriendo todas nuestras bases.
+
+P: Oh, he oído hablar de mono antes.
+
+D: Sí.
+
+P: De acuerdo.
+
+D: Es probable que esté ahí arriba en términos de lo que tienes, así que creo que esas eran todas las preguntas que tenía para ti. ¿Tienes alguna pregunta para mí? ¿Algo que quisieras añadir?
+
+P: No, creo que eso lo cubriste todo.
+
+D: Bien, de acuerdo, así que voy a salir unos pocos, vamos a tratar de cubrir nuestra base y conseguir que se prueba para mono que tendría que hacer como una prueba monospot y podemos hacer una prueba de estreptococo rápida, así para ver si tiene algo llamado garganta estreptococo. Pero sí, veremos cómo vuelven esos resultados. Y nos iremos de allí. ¿Te parece bien?
+
+P: Sí, no, eso suena bien.
+
+D: Bien, gracias.

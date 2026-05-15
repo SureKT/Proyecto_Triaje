@@ -1,0 +1,208 @@
+D: ¿Qué te trae por aquí para vernos?
+
+P: Así que he estado teniendo esta tos que siento que ha estado empeorando, y también he estado sintiendo un poco de falta de aliento durante los últimos meses.
+
+D: Vale, ¿podrías decirme cuándo empezó la tos?
+
+P: Así que yo diría que empezó hace unos dos meses.
+
+D: Vale, ¿y la tos ha estado seca o has estado trayendo esputo?
+
+P: Usualmente siempre produce como el esputo, y usualmente es de color blanco o amarillento.
+
+D: Vale, ¿y cuánto esputo produces cada día? Algunas, a veces es útil pensar en como cucharaditas o cucharadas.
+
+P: Yo diría que cada vez que tose como una cucharadita probablemente tenga gusto. No lo sé. Tal vez 5 a 10 cucharaditas al día.
+
+D: Vale, ¿y hay alguna hora en particular del día en que la tos sea peor?
+
+P: En realidad no. Es bastante, casi lo mismo. A veces es peor por la mañana. Sí, y a veces se pone mejor cuando salgo a fumar.
+
+D: De acuerdo. ¿Y has notado algo de sangre?
+
+P: No, no he notado sangre.
+
+D: Vale, y has tenido, así que has tenido falta de aliento, ¿cuándo empezó eso?
+
+P: Hace unos dos meses, a la misma hora.
+
+D: Bien, Y. ¿Esto es? ¿Tienes dificultad para respirar en reposo o es cuando te esfuerzas?
+
+P: Es que puede pasar como en cualquier momento, pero peor cuando me esfuerzo.
+
+D: OK y luego has tenido una tos antes?
+
+P: Uh. No tan frecuentemente. Diría que no realmente, acaba de empezar en los últimos dos o tres meses.
+
+D: Vale, ¿y has tenido falta de aliento como esta antes?
+
+P: A lo largo de mi vida he tenido asma, así que cuando hago demasiado ejercicio o me expongo al polvo, a veces me falta el aliento.
+
+D: De acuerdo. ¿Ha habido algo, además de esforzarse, que haya hecho que la tos o la falta de aliento empeoren?
+
+P: Uh, durante el último año como si hubiera tenido un par de infecciones en el pecho. Después de ir a Urgencias, me dieron algunos antibióticos. Pero sí, cuando eso sucede generalmente empeora. La falta de aliento y la tos.
+
+D: Vale, ¿y tus síntomas se sienten como cualquiera de esos momentos ahora mismo?
+
+P: No, no siento que tenga fiebre y ningún otro síntoma, sólo la falta de aliento y tos.
+
+D: Vale, ¿y has estado haciendo algo que lo haya mejorado?
+
+P: He estado tomando un poco de Tylenol Cold, realmente no ha ayudado demasiado. He probado mis inhaladores, a veces ayudan, pero nunca he tenido esta frecuencia de tos y falta de aliento antes.
+
+D: Vale, ¿y cómo ha sido tu energía? ¿Has estado experimentando fatiga?
+
+P: Cuando se pone muy mal, no puedo salir de la casa, pero aparte de eso siento que mi energía sigue ahí.
+
+D: Vale y lo tienes, ¿has tenido fiebre o escalofríos?
+
+P: No.
+
+D: Vale, ¿qué tal si pierdes el olfato?
+
+P: No.
+
+D: ¿Una pérdida de gusto?
+
+P: Nop.
+
+D: Vale, ¿y has tenido algún dolor en el pecho?
+
+P: No, sólo que a veces cuando estoy como tosiendo mucho se pone un poco incómodo. Pero aparte de eso, no.
+
+D: Vale, ¿has tenido algún caso en el que sintieras que tu corazón se estaba acelerando?
+
+P: No.
+
+D: Vale, ¿qué tal si te mareas o te vas a desmayar?
+
+P: No.
+
+D: Vale, ¿has tenido un moqueo nasal o un dolor de garganta?
+
+P: Nop.
+
+D: Vale, ¿y qué tal dolores de cabeza?
+
+P: Sin dolores de cabeza.
+
+D: Muy bien, ¿y has tenido sibilancias?
+
+P: Um, a veces lo he notado, pero lo tenía antes. Como con el asma también, pero no tanto.
+
+D: Bien, ¿y qué tal dolor abdominal?
+
+P: No hay dolor abdominal.
+
+D: Muy bien, ¿entonces algún problema urinario?
+
+P: Nop.
+
+D: ¿Algún problema intestinal?
+
+P: No.
+
+D: ¿Algún sarpullido?
+
+P: Nop.
+
+D: Vale, ¿y qué tal algún dolor muscular, o dolor articular o dolor corporal?
+
+P: No, nada de eso.
+
+D: Muy bien. Y usted mencionó asma, pero ¿le han diagnosticado alguna otra condición médica?
+
+P: No, sólo asma.
+
+D: Vale, ¿y usas inhaladores? ¿Hay algún otro medicamento que esté usando actualmente?
+
+P: Oh no, sólo el salbutamol y como el inhalador de esteroides.
+
+D: Vale, sí, ¿y con qué frecuencia usas las dos?
+
+P: Así que el esteroide que estoy usando casi todos los días, pero el salbutamol que encontré que he estado usando mucho más recientemente. Yo diría que probablemente al menos seis a diez veces en una semana.
+
+D: Vale, eso me recordó que olvidé preguntar. ¿Has notado algún cambio en tu voz?
+
+P: No, en realidad no.
+
+D: De acuerdo. Y me preguntaba si tenías alguna alergia a los medicamentos.
+
+P: No, no que yo sepa.
+
+D: Muy bien, ¿y has estado en el hospital recientemente?
+
+P: No.
+
+D: Muy bien, ¿cuándo fue la última vez que tomaste antibióticos?
+
+P: Yo diría que hace como seis meses.
+
+D: Bien, ¿y alguna cirugía?
+
+P: Nop.
+
+D: Vale, ¿y te dieron la vacuna contra la gripe este año?
+
+P: Sí.
+
+D: Vale, genial y me preguntaba si podrías contarme un poco sobre tu situación de vida.
+
+P: Así que vivo en Londres en un pequeño apartamento con mi esposa.
+
+D: Vale, ¿tienes mascotas por aquí?
+
+P: No, no hay mascotas.
+
+D: Muy bien, y um, cualquier exposición en el trabajo también, como polvo o cualquier tipo de productos químicos similares como ese.
+
+P: No, en realidad no. Mi trabajo es más o menos un trabajo de escritorio, así que nada de eso.
+
+D: Vale, ¿y fumas cigarrillos?
+
+P: Sí, sí, fumo muchos cigarrillos como diría 30 cigarrillos al día.
+
+D: Vale, ¿y cuánto tiempo has fumado?
+
+P: Yo diría, probablemente al menos 25 años.
+
+D: OK y lo siento, ¿podrías recordarme tu edad otra vez?
+
+P: Así que ahora tengo 60 años.
+
+D: Bien, entonces empezaste a fumar alrededor de 35.
+
+P: Sí, sí.
+
+D: De acuerdo. ¿Has intentado renunciar?
+
+P: Sí, traté de dejarlo. Incluso un par de veces, pero luego volví a ello. Sí, no estoy listo para dejarlo.
+
+D: De acuerdo. Es justo. Si hay algo que quieras hablar sobre dejar de fumar en otra cita, podemos arreglar un seguimiento para eso.
+
+P: Muy bien.
+
+D: ¿Bebes alcohol?
+
+P: No mucho, digamos una o dos cervezas el fin de semana.
+
+D: Muy bien, y usas cualquier droga recreativa como cocaína, metanfetamina cristalina o drogas intravenosas.
+
+P: No, nada de eso.
+
+D: Muy bien, ¿y ha pasado algo parecido en tu familia antes?
+
+P: Creo que mi hermana tiene una EPOC, como si también fumara mucho. Pero eso es todo, no sé si es genético.
+
+D: Oh, está bien, um, yo. Así que quiero decir, ¿alguien en la familia tiene cáncer?
+
+P: Um no, no que yo sepa.
+
+D: Muy bien, um así que, que eran todas las preguntas que quería hacer en la historia. ¿Había alguna otra pregunta que tuvieras?
+
+P: No, en realidad no. Sólo quería llegar al fondo de esto.
+
+D: De acuerdo, seguro que haremos algunas investigaciones y probablemente conseguiremos un Rayo X de tórax porque han pasado un par de meses desde que estos síntomas han estado ocurriendo. Pero creo que podría estar relacionado con su tabaquismo y muy probablemente um bronc, bronquitis crónica, pero definitivamente podemos estar investigando esto, y luego también con algunas pruebas de función pulmonar también.
+
+P: Bien, suena bien.
+

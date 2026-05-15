@@ -1,0 +1,189 @@
+D: Me preguntaba si podríamos empezar diciéndome qué te trajo hoy.
+
+P: Así que vine hoy porque he estado teniendo dolor de garganta.
+
+D: Vale, ¿podrías decirme específicamente dónde sientes el dolor?
+
+P: Yo diría que está sobre todo en la parte de atrás de mi garganta.
+
+D: Vale, ¿y cuánto tiempo ha estado pasando esto?
+
+P: Creo que empezó anoche.
+
+D: De acuerdo. ¿Y cómo describirías el dolor? ¿Es agudo, ardiente, punzante, aburrido?
+
+P: Lo describiría como un dolor ardiente.
+
+D: Vale, y uh, ¿ha ido algo peor el dolor?
+
+P: Creo que está empeorando desde anoche.
+
+D: Vale, ¿y algún episodio anterior como este en el que tuvieras síntomas similares?
+
+P: Nada, nada que pueda recordar recientemente, no.
+
+D: Vale, ¿sientes que el dolor irradia en algún otro lugar?
+
+P: Creo que se queda en la parte de atrás de mi garganta.
+
+D: Vale, ¿y puedes pensar en algo que desencadenó el dolor de garganta que hiciste justo antes de que aparecieran los síntomas?
+
+P: No, no que se me ocurra. Realmente no he cambiado lo que bebo o lo que como. Nada realmente cambió.
+
+D: Vale, ¿y algo que haya estado empeorando el dolor?
+
+P: Yo diría que cuando, especialmente cuando estoy comiendo cuando estoy tragando, duele mucho, pero eso es todo.
+
+D: De acuerdo. ¿Algo que lo mejore?
+
+P: Creo que cuando bebo como líquidos más fríos o helados, calma un poco el dolor.
+
+D: De acuerdo. ¿Algún otro síntoma que hayas estado experimentando?
+
+P: Um, así que me parece que como mi madre me dijo, que tengo mi voz es un poco áspera y como un poco ronca. Pero aparte de eso, aparte de tragar, nada más en realidad. Todavía soy capaz de tragar líquidos, pero son sólo los sólidos los que causan un poco de dolor.
+
+D: Vale, ¿has comido algo hoy o cuándo fue la última vez que comiste algo?
+
+P: Creo que almorcé hoy. No pude comer demasiado sólo por el dolor. Pero sí, hace un par de horas tuve un almuerzo.
+
+D: Vale, ¿y has notado algún cambio en tu voz?
+
+P: Lo siento, ¿qué fue eso?
+
+D: ¿Has notado algún cambio en tus gustos? ¿Crees que tu voz también suena diferente?
+
+P: Sí, definitivamente creo que um, como cuando me desperté esta mañana, mi voz era definitivamente más como ronca y más como raspy, casi. Pero sí, diría que mi voz ha cambiado.
+
+D: Vale, ¿y has estado teniendo fiebre o escalofríos?
+
+P: Definitivamente me sentí un poco fría ayer por la mañana. No tomé ninguna temperatura. Creo que ustedes tomaron una temperatura cuando llegué hoy. No sé qué fue.
+
+D: Vale, sí, hoy tuviste fiebre cuando entraste.
+
+P: De acuerdo.
+
+D: De acuerdo. ¿Has tenido dolores de cabeza?
+
+P: Sin dolores de cabeza.
+
+D: Vale, ¿qué tal náusea o vómitos?
+
+P: A veces me siento como con el dolor y creo que hay un montón de hinchazón de nuevo en mi garganta que cuando hablo demasiado, casi siento que estoy a punto de amordazar, pero realmente no he vomitado en absoluto.
+
+D: Vale, ¿pero sientes que tu garganta está hinchada?
+
+P: Mhm.
+
+D: Muy bien, ¿y cómo ha sido tu energía? ¿Has estado experimentando fatiga?
+
+P: Sí, diría que definitivamente los últimos días, especialmente ayer. Me sentía exhausta, no quería hacer nada.
+
+D: Vale, ¿notaste algún sarpullido o cambio en la piel?
+
+P: No, sin erupciones cutáneas.
+
+D: Vale, ¿y has tenido tos?
+
+P: No, no he tomado café.
+
+D: ¿Qué tal alguna dificultad para respirar o falta de aliento?
+
+P: No, creo que mi respiración ha estado bien.
+
+D: Vale, ¿y cómo está tu apetito?
+
+P: Sí, en los últimos días, especialmente hoy, me siento como con el dolor que realmente no tengo ganas de comer.
+
+D: De acuerdo. ¿Y algún cambio reciente en tu peso?
+
+P: No, peso alrededor de 150 y eso no ha cambiado en absoluto.
+
+D: Muy bien, y uh, ¿has tenido alguna infección recientemente?
+
+P: Creo que hace un par de semanas tuve una que diría como un poco de goteo nasal. Tal vez un poco de dolor de garganta, pero se fue solo.
+
+D: Vale, ¿así que no tuviste ningún tratamiento para eso?
+
+P: No, no tenía medicamentos ni nada. Ni siquiera fui al médico entonces.
+
+D: Vale, ¿y has notado algún bulto en tu cuello o debajo de tu barbilla?
+
+P: No que yo sepa, realmente no lo he comprobado, pero no he notado nada como extraordinario.
+
+D: Vale, ¿algún cambio en el olor de tu aliento?
+
+P: No sé nada de olor, pero siento que tengo un sabor asqueroso en la boca. Tal vez no lo sé. Creo que puede oler un poco, pero definitivamente tengo ese sabor realmente asqueroso.
+
+D: Bien, y uh, ¿tienes algún dolor abdominal?
+
+P: Siento que mi estómago está un poco dolorido, especialmente hoy, pero nada de lo que me preocupe demasiado.
+
+D: Vale, ¿y has sido diagnosticado o tratado por alguna condición médica en el pasado?
+
+P: No. He tenido suerte. Estoy completamente sano.
+
+D: ¿Alguna alergia?
+
+P: Sin alergias.
+
+D: ¿Medicamentos?
+
+P: Uh, no.
+
+D: ¿Alguna hospitalización?
+
+P: Nop. Nunca.
+
+D: Vale, ¿has estado cerca de alguien que ha estado enfermo?
+
+P: Uh, así que hace un par de semanas, alrededor de la época en que tenía algunos síntomas de frío, mi novia también tenía dolor de garganta y duró alrededor de una semana. Sí, por lo que diría que sólo mi novia.
+
+D: Vale, ¿tu novia tiene dolor de garganta ahora?
+
+P: No, empezó, creo que hace unas dos semanas y se detuvo la semana pasada.
+
+D: Vale, ¿alguna cirugía antes?
+
+P: No, sin cirugías.
+
+D: Muy bien en la familia, cualquier historia de cáncer o cáncer, enfermedades cardiovasculares tempranas o enfermedades crónicas?
+
+P: No sé el resto, pero yo, mi padre tiene diabetes tipo 2, pero no hay cáncer ni ataques al corazón ni nada por el estilo.
+
+D: Vale, y ahora mismo, ¿cómo te mantienes económicamente?
+
+P: Así que actualmente no estoy trabajando. Voy a ir a la universidad ahora mismo, a estudiar artes. En este momento estoy viviendo en el dormitorio, he sido afortunado, mis padres me apoyan financieramente, así que actualmente no estoy trabajando, sólo un estudiante.
+
+D: Veo bien, ¿y bebes alcohol?
+
+P: Sólo los fines de semana cuando hay una reunión y fiestas. Pero durante toda la semana no bebo nada.
+
+D: Vale, ¿y fumas cigarrillos?
+
+P: No, nunca probé cigarrillos.
+
+D: Vale, ¿y usas alguna otra droga recreativa como la marihuana?
+
+P: No, no. Trato de mantenerme alejado de todas las drogas porque también soy atleta, así que necesito asegurarme de que mi cuerpo esté completamente sano.
+
+D: Vale, ¿y actualmente eres sexualmente activa?
+
+P: Sí.
+
+D: Vale, ¿podrías contarme un poco sobre tu pareja o pareja?
+
+P: Así que sólo tengo un compañero durante los últimos dos meses, mi novia. Antes de eso, durante todo el año, creo que he tenido otros dos socios. Pero sí en este momento, sólo mi novia.
+
+D: ¿De acuerdo y hombres o mujeres o ambas cosas?
+
+P: Oh no, soy hetero. Como si sólo hubiera estado con mujeres.
+
+D: Vale, ¿y con cuántos socios has estado en los últimos seis meses o en el último año?
+
+P: Yo diría que para mi novia, otras dos chicas, así que tres en total en el último año.
+
+D: Vale, ¿y usas un condón?
+
+P: Siempre trato de usar un condón como la última cosa que mis padres probablemente me echarían si alguna vez quedara embarazada. Así que sí, siempre uso un condón.
+
+D: De acuerdo.

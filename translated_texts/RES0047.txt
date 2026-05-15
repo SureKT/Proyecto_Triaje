@@ -1,0 +1,236 @@
+D: ¿Qué te trae por aquí?
+
+P: Sí, así que he tenido esta opresión en el pecho y me ha faltado el aliento y me ha salido el esputo con esta tos.
+
+D: Bien, empecemos con la tos. ¿Cuándo empezó eso?
+
+P: Así que he tenido tos por unos años, pero en estos últimos tres días se ha puesto un poco peor.
+
+D: Bien, durante los últimos tres días, tres tres años. De acuerdo.
+
+P: Sí.
+
+D: ¿Hay algún desencadenante para tu tos?
+
+P: Uh, sí, si estoy haciendo, um, como si estoy realmente activo como si corro para coger el autobús o uh o si estoy paleando nieve, tal vez puedo hacer, llegar a tener falta de aliento, pero um no si estoy caminando alrededor de la manzana o algo así.
+
+D: Vale, ¿y qué causó esta tos al principio hace tres años? ¿Lo sabes?
+
+P: Sí, creo que es sólo una tos de fumadores. Creo que mi médico de familia me dijo que tenía una bronquitis crónica antes.
+
+D: Está bien, está bien. ¿Con qué frecuencia tosías antes de que empeorara recientemente?
+
+P: Usualmente tosía todos los días, pero la tos solía ser, por la mañana, me levantaba, ahí, tosía un poco de esputo y luego tal vez, y entonces normalmente estaba bien.
+
+D: Vale, ¿y algo te hace toser mejor? ¿Como si te hicieras cargo del jarabe para la tos?
+
+P: Sí, he probado con jarabes para la tos en el pasado, pero no ha ayudado.
+
+D: Vale, vale, y si hablaras de la calidad de tu tos, ¿es corteza? ¿Suena duro? ¿Cómo suena?
+
+P: Sí, diría que suena bastante duro. Parece que hay moco moviéndose, supongo que con la tos en el pecho, puedo sentirlo.
+
+D: Vale, vale y mencionaste que estás produciendo mucho esputo con tu tos. ¿De qué color es ese esputo?
+
+P: Verde
+
+D: Verde, está bien. ¿Alguna sangre?
+
+P: Sin sangre.
+
+D: No hay sangre, OK. Y mencionaste que nunca has producido esputo con la tos, especialmente no con el esputo verde en los últimos tres años, ¿verdad?
+
+P: Sacaría a relucir el esputo, pero normalmente es claro y blanco.
+
+D: Vale, vale, ¿y tienes algún silbido asociado con esta tos?
+
+P: Sí, lo sé.
+
+D: Sí, está bien. Y mencionaste que te faltaba el aliento. ¿Te faltaba el aliento antes de la tos o eso empezó cuando esta tos empeoró?
+
+P: Creo que la falta de aliento ha empeorado un poco en los últimos días mientras la tos ha empeorado.
+
+D: Está bien, está bien. Y si evaluaras la gravedad de tus síntomas, de cómo te sientes, siendo 1 a 10, 10 lo peor, ¿dónde te pondrías?
+
+P: Yo diría que un 8, ha sido muy duro, se ha vuelto muy difícil respirar.
+
+D: De acuerdo, sí. ¿Y ha experimentado alguna vez algo tan grave en el pasado?
+
+P: No, no he tenido esta dificultad para respirar antes.
+
+D: De acuerdo. De acuerdo. ¿Te duele el pecho?
+
+P: Uh, mi pecho es, se siente apretado.
+
+D: De acuerdo. Se siente apretado, vale, ¿te duele?
+
+P: No, no, en realidad no duele. Es incómodo.
+
+D: De acuerdo. ¿Y crees que está apretado por la tos o la falta de aliento?
+
+P: Sí, como que lo siento con la tos.
+
+D: ¿Te has dado cuenta de alguna hinchazón en tus extremidades?
+
+P: Sí, tal vez un poco en mis pies, más de lo habitual.
+
+D: Vale, ¿y sientes que tu corazón está acelerado?
+
+P: Uh, no.
+
+D: No, está bien. ¿Algún mareo o desmayo?
+
+P: No he tenido nada como eso.
+
+D: De acuerdo. ¿Algún cambio en tu visión o audición?
+
+P: No.
+
+D: No, um, ¿tienes la nariz congestionada o la nariz goteada?
+
+P: No.
+
+D: ¿Qué tal un dolor de garganta?
+
+P: No.
+
+D: No, ¿algún cambio en tu olor o gusto?
+
+P: No.
+
+D: ¿Tienes fiebre o escalofríos?
+
+P: No, me he sentido bien.
+
+D: Vale, ¿alguna pérdida de peso?
+
+P: Sí, tal vez en los últimos años he perdido unas cuantas libras, pero tal vez 10 libras en los últimos dos años.
+
+D: Los últimos dos años, OK. ¿Fue una pérdida intencional de peso o no intencional?
+
+P: No es intencional.
+
+D: Vale, vale, ¿y algún cambio en tu cabello, uñas o piel, como sarpullidos?
+
+P: No, no he notado nada de eso.
+
+D: Bien, ¿y cómo están tus evacuaciones intestinales? ¿Todo normal allí?
+
+P: Sí, eso ha sido normal.
+
+D: Vale, ¿todo lo normal con respecto a tu orina?
+
+P: Sí, eso ha sido normal.
+
+D: De acuerdo. ¿Alguna confusión o pérdida de memoria?
+
+P: No.
+
+D: No, está bien. ¿Alguna fatiga?
+
+P: Sí, me he estado sintiendo bien, muy cansado estos últimos tres días.
+
+D: Sí, está bien. ¿Dolor en las articulaciones o dolores musculares?
+
+P: No.
+
+D: No, ¿y por lo demás estás sano?
+
+P: Um, bueno, uso estos inhaladores y creo que me han dicho que tengo EPOC antes.
+
+D: Vale, aparte de tu EPOC, ¿tienes alguna otra condición médica de larga data como presión arterial alta, diabetes, algo así?
+
+P: Sí, tengo presión arterial alta y me sacaron la vesícula biliar hace unos años.
+
+D: De acuerdo. Vale, ¿alguna otra cirugía o hospitalización?
+
+P: Tuve una reparación de ACL como cuando era adolescente.
+
+D: Bien, y además de los inhaladores, ¿está tomando algún otro medicamento?
+
+P: Sí, hay uno para la presión arterial um y tomo vitamina D, um y eso es todo.
+
+D: Vale, ¿cuál, qué um medicación estás tomando para la presión arterial?
+
+P: Amlodipino.
+
+D: Amlodipino, está bien. ¿Cuándo empezaste a tomar eso?
+
+P: Hace unos siete años.
+
+D: Vale, y luego para tu EPOC, ¿en qué inhaladores estás?
+
+P: Uh, hay uno que es para, um, como la actuación corta. Y luego hay uno que uso todos los días, Spiriva, creo.
+
+D: De acuerdo, sí. ¿Y cuánto tiempo lleva en estos inhaladores?
+
+P: Uh ha sido un par de años para bien, para el corto que uso para terapias de rescate fue por mucho tiempo, pero Spiriva ha sido los últimos años.
+
+D: Vale, vale, ¿y descubres que tus inhaladores están ayudando?
+
+P: Sí. Definitivamente noto una diferencia cuando, si me olvido de una dosis o algo así.
+
+D: Sí, está bien. ¿Y tienes alguna alergia?
+
+P: No, no lo creo.
+
+D: No, está bien. ¿Qué tal vacunas, estás al día?
+
+P: Sí, eso creo.
+
+D: De acuerdo. Y en términos de historia familiar, ¿hay alguna condición pulmonar o cardíaca que funcione en la familia?
+
+P: Um, uh no.
+
+D: No, está bien. ¿Fumas actualmente?
+
+P: Sí, lo sé. He estado tratando de dejarlo, um fumo por un paquete de cigarrillos por día ahora. Solía fumar como 2 paquetes al día.
+
+D: Vale, bueno, es bueno que hayas recortado, um si necesitas alguna ayuda adicional cortando tenemos recursos a los que podemos referirte.
+
+P: Sí, eso sería genial.
+
+D: Sí, ¿cuánto, por cuánto tiempo has estado fumando? ¿Cuántos años?
+
+P: Bueno, empecé cuando era adolescente, así que probablemente como 35.
+
+D: De acuerdo. ¿Y haces marihuana?
+
+P: Uh no.
+
+D: No, vale, vale, ¿qué tal alcohol? ¿Bebes alcohol?
+
+P: Sí, unas cervezas el fin de semana.
+
+D: De acuerdo. ¿Y dónde vives actualmente?
+
+P: Vivo solo en un apartamento.
+
+D: De acuerdo. ¿Y alguna razón para pensar que hay alfombras viejas, moho, o um asbesto o algo por el estilo que podría estar exacerbando tus síntomas?
+
+P: Uh, quiero decir que tengo una alfombra en el dormitorio así que, pero quiero decir que es la única alfombra en el apartamento.
+
+D: De acuerdo. ¿Vives con alguien?
+
+P: No, solo somos mi perro y yo.
+
+D: De acuerdo. ¿Has estado con algún contacto enfermo últimamente?
+
+P: Um tal vez, quiero decir que por lo general voy a ver uh, un par de amigos, nos reuniremos para tomar un café
+Por la mañana por la mañana, pero siento que han estado bien.
+
+D: Vale, ¿qué tal si viajas, has viajado a alguna parte recientemente?
+
+P: No.
+
+D: No, está bien. Bueno, creo que esas eran todas las preguntas que tenía para ti. ¿Tienes alguna pregunta o preocupación o algo que me haya perdido que quisieras discutir?
+
+P: No, solo quería entrar porque ha sido muy difícil respirar.
+
+D: Sí, bueno, haremos un examen físico para tratar de entender lo mala que es la exacerbación de la EPOC. Um también vamos a tratar de conseguir una saturación de oxígeno um en usted, y queremos que la lectura
+estar entre el 88 y el 92%. Si es menos que eso um y creemos que tienes una leve exacerbación, te sugeriremos que uses tu agonista beta de acción corta um más a menudo, y luego si,
+Si creemos que tienes una exacerbación moderada también te recetaremos antibióticos o esteroides para acompañar al agonista beta de acción corta. Y si es severo, o si se vuelve severo, por favor busque ayuda en Urgencias y lo intentarán, probablemente te pondrán en algún tipo de, um oxy como um algún tipo de oxígeno suplementario, ya sea BIPAP o CPAP. Y otra vez te seguirán dando tus broncodilatadores y esteroides, así como antibióticos para asegurarte de que no tengas ninguna mala complicación de la neumonía. Y suena como si fuera una exacerbación de la EPOC en este punto, pero si desarrollas otros síntomas como fiebres, o cualquier síntoma que se superponga con enfermedades virales, te prepararemos para eso, lo haremos, creo que todavía te haremos un frotis covidido solo para asegurarnos de que no tienes eso, pero empezaremos con trabajarte para EPOC. ¿Qué te parece?
+
+P: Eso suena genial. Gracias.
+
+D: Muy bien. Cuídate.

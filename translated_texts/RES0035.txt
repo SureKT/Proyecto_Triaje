@@ -1,0 +1,225 @@
+D: ¿Puedo empezar preguntándote qué te trajo aquí hoy?
+
+P: Claro, he estado experimentando algunos problemas respirando, y sólo un montón de tos durante el último año o algo así.
+
+D: De acuerdo. Y es su tos, ¿ha sido una tos húmeda o una tos seca?
+
+P: Uh, pero ha sido una tos húmeda.
+
+D: De acuerdo. ¿Mencionó que empezó hace más de un año?
+
+P: Bueno, unos ocho meses.
+
+D: 8 meses. ¿Y ha ido empeorando?
+
+P: Sí, creo que ha estado empeorando.
+
+D: De acuerdo. Y así ha sido una tos húmeda. ¿Liberas algún tipo de flema o esputo?
+
+P: Um, sí, generalmente está claro, pero a veces puede verse amarillo o verde.
+
+D: Vale, y cómo, ¿cuánto dirías que produces todos los días?
+
+P: Um, como um, en total por día?
+
+D: O tal vez cada vez que toses.
+
+P: Cada vez que tose tal vez como el tamaño de mi huella digital.
+
+D: Vale, ¿y te has dado cuenta de que toses sangre?
+
+P: No.
+
+D: ¿La sangre se mezcla alguna vez con la flema?
+
+P: No.
+
+D: De acuerdo. ¿Y ha sido tosida constante? ¿O va y viene en los últimos ocho meses?
+
+P: Um, va y viene, pero ahí, siempre hay como si tuviera un cosquilleo en mi garganta o algo así.
+
+D: Vale, y cuando empezó, ¿había cambiado algo en tu vida? ¿Te mudaste a un nuevo lugar o empezaste a fumar o algo así?
+
+P: No.
+
+D: No. De acuerdo. ¿Hay algo que haga que empeore la tos o la falta de aliento?
+
+P: Supongo que caminando.
+
+D: ¿Caminando? ¿Hay algo que lo mejore?
+
+P: Solo descansando.
+
+D: Solo descansando, OK. ¿Cuánto puede caminar o correr hasta que sienta la tos o la falta de aliento?
+
+P: Unos 200 metros.
+
+D: De acuerdo. ¿Y esto te ha pasado antes de los ocho meses?
+
+P: No. En realidad, me da jadeo porque tengo asma, pero no, no es tan malo como esto.
+
+D: De acuerdo. Y, um, ¿cuántas veces estás tosiendo, estás tosiendo durante todo el día? ¿O es más así durante el día y luego o más por la noche?
+
+P: Uh, es sólo que siempre está ahí, um durante todo el día.
+
+D: De acuerdo. ¿Y tienes otros síntomas además de la dificultad para respirar y la tos? ¿Tienes dolor de garganta, moqueo nasal, mareos, algo así?
+
+P: No.
+
+D: Vale, ¿así que la dificultad para respirar y la tos?
+
+P: Sí.
+
+D: ¿Te duele el pecho?
+
+P: No hay dolor en el pecho.
+
+D: Genial, ¿has viajado a algún lugar fuera del país recientemente?
+
+P: Uh, no, no.
+
+D: ¿Dolor de cabeza, náuseas o vómitos?
+
+P: No.
+
+D: ¿Tienes fiebre, escalofríos o sudores nocturnos?
+
+P: No.
+
+D: ¿ Te sientes cada vez más fatigado durante todo el día?
+
+P: Sí, supongo que toser mucho me cansa.
+
+D: Vale, ¿alguna vez sientes que tu corazón está acelerado o tienes algún tipo de dolor en el pecho?
+
+P: No.
+
+D: ¿Has notado algún problema orinando?
+
+P: No.
+
+D: ¿Algún cambio en sus deposiciones, estreñimiento o diarrea?
+
+P: No.
+
+D: ¿Algún problema con tu sueño o apetito?
+
+P: Uh, no.
+
+D: ¿Algún cambio significativo en su peso?
+
+P: No.
+
+D: ¿Ha tenido alguna infección reciente que usted sepa?
+
+P: No que yo sepa.
+
+D: ¿Algún antibiótico que hayas tenido que usar para infecciones?
+
+P: No.
+
+D: ¿Crees que has tenido alguna exposición a la tuberculosis en el pasado?
+
+P: No.
+
+D: ¿Y usted tiene exposición a humos o polvo o animales o mascotas en su trabajo o entorno familiar?
+
+P: Tengo un pájaro.
+
+D: ¿Un pájaro? ¿Y cuándo conseguiste el pájaro?
+
+P: Como hace cinco años.
+
+D: Vale, ¿pero no hay problemas antes de los ocho meses?
+
+P: No.
+
+D: De acuerdo. En términos de su salud general, ¿tiene alguna condición médica pasada? ¿Mencionó asma, pero algo más como diabetes, presión arterial alta?
+
+P: Tengo diabetes tipo 2 y presión arterial alta.
+
+D: De acuerdo. ¿Y toma algún medicamento para esas condiciones?
+
+P: No, sólo está siendo controlado por la dieta.
+
+D: Vale, ¿alguna medicación por alguna otra razón?
+
+P: Tomo algunas tabletas de vitamina D.
+
+D: Vale, ¿alergias, ambientales o a los medicamentos?
+
+P: No.
+
+D: Vale, ¿alguna vez has sido hospitalizado?
+
+P: No.
+
+D: ¿Algún contacto enfermo cerca de ti en casa o en el trabajo?
+
+P: No.
+
+D: ¿Alguna cirugía previa?
+
+P: No hay cirugías previas.
+
+D: Vale, ¿tienes antecedentes familiares de asma o alguna otra afección pulmonar o algún cáncer?
+
+P: No hay afecciones pulmonares ni cánceres.
+
+D: De acuerdo. Y actualmente, ¿trabajas?
+
+P: Sí.
+
+D: ¿Y dónde trabajas?
+
+P: Trabajo como contable.
+
+D: De acuerdo. ¿Y vives actualmente en un apartamento o una casa?
+
+P: En un apartamento.
+
+D: De acuerdo. ¿Y vives solo o vives con alguien más?
+
+P: Solo por mi cuenta.
+
+D: De acuerdo. ¿Algún cambio en tu casa, alfombras nuevas o algo así? ¿O te has mudado a un nuevo lugar recientemente?
+
+P: No.
+
+D: ¿Usas drogas recreativas como marihuana?
+
+P: No, fumé cuando era más joven, pero ya no.
+
+D: Vale, ¿y fumas cigarrillos?
+
+P: Sí.
+
+D: Vale, ¿y cuánto dirías que fumas en un día promedio?
+
+P: Uhm, como medio paquete al día.
+
+D: Vale, ¿y cuánto tiempo llevas fumando?
+
+P: Desde que tenía 18 años.
+
+D: De acuerdo. ¿Y bebes alcohol?
+
+P: Uhm, a veces.
+
+D: ¿Y con qué frecuencia dirías en una semana media, cuántas bebidas de alcohol dirías que tienes?
+
+P: Uhm, tal vez dos vasos de vino a la semana.
+
+D: De acuerdo. Y en términos de su dieta y ejercicio, ¿diría que recibe 3 comidas al día? Bueno, ¿equilibrio, dieta bien equilibrada?
+
+P: Sí, yo diría que sí.
+
+D: Bien, y por último, en términos de ejercicio, ¿dirías que eres bastante activo durante toda la semana?
+
+P: Uhm, sí.
+
+D: ¿Y qué tipo de cosas haces para hacer actividad?
+
+P: Hago caminatas cuando puedo. Antes de esta falta de aliento, solía montar en bicicleta.
+
+D: De acuerdo.

@@ -1,0 +1,208 @@
+D: Me preguntaba si podrías decirme qué te trajo.
+
+P: Claro, he estado tosiendo mucho. Me he sentido con falta de aliento y me siento muy sibilante, así que pensé que debería ir a verlo.
+
+D: Vale, ¿cuándo empezó la tos?
+
+P: Siempre he tenido tos. Bueno, supongo que he tenido una tos durante los últimos cinco años, pero en los últimos tres días se ha puesto mucho peor.
+
+D: ¿Pasó algo hace 3 días que haya traído tos?
+
+P: Uhm, no, yo estaba, hice comestibles, llegué a casa y luego empecé a toser un poco más y no he podido parar desde entonces.
+
+D: Vale, ¿hay alguna hora en particular del día en la que la tos sea peor, como la mañana, la noche?
+
+P: Uhm, parece ser peor en la mañana.
+
+D: Vale, ¿y traes algo de esputo?
+
+P: Lo estoy. Umm, y se ve amarillo y a veces incluso verde.
+
+D: De acuerdo. ¿Con tu tos antes de hace tres días estabas sacando el esputo con eso?
+
+P: Supongo que un poco, pero estaba claro.
+
+D: Vale, ¿y ahora traes más esputo, el mismo o menos?
+
+P: Más esputo, y el esputo se ve diferente.
+
+D: Vale, ¿has notado algo de sangre?
+
+P: Sin sangre.
+
+D: Vale, y mencionaste que has estado teniendo un sibilancia, ¿cuándo te das cuenta?
+
+P: Uhm, yo también, supongo que me di cuenta de que la mayoría de anoche, sí.
+
+D: Vale, ¿y qué tipo de actividades has tenido falta de aliento?
+
+P: Supongo que caminar, hacer día a día las cosas me han hecho sentir un poco más corto de aliento de lo que solía sentir.
+
+D: De acuerdo. ¿Y ha estado experimentando otros síntomas además de la tos, sibilancia y falta de aliento?
+
+P: Me siento un poco más cansado, pero aparte de eso, no.
+
+D: De acuerdo. Así que un poco más cansado. ¿Cómo ha estado tu sueño?
+
+P: Mi sueño ha sido, um, bastante normal. Ha sido, sí, ha sido lo mismo. Supongo que es la tos lo que me está cansando.
+
+D: Vale, ¿has tenido algún dolor en el oído o en los ojos?
+
+P: ¿Dolor en los oídos o en los ojos? No.
+
+D: ¿Alguna descarga de cualquiera de los dos, tus oídos o tus ojos?
+
+P: No.
+
+D: De acuerdo. ¿Has tenido un moqueo nasal?
+
+P: No.
+
+D: ¿O se sintió congestionada?
+
+P: No.
+
+D: Vale, ¿has tenido dolor de garganta?
+
+P: Uh, no.
+
+D: ¿O alguna dificultad para tragar?
+
+P: Uhm, no.
+
+D: ¿Cambios en tu sentido del olfato o del gusto?
+
+P: No.
+
+D: Vale, ¿has tenido algún cambio en el apetito?
+
+P: No, no lo creo.
+
+D: Muy bien, ¿y has tenido alguna pérdida de peso en los últimos meses?
+
+P: Pérdida de peso, no.
+
+D: De acuerdo. ¿Qué tal si has tenido fiebre o escalofríos?
+
+P: Fevers o escalofríos ah, no. No, nada de eso.
+
+D: Noches, ¿qué tal sudores nocturnos?
+
+P: No.
+
+D: ¿Has tenido algún dolor en el pecho?
+
+P: Ah no, no hay pecho. Bueno, mi pecho se siente, supongo que a veces, se siente doloroso porque estoy tosiendo mucho, pero nada más que eso.
+
+D: ¿Te duele el pecho cuando te esfuerzas físicamente?
+
+P: Uhm, no.
+
+D: Vale, ¿así que es justo después de la tos?
+
+P: Sí.
+
+D: Bien, ¿y cómo describirías el carácter del dolor en el pecho? Algunas personas dirán agudo, aburrido, dolorido.
+
+P: Yo diría que aburrido.
+
+D: Vale, ¿y has tenido palpitaciones en el corazón, sintiéndote como si tu corazón estuviera acelerado?
+
+P: No.
+
+D: ¿Y qué hay de cualquier episodio en el que te sintieras como si fueras a desmayarte o, sí, desmayarte?
+
+P: No.
+
+D: De acuerdo. ¿Te han hinchado los pies, los tobillos, las manos?
+
+P: No, nada de eso.
+
+D: De acuerdo. ¿Y luego has tenido algún problema urinario?
+
+P: Um, no.
+
+D: ¿Algún problema intestinal?
+
+P: No.
+
+D: Vale, ¿y luego algún dolor en las articulaciones o dolores musculares?
+
+P: No, nada de eso.
+
+D: ¿Y qué tal algún sarpullido en alguna parte?
+
+P: No.
+
+D: Vale, y luego, lo siento, ¿has tenido náusea o vómitos?
+
+P: Uh, no.
+
+D: De acuerdo. En términos de su historial médico pasado, ¿ha sido diagnosticado con alguna condición antes?
+
+P: Tengo presión arterial alta y diabetes.
+
+D: Ya veo. ¿Tomas algún medicamento para eso?
+
+P: Um, para la presión arterial, la presión arterial alta, estoy en un bloqueador beta y luego para mi diabetes estoy en metformina.
+
+D: Vale, ¿estás tomando algún otro medicamento?
+
+P: Solo un poco de calcio y vitamina D.
+
+D: ¿Alguna cirugía en el pasado?
+
+P: Nop.
+
+D: ¿Alguna alergia a los medicamentos?
+
+P: No.
+
+D: De acuerdo. ¿Están actualizadas sus vacunas?
+
+P: Creo que sí, pero recientemente aprendí que debería conseguir algo llamado la vacuna antineumocócica. Aún no lo he entendido.
+
+D: Sí, tienes razón. Así que para um, en Canadá o cualquiera o en Ontario, al menos, cualquiera que tenga más de 65 años, se recomienda obtener esta vacuna para proteger contra ciertos tipos de infecciones bacterianas que pueden causar neumonía. Así que sería bueno algo que usted puede establecer con su médico de familia.
+
+P: De acuerdo.
+
+D: Sí, y tú también, ¿así que fumas cigarrillos?
+
+P: Solía hacerlo.
+
+D: Vale, ¿y cuánto fumas o cuánto fumas?
+
+P: Fumé un paquete al día y fumé durante 45 años, pero paré hace dos años.
+
+D: Vale, es genial que hayas podido parar. ¿Bebes alcohol?
+
+P: De vez en cuando como una vez cada dos semanas.
+
+D: Vale, ¿y cualquier disparador que puedas pensar que estuviste expuesto en el trabajo o en casa como químicos o cosas a las que estabas expuesto a las que tenías que respirar, que respiras?
+
+P: No, nada de eso.
+
+D: Vale, ¿has viajado a alguna parte?
+
+P: No.
+
+D: Muy bien, ¿y has estado cerca de alguien que ha estado enfermo o tiene síntomas similares?
+
+P: Uhm, no.
+
+D: Muy bien, ¿y alguien en la familia tiene una enfermedad cardíaca o pulmonar?
+
+P: Um, no.
+
+D: ¿Algún cáncer en la familia?
+
+P: Había un cáncer de hígado.
+
+D: Bien, y, creo que .. Vale, y eso era todo lo que quería preguntar sobre la historia. ¿Hay algo más que quieras decirme hoy?
+
+P: No, ¿cuál crees que es el problema? Nunca me había sentido tan mal con mi falta de aliento.
+
+D: Sí, ciertamente tan umm, suena como si pudiera ser una infección viral que traje con esta tos y empeorar el esputo. Esto podría ser una infección bacteriana, podría ser una exacerbación de la EPOC y también una de las otras cosas que tendríamos que considerar en este momento es Covid también y por lo que vamos a hacer un hisopo nasal PCR para Covid y una radiografía de tórax y algunas otras investigaciones también y uhm, vamos a tratar de llegar al fondo de lo que está causando su falta de aliento.
+
+P: Vale, eso suena bien, gracias.
+
