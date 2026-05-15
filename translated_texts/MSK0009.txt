@@ -1,0 +1,223 @@
+D: ¿En qué puedo ayudarle?
+
+P: Así que he estado teniendo este dolor en mi rodilla desde que me caí, hace sólo tres días resbalé en las escaleras. Desde entonces he estado teniendo mucho dolor.
+
+D: Veo que este dolor empezó justo después de caer en las escaleras?
+
+P: Sí, sí, he estado teniendo el dolor desde entonces.
+
+D: De acuerdo.
+
+P: Y eso fue hace tres días.
+
+D: Hace tres días, OK. ¿Y sientes el dolor en tu rodilla derecha?
+
+P: Sí, en mi rodilla derecha.
+
+D: De acuerdo. ¿Y cuál dirías que es el carácter del dolor, o cómo describirías el dolor?
+
+P: Es como un dolor aburrido.
+
+D: De acuerdo. ¿Y el dolor ha ido mejorando o empeorando?
+
+P: Uhm, es un poco peor en realidad sólo en mi rodilla derecha, así como toda mi pantorrilla derecha también.
+
+D: Está bien, está bien. Uh. ¿Cuál es la intensidad del dolor en una escala de 1 a 10, siendo el peor dolor que has sentido?
+
+P: Probablemente alrededor de las 6.
+
+D: De acuerdo. Um. Y luego. ¿Te dolió la rodilla antes de esto, o tuviste algún trauma en la pierna antes?
+
+P: No, no antes de hace tres días antes de mi resbalón estaba bien.
+
+D: Vale, ¿sientes el dolor en algún otro lugar aparte de tu rodilla derecha?
+
+P: En mi pantorrilla también me duele mucho. En mi pantorrilla derecha.
+
+D: Vale, ¿ha habido algo que haya empeorado el dolor?
+
+P: Sí, si lo soy si estoy caminando o si estoy moviendo esa pierna y poniendo peso en ella, es definitivamente peor, así que definitivamente es mejor si me quedo sentado y me quedo descansando.
+
+D: De acuerdo. ¿Hay algo que ella dijo descansando que ayude, hay algo más que haya ayudado?
+
+P: Tomé un Advil que me ayudó durante unas horas, pero luego como que volvió a lo mismo.
+
+D: De acuerdo. Uhm. Y luego. Sí, ¿has tenido algún otro, uh, como síntomas asociados con la rodilla derecha y dolor de pantorrilla?
+
+P: Sí, también creo que hay algo de hinchazón en mi pantorrilla derecha también. Desde ayer.
+
+D: De acuerdo. Está bien, hay algo de hinchazón allí.
+
+P: Mmm
+
+D: ¿Se ha dado cuenta si su pantorrilla era roja o si había un sarpullido sobre ella?
+
+P: No veo ningún sarpullido o enrojecimiento, pero definitivamente parece hinchado y luego duele también cuando lo muevo o lo presiono.
+
+D: OK, uh, OK, y cuando te caíste ¿le hiciste daño a alguna otra parte de tu cuerpo como tus manos o muñecas?
+
+P: Um sólo unos pocos arañazos en mis manos, pero nada muy malo.
+
+D: ¿Y tu cabeza? ¿Perdiste el conocimiento o te golpeaste la cabeza?
+
+P: No, no, no me golpeé la cabeza en absoluto. Me atrapé antes y no, no perdí la conciencia.
+
+D: De acuerdo. Vale, ¿has tenido fiebre o escalofríos?
+
+P: No.
+
+D: Vale, ¿has tenido algún dolor en el pecho?
+
+P: No.
+
+D: ¿Has tenido tos?
+
+P: No tose.
+
+D: ¿Has tenido alguna dificultad para respirar?
+
+P: No.
+
+D: Vale, ¿has tenido algún mareo o aturdimiento?
+
+P: No.
+
+D: Vale, ¿y has tenido palpitaciones en el corazón o sientes que tu corazón está acelerado?
+
+P: No, nada de eso.
+
+D: De acuerdo. Y luego. ¿Ha tenido algún síntoma infeccioso, como por ejemplo? ¿Como moqueo nasal o dolor de garganta?
+
+P: No, nada de eso.
+
+D: De acuerdo. Y has tenido náuseas o vómitos.
+
+P: No.
+
+D: ¿Has tenido algún dolor abdominal?
+
+P: No.
+
+D: Vale, ¿has tenido algún cambio en tus deposiciones como diarrea o estreñimiento?
+
+P: No, nada de eso.
+
+D: Muy bien, ¿has tenido algún problema urinario?
+
+P: Nop.
+
+D: Muy bien, ¿has tenido algún cambio de peso reciente?
+
+P: No, nada de eso.
+
+D: De acuerdo. Uhm, Y. ¿Has notado algún sarpullido en cualquier otro lugar sobre todo tu cuerpo?
+
+P: No, no es que me haya dado cuenta.
+
+D: ¿Has notado alguna debilidad muscular?
+
+P: No.
+
+D: ¿Has tenido algo de entumecimiento en la piel?
+
+P: No que yo haya notado, no.
+
+D: ¿Y has tenido algún hormigueo?
+
+P: No. De acuerdo.
+
+D: Y luego. Um. Así que en el pasado, ¿le han diagnosticado alguna condición médica?
+
+P: Tengo un poco de colesterol alto y presión arterial alta.
+
+D: Ya veo, ¿y toma algún medicamento?
+
+P: Sí, así que el colesterol. Estoy tomando una medicación como Crestor y luego para la presión arterial alta estoy tomando un Ramipril.
+
+D: De acuerdo. ¿Ha tenido alguna hospitalización o cirugía antes?
+
+P: Um. Sólo una. No, no lo hago, um sólo a parte de una cesárea para uno de mis hijos. No tengo ninguna otra cirugía.
+
+D: De acuerdo. Yo soy y. ¿Ha tenido alguna trombosis antes, o un coágulo de sangre en el pasado?
+
+P: No, nunca he tenido algo así.
+
+D: Vale, y has sido tan tú. ¿Ha tenido el nacimiento de su embarazada en otras ocasiones en el pasado?
+
+P: No, eso fue todo.
+
+D: Bien, ¿has tenido un aborto espontáneo antes?
+
+P: No.
+
+D: Vale, ¿alguna alergia a los medicamentos?
+
+P: Sin alergias.
+
+D: De acuerdo y. Uhm, ¿podrías contarme un poco sobre tu, uhm, situación de vida actual como con quién estás viviendo y dónde estás viviendo?
+
+P: Sí, vivo con mi marido y nuestra hija. Y es sólo en una pequeña casa, justo en la ciudad.
+
+D: Vale, ¿y estás trabajando actualmente?
+
+P: Trabajo desde casa, en realidad sólo soy un empleado de contabilidad, pero la mayor parte de mi trabajo es de casa ahora mismo.
+
+D: De acuerdo. ¿Y alguna exposición a alguien que haya estado enfermo?
+
+P: No.
+
+D: ¿Has viajado a alguna parte últimamente?
+
+P: Um nop.
+
+D: De acuerdo. Uh. Y en los últimos dos días con eso con el dolor de pierna, ¿te sientes como si hubieras estado inmovilizado?
+
+P: Sí, he estado tratando de quedarme descansado, simplemente permanecer sentado de lo contrario me duele mucho, especialmente después de mi caída, así que. He intentado quedarme inmovilizado.
+
+D: Está bien durante los últimos dos días. Vale, ¿y bebes alcohol?
+
+P: Solo socialmente, a veces cuando estoy con amigos o parientes como una copa de vino.
+
+D: Vale, ¿y usas drogas recreativas como marihuana u otras cosas como cocaína?
+
+P: No, nunca lo he intentado.
+
+D: De acuerdo. ¿Y fumas cigarrillos?
+
+P: No, no lo sé.
+
+D: Bien, estoy bien. Oh, y uh en la familia hay algún historial de enfermedades cardíacas o pulmonares?
+
+P: Um así que no sé acerca de las condiciones del corazón o los pulmones, pero uh mi madre tuvo un derrame cerebral a finales de los años 60 y mi padre está bastante sano.
+
+D: De acuerdo. ¿Ha habido coágulos de sangre en la familia antes?
+
+P: No estoy seguro de los coágulos de sangre, pero mi madre tuvo un derrame cerebral que es, ¿eso es como un coágulo de sangre?
+
+D: Podría ser, un accidente cerebrovascular podría haber tenido muchos tipos diferentes de causas, y una de ellas podría ser causada por un coágulo de sangre. Pero no sería capaz de decirlo con seguridad.
+
+P: De acuerdo.
+
+D: Sólo porque, sí, hay muchos tipos diferentes o razones para tener un derrame cerebral.
+
+P: Veo que está bien.
+
+D: Así que sí, así que mencionaste que tu pierna tiene un poco de hinchazón, um, ¿te sientes como si hubiera algún cambio de temperatura similar en tu pantorrilla como si estuviera caliente?
+
+P: Creo que no sé si está un poco caliente, pero definitivamente hinchado.
+
+D: Vale, ¿y sientes que hay dolor en la palpación? Como si tocaras tu pantorrilla o algo así, ¿hay dolor?
+
+P: Sí, si toco mi pantorrilla derecha es doloroso y luego si apreto hacia abajo es realmente doloroso y luego justo en el exterior de mi rodilla derecha si toco o apreto hacia abajo realmente duele también.
+
+D: De acuerdo. Y si mueves el pie así que sí, si te dorsiflex el tobillo. O doblando tu dedo hacia arriba hacia tu nariz, ¿terminas teniendo algún dolor de pantorrilla? Haciendo la prueba de Homan.
+
+P: Sí, sí, lo intentaré. Y sí, creo que definitivamente duele. Cuando muevo mis dedos de los pies hacia mi nariz.
+
+D: De acuerdo. Vale, así que creo que eso fue todo lo que quería preguntar hoy sobre la historia. ¿Había algo más que tal vez me perdí?
+
+P: No, creo que eso es todo.
+
+D: OK, sí, está bien, así que con el. Caigo hace dos días. Cosas en las que estoy pensando ahora mismo serían posiblemente una tensión muscular, así que esto podría ser una tensión gastrocnemius al músculo de la pantorrilla en sí, desde la caída que podría tener dolor cuando lo toques, podría haber un poco de hinchazón y dijo que se agravaría por los movimientos. También podría ser como lesiones a algunos de eso, los ligamentos allí también. Y sin embargo, con esto la inmovilización de hinchazón durante los últimos dos días, así como el tipo de dolor de ser un poco progresivo que con la hinchazón y un Homan positivo en la prueba y su temperatura es un poco elevado hoy no es una fiebre, pero febril. Aumenta la sospecha de trombosis venosa profunda y así que creo que lo más probable en este momento es en realidad una TVP o trombosis venosa profunda. Así que ordenaremos algunos estudios de diagnóstico, una ecografía de la pantorrilla derecha así como un Rayo X de la rodilla derecha para empezar bien.
+
+P: Bien, suena bien. Muchas gracias.

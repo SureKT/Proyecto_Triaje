@@ -1,0 +1,137 @@
+D: ¿Qué te trae por aquí hoy?
+
+P: Tengo un dolor muy agudo en el pecho y tengo miedo. Creo que estoy teniendo un ataque al corazón.
+
+D: Oh wow, sí um eso debe ser realmente aterrador. ¿Cuándo empezó esto, cuándo empezó este dolor?
+
+P: Así que hace unos 3 días.
+
+D: Hace tres días, ¿y dónde lo sientes exactamente en el pecho?
+
+P: Está justo aquí, justo sobre mi corazón, creo, ahí es donde es lo peor.
+
+D: Vale, ¿y qué tipo de dolor es? ¿Es más bien un dolor de presión apagado, o es un dolor agudo? ¿Cómo lo describirías?
+
+P: Yo diría que es un dolor agudo.
+
+D: Un dolor agudo, OK. Um, así que comenzó hace tres días, ¿ha estado yendo y viniendo o ha sido constante?
+
+P: Sólo dura unos segundos y luego desaparece.
+
+D: Vale, ¿el dolor viene cuando estás haciendo alguna actividad o cuando suele venir el dolor?
+
+P: Normalmente es peor cuando tose o me acuesto. Sí, sí.
+
+D: Vale, y um, ¿mejora con algún cambio de posición en absoluto, o cualquier cosa que hagas que ayude?
+
+P: Cuando me inclino hacia adelante, en realidad mejora. Lo pienso, sí.
+
+D: Vale, ¿y esto te ha pasado antes?
+
+P: No, no lo ha hecho.
+
+D: OK y en una escala de 1 a 10, uno siendo la menor cantidad de dolor sentida y 10 siendo la peor, ¿cuánto lo calificarías?
+
+P: Yo diría que un 6 de 10.
+
+D: Vale, ¿y el dolor se mueve a cualquier parte de tu pecho o se queda en el mismo lugar?
+
+P: Sí, creo que a veces me toca el cuello.
+
+D: Vale, ¿y tienes algún otro síntoma, como si tuvieras dificultad para respirar, mareos, algo así?
+
+P: No, no lo sé.
+
+D: ¿Alguna palpitación?
+
+P: No.
+
+D: De acuerdo. Muy bien, y aparte de eso, ¿has estado teniendo algún otro síntoma aparte del dolor?
+
+P: No, no, nada más, eso es todo, sólo tienen estos agudos episodios de dolor que duran un par de segundos.
+
+D: Vale, ¿has probado como cualquier medicamento que haya ayudado al dolor?
+
+P: Sí, tomé un poco, tomé un poco de Tylenol y eso ayudó.
+
+D: De acuerdo.
+
+P: Lo tomé una vez ayer.
+
+D: Muy bien, um, ¿alguna lesión reciente en la zona como si tuvieras alguna caída o algo por el estilo?
+
+P: No, no lo he hecho.
+
+D: ¿Tiene dolores de cabeza, náuseas o vómitos, fiebre o escalofríos? ¿Alguno de esos síntomas?
+
+P: No.
+
+D: ¿Tos, moqueo nasal, síntomas virales?
+
+P: No, bueno ahora no, pero tuve una gripe la semana pasada. Tenía fiebre, moqueaba la nariz. Tuve un poco de tos y me sentía super cansado, pero ya no. Ahora estoy bien.
+
+D: Vale, ¿y has tenido algún mareo o te has desmayado?
+
+P: No.
+
+D: De acuerdo. ¿Has notado algún tipo de debilidad o entumecimiento?
+
+P: No.
+
+D: No, está bien, y en términos de su historial médico pasado, ¿tiene alguna condición médica como diabetes, presión arterial alta, algún otro diagnóstico?
+
+P: No. Soy un niño bastante saludable de 25 años.
+
+D: De acuerdo. ¿Tomas algún medicamento?
+
+P: A veces tomo Tylenol.
+
+D: Vale, ¿y alguna alergia?
+
+P: No.
+
+D: Bien, ¿y alguna cirugía previa?
+
+P: No, no, sin cirugías.
+
+D: ¿Tiene antecedentes familiares de alguna enfermedad cardíaca o algún cáncer o algo por el estilo?
+
+P: Sí, mi padre, tuvo un ataque al corazón hace dos semanas y él y él murieron. Y me preocupa que esté teniendo un ataque al corazón también.
+
+D: ¿Fue hace sólo dos semanas?
+
+P: Sí.
+
+D: Siento mucho oír eso. Sí, debe ser un momento muy difícil para ti ahora mismo. Vale, ¿así que te preocupa que también tengas un ataque al corazón?
+
+P: Sí.
+
+D: De acuerdo, así que definitivamente podemos hacer algunas pruebas y ver qué estaba pasando. Sólo tengo unas preguntas más y luego sólo voy a llegar a algunos de la gestión y lo que vamos a hacer por usted en el futuro. Así que en este momento, ¿trabajas en absoluto?
+
+P: No, soy estudiante. Yo, además de un trabajo a tiempo parcial, trabajo como cartero.
+
+D: Vale, ¿y dónde eres estudiante? ¿A qué te dedicas?
+
+P: Estoy estudiando ingeniería en Western.
+
+D: Muy bien, ¿y actualmente dónde vives? ¿Vives en una vivienda estudiantil, un apartamento o una casa?
+
+P: Vivo con mis padres, mi mamá ahora, en una casa.
+
+D: Bien, ¿y bebes algo de alcohol?
+
+P: Bebo de vez en cuando, tal vez una o dos copas los fines de semana.
+
+D: Vale, ¿y algún consumo recreativo de drogas como marihuana o cocaína?
+
+P: No.
+
+D: ¿Y fumas?
+
+P: No.
+
+D: Muy bien, así que esas son todas las preguntas que tuvimos para usted hoy. Y sí, debe ser muy difícil y aterrador para ti ahora mismo, pero nos aseguraremos de llegar al fondo de esto para ver lo que está pasando. Así que lo que podemos hacer es conseguirte un ECG para ver cómo funciona tu corazón y luego ver cómo se hace el análisis de sangre si lo necesitamos para el futuro. Pero sí, en este momento yo diría que tratar de no preocuparse demasiado por ello en este momento y ver um lo que algunas de esas pruebas vuelven.
+
+P: Gracias.
+
+D: Así que sí, de nada.

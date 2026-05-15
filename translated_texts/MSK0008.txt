@@ -1,0 +1,312 @@
+D: ¿En qué puedo ayudarle?
+
+P: Um así que estaba jugando fútbol el otro día y me dieron una patada en la rodilla y desde entonces me ha dolido la rodilla y se ve un poco roja y un poco hinchada en el aspecto medial de mi rodilla derecha.
+
+D: De acuerdo. Y luego. ¿Y esto empezó justo después de la patada en el fútbol?
+
+P: Sí.
+
+D: Vale, ¿y cuántos días atrás fue esto?
+
+P: Esto fue hace dos días.
+
+D: Vale, desde entonces, ¿ha empezado a mejorar o empeorar el dolor o a permanecer igual?
+
+P: No, se está quedando igual o un poco peor.
+
+D: De acuerdo. ¿Podría describir el dolor? ¿Está afilado, dolorido?
+
+P: Yo diría que es bastante agudo.
+
+D: De acuerdo. ¿Y sientes el dolor irradiar en algún lugar como por la pierna o hacia arriba en el muslo?
+
+P: Um no.
+
+D: Vale, ¿algún dolor en el aspecto posterior de la rodilla o en el lateral?
+
+P: No.
+
+D: De acuerdo. ¿Y hay algo que empeore el dolor?
+
+P: Supongo que si presiono esa área o lo intento. Y luego. No sé, flexionar o extender mi rodilla demasiado.
+
+D: De acuerdo. ¿Algo que hayas intentado mejorar el dolor?
+
+P: Um un poco de hielo ayuda.
+
+D: De acuerdo. ¿Y te has dado cuenta de la hinchazón en la zona?
+
+P: Sólo un poco.
+
+D: Bien, ¿y el enrojecimiento también?
+
+P: Sí.
+
+D: De acuerdo. Uhm y lo que dirías que la gravedad del dolor es un 10 siendo el peor dolor que has sentido y 1 siendo dolor de baja intensidad.
+
+P: Le daría como un 5.
+
+D: Vale, ¿y has tenido alguna lesión o dolor de rodilla antes?
+
+P: No.
+
+D: Bien, en el momento de la lesión, ¿oyó un sonido pop o algún tipo de sonido así?
+
+P: No lo recuerdo.
+
+D: Vale, ¿y qué tal alguna dificultad para caminar o tener alguna inestabilidad en la rodilla?
+
+P: Um un poco sólo cuando me gusta tratar de extender o flexionar mi rodilla demasiado.
+
+D: De acuerdo. Um. Y luego. Uh, um bien. ¿Has estado experimentando algún otro síntoma?
+
+P: No.
+
+D: Muy bien, así que sólo para ser comprehensivo así que voy a correr a través de una revisión. ¿Así que has estado, teniendo algún dolor de cabeza?
+
+P: No.
+
+D: ¿Algún cambio sensorial como cambios en la visión, el oído, el olor o el gusto?
+
+P: No.
+
+D: ¿Algún síntoma ocular o sus síntomas?
+
+P: No.
+
+D: ¿Has tenido moqueo nasal o dolor de garganta?
+
+P: No.
+
+D: ¿Has tenido tos?
+
+P: No.
+
+D: ¿Alguna dificultad para respirar?
+
+P: No.
+
+D: ¿Has tenido sibilancias?
+
+P: No.
+
+D: ¿Has tenido algún dolor en el pecho?
+
+P: No.
+
+D: ¿Alguna palpitación cardíaca o una aceleración cardíaca?
+
+P: No.
+
+D: De acuerdo. ¿Ha tenido algún desmayo o mareo?
+
+P: Um no.
+
+D: Muy bien, ¿has tenido náusea o vómitos?
+
+P: No.
+
+D: ¿Ha tenido algún cambio en su apetito como la pérdida de apetito?
+
+P: No.
+
+D: ¿Ha tenido alguna pérdida de peso inesperadamente.
+
+P: No.
+
+D: Vale, ¿has tenido algún dolor abdominal?
+
+P: Um no.
+
+D: ¿Algún cambio en los hábitos intestinales como diarrea, estreñimiento?
+
+P: No.
+
+D: Vale, ¿has tenido algún problema urinario como dolor o frecuencia?
+
+P: No.
+
+D: Muy bien, ¿y has tenido algún cambio en la piel como ra' rashes o algo así?
+
+P: No.
+
+D: Vale, ¿algún dolor en las articulaciones en cualquier otro lugar?
+
+P: Um no.
+
+D: Bien, ¿y algo de fatiga?
+
+P: No.
+
+D: Vale, y en el pasado, ¿has tenido o te han diagnosticado alguna condición médica?
+
+P: Um no.
+
+D: Vale, ¿tienes alguna alergia a los medicamentos?
+
+P: No, no, no que yo sepa.
+
+D: ¿Está tomando algún medicamento?
+
+P: No.
+
+D: Muy bien, ¿y has tenido alguna cirugía o hospitalizaciones antes?
+
+P: No.
+
+D: De acuerdo, y. Um, ¿puedes contarme un poco sobre tu situación de vida, como si estuvieras viviendo con y paradero?
+
+P: Claro, vivo con mis padres y tres de mis hermanos.
+
+D: Vale, ¿y vas a ir a la escuela?
+
+P: Estoy, estoy en mi último año de 12o grado.
+
+D: De acuerdo. Bueno, eso es bueno. ¿Cómo te ha ido?
+
+P: Todo ha ido bien. Hemos estado haciendo parte en línea, parte en persona.
+
+D: Vale, ¿has estado cerca de alguien que ha estado enfermo?
+
+P: No.
+
+D: Muy bien, entonces. Y tú juegas al fútbol. ¿Juegas a otros deportes?
+
+P: Y yo juego al fútbol.
+
+D: Vale, ¿cool y alguna lesión antes de tu rodilla o algo así?
+
+P: Um no es eso en el pasado.
+
+D: Muy bien. ¿Y fumas cigarrillos?
+
+P: No.
+
+D: ¿Bebes alcohol?
+
+P: No.
+
+D: ¿Usaste alguna droga recreativa como marihuana o algo más?
+
+P: No.
+
+D: Bien, ¿estás sexualmente activo?
+
+P: Lo estoy.
+
+D: Vale, ¿estás en una relación?
+
+P: Lo estoy. Hemos estado juntos por un año.
+
+D: Vale, ¿hay alguna preocupación por una infección de transmisión sexual?
+
+P: No, los dos fuimos probados.
+
+D: Vale, genial, ¿y alguna posibilidad de que puedas estar embarazada?
+
+P: No.
+
+D: Bien y uh en la familia, ¿hay alguna condición musculoesquelética o neurológica?
+
+P: Um no.
+
+D: De acuerdo. Y para que yo fuera todo lo que quería pedir sobre la historia. Así que para el examen físico, al inspeccionar la rodilla, ¿está usted viendo efusiones articulares o hinchazón de las articulaciones o equimosis o hematomas?
+
+P: Parece o es que un moretón, se ve rojo y yo diría que está un poco hinchado en el aspecto medial sólo.
+
+D: Vale, ¿hay alguna atrofia muscular?
+
+P: Um no.
+
+D: Vale, ¿y hay alguna desalineación o deformidades articulares?
+
+P: No, no que yo note.
+
+D: De acuerdo. Y bien en andar o caminar, ¿hay alguna cojera o antalgia?
+
+P: Um no.
+
+D: ¿Puedes caminar normalmente?
+
+P: Soy capaz de caminar normalmente y me duele, pero creo que estoy caminando bien.
+
+D: De acuerdo. Uhm y a continuación, ¿hay algún cambio en la temperatura como la articulación en sí se siente caliente?
+
+P: No.
+
+D: OK y ¿hay alguna zona de la línea articular misma de la rodilla que sea dolorosa a la palpación?
+
+P: Sólo en la parte medial de la misma como el supongo donde estaría el ligamento.
+
+D: Vale, déjame a mí, y, ¿algún dolor por la rótula?
+
+P: No.
+
+D: ¿Algún dolor por la tuberosidad tibial o el tendón de rótula?
+
+P: No.
+
+D: ¿Algún dolor sobre la cabeza del fibular o la parte lateral de la rodilla?
+
+P: No.
+
+D: ¿Algún dolor en la pantorrilla o en los músculos del muslo?
+
+P: No.
+
+D: ¿Algún dolor en los músculos de los tendones?
+
+P: No.
+
+D: Vale, ¿y hay algún dolor en un varus como el estrés de la rodilla?
+
+P: ¿Por el estrés varus? Supongo que sería, habrá dolor si aprieto hacia abajo en esa área.
+
+D: Vale, y ¿hay alguna articulación sí, la laxitud o el dolor de las articulaciones también, como un valgus estrés de la rodilla?
+
+P: Sí, así que cuando aprieto cuando lo hago duele en el aspecto medial pero no en el lateral.
+
+D: De acuerdo. ¿Y se siente como si hubiera algunas como las articulaciones que se abren más cuando pones el valgus stress?
+
+P: Un poco, sí.
+
+D: De acuerdo. Uhm y ¿hay alguna inestabilidad moviendo la tibia anterior, si estás como, tirar hacia fuera?
+
+P: Um no.
+
+D: ¿Y si tiramos de la tibia a posteriori, alguna inestabilidad?
+
+P: No.
+
+D: Vale, ¿y el es todo su rango de movimiento de la rodilla?
+
+P: Sí.
+
+D: ¿Y todo el rango de movimiento de la cadera y el tobillo?
+
+P: Sí.
+
+D: Vale, ¿y tienes algo como entumecimiento, hormigueo o debilidad muscular?
+
+P: No.
+
+D: Vale, ¿y algún cambio sensorial en la piel?
+
+P: No, no.
+
+D: OK y los reflejos son normales.
+
+P: Mmmm
+
+D: De acuerdo. Así que creo que eso era todo lo que quería pedir y pasar por el examen físico. ¿Tienes alguna otra pregunta o algo que tal vez se me haya olvidado mencionar hoy?
+
+P: Ah no, eso fue todo. ¿Qué puedo hacer con mi rodilla?
+
+D: Sí, así que ahora mismo suena como si esto pudiera ser una cepa de ligamento colateral MCL o medial, o lesión y por lo tanto este tipo de lesiones generalmente se tratan conservadoramente, como con cosas como AINEs o antiinflamatorios para ayudar a que el dolor y la hinchazón. Si el dolor depende de lo grave que es, podría ser útil utilizar muletas tal vez por un día o dos para tratar de ayudar a dejar que el dolor se desplome y permitir que usted sea capaz de hacer algunos ejercicios de terapia física como el fortalecimiento de los cuádriceps y músculos de tendones.
+
+P: De acuerdo.
+
+D: Pero típicamente las lesiones que son de menor grado se curan en dos semanas y si es más grave, podría tomar un poco más de tiempo. Y aunque es muy probable que sea una lesión MCL que usted está describiendo, podría ser una lesión meniscal medial también o posiblemente incluso una bursitis en el aspecto medial de la rodilla. Pero el tratamiento para empezar sería el mismo y tal vez recibiremos alguna radiografía si las cosas no están mejorando.
+
+P: Vale, eso suena bien, gracias.
+
