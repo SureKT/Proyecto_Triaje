@@ -1,0 +1,207 @@
+
+D: ¿En qué puedo ayudarle?
+
+P: Sí, acabo de llegar hoy. Acabo de estarlo. Realmente se pone como el dolor de garganta en el pasado, Yo diría que cuatro días y también tuve fiebre durante los últimos dos días también.
+
+D: De acuerdo. Así que el dolor de garganta, ¿has estado teniendo dolor con tragar alimentos o líquidos?
+
+P: Uhm tal vez un poco con sólidos, no tanto con líquidos. Pero sí, definitivamente me he estado sintiendo más dolorida.
+
+D: De acuerdo. ¿Has notado algún cambio en tu voz?
+
+P: Uhm, no, no realmente, no. No he notado ningún cambio.
+
+D: Vale, ¿has notado algo de enrojecimiento en la parte de atrás de tu boca?
+
+P: Sí, me he dado cuenta de algo de enrojecimiento y luego también siento que hay como algún material, como material blanquecino que sale de la parte posterior de mi garganta.
+
+D: Bueno, esto podría ser un uh, lo que llaman un exudado tonsilar posiblemente, vamos a mirar en el examen físico. Vale, ¿parece que hay hinchazón en la parte de atrás de tu boca?
+
+P: Sí, definitivamente parece enojado.
+
+D: Vale, ¿has notado alguna hinchazón en tu cuello también como en los lados, como, o algún bulto allí?
+
+P: Sí, definitivamente como más en la parte delantera de mi cuello en ambos lados. Me siento como una especie de hinchazón y bultos.
+
+D: De acuerdo. Y tú también has tenido fiebre estos últimos días, ¿así que has tenido escalofríos?
+
+P: Sí, he tenido escalofríos y también me he sentido caliente durante el día. Creo que ayer tomé una temperatura en la noche y era 38.4 grados Celsius.
+
+D: Vale, así que sí, ciertamente una fiebre. ¿Has tenido sudores nocturnos?
+
+P: No.
+
+D: De acuerdo. Uhm, ¿y has tenido algún dolor de cabeza?
+
+P: Sin dolores de cabeza.
+
+D: ¿Ha tenido enrojecimiento o secreción ocular?
+
+P: No.
+
+D: ¿Algún cambio en su visión o audición?
+
+P: No.
+
+D: Vale, ¿algún dolor de oído?
+
+P: No.
+
+D: ¿Has tenido goteo nasal o te has sentido congestionado?
+
+P: La semana pasada tuve un poco de goteo nasal y un poco de tos también, pero esta semana no estoy teniendo ninguna tos o goteo nasal, es sólo un dolor de garganta.
+
+D: Vale, ¿así que la fiebre nasal y la tos se han ido por completo?
+
+P: Sí.
+
+D: Vale, ¿y cuánto tiempo duró eso?
+
+P: Probablemente como 5 días así que creo que empezó hace dos semanas.
+
+D: De acuerdo. ¿Y ahora estás tosiendo?
+
+P: No, no tose ahora mismo.
+
+D: OK, uhm, y uh, OK, ¿y has tenido algún cambio en tu sentido del olfato o sentido del gusto?
+
+P: No, ambos han sido iguales.
+
+D: Vale, ¿y has perdido el apetito?
+
+P: Uhm, no, mi apetito ha sido casi el mismo yo, todavía lo intento y tengo hambre e intento asegurarme, aunque me duela un poco, de seguir comiendo.
+
+D: De acuerdo. Uhm, y cuando tuviste una tos, o durante este tiempo también, ¿has tosido algún esputo o sangre?
+
+P: No, nada de eso.
+
+D: Vale, ¿has tenido sibilancias?
+
+P: Uhm, nada de sibilancias.
+
+D: Vale, ¿ahora has tenido alguna dificultad para respirar?
+
+P: No, sin falta de aliento.
+
+D: Vale, ¿y qué tal algún dolor en el pecho?
+
+P: No, no hay dolor en el pecho.
+
+D: Muy bien, ¿has tenido algún mareo o aturdimiento?
+
+P: No.
+
+D: De acuerdo. ¿Has tenido palpitaciones en el corazón?
+
+P: Uh, no.
+
+D: Vale, ¿y has tenido náusea o vómitos?
+
+P: No.
+
+D: ¿Has tenido diarrea?
+
+P: No.
+
+D: ¿Has tenido estreñimiento?
+
+P: Ah no.
+
+D: OK y has tenido algún problema urinario como dolor con vaciado o frecuencia urinaria?
+
+P: No, nada de eso.
+
+D: Vale, ¿y has tenido algún dolor abdominal?
+
+P: No.
+
+D: De acuerdo. Uhm, ¿has tenido algún sarpullido?
+
+P: No.
+
+D: ¿Ha tenido dolores musculares o articulares?
+
+P: No que yo sepa.
+
+D: De acuerdo. Uhm, ¿has tenido alguna confusión o pérdida de memoria?
+
+P: No.
+
+D: Bien, ¿y has tenido algún cambio en tu energía? ¿Como fatiga o malestar?
+
+P: Uhm no, no lo creo. Todavía me siento bastante enérgico.
+
+D: De acuerdo. En el pasado, ¿le han diagnosticado alguna condición médica?
+
+P: No, no, he estado muy saludable.
+
+D: Muy bien, ¿y toma algún medicamento regularmente, ya sea en el mostrador o recetado?
+
+P: No.
+
+D: De acuerdo. ¿Y tienes alguna alergia?
+
+P: No, no que yo sepa.
+
+D: Vale, ¿y tienes alguno? ¿Están actualizadas sus vacunas?
+
+P: Sí, por lo que sé.
+
+D: De acuerdo. Y, ¿puedes contarme un poco sobre tu situación de vida? ¿Así que dónde vives y con quién vives?
+
+P: Sí, vivo con mis padres ahora mismo en una, en una casa justo en la ciudad. Y también vivo con mi hermano mayor.
+
+D: Vale, ¿has ido a la escuela?
+
+P: Sí, ahora mismo es la escuela en línea debido a la pandemia.
+
+D: Vale, ¿y alguien en casa ha estado enfermo o has estado cerca de alguien que ha estado enfermo?
+
+P: Mi hermano tenía síntomas similares de dolor de garganta, creo que hace dos semanas y el doctor le dio algunos medicamentos.
+
+D: Vale, ¿así que le dieron antibióticos?
+
+P: Creo que sí. Creo que tiene antibióticos.
+
+D: De acuerdo. ¿Has viajado a alguna parte últimamente?
+
+P: Uh, no.
+
+D: Muy bien y, sé si algunas personas de su grupo de edad podrían experimentar con fumar o alcohol. ¿Ha intentado usted o alguno de sus amigos algo como eso antes?
+
+P: No, no, nada de eso.
+
+D: Vale, y todo de lo que hablamos siempre es confidencial, para que puedas sentirte seguro compartiendo conmigo, y así ha habido alguna preocupación con la violencia física o emocional en casa?
+
+P: No, me siento muy segura. Mis padres son muy cariñosos y amorosos.
+
+D: Bien, eso es excelente. ¿Y eres sexualmente activa?
+
+P: No.
+
+D: Vale, ¿has sido sexualmente activa en el pasado?
+
+P: No, para nada.
+
+D: De acuerdo. Y ahora en la familia, ¿hay alguna condición como problemas cardíacos o problemas pulmonares que funcione en la familia?
+
+P: Uh, no. Como si mis padres estuvieran muy sanos.
+
+D: Vale, ¿y algún cáncer en la familia?
+
+P: No.
+
+D: Bien, ¿y cómo va la escuela?
+
+P: La escuela va bastante bien, no hay problemas de verdad. Tomó algún tiempo y adaptarse al nuevo currículo en línea, pero está yendo bastante bien ahora.
+
+D: Bien, eso es bueno. Me alegro de que hayas podido, uh, ajustarte. Así que creo que eso era todo lo que quería preguntar sobre la historia de hoy. ¿Tenías algo más que tal vez quisieras añadir? ¿O que tal vez se me olvidó preguntar?
+
+P: No. Creo que esas son todas las preguntas que tenía.
+
+D: De acuerdo, con tus síntomas actuales ahora mismo sin tos, exudado amígdalo, fiebre, también tu edad y la hinchazón y enrojecimiento similares que notas en la parte posterior de tu garganta es probable que un grupo de faringitis estreptocócica que está causando esto. Y con su exposición a su hermano que también recibió antibióticos, podría ser potencialmente un contacto enfermo para usted que estaba alrededor, por lo que esto requeriría antibióticos también para usted y vamos a hacer una rápida prueba de antígeno estreptococo para comprobar para esto y esperar en el resultado para eso porque todavía podría ser una enfermedad viral y por lo que pasa negativo y estamos pensando que es una enfermedad viral, entonces podríamos retener los antibióticos por ahora y monitorear los síntomas. Y si en cualquier momento las cosas empeoran como empiezas a tener falta de aliento o tu fiebre empeora y no es así, no siendo controlado, entonces reevaluaremos la situación.
+
+P: Bien, suena bien. Muchas gracias.
+
+D: Gracias.
+

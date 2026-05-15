@@ -1,0 +1,221 @@
+D: ¿Qué te trajo hoy?
+
+P: Hola, um así que he tenido esta terrible fiebre durante los últimos tres días um y justo antes de que tuviera una nariz congestionada um y tenía dolor de garganta, bueno, todavía lo tengo, um y simplemente no va a desaparecer, así que pensé que debería entrar y ver si tengo covid o lo que es.
+
+D: Vale, si lo entiendo, ¿empezó con una nariz congestionada?
+
+P: Sí.
+
+D: Bien, ¿y eso se convirtió en fiebre?
+
+P: Sí, así es.
+
+D: Vale, ¿has estado sintiendo algún otro síntoma aparte de la fiebre?
+
+P: No.
+
+D: Nada en realidad, ¿has tenido náuseas, vómitos en absoluto en el último tiempo?
+
+P: No.
+
+D: ¿Algún dolor en cualquier otro lugar de tu cuerpo?
+
+P: Uh, no.
+
+D: Vale, ¿tienes rigidez en el cuello?
+
+P: No.
+
+D: ¿Algún dolor de cabeza?
+
+P: Um no, sin dolores de cabeza.
+
+D: Vale, ¿y has podido comer y beber durante este periodo de tiempo?
+
+P: Sí.
+
+D: Excelente. Vale, ¿has tenido tos?
+
+P: No tose.
+
+D: Sin tos, ¿y qué tal dolor abdominal, algún dolor en la barriga?
+
+P: Um no.
+
+D: Nada de eso, ¿qué pasa con otros cambios en tu cuerpo? ¿Ha notado fiebres o sarpullidos, cambios en la piel?
+
+P: No, nada de eso.
+
+D: De acuerdo. ¿Qué hay de cualquier dolor en cualquiera de tus articulaciones y tus rodillas, caderas?
+
+P: Oh, en realidad no en mis articulaciones, pero acabo de, ha habido algún dolor muscular.
+
+D: Vale, ¿cuánto tiempo ha estado pasando eso?
+
+P: Durante los últimos dos días.
+
+D: ¿Así que al mismo tiempo que has tenido esta fiebre?
+
+P: Mhmm.
+
+D: De acuerdo.
+
+P: Así es.
+
+D: ¿Has tenido algún contacto con alguien que haya estado enfermo en el último tiempo?
+
+P: No, no que se me ocurra.
+
+D: Vale, ¿has tenido algún viaje reciente a alguna otra parte?
+
+P: No, fui de excursión el fin de semana pasado, y estaba a unas 2 horas, había algunas personas en la ruta de senderismo por la que pasé, pero aparte de eso, no hay viajes fuera de la provincia.
+
+D: De acuerdo. ¿Alguien a tu alrededor o en tu círculo inmediato viene con algo similar recientemente?
+
+P: Um mi marido también ha estado experimentando síntomas similares durante la semana pasada.
+
+D: Bien, ¿cómo está?
+
+P: Lo mismo que yo.
+
+D: De acuerdo. ¿Y ha tomado algún hisopo covidido recientemente?
+
+P: No.
+
+D: Vale, y aparte de la caminata de fin de semana, ¿has estado principalmente aislándote a ti mismo o?
+
+P: Sí, solo mi marido y yo en casa.
+
+D: Vale, ¿y sales de la casa para trabajar?
+
+P: No, trabajo desde casa.
+
+D: Bien, suena bien. Así que tienes dolores musculares, un poco de fiebre, nariz congestionada, dolor de garganta, ¿tienes alguna dificultad para tragar?
+
+P: No, solo duele.
+
+D: Vale, ¿así que aún puedes tragar comida, tragar líquidos?
+
+P: Sí, así es.
+
+D: ¿No parece que nada vaya mal o que tose después de tragar?
+
+P: No.
+
+D: De acuerdo. Y en términos de volver a este dolor de garganta, ¿sientes que tienes alguna hinchazón alrededor del cuello? ¿Se siente inflamado o hinchado?
+
+P: No.
+
+D: ¿Nada de eso?
+
+P: No.
+
+D: De acuerdo, de acuerdo, excelente. Así que estás comiendo bien, haciendo bien, ¿algún cambio en tus evacuaciones intestinales recientemente?
+
+P: No, no.
+
+D: Vale, vale, voy a ir a otras cosas, sólo en términos de cualquier otra cosa que pudieras haber tenido en el pasado, ¿alguna vez has sido hospitalizado por alguna razón en tu vida?
+
+P: Me sacaron la vesícula biliar hace cinco años.
+
+D: ¿Eso fue cuando tenías 50 años?
+
+P: Sí.
+
+D: De acuerdo. ¿Y alguna otra cirugía que hayas tenido en tu vida?
+
+P: Uh no.
+
+D: No, ¿algo por lo que hayas tenido que ver a un médico?
+
+P: Um, en los últimos dos años uh sólo por cosas como esta supongo que um resfriados, um soy pre diabético, así que he estado comprobando mis niveles de glucosa, sí aparte de eso nada más.
+
+D: ¿Así que no hay presión arterial alta?
+
+P: No.
+
+D: ¿No hay problemas de colesterol?
+
+P: No.
+
+D: Vale, de lo contrario parece que has estado muy saludable.
+
+P: Sí.
+
+D: Excelente, de acuerdo. ¿Tienes alguna alergia? A los medicamentos o de otro modo.
+
+P: Penicilina.
+
+D: Penicilina, ¿qué pasa cuando tomas penicilina?
+
+P: Tengo un sarpullido.
+
+D: De acuerdo. ¿Algún problema para respirar?
+
+P: No.
+
+D: ¿Y qué medicamentos, si los hay, estás tomando?
+
+P: Solo tomo multivitaminas, eso es todo.
+
+D: ¿Y dijiste que vivías con tu marido en una casa en Londres?
+
+P: Sí, así es.
+
+D: ¿Qué hacen ustedes dos por trabajo?
+
+P: Así que trabajo desde casa como agente de marketing digital y mi marido es programador de computadoras.
+
+D: De acuerdo. ¿Y fumas?
+
+P: No.
+
+D: ¿Bebes alcohol?
+
+P: Bebo de vez en cuando.
+
+D: De acuerdo. Y cuando bebes, ¿cuántos tragos tienes?
+
+P: Una o dos copas de vino.
+
+D: Lo tengo. ¿Alguna otra droga recreativa, sustancias?
+
+P: Um no,
+
+D: ¿Así que nada de marihuana, heroína, cocaína?
+
+P: He probado marihuana antes, como los comestibles, pero no, no regularmente.
+
+D: Entendido. ¿Y alguna vez has usado drogas intravenosas?
+
+P: No.
+
+D: Vale, ¿y cuándo fue tu último período menstrual?
+
+P: Fue hace un año.
+
+D: ¿Hace un año?
+
+P: Mhmm.
+
+D: De acuerdo. Y de lo contrario, así que hablamos un poco sobre viajes recientes. Suena como si tuvieras el viaje de senderismo la semana pasada y hubieras pasado a algunas personas, pero parece que tu marido también tiene síntomas similares a los que tienes ahora mismo.
+
+P: Sí.
+
+D: Suena bien, ahora ya hemos hablado de problemas médicos pasados. Continuando, creo que lo que haremos a continuación es pasar a un examen físico. Pero antes de hacer eso, ¿tienes alguna pregunta para mí? ¿Algo más que creas que deba saber?
+
+P: No, ¿crees que tengo covid?
+
+D: Es una posibilidad. Siempre es bueno descartar estas cosas, así que pediremos un hisopo covidio sin importar qué. Obviamente con cualquier presentación en la que tengamos a alguien con fiebre y dolor de garganta, queremos descartar cualquier cosa infecciosa. Así que suena como si tu marido lo tuviera, y tú lo tuvieras, Covid sería nuestra primera cosa que queremos descartar. Así que mientras estamos tratando de investigar, trabajar más, quiero que tú y tu marido se aíslen a sí mismos. La otra pregunta que supongo que debería hacer es, ¿te han dado la vacuna contra la gripe este año?
+
+P: No, no lo he hecho.
+
+D: Así que también es una posibilidad que podría ser gripe, sólo la gripe estacional. Pero hasta que nosotros, supongo que descartamos a Covid, sería mejor guardarse solo en caso de que seas infeccioso mientras tanto.
+
+P: De acuerdo, claro.
+
+D: Bien, voy a ir a hablar con el Doctor y volveré a verte, ¿de acuerdo?
+
+P: Muy bien, gracias.
+
+D: Cuídate.

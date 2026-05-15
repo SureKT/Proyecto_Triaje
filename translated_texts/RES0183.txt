@@ -1,0 +1,220 @@
+D: ¿En qué puedo ayudarle?
+
+P: Hola, traje mi aquí porque ha estado ladrando, bueno, no ladrando, ha tenido una tos que suena como una tos de ladrido y está teniendo un momento muy difícil de tomar una respiración profunda y el dinero suena, suena duro.
+
+D: Vale, ¿y cuándo empezó la tos?
+
+P: Empezó hace unos dos días.
+
+D: Vale, ¿es tos seca o tos húmeda?
+
+P: Suena bastante seco, sí.
+
+D: Muy bien, ¿así que no ha habido esputo ni hemoptisis?
+
+P: No.
+
+D: De acuerdo. Y lo hace, ¿la tos ocurre a cualquier hora del día en particular?
+
+P: Uhm, quiero decir no, bueno, en realidad la mayoría de la noche, pero también sucede durante todo el día. Umm, pero sí, más por la noche.
+
+D: De acuerdo. Y, uh, ¿ha habido alguna falta de aliento o dificultad para respirar?
+
+P: No hay dificultad para respirar o dificultad para respirar. Suena duro cuando respira profundamente.
+
+D: De acuerdo. Uh, y cualquier cambio en, uh, a la voz o, uhm, sí, como esto está diciendo que suena diferente como una voz de papa caliente?
+
+P: Uhm, no. No suena así.
+
+D: De acuerdo. Y uh, uhm, que mencionaste umm, oh lo siento, ¿ha tenido algún cambio en el sonido de su respiración?
+
+P: El sonido de su respiración. Suena como que suena duro cuando respira profundamente.
+
+D: De acuerdo. Eso suena como si estuviera teniendo estridor. ¿Ha estado haciendo sibilancias?
+
+P: ¿Te refieres a cuando exhala?
+
+D: Sí.
+
+P: Es más cuando inhala que lo oigo.
+
+D: De acuerdo. De acuerdo. ¿Y ha tenido algún enrojecimiento o secreción ocular?
+
+P: Uhm, no, no he notado nada de eso.
+
+D: ¿El otro es un resfriado?
+
+P: No.
+
+D: Vale, ¿tiene dolor de garganta?
+
+P: Sin dolor de garganta.
+
+D: Bien, y has tenido la oportunidad de mirar en su boca, ¿ha tenido alguna, como cualquier enrojecimiento o alguna hinchazón en la parte posterior de su boca?
+
+P: Eché un vistazo. No parece hinchado.
+
+D: De acuerdo. ¿Y, eh, sin falta de aliento, creo que dijiste?
+
+P: Sí, sin falta de aliento.
+
+D: De acuerdo. ¿Y tiene dolor de garganta?
+
+P: No.
+
+D: Vale, ¿y algún cambio en su sentido del olfato o sentido del gusto?
+
+P: Uhm, no es que me haya dado cuenta.
+
+D: De acuerdo. ¿Y cómo ha sido su apetito?
+
+P: No tan bien como suele ser, pero todavía está comiendo.
+
+D: De acuerdo. ¿Cómo ha sido su estado de ánimo y comportamiento?
+
+P: Ha sido un poco más quisquilloso de lo habitual.
+
+D: De acuerdo. ¿Y comer menos también?
+
+P: Ha estado comiendo menos, pero no mucho menos. Todavía trato de conseguir algo en él.
+
+D: Vale, bueno, eso es bueno. ¿Y ha tenido algún dolor en el pecho?
+
+P: Uhm, no, no lo creo. No se ha quejado de ello ni nada para hacerme pensar que tiene dolor en el pecho.
+
+D: De acuerdo. ¿Se ha desmayado o ha mencionado que está mareado?
+
+P: No.
+
+D: Vale, ¿tiene dolores de cabeza?
+
+P: No lo creo. No se ha quejado de eso.
+
+D: De acuerdo. ¿Algún dolor de oído o secreción de oído?
+
+P. Uh, no.
+
+D: De acuerdo. ¿Tiene dolor abdominal?
+
+P: No.
+
+D: ¿Tiene diarrea o estreñimiento?
+
+P: No.
+
+D: Vale, ¿hay sangre en las heces?
+
+P: No.
+
+D: Bien, ¿y algún sarpullido en la piel?
+
+P: No, no es que me haya dado cuenta.
+
+D: ¿Ha mencionado algo sobre dolores musculares o articulares?
+
+P: Ah, no, no lo ha hecho.
+
+D: De acuerdo. ¿Y tiene náuseas o vómitos?
+
+P: No.
+
+D: De acuerdo. ¿Y se le ha diagnosticado alguna enfermedad en el pasado?
+
+P: No, ha sido un niño muy saludable.
+
+D: De acuerdo. Y lo siento, sólo para volver y resumir los síntomas en general, por lo que ha tenido una tos "barki" que comenzó hace dos días, así como un poco de estridor o algún ruido en la inhalación. Y, y esto me recuerda, ¿ha tenido fiebre o escalofríos?
+
+P: Ha tenido fiebre. En realidad fue 38.7 ayer.
+
+D: Vale, ¿y algún sudor nocturno?
+
+P: No, no ha parecido sudado por la noche, no.
+
+D: De acuerdo. ¿Y ha tenido alguna pérdida de peso en los últimos meses?
+
+P: Uh, no.
+
+D: De acuerdo. Y usted dijo que no había sido diagnosticado con ninguna condición médica antes, pero entonces, ¿ha tenido alguna razón para ser hospitalizado o alguna cirugía?
+
+P: No, ha sido un niño bastante saludable.
+
+D: Vale, eso es genial, ¿y alguna alergia de la que estés al tanto?
+
+P: Creo que es alérgico a la penicilina.
+
+D: Muy bien, ¿cuál es la reacción?
+
+P: Uh, él sólo tiene un sarpullido.
+
+D: De acuerdo. ¿Y sus vacunas están al día?
+
+P: Sí.
+
+D: Muy bien, ¿y actualmente con quién vive?
+
+P: Vive con sus padres y su hermana mayor.
+
+D: Vale, ¿y alguien de la familia ha estado enfermo, o ha estado cerca de alguien que ha estado enfermo?
+
+P: No, todos han estado muy sanos.
+
+D: De acuerdo. ¿Ha habido algún viaje recientemente?
+
+P: No, nadie viajó recientemente.
+
+D: Vale, ¿y alguien fuma en la casa?
+
+P: Uh, no.
+
+D: De acuerdo, ¿entonces alguna preocupación por estar expuesto a cualquier forma de abuso físico o emocional o verbal o cualquier violencia en el hogar?
+
+P: Oh, no, no.
+
+D: De acuerdo. ¿Y es como ir a la guardería o quién es el principal cuidador en casa?
+
+P: Umm, normalmente es de él, su madre, sí.
+
+D: De acuerdo. ¿Y hubo alguna complicación durante el embarazo, como diabetes gestacional o presión arterial alta?
+
+P: No.
+
+D: Muy bien, y cualquier complicación con el parto y fue vaginal o cesárea?
+
+P: Era vaginal y no, no había complicaciones.
+
+D: Muy bien, y hasta este punto, como es mejor reunirse es hitos para como hablar, caminar y cosas por el estilo?
+
+P: Sí, así es.
+
+D: Bien, y uh, ¿alguna preocupación por su visión u oído?
+
+P: No.
+
+D: Vale, ¿y ha estado creciendo normalmente?
+
+P: Sí, ha tenido todos sus hitos.
+
+D: Excelente, de acuerdo. ¿Y hay alguna condición en la familia como enfermedad cardíaca o pulmonar?
+
+P: Oh, no.
+
+D: De acuerdo. ¿Qué tal ah, asma o cosas como rinitis alérgica y alergias?
+
+P: No, nada de eso.
+
+D: De acuerdo. Así que creo que esas eran todas las preguntas que quería hacer hoy sobre la historia. ¿Había algo más que se me haya olvidado preguntar o que quisieras mencionar?
+
+P: No, eso fue algo así. ¿Qué debo hacer por él?
+
+D: Uhm, por lo que suena como el diagnóstico más probable ahora es algo llamado Croup o bronquitis traqueal laríngea, que es básicamente una infección viral de las áreas del tracto respiratorio superior, y por lo que puede causar una tos ladrada y estridor y fiebre. Y así, si es así, es realmente atención de apoyo y a menos que se descompensa y se vuelve realmente corto de aliento y peor, en cuyo caso podríamos, el tratamiento sería esteroides y uhm, posiblemente utilizando otras cosas también, dependiendo de sus síntomas, pero por lo general será esteroides y tal vez un poco de oxígeno también. Pero si se mantiene relativamente estable, entonces es sobre todo atención de apoyo, asegurándose de que está hidratado tanto como sea posible, se podría utilizar como aire humedecido. A veces como una ducha caliente. Ese tipo de cosas pueden ayudar a aliviar la tos por la noche.
+
+P: De acuerdo.
+
+D: Pero umm, eso es todo.
+
+P: De acuerdo.
+
+D: Vamos, así que, vamos a así que sólo vamos a observar por ahora.
+
+P: Vale, eso suena bien. Gracias.
+

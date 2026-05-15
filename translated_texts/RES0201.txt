@@ -1,0 +1,180 @@
+
+D: Sólo voy a tener una charla con usted obtener una idea de lo que está pasando y luego puedo ir sobre él con. El médico volverá a reunirse y hablará con usted sobre los próximos pasos. ¿Qué te parece eso?
+
+P: Eso es genial, gracias.
+
+D: Genial. Aquí dice que has estado teniendo dolor de garganta. ¿Puedes contarme un poco más sobre eso?
+
+P: Claro, sí, el dolor de garganta que comenzó hace unos cuatro días. Y realmente está muy dolorido. Puedo beber líquidos, pero incluso tengo problemas para tragar comida.
+
+D: Vale, ¿así que dijiste hace cuatro días?
+
+P: Sí, hace cuatro días.
+
+D: De acuerdo. Así que ha sido un poco doloroso, algunos problemas tragar comida OK, y en los últimos cuatro días ha empeorado, mejor que se mantuvo igual?
+
+P: El dolor de garganta tiene, está empeorando con seguridad.
+
+D: Vale, ¿alguna vez has tenido algo como esto antes?
+
+P: Yo, supongo que cuando era más joven tenía mononucleosis. Y tuve dolor de garganta cuando tuve eso, sí.
+
+D: Vale, ¿hay algo que lo empeore o que lo haga sentir mejor ahora mismo?
+
+P: No, en realidad no. He intentado, ya sabes, he intentado hacer gárgaras con agua salada. He probado algunos analgésicos como nada, nada parece estar funcionando.
+
+D: Uhm OK, y dijiste que también has tenido alguna dificultad para respirar.
+
+P: Sí, así es.
+
+D: ¿Empezó eso al mismo tiempo?
+
+P: Eso empezó ayer, y me ha preocupado mucho.
+
+D: De acuerdo. Sí, puedo entender lo preocupante que sería eso. Definitivamente vamos a tratar de llegar al fondo de esto hoy. Um OK así que comenzó ayer, dijo que entonces se ha puesto peor? ¿Es lo mismo mejor?
+
+P: Um, bueno, supongo que está empeorando, sí.
+
+D: ¿Sientes que es todo el tiempo o que está encendido y apagado?
+
+P: Es que está ahí todo el tiempo.
+
+D: ¿Alguna vez has tenido alguna dificultad para respirar en el pasado?
+
+P: No, no, no, así no.
+
+D: De acuerdo. Uh. ¿Has estado en contacto recientemente con alguien que ha estado enfermo?
+
+P: Um. Lo he hecho, no. Hoy en día no salgo mucho de la casa. Voy a la tienda de comestibles, voy al banco. Sólo cosas esenciales.
+
+D: Vale, ¿has viajado recientemente?
+
+P: No, no, no he salido de la ciudad por nada.
+
+D: De acuerdo. ¿Sabes si tus vacunas están actualizadas?
+
+P: Ah, sí, todo está al día.
+
+D: De acuerdo. Eso es bueno. Nos vemos así que voy a preguntarte sobre otros síntomas. Me gusta tener una idea si hay algo más que hayas estado experimentando. ¿Has tenido tos?
+
+P: No.
+
+D: ¿Has tenido un moqueo nasal?
+
+P: Sin goteo de nariz.
+
+D: ¿Has tenido dolores de cabeza?
+
+P: No.
+
+D: ¿Has tenido algún dolor en el pecho?
+
+P: Ah no, no hay dolor en el pecho.
+
+D: ¿Has perdido algo de tu sentido del olfato o del gusto?
+
+P: Tal vez sabor un poco, pero no olor.
+
+D: Vale, vale, ¿cuándo empezó eso?
+
+P: El sabor ah. ¿Tal vez hace dos días?
+
+D: De acuerdo. OK sabor hace dos días. ¿Ha estado encendida y apagada o ha sido constantemente como un sentido del gusto reducido?
+
+P: Es lo que es. Ha sido bastante constante.
+
+D: De acuerdo. ¿Has tenido algo así antes?
+
+P: No.
+
+D: ¿Has tenido fiebre?
+
+P: No lo creo.
+
+D: De acuerdo. ¿Has tenido escalofríos o sudores nocturnos?
+
+P: No.
+
+D: ¿Se ha sentido en general realmente cansado y débil?
+
+P: I. Me sentía cansado, tal vez no débil, pero siento que mis músculos me duelen.
+
+D: De acuerdo. Vale, ¿y cuándo empezó eso?
+
+P: Eso empezó. Como inmediatamente después de mi dolor de garganta.
+
+D: De acuerdo. De acuerdo. Bien, podríamos volver en círculo. Creo que hay más preguntas que quieras hacer. En este momento, pero en general, en términos de su salud en general, ¿tiene alguna condición crónica para la que tome medicamentos o consulte a un médico con regularidad?
+
+P: Tengo EPOC leve.
+
+D: De acuerdo. ¿Y qué medicamentos está tomando actualmente?
+
+P: Estoy en un agonista beta de acción larga.
+
+D: Vale, ¿es la única medicación que tomas?
+
+P: Disculpe.
+
+D: ¿Es la única medicación que tomas?
+
+P: Y también tomo un par de vitaminas.
+
+D: De acuerdo. ¿Tienes alguna alergia?
+
+P: Um no, sin alergias.
+
+D: Sólo voy a hacerte algunas preguntas sobre tu estilo de vida. ¿Vives aquí en la ciudad?
+
+P: Sí.
+
+D: ¿Vives sola o con familia?
+
+P: Vivo solo.
+
+D: De acuerdo. ¿Y fumas?
+
+P: Renuncié hace dos años.
+
+D: Oh felicidades, ¿antes de eso fumaste por muchos años?
+
+P: Lo hice, fumé durante 40 años.
+
+D: De acuerdo. ¿Bebes alcohol?
+
+P: Bebo de vez en cuando, como los fines de semana.
+
+D: De acuerdo. Uhm, ¿y usas cannabis?
+
+P: No.
+
+D: ¿Está bien alguna otra droga?
+
+P: No, ninguna otra droga.
+
+D: De acuerdo. ¿Y estás jubilado? ¿Trabajas?
+
+P: Estoy retirado, sí.
+
+D: Vale, ¿qué has hecho antes para trabajar?
+
+P: Trabajé para GM.
+
+D: Crock. De acuerdo. ¿Y tienes antecedentes familiares de problemas respiratorios, problemas cardíacos y?
+
+P: No.
+
+D: De acuerdo. Uhm. Vale, creo que eso cubre mis preguntas para ti ahora mismo. ¿Hay algo más que quieras añadir que no te haya preguntado?
+
+P: No, no lo creo.
+
+D: De acuerdo. Voy a repasar esto con el documento con el que estoy trabajando hoy en día, supongo que sólo porque algunos de sus síntomas están en línea con los síntomas comunes de covid 19, que probablemente hará un hisopo covidio, y lo que sucede con eso es que tenemos algunos síntomas, tendrá que aislar hasta que el resultado vuelva y potencialmente después de que si usted todavía tiene síntomas, incluso si es negativo. Así que eso es una especie de aviso sobre eso. Tal vez una de las siguientes cosas que suceden. Probablemente te conseguiremos una radiografía de tórax porque queremos tener una idea de lo que está pasando ahí. ¿Tienes alguna otra pregunta?
+
+P: No, muchas gracias.
+
+D: Vale, bien gracias por hablar conmigo. Deberíamos volver pronto para avisarte con el siguiente paso.
+
+P: Bien, genial, gracias.
+
+D: Gracias.
+
+

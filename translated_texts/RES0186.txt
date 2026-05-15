@@ -1,0 +1,159 @@
+
+D: ¿Qué te trae por aquí?
+
+P: Hola, he estado teniendo esta tos que ha estado en curso durante los últimos dos días, y he empezado a faltar aliento también. Incluso con un poco de esfuerzo. También me he estado sintiendo febril y he comprobado mi temperatura y era 38 punto, uh, punto 5.
+
+D: Bueno, eso definitivamente es fiebre. ¿Puedes contarme un poco sobre cuando empezó la tos?
+
+P: Sí, la primera vez que me di cuenta hace dos días y ha sido un poco peor en estos dos últimos días hasta el punto en que me falta el aliento también.
+
+D: Vale, entonces eso fue hace dos días y entonces, ¿cuándo empieza la falta de aliento?
+
+P: La falta de aliento ha sido en el último día en el último día.
+
+D: En el último día, OK. ¿Y la tos es que tose seco o es tos húmeda?
+
+P: Es una tos seca.
+
+D: De acuerdo. Uhm así que no hay esputo o sangre.
+
+P: No hay esputo ni sangre en la tos.
+
+D: Bien, eso es bueno. ¿Y bien algún dolor en el pecho?
+
+P: No, no he tenido ningún dolor en el pecho.
+
+D: De acuerdo. ¿Alguna palpitación de tu corazón?
+
+P: No, sin palpitaciones.
+
+D: De acuerdo. ¿Y te has dado cuenta de algo, como un goteo de nariz o una nariz congestionada?
+
+P: No, realmente no he tenido un goteo de nariz, sin goteo de nariz.
+
+D: Vale, no hay goteo de nariz. Eso es bueno, ¿y luego algún cambio en tu visión o audición?
+
+P: No hay cambios en la visión o la audición.
+
+D: ¿Qué tal si cambias tu olor o gusto?
+
+P: No hay cambios en el olor o el gusto. Eso ha sido normal.
+
+D: Ha sido normal, está bien. ¿Y qué hay de, qué hay de la pérdida de peso?
+
+P: No, no he tenido ninguna pérdida de peso.
+
+D: Vale, eso es bueno, ¿algún sarpullido?
+
+P: Uh, sin sarpullidos.
+
+D: ¿Cambios en sus deposiciones?
+
+P: No, no he tenido ninguno. Sin diarrea. He tenido un poco de uh como dolor de barriga sin embargo.
+
+D: Está bien, está bien. ¿Cuándo empezó el dolor de vientre?
+
+P: Eso ha sido uh, sí, en el último día, uh, también. Se siente un poco incómodo por todas partes.
+
+D: Vale, sí, vale. ¿Y no te sientes gaseosa o hinchada?
+
+P: No.
+
+D: De acuerdo. ¿Y no hay náuseas ni vómitos?
+
+P: No, no he tenido ninguno. Ah, en realidad he sido un poco, he tenido algunas náuseas también como eso es lo que siento con eso con el dolor abdominal.
+
+D: Mhmm. Vale, ¿y algún cambio en tu olor o gusto?
+
+P: Uhm, así que, en realidad sí, con el sentido del olfato como no he sido capaz de oler también. Ahora que lo preguntas de nuevo, sí, lo siento.
+
+D: Vale, ¿no te preocupas y cambia el apetito?
+
+P: Sí, no lo he hecho. He tenido una pérdida de apetito.
+
+D: De acuerdo. Muy bien. Muy bien, ¿y sigues comiendo lo mismo o un poco menos?
+
+P: Un poco menos. Así que supongo que no he tenido hambre. Digo una cantidad de tiempo similar en realidad estos últimos dos días.
+
+D: Sí. ¿Ha tenido mareos o desmayos?
+
+P: No, no lo he hecho.
+
+D: No. ¿Alguna pérdida de memoria o confusión?
+
+P: No.
+
+D: No. ¿Dolor articular o dolor muscular?
+
+P: Sí, he tenido dolores musculares. Creo que me siento como si hubiéramos estado envejeciendo, pero no, sí, he tenido dolores musculares estos últimos días también. Un poco adolorido en general.
+
+D: De acuerdo. ¿Y estás sano de otra manera o tienes alguna condición médica de larga data?
+
+P: Tengo diabetes, diabetes tipo 2, y también tengo presión arterial alta.
+
+D: De acuerdo.
+
+P: Sí, mi peso es un poco alto.
+
+D: Vale, ¿y tomas algún medicamento para estas cosas?
+
+P: Sí, así que tomo metformina y también un inhibidor de la ECA, y eso es todo.
+
+D: De acuerdo. Muy bien, ¿y estás al día con tus vacunas?
+
+P: Creo que sí.
+
+D: Sí. De acuerdo. ¿Y qué hay de las alergias? ¿Tienes alguno?
+
+P: No, no creo que no, sin alergias.
+
+D: ¿Algún historial familiar de enfermedades cardíacas o pulmonares?
+
+P: No, nada de eso.
+
+D: Vale, vale, ¿alguna historia de cánceres en la familia?
+
+P: No hay antecedentes de cáncer en la familia.
+
+D: De acuerdo. ¿Fumas algo?
+
+P: No, no fumo.
+
+D: No fumas, OK. ¿Qué tal drogas recreativas?
+
+P: No, no uso nada de eso.
+
+D: No. De acuerdo. ¿Bebes alcohol?
+
+P: Sí, tomaré como una cerveza cada día así que sí, sobre sí, una cerveza al día.
+
+D: Una cerveza al día, OK. ¿Y dónde vives ahora mismo?
+
+P: Umm, así que vivo en una casa con mi esposa y ah, y nuestro hijo.
+
+D: Vale, ¿y alguien en casa está enfermo?
+
+P: Nadie ha estado enfermo en casa.
+
+D: Vale, ¿has estado en contacto con alguien que haya estado enfermo?
+
+P: No lo creo. Quiero decir, he estado saliendo a hacer lo esencial y uhm, hago ejercicio en una fábrica ah y así que quiero decir, podría haber habido alguien allí, pero no estoy seguro.
+
+D: Vale, vale, ¿y has viajado a alguna parte recientemente?
+
+P: Uh, sin viajes, sólo he estado yendo a trabajar y haciendo lo esencial y a casa.
+
+D: Bien, eso es bueno. ¿Y alguna razón para creer que tienes alfombra vieja, moho, asbesto, mascotas, cualquier cosa en casa que pueda estar empeorando tu condición?
+
+P: No lo creo. No, sí, es un nuevo hogar y hemos hecho algunas renovaciones.
+
+D: Bien, eso es bueno. Esas son todas las preguntas que tuve para ti hoy. ¿Tenías alguna pregunta para mí?
+
+P: No, solo me preocupaba que tal vez pudiera tener a Covid.
+
+D: Sí, seguro, así que eso es un poco superior en mi lista ahora mismo para descartarlo, así que haremos un hisopo Covid y deberías escuchar en 24 a 48 horas con esos resultados. Mientras tanto, debes aislarte durante unos 14 días y si tus síntomas empeoran, ve a Urgencias y si estás experimentando cosas como debilidad, convulsiones y no estás mejorando en un par de semanas, o te sientes deshidratado. De lo contrario, el cuidado de apoyo en casa, mantenerse hidratado, comer bien, dormir bien, todos ellos definitivamente ayudará también. ¿Te parece bien?
+
+P: Sí, así es. Gracias.
+
+D: Vale, sí, no hay problema.
+

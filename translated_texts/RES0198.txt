@@ -1,0 +1,162 @@
+
+
+D: ¿Qué te trae por aquí hoy?
+
+P: Hola, sí, he tenido la nariz congestionada um que ha estado en y fuera, así como una nariz con goteo durante la última semana y no parece estar mejorando, así que pensé que debería entrar y hacer que lo revisen en caso de que tenga covid.
+
+D: Vale, sí, estoy seguro de que es una buena idea. ¿Cuánto tiempo has tenido esto?
+
+P: Hace una semana.
+
+D: Una semana. Y lo hice. Entonces, ¿qué empezó primero? ¿Fue por el moqueo de la nariz? ¿O como la congestión?
+
+P: Al principio se sentía bastante congestionado, pero ahora está funcionando.
+
+D: Vale, ¿y estás tosiendo algo?
+
+P: No.
+
+D: No está bien, y la nariz escalofriante ¿qué tipo de contenido estás produciendo o drenando? ¿Es principalmente como claro o hay algún color en él?
+
+P: Está más que claro.
+
+D: De acuerdo. Y, ¿es principalmente simplemente la congestión y el drenaje de su nariz o usted siente y va en la parte posterior de su garganta también?
+
+P: No, es sobre todo para mi nariz.
+
+D: ¿Algún otro síntoma como dolor de garganta, dificultad para respirar, fiebre o escalofríos?
+
+P: No.
+
+D: No está bien. ¿Y esto es como algo que es constante o va y viene?
+
+P: Ah, lo es. Ha sido bastante constante durante la semana pasada.
+
+D: Vale, ¿te ha pasado esto antes?
+
+P: No, bueno, en realidad he tenido un resfriado antes, pero no recientemente. Tal vez hace cinco años.
+
+D: Vale, ¿has probado con algún medicamento de venta libre?
+
+P: Lo he intentado como descongestionantes y. Eso no lo es. Bueno, supongo que mi nariz está seca ahora, así que funcionó un poco.
+
+D: De acuerdo. Vale, ¿y has estado en contacto con alguien que haya estado enfermo recientemente?
+
+P: Uhm? No, no lo creo. Tengo un sobrino con el que vivo que va a la guardería.
+
+D: Bien, ¿y ha estado enfermo?
+
+P: No, ha estado bien.
+
+D: Vale, ¿algún viaje reciente?
+
+P: No.
+
+D: No, está bien. ¿Dolor de cabeza, náusea o vómitos?
+
+P: No, nada de eso.
+
+D: Vale, ¿algo de fatiga?
+
+P: Un poco.
+
+D: Vale, cualquier pérdida de sentido del gusto u olfato.
+
+P: Um. No, no es que me haya dado cuenta.
+
+D: Vale, ¿cualquier tipo de dolor en el pecho o sensación de carrera de tu corazón o algo así?
+
+P: No.
+
+D: ¿No está bien? ¿Algún cambio en sus deposiciones?
+
+P: No.
+
+D: ¿Qué hay de tus dificultades para orinar?
+
+P: Um no.
+
+D: Vale, ¿has estado durmiendo y comiendo bien?
+
+P: Sí.
+
+D: Vale, ¿algún cambio de peso como cualquier pérdida de peso importante recientemente?
+
+P: No, no, no, nada de eso.
+
+D: De acuerdo. ¿En casa o en casa de trabajo cualquier exposición a vapores, polvo o animales similares?
+
+P: No.
+
+D: Vale, ¿y te han diagnosticado alguna enfermedad en el pasado?
+
+P: Tengo diabetes tipo uno.
+
+D: Vale, ¿y cuándo te diagnosticaron con eso?
+
+P: Cuando tenía como 7 años.
+
+D: De acuerdo. ¿Así que tienes tu medicación para la insulina y estás al día con eso?
+
+P: Sí.
+
+D: Vale, ¿y ves a un endocrinólogo?
+
+P: Sí.
+
+D: Está bien, está bien. ¿Algún medicamento que esté tomando además de insulina?
+
+P: Uh no.
+
+D: No, está bien. ¿Alguna alergia?
+
+P: No.
+
+D: Vale, ¿has sido hospitalizado o tenido alguna cirugía antes?
+
+P: No.
+
+D: No, está bien. Cualquier historia familiar de cualquier condición médica, en particular con los pulmones o el corazón.
+
+P: No.
+
+D: No, ¿alguna enfermedad autoinmune?
+
+P: No.
+
+D: De acuerdo. ¿Y ahora mismo trabajas o vas a la escuela?
+
+P: Estoy en la escuela ahora mismo.
+
+D: Vale, y tú también vives, ¿dónde vives ahora mismo?
+
+P: Vivo solo en un apartamento.
+
+D: De acuerdo. Y actualmente, ¿usas alguna droga recreativa como marihuana o algo así?
+
+P: Uh no, no está bien no tan a menudo, pero tal vez una vez al mes voy a tener un comestible.
+
+D: Vale, ¿alguna otra droga recreativa como la cocaína y la heroína? ¿Algo así?
+
+P: Oh, no.
+
+D: No. ¿Y bebes alcohol?
+
+P: Uh no.
+
+D: ¿Y fumas tabaco?
+
+P: No.
+
+D: Sí, esas eran todas las preguntas que tenía para ti hoy. ¿Tienes alguna pregunta para mí?
+
+P: Sí, ¿cómo me deshago de esto? Y realmente me ha estado molestando.
+
+D: Sí, parece que es una infección viral como el resfriado común. Los síntomas tardan unas semanas en aliviarse, pero no hay mucho que podamos hacer además de los cuidados de apoyo, así que asegúrate de mantenerte bien hidratado. Puedes usar medicamentos de venta libre como Tylenol frío. Ahora, si usted alivia algunos de sus síntomas, pero ya que en este momento estamos en una pandemia, algunos de estos síntomas también se pueden ver en pacientes covid, así que también vamos a hacer un hisopo para usted hoy, y usted debe tener los resultados de vuelta en 48 horas. Hasta entonces, te recomendamos que te mantengas aislado en tu propia casa y no veas a nadie más. Y una vez que los resultados regresen, recibirás más instrucciones de la salud pública.
+
+P: Vale, eso suena genial. Gracias.
+
+D: De nada. Cuídate.
+
+P: Tú también, adiós.
+

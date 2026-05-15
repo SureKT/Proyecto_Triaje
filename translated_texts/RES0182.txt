@@ -1,0 +1,196 @@
+D: ¿En qué puedo ayudarle?
+
+P: Hola, sí, estoy aquí porque he pasado los últimos dos meses y he estado perdiendo mucho peso. Uhm, pero realmente no tenía ningún otro síntoma, pero desde hace como dos semanas he estado tosiendo algo de sangre y ahora tengo fiebre también.
+
+D: Vale, así que mencionaste que primero notaste la pérdida de peso. ¿Cuánto peso has perdido? ¿O más o menos?
+
+P: He perdido cerca de 30 libras en el pasado, pasados como 8 meses.
+
+D: De acuerdo. Entonces, ¿y has estado tratando de perder peso?
+
+P: No.
+
+D: OK y, cualquiera, como cualquier cambio en su dieta o ejercicio?
+
+P: No, nada de eso.
+
+D: Vale, y más recientemente empezaste a tener tos. ¿Cuándo empezó eso?
+
+P: La tos comenzó hace dos semanas.
+
+D: De acuerdo. Y antes de esto, ¿tuviste tos?
+
+P: No.
+
+D: No. ¿Y traes algún esputo o flema?
+
+P: Sí, es sí, hay esputo seguro y parece sangriento.
+
+D: De acuerdo. Así que tú también estás tosiendo sangre.
+
+P: Sí, así es.
+
+D: Vale, ¿y eso ha estado pasando durante las últimas dos semanas también?
+
+P: Sí.
+
+D: De acuerdo. ¿Y cuánta sangre has estado sacando a relucir? Si usted puede pensar en ello como en términos de cucharadas o cucharaditas.
+
+P: Como cada vez que tose, es del tamaño de una cucharadita.
+
+D: Vale, ¿y hay algún desencadenante para tu tos en el que puedas pensar?
+
+P: Uhm, no lo creo. Pasan todo el día.
+
+D: Vale, ¿y has probado algo para la tos?
+
+P: Probé con estos supresores de la tos. Traté como enjuagues de agua salada, como en los remedios caseros y sobre los productos de venta libre, pero nada está ayudando.
+
+D: De acuerdo. ¿Así que has tenido algún tipo de síntomas virales infecciosos, como ojos, secreción ocular o ojos rojos o secreción nasal o incluso dolor de garganta?
+
+P: No, nada de eso.
+
+D: De acuerdo. Y, ¿has tenido algún dolor de cabeza?
+
+P: No, sin dolores de cabeza.
+
+D: De acuerdo. ¿Has tenido alguna, has tenido un goteo de nariz?
+
+P: No.
+
+D: Vale, ¿qué tal si has perdido el olfato o el gusto?
+
+P: No.
+
+D: Vale, ¿has tenido alguna dificultad para respirar?
+
+P: Uh, no.
+
+D: ¿Has tenido sibilancias?
+
+P: Uhm, no. Sin sibilancias.
+
+D: Vale, ¿has tenido algún dolor en el pecho?
+
+P: No.
+
+D: De acuerdo. ¿Ha tenido mareos o desmayos?
+
+P: Uhm, no, nada de eso.
+
+D: ¿Palpitaciones cardíacas?
+
+P: No.
+
+D: De acuerdo. ¿Y has tenido náuseas o vómitos?
+
+P: No.
+
+D: ¿Has tenido algún dolor abdominal?
+
+P: No.
+
+D: ¿Ha tenido diarrea o estreñimiento?
+
+P: No.
+
+D: ¿Ha tenido algún dolor con la micción o, o frecuencia?
+
+P: Uh, no.
+
+D: Vale, ¿has tenido algún sarpullido?
+
+P: No.
+
+D: ¿Qué tal dolores musculares o del cuerpo?
+
+P: Uhm, dolores musculares, sí. Sí, eso ha estado pasando.
+
+D: ¿Algún músculo en particular? ¿O es más general?
+
+P: Es más general.
+
+D: ¿Has estado teniendo algún dolor óseo como cualquiera en tu espalda o algo así?
+
+P: No.
+
+D: Vale, y, ¿cómo ha estado tu energía?
+
+P: Bastante bajo.
+
+D: Bien, ¿y cómo ha estado tu apetito?
+
+P: Uhm, también bastante bajo.
+
+D: De acuerdo. ¿Y en el pasado se le diagnosticó alguna condición médica?
+
+P: Uhm, no, he estado bastante saludable hasta ahora.
+
+D: De acuerdo. Uhm, ¿así que toma algún medicamento regularmente para algo?
+
+P: No.
+
+D: De acuerdo. ¿Y tienes alguna alergia a los medicamentos o, o algo ambiental?
+
+P: Uh, no.
+
+D: Vale, ¿y has tenido alguna hospitalización o cirugía previa?
+
+P: Uhm, no.
+
+D: De acuerdo. Y, uh, ¿podrías contarme un poco sobre tu situación de vida actualmente? ¿Como con quién vives, dónde vives?
+
+P: Uhm, vivo solo. Vivo en un apartamento en el centro.
+
+D: Vale, ¿y estás trabajando actualmente o en la escuela o?
+
+P: Estoy trabajando desde casa ahora mismo.
+
+D: Vale, ¿has estado cerca de alguien que ha estado enfermo?
+
+P: No.
+
+D: ¿Has viajado a alguna parte últimamente?
+
+P: No, no desde que me mudé aquí.
+
+D: Vale, ¿cuándo te mudaste aquí y de dónde te mudaste?
+
+P: Me mudé aquí hace un año desde Sri Lanka.
+
+D: De acuerdo. Y, y en Sri Lanka, ¿había algún miembro de su familia o gente a la que haya pasado algún tiempo diagnosticando tuberculosis?
+
+P: Quiero decir, es bastante común en Sri Lanka. Ninguno de mis familiares inmediatos lo era.
+
+D: De acuerdo. ¿Y fumas cigarrillos?
+
+P: No.
+
+D: Y ah, ¿fumas cannabis o consumes algún producto de cannabis?
+
+P: No.
+
+D: De acuerdo. ¿Y bebes alcohol?
+
+P: Yo no.
+
+D: Vale, ¿qué tal el uso de otras drogas recreativas?
+
+P: Uh, no.
+
+D: De acuerdo. ¿Y algún historial familiar de problemas cardíacos o pulmonares?
+
+P: ¿Corazón o pulmón? Uh, no, no que yo sepa.
+
+D: Vale, ¿y qué tal algún cáncer en la familia?
+
+P: No, no hay cánceres.
+
+D: Ya veo, está bien. ¿Tienes alguna otra pregunta para mí hoy? Creo que eso era todo lo que quería pedir por ahora.
+
+P: Ah no, ¿qué te gusta, qué crees que tengo, y cómo crees que debería tratarlo?
+
+D: Así que, sí, suena como, como que podría ser tuberculosis basado en el tipo de línea temporal de sus síntomas y así y tos y hemoptisis y así haremos una prueba para eso, como una prueba rápida de ácido del esputo. Consigue un Rayo X en el pecho. Y si es tuberculosis, requerirá un curso prolongado de antibióticos, por lo que voy a ser más de varios meses. Y así conseguiremos que el equipo de enfermedades infecciosas se involucre para ayudar a guiar nuestro manejo con la opción antibiótica apropiada, si vuelve a ser tuberculosis.
+
+P: De acuerdo. Vale, eso suena bien, gracias.
+
