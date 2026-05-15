@@ -1,0 +1,231 @@
+D: ¿Qué te trae por aquí hoy?
+
+P: Uh, he tenido esta tos continua por un par de meses ahora, uhm, y recientemente he empezado a notar algo de sangre.
+
+D: Vale, ¿así que esta tos ha estado pasando durante cuántos meses?
+
+P: Yo diría que tal vez seis meses.
+
+D: Seis meses, ¿y has tenido esta tos antes, entonces?
+
+P: Sí, he tenido tos antes y durante mucho tiempo, porque he fumado por un tiempo.
+
+D: Vale, ya veo, ¿qué tipo de tos tienes, es productiva? ¿Es tos húmeda o tos seca?
+
+P: Normalmente es una tos seca, pero recientemente he estado trayendo un poco de sangre.
+
+D: Vale, ¿y la sangre está mezclada con el esputo que estás sacando o es que estás tosiendo sangre?
+
+P: Es mayormente rojo, sí, mayormente sangre.
+
+D: Vale, ya veo, ¿y tu tos es constante o va y viene?
+
+P: Es algo así como, constante durante todo el día.
+
+D: Vale, ¿y has notado algún tipo de color verdoso o amarillento de tu esputo?
+
+P: En realidad no, no.
+
+D: ¿Cuánta sangre dirías que estás tosiendo ahora en un día promedio?
+
+P: Yo diría, tal vez dos o tres cucharaditas.
+
+D: Bien, ya veo. ¿Ha empeorado tu tos o ha seguido igual?
+
+P: Ha sido casi lo mismo.
+
+D: Vale, ¿hay algo que mejore o empeore tus síntomas?
+
+P: En realidad no, ha estado ahí la mayoría de los días.
+
+D: ¿Y tienes otros síntomas como falta de aliento o dolor en el pecho, moqueo nasal, algo así?
+
+P: No, no, realmente no he tenido nada como eso.
+
+D: Bien, con tu tos, ¿no sientes que tienes dificultad para respirar?
+
+P: No, quiero decir, no he tenido ninguna dificultad para respirar, sólo he tenido uh, bueno, sí, en realidad lo siento, he tenido dificultades para respirar también.
+
+D: Vale, ¿y cuándo empezó eso?
+
+P: Bueno, ese ha sido un problema continuo durante los últimos años, pensé que estaba relacionado con fumar, pero ha empeorado.
+
+D: Ya veo, ¿y tienes algún dolor en el pecho con inspiración o expiración?
+
+P: No, no hay dolor en el pecho.
+
+D: Vale, ¿algo de mareo? ¿Algún episodio de desmayo?
+
+P: Nada de eso.
+
+D: ¿Algún viaje reciente fuera del país?
+
+P: No, he estado en casa.
+
+D: Vale, ¿algún dolor de cabeza, fiebre o escalofríos?
+
+P: No, ni fiebre ni escalofríos, y tampoco he tenido dolores de cabeza.
+
+D: Vale, ¿alguna pérdida en el sentido del gusto o del olfato?
+
+P: No.
+
+D: ¿Náuseas o vómitos?
+
+P: Uhm, sí, he estado un poco más nauseas últimamente, pero no he tenido ningún vómito.
+
+D: Vale, ¿y cuándo empezaste a sentir náuseas?
+
+P: Va y viene, he tenido ese problema durante los últimos dos meses o así.
+
+D: Vale, ¿y sientes náuseas en cualquier momento particularmente en el día, como después de comer, o aparece al azar?
+
+P: Al azar.
+
+D: Vale, ¿y has estado teniendo algún tipo de diarrea o Estreñimiento, cambios en la evacuación intestinal?
+
+P: No.
+
+D: Vale, ¿alguna sangre en tus heces?
+
+P: No.
+
+D: Vale, ¿te has sentido fatigado?
+
+P: Sí, un poco más cansado recientemente, sí.
+
+D: ¿Y qué tan recientemente dirías?
+
+P: Pensé que estaba relacionado con como, sólo falta de aliento, sí, así que tal vez en el último par de meses también.
+
+D: Vale, ¿y cuándo te falta el aliento? ¿Es cuando haces alguna actividad? ¿Es cuando te acuestas? ¿Hay algo relacionado con eso?
+
+P: Si me esfuerzo o si estoy haciendo más actividad, se hace más difícil seguir el ritmo, pero sí.
+
+D: ¿Y te das cuenta de que tienes que levantarte por la noche para respirar? O cuando te acuestas, ¿tienes problemas para respirar?
+
+P: No.
+
+D: Vale, ¿y has notado algún tipo de hinchazón en tus extremidades o algo por el estilo?
+
+P: Sin hinchazón.
+
+D: Vale, ¿has tenido sudores nocturnos?
+
+P: No
+
+D: Vale, y qué hay de tu sueño y apetito, ¿lo han cambiado todo?
+
+P: Oh, sí, mi apetito ha sido menor. He perdido algo de peso en los últimos meses.
+
+D: Vale, ¿y cuánto peso dirías que has perdido?
+
+P: Tal vez diez a quince libras.
+
+D: Vale, ¿y cuánto pesas?
+
+P: Creo que ahora peso alrededor de ciento sesenta libras.
+
+D: Vale, así que sí, de diez a quince libras en los últimos, ¿cuántos meses dirías?
+
+P: Tal vez dos meses.
+
+D: Dos meses, está bien. ¿Ha tenido recientemente alguna infección, como síntomas virales, como moqueo nasal, fiebre, o algún resfriado como síntomas?
+
+P: No.
+
+D: Vale, ¿y cualquier exposición a alguien que conozcas que pueda tener tuberculosis?
+
+P: No, he estado casi siempre en casa. No he estado viendo a mucha gente últimamente.
+
+D: Vale, ¿y tienes antecedentes médicos pasados o algún diagnóstico como EPOC, asma, presión arterial alta, diabetes, algo así?
+
+P: Tuve una cirugía de cataratas, pero eso es todo.
+
+D: Vale, ¿y hay algún medicamento que tomes a diario?
+
+P: Multivitaminas.
+
+D: Multivitaminas, OK, ¿alguna alergia que conozcas a los medicamentos o a cualquier alergia ambiental?
+
+P: Creo que sulfa, pero eso es todo.
+
+D: Vale, ¿y qué tipo de reacción tienes?
+
+P: Uh, tengo un sarpullido.
+
+D: Erupción, ¿alguna cirugía o hospitalización en el pasado?
+
+P: Me acaban de quitar la cataratas del ojo derecho, y eso es todo.
+
+D: Vale, ¿algún contacto tuyo que haya estado enfermo recientemente?
+
+P: No.
+
+D: No, está bien, y en términos de su historia familiar, ¿hay cánceres como el cáncer de pulmón en su familia o alguna condición cardíaca, algo así?
+
+P: Creo que mi tío abuelo tenía cáncer de pulmón, mi madre tenía diabetes tipo 2, pero eso es todo.
+
+D: Bien, y ahora mismo, ¿trabajas?
+
+P: Sí, me retiro pronto. Trabajo como conductor de autobús.
+
+D: Bien, y en el pasado, ¿has trabajado en algún ambiente donde estuvieras expuesto a metales, toxinas, asbesto o algo así?
+
+P: Uhm, no lo creo.
+
+D: De acuerdo.
+
+P: Trabajé como conductor de autobús desde hace bastantes años.
+
+D: ¿Y dónde vives ahora mismo? ¿En un apartamento? ¿En una casa? ¿Y con quién vives?
+
+P: Vivo en una casa con mi esposa y somos solo nosotros dos.
+
+D: ¿Y sabes si hay alguna exposición de asbesto en tu casa?
+
+P: No lo creo, no.
+
+D: Bien, ¿y actualmente fumas?
+
+P: He estado cortando, pero fumo, sí. Fumo como media cajetilla por día. Hubo un tiempo en que estaba fumando dos paquetes por día durante varios años y empecé a fumar cuando probablemente tenía quince años.
+
+D: Mhm.
+
+P: Sí, así que han sido unos cuarenta, sí, cuarenta años al menos.
+
+D: ¿Y has pensado en dejar de fumar?
+
+P: Sí, lo he intentado. Estaba pensando en tal vez hablar de una receta para ayudar a dejar de fumar o algo así hoy. Sentía que esto estaba causando algunos de mis síntomas como mi tos, falta de aliento.
+
+D: Sí, bueno, es realmente genial que estés pensando en renunciar. Definitivamente podemos ayudarle con algunos recursos, y algunos medicamentos. ¿Has intentado algo antes que yo debería saber, para ayudarte a renunciar?
+
+P: He probado parches de nicotina y goma de mascar, pero eso es todo.
+
+D: Vale, así que sí, hay otras opciones que puedes tomar. ¿Has oído hablar de Champix?
+
+P: Uh, en realidad he oído hablar de él. Sí, así que uno de mis amigos lo intentó y funcionó bien para ellos, así que, sí.
+
+D: Vale, sí, así que podemos, si te estás preguntando sobre eso, puedo darte algo de información sobre ese medicamento, como un paquete completo para ti y luego podemos discutir si eso podría funcionar para ti.
+
+P: Eso suena genial.
+
+D: OK, dulce. Y aparte de fumar, ¿usas alguna droga recreativa como marihuana?
+
+P: No, no lo sé.
+
+D: Vale, ¿y bebes alcohol?
+
+P: Bueno, tomaré una o dos cervezas el fin de semana.
+
+D: De acuerdo. Muy bien, así que sí, esas son casi todas las preguntas que tenía en este momento. Parece que tus síntomas, tienes esa tos y la falta de aliento y ha sido crónica, pero ahora también estás tosiendo algo de sangre, así que definitivamente eso es algo que te preocupa y queremos asegurarnos de que no pasa nada así que te haremos una radiografía de tórax y veremos si podemos encontrar algo allí. ¿Todavía están produciendo el esputo sangriento?
+
+P: Sí, eso ha estado llegando un día todavía.
+
+D: OK, así que si crees que puedes producir eso, podemos incluso tomar una muestra de eso también y ver si hay alguna presencia. La única cosa que nos preocupa con algunos de sus síntomas y un largo historial de fumar también es el cáncer de pulmón. Así que sí, vamos a hacer una radiografía de tórax, hacer un poco de citología también y luego una vez que tengamos que en el futuro tal vez necesitemos hacer una biopsia, pero en este momento vamos a hacer algunas de las primeras cosas que mencioné y luego ir de allí.
+
+P: Eso suena bien. Gracias.
+
+D: De nada. Cuídate.
+
+P: Adiós.

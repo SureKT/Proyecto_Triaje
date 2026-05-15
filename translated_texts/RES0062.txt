@@ -1,0 +1,259 @@
+D: ¿Qué te trae por aquí?
+
+P: Bueno, he tenido esta tos pero el mayor problema es que he estado muy corto de aliento.
+
+D: Vale, ¿cuándo empezó la tos?
+
+P: Yo diría que hace unos 3 días.
+
+D: Hace tres días, OK, y uh, alrededor de ese tiempo ¿también empezaste a sentir falta de aliento?
+
+P: Uh, la falta de aliento ha llegado, no sé dentro del último día más o menos. Después de eso, la tos empezó primero.
+
+D: Bien, y la tos, ¿es tos seca o tos húmeda?
+
+P: Bueno, he estado sacando algo de verde amarillento, como flema, así que supongo que una tos húmeda.
+
+D: Vale, así que sí, verde amarillento dijiste.
+
+P: Sí.
+
+D: Vale, ¿hay sangre en el esputo?
+
+P: No he notado sangre.
+
+D: Vale, ¿y cuánto esputo estás tosiendo cada vez? ¿Es del tamaño de la punta de tu dedo o te llena toda la palma de la mano?
+
+P: Sí, probablemente más del tamaño de una punta del pulgar.
+
+D: Vale, vale, ¿y te das cuenta de algo, como pus o espuma en el esputo?
+
+P: Nada de eso me di cuenta.
+
+D: Vale, y si describieras el sonido de tu tos, ¿suena como si estuviera ladrando o como una tos de hackeo?
+
+P: No lo sé, supongo que hackeando.
+
+D: Muy bien, ¿y oyes algún silbido?
+
+P: No, bueno, quizás cuando me falta el aliento, sí, sibilante, sí.
+
+D: Bien, y la falta de aliento, ¿qué tan grave es? ¿1 a 10, 10 siendo lo peor?
+
+P: ¿Tal vez un 7?
+
+D: A las siete, ¿estás teniendo problemas para dormir por tu falta de aliento?
+
+P: Bueno, no sé si es eso o la tos. Quiero decir, entre esas dos cosas definitivamente ha estado interrumpiendo mi sueño.
+
+D: Vale, ¿y descubres que hay algún desencadenante en tu tos como una hora en particular del día? ¿Los desencadenantes como tú saben polen o cosas en tu entorno como mascotas?
+
+P: No, la tos ha estado pasando todo el día. Justo cuando me levanto por la mañana y sigo toda la noche, ha estado empeorando con estos últimos días.
+
+D: Vale, sí, sí, eso no suena muy bien en términos de tu falta de aliento. ¿Te parece que ciertas posiciones lo empeoran? ¿O como esforzarse por ti mismo lo hace peor?
+
+P: En realidad no.
+
+D: Vale, ¿y alguna vez has experimentado algo como esto en el pasado?
+
+P: No, no lo he hecho.
+
+D: De acuerdo. ¿Y algún otro síntoma que tengas junto con tu tos y esputo?
+
+P: Tan pronto como respiro, bueno, no me he sentido bien como, cansado, un poco débil.
+
+D: OK sí um, junto con su fatiga y sentirse débil, ¿ha experimentado algún mareo o desmayo?
+
+P: Sin mareos y no me he desmayado ni nada por el estilo.
+
+D: Vale, ¿alguna confusión o pérdida de memoria?
+
+P: No me preocupa mi memoria.
+
+D: De acuerdo. ¿Y qué tal dolores musculares o algún tipo de dolor corporal?
+
+P: Muy bien, sí, tal vez un poco, un poco, y débil.
+
+D: Sí, está bien, así que volvamos a tu falta de aliento. ¿Tiene algún dolor en el pecho asociado con eso?
+
+P: Uh, no.
+
+D: Vale, ¿y alguna vez sientes que tu corazón está acelerado?
+
+P: No, nada de eso.
+
+D: Vale, ¿y qué tal si cambias tus deposiciones?
+
+P: No, esos han sido normales. No he tenido diarrea ni estreñimiento.
+
+D: ¿Está bien y no hay sangre en tus heces?
+
+P: No he notado sangre, no.
+
+D: Bien, ¿qué tal dolores abdominales?
+
+P: Oh, sí, no sé por qué, sí, mi vientre ha estado un poco dolorido tal vez.
+
+D: Vale, ¿y qué tal un dolor de garganta?
+
+P: No, mi garganta se sintió bien.
+
+D: Bien, ¿y has experimentado alguna pérdida de gusto?
+
+P: Sin pérdida de gusto, pero me he dado cuenta, sí, mi olor ha sido un poco gracioso.
+
+D: ¿Tu olor ha sido un poco gracioso, como si no pudieras oler o hacer las cosas oler diferente de lo que esperabas?
+
+P: Sí, había una vela encendida hoy temprano y supongo que realmente no podía olerla, así que supongo que no he podido olerla.
+
+D: Vale, ¿tienes un goteo nasal o una nariz obstruida?
+
+P: No, no he tenido que sonarme la nariz ni nada.
+
+D: Vale, ¿algún cambio en tu visión o audición?
+
+P: No, eso ha sido normal.
+
+D: Vale, ¿alguna descarga o dolor en los ojos u oídos?
+
+P: No, eso ha estado bien.
+
+D: Vale, ¿y luego algún cambio en tu orina?
+
+P: No, no he tenido ningún dolor ni nada por el estilo.
+
+D: Vale, ¿y estás saludable de otra manera? ¿Tiene alguna condición médica?
+
+P: Sí, tengo fibrilación auricular. Y tomo Metoprolol para eso.
+
+D: Bien, ¿cuánto tiempo has tenido A. ¿Fib?
+
+P: Fue como hace 4 años, creo que sí. Estaba teniendo eso como, sentía como si mi corazón se acelerase por lo que estabas preguntando antes e hicieron un electrocardiograma y me dijeron que tenía fibrilación auricular. Así que sí, he estado en un bloqueador beta durante tres años.
+
+D: Vale, cuatro años, ¿y cuándo fue la última vez que tuviste un electrocardiograma?
+
+P: Tal vez hace un par de meses. Creo que cada vez que vengo a ver a mi médico de familia, lo hacen.
+
+D: Vale, y la última vez que se hizo, ¿fue normal?
+
+P: Sí, dijeron que sí. Mi ritmo cardíaco ha sido de alrededor de 80 latidos por minuto lo que es bueno y no he tenido ningún síntoma así que las cosas han sido estables.
+
+D: Vale, bien. ¿Y ha tenido alguna hospitalización o cirugía en el pasado?
+
+P: Me hicieron una reparación de hernia inguinal hace unos 15 años.
+
+D: Vale, ¿alguna complicación de eso?
+
+P: Um no.
+
+D: Vale, y además del Metoprolol, ¿estás tomando algún otro medicamento?
+
+P: Sí, tomo estatinas y aspirinas para bebés.
+
+D: Vale, y eso es para la A. ¿Fib también, la aspirina? ¿O es sólo para otros problemas cardiovasculares o algún tipo de medida preventiva?
+
+P: Sí, oí que era bueno para la gente que tiene fibrilación auricular así que empecé a tomarla.
+
+D: De acuerdo. y vamos a revisar sus medicamentos al final de la sesión de hoy. Sólo quiero asegurarme de que estás tomando los medicamentos y sólo quiero asegurarme de que estás en la dosis correcta. ¿Te parece bien?
+
+P: Sí, por supuesto.
+
+D:OK genial. Y bien, hablamos de tu historial médico y de tus medicamentos. Hablaremos un poco sobre cualquier alergia que tengas, si la tienes.
+
+P: Creo que es como una alergia a la sulfa. Recibí un antibiótico como ese hace muchos años y tuve un sarpullido.
+
+D: Vale, vale, ¿y tienes alguna razón para sospechar que has tomado algún sulfato recientemente?
+
+P: No, no he tomado antibióticos, así que no, realmente no hay cambios.
+
+D: Vale, vale, ¿y estás al día con todas tus vacunas?
+
+P: Sí. He recibido la vacuna Zoster para el herpes y también la vacuna para la neumonía.
+
+D: Vale, bien, bien sí, esos dos definitivamente recomendamos si tienes más de 65 años. Vale, ¿y sabes de algún historial familiar de enfermedades pulmonares o del corazón?
+
+P: No, creo que mi tía tuvo cáncer de pulmón pero se fumó toda la vida.
+
+D: Vale, vale, ¿y qué hay de otros cánceres?
+
+P: No hay otros cánceres.
+
+D: ¿Y has estado en contacto o crees que has estado en contacto con alguien enfermo recientemente?
+
+P: Bueno, visité a mi madre en un centro de cuidados a largo plazo justo el fin de semana pasado, así que supongo que hace algo más de una semana visité allí.
+
+D: Vale, ¿y ha habido brotes de COVID a largo plazo?
+
+P: Sí, ha habido, pensé que estaba como lejos de esas áreas pero he oído hablar de brotes allí.
+
+D: Vale, vale, ¿y algún historial de viajes?
+
+P: No hay viajes.
+
+D: ¿Y fumas?
+
+P: Solía fumar un paquete de cigarrillos al día, pero renuncié hace unos cinco años. Sé que hace cuatro años fue cuando me enteré de que tenía fibrilación auricular. Renuncio.
+
+D: Está bien, está bien. Bien por ti por renunciar. ¿Qué tal marihuana?
+
+P: No, no lo fumo, pero usaré algunos comestibles que compro en las tiendas de Ontario un par de veces por semana. Sólo las cosas del CBD.
+
+D: Las cosas del CBD están bien. ¿Y cuántos miligramos?
+
+P: No estoy seguro, aunque sé que es su dosis más baja.
+
+D: Vale, vale, si es la dosis más baja, podría ser 2,5 miligramos.
+
+P: Me suena familiar.
+
+D: Bien. ¿Hay alguna razón en particular por la que tome estos comestibles de CBD?
+
+P: Me ayuda a dormir.
+
+D: Vale, si es específicamente para ayudarte a dormir, podemos intentar ver si hay otras opciones para ti. Sabes que hay pastillas, como si fueran somníferos. O incluso cosas como la melatonina que pueden ayudar a regular su sueño para que podamos revisar otras opciones para usted si usted está abierto a eso también.
+
+P: De acuerdo. Sí, lo haré. Sí, podemos hablar de eso más tarde.
+
+D: Vale, eso suena bien y ¿haces alguna otra droga recreativa?
+
+P: Yo no.
+
+D: Bien, ¿qué tal alcohol?
+
+P: No, ya no bebo.
+
+D: Vale, ¿y solías beber antes?
+
+P: Sí, acabo de parar hace unos años,
+
+D: Vale, ¿y cómo es tu situación de vida ahora mismo?
+
+P: Vivo en una casa con mi esposa.
+
+D: En una casa, está bien. ¿Alguna preocupación por alfombras viejas, moho o asbesto en tu casa?
+
+P: No, lo hemos renovado a lo largo de los años.
+
+D: Vale, bien y me disculpo, pero me gustaría aclarar tres síntomas más contigo. ¿Dijiste que sentías que tenías fiebre antes?
+
+P: Um, tal vez me he estado sintiendo un poco caliente, pero ha sido realmente más la tos y la falta de aliento que me ha estado molestando.
+
+D: Bien, podemos tomarnos una temperatura hoy solo para asegurarnos. ¿Has estado sintiendo que tienes sudores nocturnos o escalofríos?
+
+P: En realidad no. No, no lo he notado.
+
+D: Vale, ¿y qué tal, um, cualquier pérdida de peso en los últimos meses?
+
+P: No, ha estado estable.
+
+D: Está bien, está bien, así que eso nos lleva al final. ¿Tiene alguna pregunta o preocupación que le gustaría aclarar antes de que terminemos la entrevista?
+
+P: No, nada hoy. Realmente esperaba conseguir, uh, lo que sea que esto esté solucionado.
+
+D: Sí, ya sabes, um, ahora mismo parece que, suena como si pudiera ser una enfermedad viral respiratoria superior, así que eso incluye COVID. Así que haremos un hisopo para ti y luego lo enviaremos al laboratorio para los resultados de PCR. Mientras tanto, debido a que usted tiene síntomas que se superponen con los síntomas de COVID, estimulamos el aislamiento durante 14 días. Hasta que tus síntomas desaparezcan, lo siento, hasta que tus síntomas desaparezcan, incluso si se han ido, te sugerimos aislarte durante 14 días solo para asegurarnos de que no eres portador o podrías propagar COVID, así que lo alentamos, y eso incluye a tu marido. Si es posible, obtendremos esos resultados en uno o dos días. Si son positivos, enviaremos sus resultados a la salud pública que estará en contacto con usted para hacer algún seguimiento de contacto para ver de dónde lo ha obtenido. Si no es COVID, podrían ser otras enfermedades virales las que están ocurriendo en esta época del año. Y si sus síntomas no mejoran por sí solos, y hay razones para sospechar que puede tener una infección bacteriana o neumonía bacteriana, le haremos un seguimiento y posiblemente le recetaremos antibióticos. ¿Qué te parece?
+
+P: Sí, eso suena como un gran plan.
+
+D: Bien, genial así que te veré en la próxima cita.
+
+P: Gracias.

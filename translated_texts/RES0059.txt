@@ -1,0 +1,221 @@
+D: ¿Cómo estás?
+
+P: No muy bien, he tenido esta tos los últimos días.
+
+D: Vale, umm, ¿cuántos años tienes?
+
+P: Tengo 36 años.
+
+D: Vale, así que durante los últimos dos días dijiste, ¿eso son dos días? ¿Tres días?
+
+P: Creo que 3 tres días.
+
+D: ¿Está bien y es una tos seca o traes algo?
+
+P: Está seco.
+
+D: Vale, ¿así que no hay esputo, ni sangre?
+
+P: Sin sangre.
+
+D: Vale, ¿y te sientes algo sibilante?
+
+P: No, nada de sibilancias.
+
+D: ¿Sin falta de aliento?
+
+P: Ayer corrí a coger el autobús y me faltaba un poco más de aliento de lo que normalmente sería.
+
+D: Vale, ¿y has tenido fiebre?
+
+P: Me he sentido caliente, sí.
+
+D: Vale, ¿realmente tomaste tu temperatura o solo te sientes caliente?
+
+P: Acabo de calentarme.
+
+D: OK así que podemos tomar su temperatura hoy. ¿Te duele el pecho?
+
+P: No hay dolor en el pecho.
+
+D: Bien, ¿y algo de dolor de garganta?
+
+P: Sí, mi garganta ha estado un poco dolorida, pero pensé que tal vez era sólo porque estaba tosiendo tanto.
+
+D: ¿Algún problema con tragar comida?
+
+P: Umm, no hay problemas para tragar comida.
+
+D: Vale, ¿algún cambio en tu olor?
+
+P: Ahora que lo mencionas, sí, pensé que estaba tapado, pero no he podido oler estos últimos días.
+
+D: Vale, ¿y qué tal escuchar? ¿Algún cambio en su audiencia?
+
+P: No hay cambios allí.
+
+D: ¿Te duele el oído?
+
+P: Sin dolor de oído, no.
+
+D: Vale, ¿algún cambio en tu visión?
+
+P: Umm, tengo gafas el año pasado pero nada recientemente.
+
+D: OK y cualquier dolor en los ojos o secreción de los ojos?
+
+P: No.
+
+D: Vale, ¿y has tenido sudores nocturnos o escalofríos?
+
+P: Nada de eso.
+
+D: ¿Alguna pérdida de peso?
+
+P: Sin pérdida de peso, no.
+
+D: OK y luego ¿qué tal si cambias tus evacuaciones intestinales?
+
+P: No, todo ha sido normal allí.
+
+D: Vale, ¿sin diarrea, sin estreñimiento, sin sangre en tus heces?
+
+P: Sin diarrea, sin estreñimiento, y no he notado sangre.
+
+D: Vale, ¿algún cambio en tu orina?
+
+P: Uh, no.
+
+D: No, está bien. Um, ¿qué tal dolores musculares o dolores?
+
+P: Me sentí bastante, uh, bueno, sí, supongo que adolorido y débil.
+
+D: ¿Empezó eso al mismo tiempo que usted experimentó su tos y posible fiebre?
+
+P: :Sí, yo diría que empezó alrededor de la misma hora.
+
+D: Vale, ¿algo de mareo?
+
+P: Uh, no.
+
+D: ¿Alguna confusión o pérdida de memoria?
+
+P: No.
+
+D: Vale, ¿algún desmayo?
+
+P: No.
+
+D: ¿Algún sarpullido?
+
+P: No he notado ningún sarpullido.
+
+D: Vale, así que es tu tos y en general cómo te sientes. ¿Se pone mejor o peor con algo? ¿Has intentado conocer a Tylenol y algún antipirético?
+
+P: Sí, he intentado un poco uh día y noche hora Tylenol en casa para dormir, pero aún así, cuando me desperté en la mañana, todavía no se siente muy bien y la tos sigue aquí también.
+
+D: De acuerdo, sí. ¿Alguna vez has experimentado algo como esto antes?
+
+P: Tal vez de niño. Quiero decir, recuerdo tener la gripe. He tenido una tos y ese tipo de cosas, pero no he estado enfermo desde hace varios años.
+
+D: De acuerdo. Umm, y luego desde que empezaste a tener esta tos también, ¿ahora ha cambiado algo? ¿Cómo te sientes peor? ¿O te sientes igual que cuando empezó?
+
+P: Yo diría que me siento un poco peor.
+
+D: Vale, ¿y alguien a tu alrededor ha estado enfermo recientemente?
+
+P: Umm, no, no que yo sepa. Sí, todo el mundo en la casa ha estado bien.
+
+D: Vale, ¿has viajado a alguna parte últimamente?
+
+P: Sí, estaba visitando a unos primos del norte hace unas semanas, pero eso era viajar por la provincia.
+
+D: Bien, ¿y están bien? ¿Nadie está enfermo?
+
+P: No he oído que nadie esté enfermo.
+
+D: Vale, ¿y estás saludable de otra manera? ¿Tiene alguna condición médica?
+
+P: Me han dicho que tenía colesterol alto antes. Pero no tomo ningún medicamento para ello. He estado tratando de perder algo de peso y hacer más ejercicio.
+
+D: Claro, está bien. ¿No hay cirugías ni hospitalizaciones en el pasado?
+
+P: No.
+
+D: ¿Está bien y no hay otros medicamentos?
+
+P: No, sólo tomo una multivitamina.
+
+D: Vale, ¿y no hay otro que conozcas sobre los medicamentos de venta libre o cosas de hierbas?
+
+P: No, usaré mi Tylenol o Ibuprofeno o Advil supongo que si tengo el dolor de cabeza ocasional. Y supongo, umm, algo como Reactine o Claritin para las alergias estacionales, pero eso es todo.
+
+D: De acuerdo. Así que dijiste alergias estacionales. ¿Alguna otra alergia?
+
+P: Umm, no, normalmente como en primavera.
+
+D: Vale, ¿y estás al día con todas tus vacunas?
+
+P: Sí, lo estoy. Sí, me vacunan contra la gripe todos los años.
+
+D: Bien. Y en términos de antecedentes familiares, ¿tiene alguno de los miembros de su familia afecciones pulmonares o cardíacas?
+
+P: Sé que mamá tiene presión arterial alta, pero nadie ha tenido un ataque al corazón o, uh, ninguna condición pulmonar tampoco.
+
+D: Vale, ¿hay algún cáncer en la familia?
+
+P: Umm, ninguno, no puedo pensar en ninguno.
+
+D: Vale, ¿y luego fumas?
+
+P: Solo fumo cannabis de vez en cuando.
+
+D: Vale, ¿cuánto fumas?
+
+P: Yo diría que tal vez, lo disfruto los fines de semana.
+
+D: ¿Dijiste un porro los fines de semana?
+
+P: Sí.
+
+D: Bien, ¿eso es como 1 miligramo?
+
+P: Sí, diría algo sobre eso. Sí, no es mucho.
+
+D: De acuerdo. ¿Pero sin cigarrillos?
+
+P: No.
+
+D: Vale, ¿alguna otra droga recreativa?
+
+P: No.
+
+D: Vale, ¿y bebes alcohol?
+
+P: Sí, sí, tomaré como dos o tres cervezas el fin de semana.
+
+D: Claro. ¿Y dónde vives?
+
+P: Estoy como a 20 minutos de camino en una casa aquí.
+
+D: Claro, ¿es un complejo de apartamentos o es como una casa llena?
+
+P: Sí, es una casa de una sola familia. Vivo allí con mi esposa y tres hijos.
+
+D: Vale, ¿alguna preocupación por tus arreglos de vida, ya sabes, como alfombras viejas o algo por el estilo?
+
+P: En realidad, el año pasado nos sacaron la mayoría de las alfombras, así que ya no.
+
+D: Bien, bien, bien. ¿Tenía alguna otra pregunta o preocupación? ¿Algo que quisieras mencionar que no haya tocado hoy?
+
+P: Sí, estaba muy preocupada de que esto pudiera ser COVID. Quiero decir que tengo tos y me he sentido muy caliente, así que estaba preocupado por eso.
+
+D: Sí, seguro, y creo que es una preocupación válida. Así que en este momento estoy pasando por, ya sabes, una lista de diagnósticos diferenciales que es posible tener y COVID, es definitivamente el primero en mi lista y por lo que es probable que consigamos un hisopo y ejecutar esas pruebas y tratar de volver a usted tan pronto como podamos. También podrían ser otras infecciones respiratorias, especialmente infecciones virales en esta época del año. Y así, si vuelve negativo para COVID, es probablemente usted sabe algo más como virus respiratorio o incluso la gripe. Así que partiremos de ahí. Y si resulta que no es una infección viral, es probable que veamos si es algún tipo de infección bacteriana en la que podamos prescribir antibióticos para esos. Pero definitivamente suena como si hubiera una imagen infecciosa pasando aquí debido a la agudeza de la presentación, y sólo tus síntomas. Así que haremos un seguimiento en una semana más o menos. Hasta entonces, dirigiremos todos estos laboratorios. ¿Te parece bien?
+
+P: Muy bien, sí, eso suena bien, así que supongo que me aislaré hasta que los resultados de COVID vuelvan.
+
+D: Oh, sí, por favor, hazlo. Ese es un gran punto. Sugiero aislar por dos semanas al menos si tienes algún tipo de síntomas, porque aunque la PCR que hacemos para probar el COVID se supone que es confiable y se supone que es específica y sensible, a veces hay pruebas negativas falsas. Ya sabes, sólo para estar en el lado seguro, si estás experimentando cualquiera de los síntomas que se superponen con los síntomas COVID, aislar durante dos semanas. Pero para el final de la semana debemos saber cuáles son los resultados de la prueba y entonces usted sabrá con seguridad lo que usted tiene.
+
+P: Bien, genial, gracias.
+
+D: Sí, gracias.

@@ -1,0 +1,159 @@
+D: ¿En qué puedo ayudarle hoy?
+
+P: Sí, he tenido fiebre y tos que empezaron hace cuatro días.
+
+D: Vale, ¿cuándo empezaste a tener tu tos hace cuatro días? ¿Y la fiebre?
+
+P: Creo que anoche fue cuando lo comprobé, fue alto, como más de treinta y ocho.
+
+D: Ya veo, está bien. Y, ¿revisaste tu fiebre antes de eso? ¿La noche anterior?
+
+P: Sí, lo revisé anoche. Me sentí caliente antes, pero, no sé, pensé que iba a mejorar, pero esta mañana todavía, bueno, sintiéndome un poco peor.
+
+D: Bien, y la tos que empezó hace cuatro días, ¿ha sido tos seca o tos húmeda?
+
+P: Ha estado seco.
+
+D: Vale, ¿así que no ha habido esputo ni nada, ni sangre?
+
+P: Sin esputo ni sangre
+
+D: De acuerdo. ¿Ha empeorado en los últimos cuatro días?
+
+P: Uh, un poco, sí.
+
+D; Y, aparte de la fiebre y la tos, ¿tienes fatiga?
+
+P: Uhm, sí.
+
+D: Sí, está bien. ¿Algún dolor muscular?
+
+P: Uh, no.
+
+D: ¿De acuerdo, Dolor de garganta?
+
+P: No.
+
+D: ¿Alguna dificultad para respirar?
+
+P: No.
+
+D: ¿Alguna sibilancia?
+
+P: No.
+
+D: ¿Dolor o presión en el pecho?
+
+P: No.
+
+D: Vale, ¿hay moqueo en la nariz?
+
+P: Sí, mi nariz ha estado un poco seca.
+
+D: Vale, ¿eso también empezó en los últimos cuatro días?
+
+P: Sí.
+
+D: Vale, ¿qué hay del dolor en tu vientre?
+
+P: Sin dolor.
+
+D: Vale, ¿alguna diarrea o estreñimiento?
+
+P: Uhm, no.
+
+D: ¿Náuseas o vómitos?
+
+P: No.
+
+D: ¿Algún síntoma urinario?
+
+P: No.
+
+D: Vale, ¿algún sarpullido que hayas notado en tu piel?
+
+P: No.
+
+D: ¿Algún cambio en tu sentido del gusto o en tu sentido del olfato?
+
+P: Sí, no he podido oler tan bien.
+
+D: Te sientes como si tuvieras un moqueo nasal, ¿pero está un poco congestionado?
+
+P: En realidad no, sí, como que estoy corriendo, y sí, no he sido capaz de oler muy bien.
+
+D: Vale, ¿y tienes alguna enfermedad médica pasada, alguna condición, alguna condición médica?
+
+P: Depresión y ansiedad.
+
+D: ¿Y ha tenido alguna cirugía en el pasado o hospitalizaciones?
+
+P: Uhm, no
+
+D: Vale, ¿estás tomando algún medicamento, incluyendo las píldoras de venta libre?
+
+P: Tomo una multivitamina.
+
+D: Y, uh.
+
+P: Lo siento, tomo, um, tomo, uh, un SSRI, Citalopram también.
+
+D: Bien, eso es bueno. Vale, ¿alguna alergia?
+
+P: Sin alergias
+
+D: Vale, ¿específicamente alergias a los medicamentos?
+
+P: Uhm, sí, no, sin medicamentos, no lo creo.
+
+D: Bien, ¿y fumas o has fumado alguna vez en el pasado?
+
+P: Fumé cuando estaba en el instituto muy brevemente, pero no he fumado nada en los últimos veinte años.
+
+D: Muy bien, ¿consumes marihuana?
+
+P: Usaremos comestibles de vez en cuando. Los compro en la tienda del gobierno, OCS.
+
+D: Ya veo, ¿alguna droga recreativa?
+
+P: No,
+
+D: Vale, ¿y actualmente vives solo o vives con otros?
+
+P: Vivo con otros, vivo con mi novia, y un perro.
+
+D: Vale, ¿y ha estado enferma o has estado en contacto con alguien que ha estado enfermo recientemente?
+
+P: Acaba de volver de un viaje de trabajo. He estado trabajando desde casa, pero ella estaba, uhm, en Saskatchewan, y acaba de volver la semana pasada.
+
+D: Vale, ¿y ha tenido algún síntoma?
+
+P: Ella ha estado fatigada desde que volvió, pero pensamos que era sólo de los viajes, pero, tal vez no.
+
+D: ¿Ha estado haciendo cuarantining, o están pasando tiempo juntos?
+
+P: Bueno, hemos estado, quiero decir, tratando de distanciar en la casa, pero quiero decir, hemos estado viviendo juntos en un apartamento así que.
+
+D: Me parece justo, me parece justo. Vale, ¿has tenido algún viaje?
+
+P: No, he estado trabajando desde casa.
+
+D: Vale, vale, y cualquiera, no tienes asma o EPOC ni problemas pulmonares, ¿verdad?
+
+P: Bien, no tengo nada de eso.
+
+D: Vale, y, ¿alguna condición que tenga tu familia?
+
+P: Uhm, no, nada que funcione en la familia.
+
+D: Muy bien, muy bien, así que si entiendo correctamente, usted ha estado sintiéndose cansado y usted ha tenido una tos y una secreción nasal y cambios en su sentido del olfato durante los últimos tres o cuatro días y también se sentía un poco caliente y ayer se dio cuenta de que había aumentado una fiebre alta. ¿Hay algo que me estoy perdiendo?
+
+P: No, creo que eso cubre todos los síntomas.
+
+D: Y usted podría haber tenido potencialmente, algo de exposición a través de su novia potencialmente, así que es posible que, bueno, es posible que usted sólo tiene un resfriado, pero también es, todavía tendremos que descartar covidio como una causa, y por lo que tendremos que hacer un hisopo covidio y ir de allí y vamos a comprobar su temperatura aquí también. Solo, uh, creo que algo que olvidé preguntar, ¿has tomado algún medicamento que te haya ayudado con tus síntomas?
+
+P: No, no he cogido nada.
+
+D: Vale, vale, bueno, gracias, iré a hablar con mi asistente y volveremos y discutiremos esto más a fondo contigo.
+
+P: Eso suena genial. Gracias.

@@ -1,0 +1,205 @@
+D: ¿Qué te trajo hoy?
+
+P: Sí, por supuesto. He tenido este terrible, terrible dolor de cabeza en los últimos dos días, quiero decir, es horrible.
+
+D: Vale, ¿el dolor de cabeza, ehm, se ha mantenido igual, ha empeorado, ha mejorado?
+
+P: Sólo ha empeorado en los últimos dos días.
+
+D: Vale, y cuando empezó el dolor de cabeza, ¿fue como una palmada de trueno, como el peor dolor de cabeza de tu vida cuando vino?
+
+P: No, no.
+
+D: De acuerdo. ¿Estaba pasando algo hace dos días en la época del dolor de cabeza, como si te golpearas la cabeza o algo así?
+
+P: No, yo sólo, uhm, acabo de salir a cenar, la noche anterior y sé que hay ciertos alimentos que pueden desencadenar mis migrañas, pero esto realmente se siente diferente. No se siente como mi migraña.
+
+D: De acuerdo. Uhm, y has tenido otros síntomas asociados, con el dolor de cabeza.
+
+P: Me he estado sintiendo muy cansada. Me tomé el día libre ayer y hoy, estoy trabajando desde casa, pero aún así decidí no hacer ningún trabajo hoy o ayer.
+
+D: De acuerdo. Y la fatiga, ¿cuándo empezó?
+
+P: Creo que eso empezó ayer por la mañana.
+
+D: De acuerdo. Y lo siento, de vuelta al dolor de cabeza. ¿Has intentado algo por ello?
+
+P: Tomé Tylenol y Advil, pero supongo que mejoró durante una hora, pero volvió a ponerse.
+
+D: De acuerdo. ¿Y podrías describir como donde sientes el dolor de cabeza?
+
+P: Claro, sí, así que es como en el frente. Se siente como una banda, como esta presión en el frente de mi cabeza.
+
+D: Vale, ¿y ha habido algo que haya empeorado el dolor de cabeza, como luces o, o sonidos?
+
+P: No, no, como dije, no es nada como mis migrañas habituales.
+
+D: De acuerdo. Y, quiero decir, el Advil o Tylenol, ayuda a los síntomas durante un breve período, pero ha habido algo más que ha ayudado a su dolor de cabeza?
+
+P: No, en realidad no.
+
+D: De acuerdo. ¿Y hay alguna hora en particular del día en que el dolor de cabeza es peor, como, es, en la hora de la mañana cuando primero te estás despertando o más tarde en el día?
+
+P: No lo creo.
+
+D: De acuerdo. ¿Y has tenido náuseas o vómitos?
+
+P: No.
+
+D: De acuerdo. ¿Y has tenido algún cambio visual?
+
+P: No.
+
+D: De acuerdo. Uhm, ¿y has tenido un moqueo nasal o un dolor de garganta?
+
+P: Uhm, he tenido un poco de dolor de garganta.
+
+D: Vale, ¿has tenido tos?
+
+P: Sí, pero honestamente el dolor de cabeza me ha estado molestando más.
+
+D: Vale, ¿y cuándo empezó la tos?
+
+P: Más o menos al mismo tiempo.
+
+D: De acuerdo.
+
+P: Tal vez hace dos días.
+
+D: Vale, ¿y has tenido rigidez en el cuello? ¿Te duele si mueves el cuello?
+
+P: No, nada de eso.
+
+D: Vale, y con la tos, ¿has tenido alguna dificultad para respirar o falta de aliento?
+
+P: Tal vez un poco.
+
+D: Bien, ¿qué tal sibilancias?
+
+P: No.
+
+D: De acuerdo. ¿Has estado trayendo algo de esputo con la tos?
+
+P: No.
+
+D: Vale, ¿qué tal, algo de sangre?
+
+P: No.
+
+D: De acuerdo. ¿Y has tenido algún cambio en tu sentido del olfato?
+
+P: No.
+
+D: ¿Algún cambio en tu sentido del gusto?
+
+P: No.
+
+D: De acuerdo. ¿Y has tenido algún cambio en tu peso recientemente en los últimos meses?
+
+P: No lo creo.
+
+D: Muy bien, ¿y cómo ha estado tu apetito?
+
+P: Uhm, está bien.
+
+D: ¿Te duele el pecho?
+
+P: No.
+
+D: De acuerdo. ¿Algún aturdimiento o sensación de mareo?
+
+P: No, no.
+
+D: Muy bien. ¿Náuseas o vómitos?
+
+P: No.
+
+D: ¿Alguna diarrea?
+
+P: No.
+
+D: ¿Algún problema urinario?
+
+P: No
+
+D: ¿Qué tal si has tenido dolores musculares o articulares?
+
+P: Un poco.
+
+D: De acuerdo. ¿Y algún sarpullido en alguna parte?
+
+P: No, no, no.
+
+D: De acuerdo. ¿Y te han diagnosticado alguna condición médica antes?
+
+P: Uhm, tengo, uh, tengo migrañas y uh, también tengo Polymyalgia reumatica.
+
+D: De acuerdo. ¿Está tomando algún medicamento actualmente, para cualquiera de esos dos?
+
+P: No.
+
+D: De acuerdo. ¿Y has tenido alguna hospitalización?
+
+P: No.
+
+D: Vale, ¿alguna cirugía?
+
+P: No.
+
+D: Vale, ¿y fumas cigarrillos?
+
+P: No.
+
+D: ¿Beber alcohol?
+
+P: No.
+
+D: ¿Y usas alguna otra droga recreativa?
+
+P: No.
+
+D: De acuerdo. ¿Y algún historial familiar de síntomas similares como dolores de cabeza inusuales o algo así?
+
+P: Bueno, las migrañas corren en la familia.
+
+D: Migrañas, de acuerdo.
+
+P: Sí.
+
+D: ¿Y alguna enfermedad cardíaca o cáncer o algo así en la familia?
+
+P: No, no, no.
+
+D: De acuerdo. ¿Y has estado cerca de alguien que ha estado enfermo recientemente? Saliste a cenar hace un par de días.
+
+P: Sí, no creo que nadie estuviera enfermo.
+
+D: De acuerdo. ¿Y no sintió que tenía algún desencadenante en sus migrañas en ese momento?
+
+P: No, no lo hice. Sí, me reuní con mis amigos y salimos a cenar. Sé que no debemos hacerlo, pero ha pasado mucho tiempo.
+
+D: Sí.
+
+P: No creo que estuvieran enfermos en ese momento, pero no he hablado con ellos después.
+
+D: De acuerdo. ¿Has viajado a alguna parte?
+
+P: No.
+
+D: Muy bien. Y así que no creo que haya preguntado, ¿tenías fiebre o escalofríos?
+
+P: No, en realidad no.
+
+D: Oh, está bien. Uhm, así que los síntomas que has estado experimentando, has tenido un dolor de cabeza que ha sido el más molesto estos, estos últimos dos días, que se siente diferente a sus migrañas, pero también ha tenido un dolor de garganta, una tos, falta de aliento, así como un poco de dolores musculares y fatiga en estos últimos dos días.
+
+P: Sí, eso suena bien.
+
+D: ¿Hay algo más?
+
+P: No, no, no lo creo.
+
+D: OK, umm así que, voy a conseguir el asistente y vamos a pasar por un examen físico y conseguir algunas investigaciones ordenadas para que podamos tratar de averiguar lo que está pasando, ok.
+
+P: Bien, gracias.
+
+D: De nada.

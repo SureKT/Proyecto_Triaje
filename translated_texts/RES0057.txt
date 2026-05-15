@@ -1,0 +1,157 @@
+D: ¿En qué puedo ayudarle?
+
+P: Hola, sí, es un placer conocerte. He estado teniendo esta tos que ha estado sucediendo durante los últimos días y he tenido dificultad para respirar.
+
+D: Siento mucho oír eso. ¿Cuándo empezó esto?
+
+P: Así que la tos empezó hace unos 3 días. Sí, la falta de aliento ha venido desde entonces.
+
+D: Bien, primero concentrémonos en la falta de aliento y luego hablaremos de tu tos también. Así que se dio cuenta de que tenía dificultades para respirar en algún momento dentro de los últimos tres días. ¿Cuándo encuentras que es difícil para ti respirar? ¿Hay algo que te haga más difícil respirar?
+
+P: Sí, en realidad no. En realidad, ha estado bien, pero sólo mal después de toser.
+
+D: ¿Así que subir las escaleras o hacer ejercicio no empeora las cosas?
+
+P: No realmente, he sido capaz de hacer la misma cantidad de actividad, supongo.
+
+D: De acuerdo, así que realmente no hay relación con la actividad con tu falta de aliento. Vale, y puedo ver que eres capaz de hablar en frases completas. Vale, ¿cómo te hace difícil hacer cosas en casa, tu dificultad para respirar?
+
+P: Estoy un poco, quiero decir, siento que no me he estado sintiendo muy bien en general, así que he estado descansando estos últimos dos días sobre todo.
+
+D: Vale, y tu tos, dijiste que eso empezó hace tres días. ¿Es tos seca o tos húmeda?
+
+P: Está seco. Es una tos seca.
+
+D: Vale, ¿y no hay producción de esputo con él? ¿Se le ocurre algo?
+
+P: No, no he notado nada de eso.
+
+D: Vale, ¿y hay algo que esté mejorando la tos? ¿Tomaste algo? ¿Algún medicamento para ello?
+
+P: Probé algunas cosas sobre el mostrador, pero no ayudó.
+
+D: De acuerdo, de acuerdo. Aparte de la dificultad para respirar y la tos, ¿ha notado otros síntomas?
+
+P: Sí, he estado muy cansada. Supongo que he estado descansando estos últimos días y también he tenido dolor de cabeza.
+
+D: De acuerdo. ¿Puedes contarme un poco más sobre tu dolor de cabeza?
+
+P: Sí, parece que alguien está apretando la parte superior de o simplemente apretando los lados de mi cabeza.
+
+D: ¿Has tenido un dolor de cabeza como este antes?
+
+P: Sí, lo he hecho. Usualmente los consigo cuando estoy deshidratado. O tal vez no he dormido bien. Y ese también ha sido el caso durante los últimos dos o tres días. Sí, ha sido un poco apagado y encendido, hay algunas veces que son peores que otras, pero me he dado cuenta de que lo tuve en su mayor parte durante los últimos días, OK,
+
+D: ¿Has tomado algo por tu dolor de cabeza? ¿Alguna medicación para el dolor?
+
+P: Sí, he estado tomando Advil, me ha ayudado.
+
+D: Así que hablaste de estar cansado, tener dolor de cabeza, dificultad para respirar y tos en los últimos tres días. ¿Alguno de estos síntomas ha empeorado las horas extras?
+
+P: Sí, diría yo, pero tanto la tos como la falta de aliento han empeorado en estos últimos días.
+
+D: Vale, ¿y has tenido escalofríos o has comprobado tu temperatura?
+
+P: No he comprobado mi temperatura, pero me sentí como si hubiera tenido fiebre o podría estar teniendo fiebre.
+
+D: Podemos comprobar su temperatura aquí. ¿Y has tenido algún dolor muscular?
+
+P: Sí, supongo que me sentí un poco adolorido.
+
+D: ¿Algún enrojecimiento en los ojos? ¿O cualquier secreción nasal o dolor de garganta como síntomas parecidos a la gripe?
+
+P: Umm, he, no sé tal vez mi nariz está un poco congestionada, pero no realmente corriendo.
+
+D: De acuerdo. ¿Y has tenido algún cambio en tu sentido del olfato?
+
+P: No, no lo he notado.
+
+D: ¿Qué hay de tu sentido del gusto? ¿Eres capaz de probar las cosas?
+
+P: Sí, eso creo.
+
+D: ¿Has notado algún sarpullido en tu cuerpo?
+
+P: Umm, no, no lo he hecho.
+
+D: Vale, ¿algún cambio en tu deposición, diarrea o estreñimiento?
+
+P: No, no, nada de eso.
+
+D: ¿Te duele el pecho?
+
+P: No, no he tenido ninguno.
+
+D: De acuerdo. Muy bien, bueno suena como si tuvieras múltiples síntomas en este momento que comenzaron hace unos 3 días. Te sientes cansado, tienes dolor de cabeza, dificultad para respirar, algunos dolores musculares y te has estado sintiendo febril. Usted también ha tenido esta tos, y su nariz se siente congestionada. ¿Hay algo más que hayas estado experimentando en los últimos tres días de lo que no haya hablado todavía?
+
+P: No, como mencionaste, el dolor de cabeza también está ahí, entonces sí, eso es todo.
+
+D: Vale, vale, ¿puedes hablarme de tu historial médico pasado? ¿Tiene alguna condición médica?
+
+P: Sí, creo que tengo asma y GERD.
+
+D: Umm, ¿la falta de aliento que estás experimentando se siente similar a los ataques de asma de alguna manera?
+
+P: No, no he tenido problemas con ataques de asma en mucho tiempo.
+
+D: ¿Tienes un inhalador?
+
+P: Lo hago, pero no lo uso muy a menudo.
+
+D: Ya veo, ¿lo usaste en los últimos tres días?
+
+P: Sí, lo intenté y no parecía ayudar mucho.
+
+D: Y aparte de eso, ¿has tenido alguna cirugía en el pasado?
+
+P: Me hice una colonoscopia hace dos años.
+
+D: ¿Alguna razón para eso?
+
+P: Mi padre tenía cáncer de colon cuando tenía 60 años.
+
+D: Veo bien, ¿y alguna hospitalización?
+
+P: No.
+
+D: De acuerdo. ¿Toma algún medicamento? Sé que tienes globos. ¿Algún medicamento, incluyendo las píldoras de venta libre?
+
+P: Sí, voy a tomar como un Zantac o como Tums a veces para el reflujo.
+
+D: ¿Y alguna alergia a los alimentos, medicamentos o alergias ambientales?
+
+P: Sí, tengo alergias ambientales. Creo que normalmente vienen en primavera.
+
+D: En términos de historia familiar, mencionaste que tu padre tenía cáncer de colon. ¿Algún otro problema médico que tenga tu familia?
+
+P: Umm, no.
+
+D: De acuerdo. ¿Y fumas actualmente?
+
+P: No, nunca he fumado en el pasado.
+
+D: Bien, ¿qué hay de la marihuana?
+
+P: Umm, no.
+
+D: Vale, ¿has bebido o has bebido alcohol alguna vez?
+
+P: Voy a tomar un poco de vino los fines de semana, tal vez una copa o dos con la cena.
+
+D: Vale, suena bien y ¿alguna vez has tomado drogas callejeras?
+
+P: Como hace mucho tiempo, tal vez cuando estaba en la universidad, una o dos veces.
+
+D: Muy bien, suena bien, ¿y has tenido algún contacto con alguna persona enferma? ¿Alguien que esté enfermo recientemente?
+
+P: No que yo sepa. Quiero decir, fui a unas cuantas tiendas aquí y allá a las que había estado yendo. He estado trabajando desde casa, así que tal vez en una de las tiendas. Y me imagino que estaba usando una máscara y, por supuesto, tratando de mantener el distanciamiento social tanto como sea posible. Pero sí, nunca, realmente sabes.
+
+D: ¿Qué pasa con cualquier otro viaje o cualquier otro viaje fuera de la ciudad o el país recientemente?
+
+P: No, había estado en casa.
+
+D: Muy bien. Así que supongo que eso es todo lo que quería saber. Iré a hablar con el asistente y volveremos a hacer un examen físico y tal vez hacer un par de preguntas más y luego discutir la gestión con usted. ¿Te parece bien?
+
+P: Sí, eso suena genial.
+
+D: Gracias. De acuerdo, de acuerdo.

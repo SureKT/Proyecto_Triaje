@@ -1,0 +1,217 @@
+D: ¿Qué te trae por aquí?
+
+P: He tenido esta tos por más de una semana, y no se ha ido.
+
+D: Vale, y uh, esta tos ha estado pasando por una semana. ¿Puedes describirme la tos un poco?
+
+P: Sí, así que a veces produzco esputo y a veces no. Es blanco y blanco de color claro.
+
+D: Vale, y ha estado pasando por más de una semana. ¿Ha estado empeorando?
+
+P: Se puso un poco peor al principio, pero luego ha sido algo así como lo mismo, desde entonces.
+
+D: Vale, ¿te has dado cuenta de algo, um, como el color verde o amarillo de tu esputo o cualquier esputo teñido de sangre?
+
+P: Uh, sin sangre, y tal vez un poco amarillento.
+
+D: OK, poco amarillento, OK. ¿Y cuánto dirías que sacas a relucir, um, en un día promedio?
+
+P: Un par de cucharaditas.
+
+D: Un par de cucharaditas OK.OK, ¿ha habido algo que um, lo haga peor o mejor?
+
+P: No se me ocurre nada.
+
+D: Vale, ¿y has hecho que esto te pasara antes en el pasado?
+
+P: No.
+
+D: ¿Y la tos es constante o va y viene?
+
+P: Va y viene, uh, durante todo el día. Ningún momento en particular del día es peor.
+
+D: Vale, y, um, ¿estás teniendo otros síntomas además de la tos, um, como falta de aliento, dolor de garganta, um, goteo nasal, congestión, algo así?
+
+P: Uh. Sí, he tenido, um, dolor de garganta, uh, y un dolor de cabeza, también.
+
+D: Vale, ¿y cuándo empezó el dolor de garganta?
+
+P: Eso empezó hace unos cinco días.
+
+D: ¿Hace cinco días? ¿Y ha ido empeorando?
+
+P: No, eso ha sido casi lo mismo.
+
+D: ¿Y tienes alguna dificultad para tragar?
+
+P: Está un poco dolorido, pero, uh, ha estado bien, comer y beber.
+
+D: Vale, ¿y has notado algún tipo de enrojecimiento en tu garganta o alguna hinchazón alrededor de tu cuello?
+
+P: No, me miré en el espejo lo mejor que pude con mi teléfono y realmente no podía notar nada que se viera rojo.
+
+D: Bien, ¿y el dolor de cabeza? ¿Cuándo empezó eso?
+
+P: Así que ha sido, uh, un poco fuera y encima de la última, uh, semana o así. Se siente como una sensación de presión y mi cabeza está realmente apretando.
+
+D: De acuerdo, y um. ¿Así que está en un lado de tu cabeza o en ambos lados?
+
+P: A ambos lados.
+
+D: Y es como una presión y apretar. ¿Está pulsando?
+
+P: No
+
+D: ¿No? Vale, ¿es constante o va y viene?
+
+P: Va y viene.
+
+D: Vale, ¿y has tomado algún medicamento para mejorar alguno de estos síntomas?
+
+P: Sí, he usado Advil para los dolores de cabeza y sobre la medicina de contrarreloj por la noche para ayudar a dormir.
+
+D: De acuerdo. ¿Y recuerdas haber hecho algo en las últimas semanas que pudieras creer que causó algunos de estos síntomas? Como por ejemplo, ¿estabas en contacto con alguien que estuviera enfermo?
+
+P: Bueno, soy estudiante de enfermería y he estado en rotaciones en el hospital recientemente.
+
+D: ¿Y alguien con quien probablemente hayas visto en el hospital, alguien enfermo con quien estuvieras en contacto?
+
+P: Vi a algunas personas que tenían, como, síntomas infecciosos.
+
+D: Vale, y aparte de eso, ¿has estado teniendo fiebre o escalofríos?
+
+P: Sí, he sentido escalofríos.
+
+D: OK escalofríos, ¿y cuándo los sentiste?
+
+P: He estado sintiendo escalofríos durante todo el día y por la noche, siento que no puedo calentarme ni siquiera con una manta puesta.
+
+D: Vale, ¿y te has tomado la temperatura?
+
+P: No.
+
+D: Vale, sí, podemos hacer eso por ti hoy. Aparte de eso, cualquier viaje reciente fuera de la provincia.
+
+P: No, he estado en la escuela.
+
+D: Vale, ¿y alguna pérdida de sentido del gusto o del olfato?
+
+P: No.
+
+D: ¿Náuseas o vómitos?
+
+P: No.
+
+D: ¿Algún sudor nocturno?
+
+P: No,
+
+D: Vale, ¿algo de fatiga?
+
+P: Sí.
+
+D: Vale, ¿y cuándo empezó eso?
+
+P: Esta semana he estado muy cansada, he estado necesitando siestas y no sentirme descansada por la mañana.
+
+D: Vale, ¿algún dolor en el pecho?
+
+P: Sí, me duele, el centro de mi pecho.
+
+D: Vale, ¿entonces algo de tos?
+
+P: Sí, lo siento, como más, como si me doliera cuando estoy tosiendo, eso es lo que siento. Creo que está siendo causado por lo mucho que estoy tosiendo.Yo como que lo siento allí en el centro.
+
+D: Y además, cuando estás tosiendo, ¿tienes algún dolor en el pecho cuando estás respirando dentro o fuera?
+
+P: No,
+
+D: ¿No? De acuerdo. Muy bien, ¿algún cambio en tus deposiciones, como cualquier Estreñimiento o diarrea?
+
+P: No.
+
+D: ¿Algún problema urinario?
+
+P: No.
+
+D: Vale, ¿algún cambio con tu sueño o tu apetito?
+
+P: No.
+
+D: ¿Ha notado alguna pérdida significativa de peso en las últimas semanas?
+
+P: No, ha sido lo mismo.
+
+D: De acuerdo. ¿Y ha tenido usted recientemente, antes de su tos, alguna infección como una enfermedad viral o como un resfriado, por ejemplo, algo así?
+
+P: Sí, ahora que lo pienso, quiero decir, tal vez hace como un mes tuve como un goteo de nariz durante un par de días y simplemente se fue.
+
+D: Vale, ¿habías tomado algún tipo de medicación o antibióticos?
+
+P: No, sólo se fue por su cuenta muy rápido.
+
+D: Muy bien, ¿tienes alguna condición médica pasada, como presión arterial alta, diabetes, algo así?
+
+P: No, no lo sé, estoy saludable.
+
+D: Vale, ¿tienes alguna alergia?
+
+P: No.
+
+D: ¿Toma algún medicamento regularmente?
+
+P: Uh, no.
+
+D: Vale, ¿alguna hospitalización o cirugía en el pasado?
+
+P: No.
+
+D: Vale, ¿y algún antecedente familiar de alguna enfermedad pulmonar o cardíaca o algún cáncer?
+
+P: Creo que mi madre tiene presión arterial alta, pero eso es todo.
+
+D: De acuerdo. Olvidé preguntarte esto antes. ¿Has estado experimentando sibilancias?
+
+P: Sí, me he dado cuenta un poco de un sibilancia, sí.
+
+D: Y actualmente eres estudiante de enfermería. ¿Dónde vives?
+
+P: Vivo con un par de mis compañeros de clase en el centro.
+
+D: Vale, ¿y vives en un apartamento o dormitorio, una casa?
+
+P: Un apartamento.
+
+D: Vale, ¿alguien está enfermo en tu casa?
+
+P: No, nadie ha estado enfermo.
+
+D: Vale, ¿bebes algo de alcohol?
+
+P: A veces con amigos, en un fin de semana.
+
+D: ¿Fumas cigarrillos?
+
+P: No, no lo sé.
+
+D: ¿Y alguna droga recreativa como la marihuana?
+
+P: Nop.
+
+D: De acuerdo. Muy bien, así que sí, esas son todas las preguntas que tenía para ti. ¿Tiene alguna pregunta o preocupación?
+
+P: No, sólo esperaba sentirme mejor. Ha estado pasando por tanto tiempo.
+
+D: Dijiste que era más de una semana, ¿verdad?
+
+P: Sí.
+
+D: Sí, así que lo que haremos hoy es, uh, en primer lugar, con la pandemia en curso, con algunos de estos síntomas, tenemos que descartar el coronavirus. Y por lo que vamos a conseguir un hisopo hecho para usted también hoy y teniendo en cuenta que usted está teniendo estos síntomas, también vamos a conseguir otro examen hecho para usted hoy para ver si hay alguna bacteria que cause lo que llamamos neumonía andante. Es la neumonía adquirida por la comunidad que es bastante común en la población más joven. Y entonces veremos si puedes tener eso. Y de ahí veremos si tenemos que ponerte antibióticos que te ayuden. Y si necesitamos hacer algún análisis de sangre o rayos X te lo haremos saber también. ¿Está bien? Y si sientes que tienes síntomas que empeoran como falta de aliento, tienes que asegurarte de volver al Departamento de Emergencias.
+
+P: Sí, eso suena genial. Gracias.
+
+D: Sí, eres bienvenido y cuídate, y haremos todas esas cosas por ti y estaremos contigo en breve.
+
+P: Bien, suena bien.
+
+D: Genial.

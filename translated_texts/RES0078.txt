@@ -1,0 +1,201 @@
+D: ¿En qué puedo ayudarle?
+
+P: He tenido dificultades para respirar estos últimos días.
+
+D: ¿Cuándo empezó?
+
+P: Empezó hace unos tres o cuatro días.
+
+D: Vale, y desde entonces, ¿se ha puesto mejor o peor?
+
+P: Tal vez se puso un poco peor, pero no, tal vez, un poco peor.
+
+D: ¿Y hay ciertos momentos en los que sientes que tienes más falta de aliento que otras veces? ¿Algo en particular que estés haciendo que lo empeore?
+
+P: Uhm, no realmente, es un poco, me siento como, es sólo más difícil respirar, uh, la mayoría de las veces.
+
+D: Y, ¿te ha pasado esto antes?
+
+P: Uhm, no como, no, nada como esto ha pasado antes.
+
+D: Vale, ¿tienes antecedentes de algún problema pulmonar?
+
+P: No, no lo sé, he estado saludable.
+
+D: Así que sin EPOC, sin asma, nada de eso, ¿verdad?
+
+P: No, nada de eso.
+
+D: Está bien, así que estás teniendo dificultades para respirar durante los últimos tres o cuatro días. ¿Tienes tos?
+
+P: Tuve un, uh, sí, he tenido una tos también, en estos últimos días.
+
+D: ¿Y ha sido tos seca o tos húmeda?
+
+P: He estado trayendo, algunos, como, uh, esputo blanquecino. Es como, sí, blanquecino o claro.
+
+D: Y no has visto sangre en ningún momento, ¿verdad? ¿En tu esputo?
+
+P: No.
+
+D: Vale, ¿y la tos ha empeorado las horas extras?
+
+P: Ha sido casi lo mismo.
+
+D: ¿Y has tenido fiebre o escalofríos?
+
+P: Me he sentido caliente pero sin escalofríos.
+
+D: De acuerdo. ¿Qué pasa con cualquier enrojecimiento en los ojos o cualquier congestión en la nariz?
+
+P: No me he dado cuenta de nada de eso.
+
+D: Vale, ¿has tenido dolor de garganta?
+
+P: Uh, se siente un poco picazón, supongo, pero no hay dolor con tragar.
+
+D: ¿Y tienes dolor en el pecho o presión en el pecho?
+
+P: Sí, cuando me gusta, uh, tomar una respiración profunda o después de que tose he estado teniendo un poco de dolor en el pecho.
+
+D: Para darle un número de uno a diez, ¿qué diría usted en términos de lo grave que es con diez siendo el peor dolor de la historia.
+
+P: Yo diría, tal vez seis. Se siente bastante agudo cuando sucede y desaparece después de unos minutos.
+
+D: Bien, ¿y dónde está exactamente, es el dolor?
+
+P: Sí, como que lo siento, sí, justo en el lado derecho del esternón.
+
+D: De acuerdo. Muy bien, ¿y irradia en alguna parte? ¿Va a algún otro lugar aparte de ese lugar?
+
+P: No, lo siento en un solo lugar.
+
+D: Vale, ¿y ese dolor ha empeorado las horas extras?
+
+P: No, ese dolor empezó, supongo que hace dos días. Más reciente que la tos o la falta de aliento.
+
+D: Ya veo, ya veo, está bien. Así que dijiste que la tos empeora y a veces respira. ¿Así que es sólo respiración normal o cuando estás haciendo como, respiración profunda?
+
+P: Respiración profunda.
+
+D: ¿Respirar profundamente duele? De acuerdo. Muy bien, y nunca has experimentado esto antes, ¿verdad?
+
+P: No, no he tenido un dolor como este antes.
+
+D: Vale, cuando tocas esa zona sobre tu pecho, ¿tocarla empeora las cosas?
+
+P: Uhm, no, no lo he notado, tocarlo no lo hace peor.
+
+D: De acuerdo. Uhm, bien, has tenido un dolor de cabeza?
+
+P: Uh, no.
+
+D: No, está bien. ¿Qué hay de fatiga o dolores musculares?
+
+P: He estado fatigado. Sin dolores musculares.
+
+D: Vale, ¿te duele el estómago?
+
+P: No.
+
+D: ¿Alguna diarrea?
+
+P: No.
+
+D: ¿Estreñimiento?
+
+P: No.
+
+D: ¿Algún cambio en tu, uh, algún cambio cuando orinas?
+
+P: No hay nada ahí.
+
+D: No. De acuerdo. ¿Algún sarpullido que hayas notado en tu piel?
+
+P: No.
+
+D: De acuerdo. ¿Algún cambio en tu sentido del gusto?
+
+P: No.
+
+D: ¿Cambios en tu sentido del olfato?
+
+P: No.
+
+D: Está bien, está bien. Así que suena como en los últimos tres o cuatro días has tenido dificultades para respirar y una tos con este esputo blanquecino, blanquecino o esputo claro. También te has estado sintiendo un poco febril. ¿Has comprobado tu temperatura?
+
+P: No, no lo he hecho. No tengo un termómetro en casa.
+
+D: Sí, no hay problema y tu garganta ha estado un poco picada y entonces hace dos días también empezaste a tener este dolor en el pecho. ¿Hay algún otro síntoma que no haya mencionado que usted haya estado experimentando en los últimos dos días?
+
+P: No, eso es todo.
+
+D: Sí, está bien. Y mencionaste que no tienes antecedentes de asma o EPOC. ¿Tiene alguna otra condición médica?
+
+P: Tengo presión arterial alta. Y tomo Amlodipine, para eso.
+
+D: OK cualquier otro sobre los medicamentos de venta libre o cualquier otro medicamento que usted está tomando?
+
+P: No.
+
+D: ¿Alguna alergia?
+
+P: Sin alergias.
+
+D: Bien, ¿y dónde vives actualmente?
+
+P: En una casa a las afueras de la ciudad aquí.
+
+D: Ya veo, ¿vives solo?
+
+P: No, vivo con mi esposa e hija.
+
+D: ¿Y su esposa e hija han estado enfermas recientemente o alguno de ustedes ha tenido contacto con alguien que ha estado enfermo?
+
+P: He estado trabajando desde casa, uhm, pero mi hija ha empezado recientemente a volver a la escuela secundaria y ella ha tenido un moqueo de nariz recientemente y un dolor de garganta, pero eso es todo.
+
+D: ¿Y qué hay de su esposa?
+
+P: Ella ha estado bien. Sí, ha estado sana.
+
+D: Vale, bien. Aparte de su hija, ¿ha estado en contacto con alguien más que podría tener, que podría estar enfermo o podría tener síntomas similares a los de su hija?
+
+P: No lo creo.
+
+D: Vale, vale, ¿y tú, has viajado a alguna parte recientemente?
+
+P: No, he estado trabajando desde casa.
+
+D: Vale, ¿y fumas?
+
+P: No.
+
+D: ¿Alguna vez fumaste en el pasado?
+
+P: No, nunca he fumado antes.
+
+D: ¿Marihuana?
+
+P: Quiero decir, voy a tener un porro a veces con amigos en una fiesta o algo, pero eso es tal vez una vez al mes?
+
+D: Claro, ¿y alguna droga de la calle?
+
+P: No, nada de eso.
+
+D: Vale, ¿y bebes alcohol?
+
+P: Tengo una cerveza un par de veces por semana.
+
+D: Bien, y me hablaste de tu historial médico, pero ¿alguna vez has tenido cirugías o hospitalizaciones en el pasado?
+
+P: Uh, he tenido una reparación de hernia, hace unos siete años. No he tenido ningún problema desde entonces.
+
+D: De acuerdo, de acuerdo, ¿y hay alguna condición médica en tu familia?
+
+P: Uhm, mi abuelo tuvo un ataque al corazón, en sus años setenta. Y, creo que mi padre también tiene presión arterial alta, pero, creo que eso es todo.
+
+D: De acuerdo, bueno, entonces, creo que eso es todo lo que quería saber. Puedo ver que no te has estado sintiendo bien en los últimos dos días y volveré con mi asistente y volveremos a charlar contigo un poco más y haremos un examen físico y nos iremos de allí.
+
+P: Suena bien, gracias.
+
+D: De nada.

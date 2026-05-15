@@ -1,0 +1,209 @@
+D: ¿Qué te trae por aquí?
+
+P: Así que sí, he estado tosiendo la última semana y creo que he tenido un poco de fiebre en los últimos días.
+
+D: Vale, ¿así que dijiste que la tos empezó hace una semana?
+
+P: Sí, hace alrededor de una semana OK y la fiebre comenzó hace dos o tres días. Sí, realmente no lo he medido, pero como definitivamente he estado sintiendo escalofríos.He estado usando como múltiples mantas en los últimos días.
+
+D: Vale, ¿te has tomado la temperatura? Dijiste que no te habías tomado la temperatura, ¿verdad?
+
+P: No.
+
+D: De acuerdo. Así que concentrémonos en la tos. ¿Es persistente o va y viene?
+
+P: Creo que la tos es bastante persistente durante la última semana.
+
+D: Vale, ¿y empeora con aire frío o polvo? ¿Tal vez mascotas o algo así?
+
+P: No, creo que sigue igual.
+
+D: Vale, umm, ¿se pone mejor con algo? ¿Has probado con el jarabe para la tos?
+
+P: Sí, probé el tilenol frío y me gustó. Creo que lo hizo un poco mejor, como si me ayudara a dormir. Aparte de eso, durante el día, sigue siendo lo mismo.
+
+D: Vale, ¿y cómo describirías esta tos? ¿Está ladrando? ¿Es duro? ¿Suena amortiguado?
+
+P: Yo diría que no es demasiado duro. Es más como una tos húmeda. Definitivamente estoy sacando algo de esputo.
+
+D: Vale, ¿de qué color es el esputo?
+
+P: Usualmente es como un, uh como un blanco y a veces como un poco amarillo también.
+
+D: Vale, ¿siempre está verde o ves sangre ahí dentro?
+
+P: No, no he visto nada de eso.
+
+D: De acuerdo. ¿Y alguna vez has tenido una tos así?
+
+P: Umm, sí, probablemente como en el último año, tal vez me he enfermado como una vez y he tenido una tos similar.
+
+D: Vale, ¿tienes dolor de garganta?
+
+P: No, no tengo dolor de garganta.
+
+D: ¿Está empeorando la tos?
+
+P: Es, creo que no realmente, se quedó alrededor de la misma y definitivamente me siento un poco mejor con el frío de tilenol.
+
+D: Vale, bien. ¿Algún cambio en su gusto u olor?
+
+P: No, no hay cambios.
+
+D: Vale, ¿algún cambio en la audición o la visión?
+
+P: Nop.
+
+D: ¿Y tuviste la última semana un moqueo o una nariz congestionada?
+
+P: No.
+
+D: Vale, ¿alguna pérdida de peso en el último mes?
+
+P: Umm, no, en realidad no.
+
+D: ¿Qué tal cambios en el cabello, las uñas o la piel como sarpullidos?
+
+P: No, no hay cambios en la piel.
+
+D: Vale, ¿alguna falta de aliento?
+
+P: No, no.
+
+D: ¿Qué tal sibilancias?
+
+P: No, no creo que lo haya hecho recientemente.
+
+D: OK, ¿dolor en el pecho?
+
+P: No hay dolor en el pecho.
+
+D: ¿Qué tal hinchazón? ¿Ha notado alguna hinchazón en sus piernas o brazos o en su área del vientre?
+
+P: No, no lo creo.
+
+D: Vale, ¿qué tal si sientes que tu corazón se acelera?
+
+P: No, no, nada de eso.
+
+D: Bien, ¿qué tal un dolor de pantorrilla?
+
+P: No, no.
+
+D: ¿Algún mareo o desmayo?
+
+P: No, nada de eso.
+
+D: ¿Dolor de cabeza?
+
+P: No.
+
+D: ¿Confusión o pérdida de memoria?
+
+P: No lo creo.
+
+D: ¿Tus deposiciones han sido normales?
+
+P: Sí, me gusta ir tres veces al día y no tengo diarrea ni nada.
+
+D: Vale, ¿qué tal orinar sabiamente?
+
+P: Todo lo normal allí. Sí, no hay problema.
+
+D: Vale, ¿náuseas o vómitos?
+
+P: No.
+
+D: ¿Dolor articular o dolor muscular?
+
+P: No, no lo creo.
+
+D: De acuerdo. ¿Algún contacto con gente enferma a tu alrededor recientemente?
+
+P: Mi esposa estaba enferma la semana pasada, pero se recuperó. Tuvo fiebre durante uno de los días y también tosió.
+
+D: Vale, ¿la revisaron en una clínica?
+
+P: No, no lo creo. Le hicieron la prueba de COVID, pero dio negativo y no fue al médico ni nada. Se fue por su cuenta.
+
+D: Vale, ¿ha habido algún viaje recientemente?
+
+P: No.
+
+D: ¿Estás saludable de otra manera? ¿Tiene alguna enfermedad de larga data?
+
+P: Como un niño. Probablemente en mi adolescencia me quitaron el apéndice, pero nada más que eso.
+
+D: De acuerdo. Vale, no hay hospitalizaciones aparte de eso también, ¿verdad?
+
+P: No, no.
+
+D: ¿Estás tomando algún medicamento?
+
+P: No, sólo tomo varias vitaminas.
+
+D: Vale, ¿y estás al día con todas tus vacunas?
+
+P: Sí, por lo que sé.
+
+D: Bien, ¿qué tal alergias?
+
+P: Tengo como algunos, tengo un poco de secreción nasal alrededor de la primavera probablemente creo que soy alérgico al polen.
+
+D: De acuerdo. ¿Y algún historial familiar de enfermedades pulmonares?
+
+P: No, no que yo sepa.
+
+D: ¿Qué hay de las condiciones del corazón?
+
+P: No, creo que mi padre tiene presión arterial alta si eso es como una condición del corazón.
+
+D: De acuerdo, claro. ¿Y cuántos años tenía cuando lo consiguió?
+
+P: Ahora tiene como 60 años, así que probablemente a los 40.
+
+D: De acuerdo. ¿Algún cáncer en la familia?
+
+P: Tengo una tía del lado de mi madre que tenía cáncer de ovario.
+
+D: Vale, ¿cuántos años tenía cuando le diagnosticaron cáncer de ovario?
+
+P: Creo que probablemente en sus 50 años.
+
+D: Vale, ¿y fumas?
+
+P: No, no fumo.
+
+D: ¿Qué tal marihuana?
+
+P: Marihuana sólo tal vez como uno o dos porros en un mes, justo cuando siento que necesito relajarme un poco.
+
+D: Vale, claro y por ahí, dijiste una vez al mes, ¿verdad?
+
+P: Sí, una vez al mes.
+
+D: Vale, ¿alguna otra droga?
+
+P: No, ninguna otra droga.
+
+D: ¿Y dónde vives ahora mismo?
+
+P: Vivo en Londres ahora mismo. Vivo con mi esposa en un apartamento.
+
+D: Vale, ¿alguna razón para pensar que tienes moho de alfombra viejo o asbesto?
+
+P: No, es un apartamento bastante nuevo.
+
+D: Vale, y bien, esas son todas las preguntas que tenía para ti hoy. ¿Tienes alguna pregunta para mí?
+
+P: ¿No crees que podría ser COVID, verdad? Como si mi esposa se hubiera hecho la prueba y fuera negativa.
+
+D: ¿Te preocupa eso?
+
+P: Sí, seguro.
+
+D: Honestamente, algunos de sus síntomas parecen estar superpuestos con el de COVID, especialmente la tos y la fiebre. Así que vamos a hacer un hisopo COVID sólo para descartar eso. Así que obtendrá esos resultados en 24 a 48 horas y debe aislar durante 14 días porque sus síntomas se superponen. La salud pública estará en contacto con usted si es positivo sólo para hacer un poco de rastreo de contacto. Pero si no es COVID, podría ser otra infección viral que está ocurriendo en esta época del año, así que mantenga un ojo en sus síntomas. Si empeoran, o si usted está experimentando síntomas como déficits neurológicos o debilidad o convulsiones o algo así, obtenga ayuda de Urgencias de inmediato y si sus síntomas persisten más allá de siete días a 10 días, también debe llamarnos para ver qué está pasando porque podría ser algo como una infección bacteriana, en cuyo caso podemos darle algunos antibióticos. ¿Te parece bien?
+
+P: Bien, genial. Gracias.
+
+D: Gracias.

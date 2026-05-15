@@ -1,0 +1,191 @@
+D: ¿Qué te trajo hoy?
+
+P: Sí, así que me he estado sintiendo un poco mal durante la última semana. Primero empecé a tener como, sólo una garganta raspada y eso fue probablemente creo que hace 5 días que sucedió y luego en los últimos 3 días he estado teniendo diarrea y también todo mi cuerpo está sufriendo.
+
+D: Vale, y entonces, ¿cuándo empezó el dolor de garganta?
+
+P: Yo diría que hace como 5 días empezó y comenzó como una especie de cosquillas, pero ahora es más como, incluso tragar comida duele mucho.
+
+D: Vale, ¿has estado comiendo o bebiendo menos de lo habitual?
+
+P: Uhm, sí, mi apetito ha sido un poco menor en los últimos días sólo por lo mucho que duele.
+
+D: Vale, ¿has notado alguna hinchazón en el cuello?
+
+P: No, en realidad no.
+
+D: Vale, ¿qué tal algo de enrojecimiento en la parte de atrás de tu garganta?
+
+P: Lo comprobé, no vi demasiado.
+
+D: Vale, ¿y ha habido algún cambio en tu voz?
+
+P: Uhm, un poco, no diría demasiado significativo.
+
+D: Bien, y dolores musculares, como, ¿cuándo empezaron?
+
+P: Sí, así que eso empezó hace sólo 3 días. Recuerdo que me desperté y mis muslos me dolían, luego mis brazos superiores y luego se me metió en la parte superior de la espalda y ahora es como un dolor general en todos los músculos.
+
+D: Vale, ¿estás teniendo alguna debilidad muscular?
+
+P: Yo diría que es principalmente dolor, realmente no siento debilidad.
+
+D: Bien, ¿y cómo ha sido tu energía? ¿Has estado teniendo fatiga?
+
+P: Sí, diría que no sé si es por el dolor, pero definitivamente me siento mucho más cansada.
+
+D: Vale, y también mencionaste la diarrea. ¿Cuándo empezó eso?
+
+P: Sí, la diarrea también comenzó hace unos 3 días. Normalmente voy 1 o 2 veces al día, pero ahora voy como 6 o 7 veces al día y todo suele ser bastante acuoso.
+
+D: Vale, ¿has notado algo de sangre en las heces?
+
+P: No, no creo que haya notado sangre.
+
+D: Vale, ¿y has notado algún taburete oscuro o alquitranado?
+
+P: No, normalmente son heces acuosas sueltas.
+
+D: Vale, ¿y has estado experimentando otros síntomas además del dolor de garganta, dolores musculares, fatiga y diarrea?
+
+P: Uhm, no, no lo creo. Esos son probablemente todos los síntomas.
+
+D: Muy bien, tan rápido para pasar por una revisión. ¿Has tenido fiebre o escalofríos?
+
+P: No, no es que me haya dado cuenta.
+
+D: Vale, ¿qué tal si te duele la cabeza?
+
+P: Uh, no.
+
+D: Vale, ¿y has tenido un goteo de nariz?
+
+P: No.
+
+D: ¿Has perdido el olfato o el gusto?
+
+P: No lo creo. No he comido mucho últimamente, pero no lo creo, no.
+
+D: Vale, ¿has tenido tos?
+
+P: No.
+
+D: ¿Le falta el aliento?
+
+P: No.
+
+D: ¿Un silbido?
+
+P: Sin sibilancias.
+
+D: Vale, dijiste que no has tenido tos, ¿pero has sacado algo de esputo?
+
+P: No.
+
+D: Vale, ¿y has tenido algún dolor en el pecho?
+
+P: No hay dolor en el pecho.
+
+D: Muy bien, ¿algún mareo o aturdimiento?
+
+P: Nop.
+
+D: Cualquier sentimiento como si tu corazón estuviera acelerado.
+
+P: No.
+
+D: Vale, ¿has tenido algún dolor abdominal?
+
+P: Uhm, tal vez sólo un poco con toda la diarrea, siento que tengo algo, sólo, sensibilidad en mi abdomen.
+
+D: Vale, ¿y has tenido náuseas o vómitos?
+
+P: No, en realidad no.
+
+D: Vale, ¿has tenido algún problema urinario?
+
+P: Uhm, no.
+
+D: Vale, ¿y algún sarpullido en alguna parte?
+
+P: No, no es que me haya dado cuenta.
+
+D: Vale, ¿y has tenido algún cambio en tu peso recientemente o en los últimos meses?
+
+P: No, mi peso ha sido el mismo.
+
+D: Vale, ¿y te han diagnosticado alguna afección médica antes?
+
+P: Sí, así que tengo presión arterial alta y colesterol alto.
+
+D: OK, ¿tomas algún medicamento para cualquiera de esos?
+
+P: Sí, así que para el colesterol estoy tomando este medicamento llamado Crestor. Para la presión arterial alta estoy tomando este medicamento llamado Ramipril.
+
+D: OK, uhm, ¿y toma algún otro medicamento como en el mostrador o suplementos o recetados?
+
+P: Solo multivitaminas.
+
+D: Vale, ¿has sido hospitalizado antes?
+
+P: En mi adolescencia me quitaron el apéndice, pero eso es todo. He sido bastante bueno de lo contrario.
+
+D: Vale, ¿te han quitado otras cirugías además del apéndice?
+
+P: No, es la única cirugía.
+
+D: Vale, ¿y alguna alergia a los medicamentos?
+
+P: No, no que yo sepa.
+
+D: Vale, ¿y puedes contarme un poco sobre tu situación de vida?
+
+P: Sí, así que actualmente vivo con mi esposa e hijo. Vivimos en una casa en Londres, y me aislé en una habitación y uso una máscara alrededor de ellos por si acaso.
+
+D: Bien, eso es bueno. Sí, es importante estar socialmente distanciado, especialmente cuando tienen síntomas. ¿Alguien más en esa casa ha estado enfermo?
+
+P: No, nadie ha estado enfermo recientemente, al menos en mi casa, pero hace solo dos semanas asistí a un evento familiar, y la semana pasada descubrí que alguien tenía síntomas. Acaban de hacerse la prueba hace dos días y el resultado de la prueba no ha vuelto.
+
+D: Bien, ya veo. ¿Y has viajado fuera de la provincia o fuera del país?
+
+P: No, estaba aquí en Londres, así que nada más que eso. No he salido de la provincia.
+
+D: Vale, ¿y cuál era el número aproximado de personas?
+
+P: Eran sólo cinco peaople así que nos sentábamos dentro de los límites establecidos para la ciudad y eran personas, en mi círculo también, así que sí, no creo que estuviera haciendo nada malo.
+
+D: OK, sólo para dar una idea de como, riesgo y rastreo de contacto también si es necesario. ¿Y fumas cigarrillos?
+
+P: No, no fumo.
+
+D: Vale, ¿y bebes alcohol?
+
+P: Sí, tal vez una o dos cervezas a la semana.
+
+D: Vale, ¿y usas alguna droga recreativa?
+
+P: No, nunca.
+
+D: De acuerdo. Y, en términos de historia familiar, ¿alguien en la familia tiene alguna enfermedad cardíaca o pulmonar?
+
+P: No, no, no que yo sepa. Creo que mi hermano, mi hermano mayor, tiene presión arterial alta.
+
+D: Vale, ¿nadie ha tenido un ataque al corazón o un derrame cerebral?
+
+P: Uh, no.
+
+D: ¿O algún cáncer en la familia?
+
+P: Oh, sí, cáncer, uh, así que mi padre lo ha hecho. No es el cáncer de piel malo, es el que puede cortarlo.
+
+D: Vale, ¿y no ha necesitado cirugía para eso?
+
+P: ¿No?
+
+D: Bien, y creo que esas son todas las preguntas que quería hacer hoy. ¿Había algo más que tal vez olvidé decirte o olvidé preguntar?
+
+P: Sí, me preguntaba, no sé los resultados del contacto que tuve, ¿así que también debería hacerme la prueba hoy?
+
+D: Sí, sin duda con síntomas inespecíficos como lo que has estado experimentando, vamos a hacer una prueba para covid hoy. Sin embargo, también haremos algunas investigaciones de laboratorio, porque podría ser otra cosa, así que esperaremos a que regresen algunos de esos resultados, y es genial que ya hayas tomado la iniciativa de aislar a los miembros de la familia y demás. Así que les pido que continúen haciéndolo, y les contestaremos cuando lleguen los resultados.
+
+P: Vale, sí, eso suena bien, muchas gracias.

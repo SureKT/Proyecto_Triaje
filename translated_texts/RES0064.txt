@@ -1,0 +1,167 @@
+D: ¿Qué te trae por aquí?
+
+P: Mi hijo también ha estado teniendo dolor de garganta y escalofríos ayer.
+
+D: Vale, así que mencionaste que el dolor de garganta comenzó hace tres o cuatro días y los escalofríos comenzaron ayer. ¿Y tiene algún problema tragándose comida o fluidos?
+
+P: Sí, parece que se le ha caído el apetito, como un montón de dolor en la garganta, especialmente cuando traga alimentos sólidos.
+
+D: ¿Le has echado un vistazo en la garganta? ¿Es rojo? ¿Ves alguna cosa blanca de rayas amarillas, algo así?
+
+P: Definitivamente eché un vistazo ayer y definitivamente vi un montón de enrojecimiento. No sé si vi alguna raya blanca o amarilla, pero definitivamente se ve muy roja ahí.
+
+D: Bien, ¿sus amígdalas parecen agrandadas?
+
+P: Todo se ve hinchado ahí dentro, no sé qué es qué, pero se ve muy enojado ahí dentro.
+
+D: Está bien, está bien. ¿Y ha tenido una nariz congestionada o moqueo?
+
+P: No, en realidad no, no.
+
+D: ¿Alguna pérdida de sabor u olfato?
+
+P: No, nada de eso.
+
+D: Vale, ¿qué tal cambios en la visión o la audición? ¿Algún cambio en sus uñas o piel como sarpullidos?
+
+P: No, no hay sarpullidos.
+
+D: De acuerdo. ¿Le has tomado la temperatura en casa?
+
+P: No, creo que pudo haber tenido fiebre ayer, pero en realidad no tomamos una temperatura.
+
+D: De acuerdo. ¿Y alguna fatiga o agotamiento?
+
+P: La energía es casi lo mismo, sólo quejándose mucho de la garganta.
+
+D: Vale, vale, ¿has notado alguna hinchazón en el área del cuello?
+
+P: Creo que podría haber algunos bultos cerca de su cuello, así que no sé si está hinchado, pero definitivamente lo hay. Hay algunos que he sentido en los últimos días.
+
+D: ¿Está bien, tosiendo?
+
+P: No, no ha estado tosiendo en absoluto.
+
+D: Vale, ¿y qué tal falta de aliento o sibilancias?
+
+P: No, nada de eso.
+
+D: ¿Dolor en el pecho?
+
+P: No.
+
+D: ¿Sientes que su corazón está acelerado?
+
+P: No.
+
+D: ¿Inflamación en sus extremidades?
+
+P: No. No me he dado cuenta de nada de eso.
+
+D: ¿Mareos o desmayos?
+
+P: No.
+
+D: ¿Dolor de cabeza?
+
+P: Se quejaba de un dolor de cabeza hace unos días, pero como que se fue por su cuenta.
+
+D: De acuerdo. Así que el dolor de cabeza se ha ido completamente ahora.
+
+P: Sí, sí.
+
+D: De acuerdo. ¿Tiene alguna confusión o pérdida de memoria?
+
+P: No, no que yo sepa.
+
+D: ¿Dolor articular o dolores musculares?
+
+P: No.
+
+D: Bien, ¿qué hay de sus deposiciones? ¿Esos han sido normales?
+
+P Sí, han sido normales. No hay diarrea ni estreñimiento.
+
+D: Vale, ¿qué tal con náuseas o vómitos?
+
+P: No, no, no me ha dicho nada de eso.
+
+D: ¿Algún cambio de apetito?
+
+P: Sí, sólo con el problema de tragar estoy tratando de asegurarme de que se pone como líquidos porque en los últimos días no puede tolerar como alimentos sólidos en absoluto.
+
+D: Sí, ¿qué tal una pérdida de peso en las últimas semanas?
+
+P: No, en realidad no. Acaba de pasar los últimos días que no ha comido como él.
+
+D: De acuerdo. ¿Está bien y ha estado sano de lo contrario?
+
+P: Sí, de lo contrario es un niño muy saludable. Rara vez hemos ido a un médico por él antes, así que sí, nada. Nada más con él.
+
+D: Vale, ¿has intentado algo por su dolor de garganta? ¿Algo sobre el mostrador?
+
+P: Intentamos, uh, como Tylenol frío. Ayudó con este dolor de cabeza, pero en realidad no ayudó con su dolor de garganta
+
+D: Vale, ¿y alguna vez ha experimentado algo como esto en el pasado?
+
+P: No, no que yo sepa.
+
+D: De acuerdo. ¿Alguna hospitalización o cirugía en el pasado?
+
+P: No.
+
+D: ¿Alguna medicación que esté tomando?
+
+P: No, no hay medicación.
+
+D: Vale, ¿está al día con todas sus vacunas?
+
+P: Sí, todas sus vacunas están al día.
+
+D: Vale, ¿alguna alergia?
+
+P: No, no que yo sepa.
+
+D: Vale, ¿los antecedentes familiares de enfermedades pulmonares o cardíacas?
+
+P: No, no hay problemas pulmonares o cardíacos. Sin embargo, su padre tiene diabetes.
+
+D: Vale, ¿cuántos años tenía cuando le diagnosticaron diabetes?
+
+P: Creo que probablemente a finales de los 30 con diabetes tipo 2.
+
+D: Tipo 2, OK y luego cualquier contacto enfermo recientemente que pueda haber tenido?
+
+P: No creo que en casa al menos, pero tal vez en la escuela, como nunca sabes con quién están en contacto, así que me pregunto si lo recogió en algún lugar de la escuela.
+
+D: De acuerdo.
+
+P: Sí, sí, todos llevan máscaras ahora mismo, pero no sé si recogió algo de sus compañeros de clase.
+
+D: Sí, seguro. Vale, ¿y luego algún viaje a algún lugar recientemente?
+
+P: No, hemos estado en casa, ni siquiera nos hemos ido a una ciudad diferente, hemos estado en Londres todo el tiempo.
+
+D: Vale, sí, ¿y con quién vive en casa?
+
+P: Así que vive conmigo y con su padre.
+
+D: ¿Algún hermano?
+
+P: No, es hijo único.
+
+D: Vale, ¿alguna razón para creer que tienes alfombras viejas, moho, asbesto, algo que pueda estar provocando sus síntomas?
+
+P: Sabes que no tenemos mascotas. No tenemos alfombras viejas, es un apartamento bastante nuevo, así que no creo que nada de eso deba ser un problema.
+
+D: Vale, bueno, creo que esas son todas las preguntas que tenía para él. ¿Algo que quisieras añadir o algo que me haya perdido hoy?
+
+P: No, creo que eso es todo de lo que quería hablar pero me preguntaba si necesita hacerse la prueba o si hay algo que podamos hacer hoy por él.
+
+D: Sí, así que parece estar comprobando algunos de los criterios para la garganta estreptocócica. Así que sólo para asegurarse, porque tiene una puntuación de ahora mismo al menos tres o cuatro, o tal vez incluso cinco, definitivamente sobre cuatro, podemos recetarle algunos antibióticos. Pero vamos a hacer una prueba rápida de estreptococos primero en la clínica aquí hoy sólo para descartar o descartar eso. Si vuelve positivo y supongo que incluso si no es positivo porque ha comprobado muchas de las cajas para la garganta estreptocócica, le daremos una receta de penicilina o amoxicilina durante 10 días. Y entonces puedes tomar eso si sus síntomas no desaparecen en un día o dos. Porque sus síntomas también se superponen con COVID, lo haremos. Haz un hisopo para eso también y debes escuchar dentro de 24 a 48 horas y luego debes aislarte durante 14 días. ¿Te parece bien?
+
+P: Sí, eso suena bien.
+
+D: Muy bien, gracias.
+
+P: Gracias.
