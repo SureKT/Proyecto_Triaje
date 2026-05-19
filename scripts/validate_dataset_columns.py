@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
 """Valida columnas y calidad de datos ENRICHED vs dataset_builder / ml_trainer."""
 import os
+import sys
+from pathlib import Path
+
 import pandas as pd
 import psycopg2
 import psycopg2.extras
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "services"))
+from ml_features import UNKNOWN, prepare_dataset_export_df, prepare_training_df
 
 
 def pg_execute(query, params=None, fetch=False):
@@ -60,15 +66,7 @@ def main():
     print(f"=== FILAS ENRICHED: {len(df)} ===\n")
     issues = []
 
-    # Simular dataset_builder
-    df_csv = df.copy()
-    for c in BOOL_COLS:
-        nulls = int(df_csv[c].isna().sum())
-        if nulls:
-            issues.append(f"bool {c} con NULL: {nulls} (dataset_builder fallará sin fillna)")
-        df_csv[c] = df_csv[c].fillna(False).astype(int)
-    df_csv["sexo"] = df_csv["sexo"].map({"M": 1, "F": 0}).fillna(-1).astype(int)
-    df_csv["especialidad"] = df_csv["especialidad"].fillna("UNK")
+    df_csv = prepare_dataset_export_df(df.copy())
 
     missing = [c for c in EXPECTED_CSV_COLS if c not in df_csv.columns]
     print("Columnas esperadas en CSV:", ", ".join(EXPECTED_CSV_COLS))
@@ -81,9 +79,13 @@ def main():
     for c in check_cols:
         n = int(df[c].isna().sum())
         pct = 100 * n / len(df)
-        flag = " ⚠" if c in FEATURES + ["nivel_triaje"] and n > 0 else ""
+        flag = ""
+        if c in ("edad", "sexo", "dolor_intensidad") and n > 0:
+            flag = " (→ -1 en CSV, esperado si no se menciona)"
+        elif c == "nivel_triaje" and n > 0:
+            flag = " ⚠"
         print(f"  {c:25} {n:3}/{len(df)} ({pct:.0f}%){flag}")
-        if c in FEATURES + ["nivel_triaje"] and n > 0:
+        if c == "nivel_triaje" and n > 0:
             issues.append(f"null en {c}: {n}")
 
     print("\n=== nivel_triaje (target ML) ===")
@@ -103,11 +105,13 @@ def main():
     print("\n=== especialidad ===")
     print(df["especialidad"].value_counts().to_string())
 
-    train_df = df_csv.dropna(subset=FEATURES + ["nivel_triaje"])
-    print(f"\n=== Filas usables por ml_trainer (sin null en features+target) ===")
+    train_df = prepare_training_df(df_csv)
+    print(f"\n=== Filas usables por ml_trainer (target + score; edad/sexo -1 si faltan) ===")
     print(f"  {len(train_df)}/{len(df)}")
+    print(f"  edad={UNKNOWN} (desconocida): {(train_df['edad'] == UNKNOWN).sum()}")
+    print(f"  sexo={UNKNOWN} (desconocido): {(train_df['sexo'] == UNKNOWN).sum()}")
     if len(train_df) < len(df):
-        issues.append(f"{len(df) - len(train_df)} filas excluidas por nulls en ML")
+        issues.append(f"{len(df) - len(train_df)} filas sin nivel_triaje o score_urgencia")
 
     ent = pg_execute(
         """
@@ -136,9 +140,9 @@ def main():
 
     print("\n=== VEREDICTO ===")
     if not missing and len(bad) == 0 and len(train_df) == len(df):
-        print("Columnas y tipos: CORRECTOS para dataset_builder y Random Forest.")
-    elif not missing and len(train_df) >= len(df) * 0.8:
-        print("Columnas: CORRECTAS. Calidad: ACEPTABLE con algunos nulls (ver arriba).")
+        print("Columnas y tipos: CORRECTOS. Listo para dataset_builder y Random Forest.")
+    elif not missing and len(train_df) >= len(df) * 0.95:
+        print("Columnas: CORRECTAS. Nulls en edad/sexo/dolor son esperables (codificados como -1).")
     else:
         print("Columnas: estructura OK, pero HAY problemas de calidad:")
         for i in issues:

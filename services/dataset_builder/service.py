@@ -10,6 +10,7 @@ import pandas as pd
 from datetime import datetime
 
 from common import pg_execute, update_estado, minio_upload_bytes, now
+from ml_features import prepare_dataset_export_df
 
 logger = logging.getLogger(__name__)
 
@@ -47,17 +48,7 @@ def build_dataset() -> str:
     if not rows:
         raise ValueError("No hay registros ENRICHED para construir el dataset.")
 
-    df = pd.DataFrame([dict(r) for r in rows])
-
-    # Convertir booleanos a enteros para sklearn
-    bool_cols = ["disnea", "fiebre", "perdida_consciencia",
-                 "irradiacion", "antecedentes_cardiacos", "fumador"]
-    for col in bool_cols:
-        df[col] = df[col].astype(int)
-
-    # Encoding de sexo y especialidad
-    df["sexo"]        = df["sexo"].map({"M": 1, "F": 0}).fillna(-1).astype(int)
-    df["especialidad"] = df["especialidad"].fillna("UNK")
+    df = prepare_dataset_export_df(pd.DataFrame([dict(r) for r in rows]))
 
     csv_bytes = df.to_csv(index=False).encode("utf-8")
     ts         = datetime.utcnow().strftime("%Y%m%d_%H%M%S")

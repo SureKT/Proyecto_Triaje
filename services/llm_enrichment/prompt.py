@@ -24,6 +24,11 @@ Analiza la siguiente transcripción de entrevista médico-paciente y devuelve EX
   "justificacion": "<razonamiento clínico breve>"
 }
 
+Reglas de extracción:
+- edad y sexo: usa null SOLO si no aparecen en la transcripción (no preguntes ni inventes).
+- dolor_intensidad: null si no hay escala de dolor explícita.
+- Booleanos clínicos (disnea, fiebre, etc.): true solo si se menciona; si no, false (nunca null).
+
 Criterios SET:
 - Nivel 1 (Rojo/Inmediato):   parada cardiorrespiratoria, pérdida de consciencia, compromiso vital inmediato
 - Nivel 2 (Naranja/10 min):   dolor torácico + disnea + edad >40, sospecha SCA/TEP, deterioro neurológico agudo

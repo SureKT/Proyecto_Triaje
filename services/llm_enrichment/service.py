@@ -6,9 +6,14 @@ import logging
 
 from common import pg_execute, update_estado, ensure_entrevista, now
 from llm_enrichment.client import call_llm
+from ml_features import as_bool
 from preprocessor.service import preprocess
 
 logger = logging.getLogger(__name__)
+
+
+def _llm_bool(resultado: dict, key: str) -> bool:
+    return as_bool(resultado.get(key))
 
 
 def enrich(guid: str, texto: str) -> dict:
@@ -61,12 +66,12 @@ def enrich(guid: str, texto: str) -> dict:
             resultado.get("edad"),
             resultado.get("sexo"),
             resultado.get("dolor_intensidad"),
-            resultado.get("disnea", False),
-            resultado.get("fiebre", False),
-            resultado.get("perdida_consciencia", False),
-            resultado.get("irradiacion", False),
-            resultado.get("antecedentes_cardiacos", False),
-            resultado.get("fumador", False),
+            _llm_bool(resultado, "disnea"),
+            _llm_bool(resultado, "fiebre"),
+            _llm_bool(resultado, "perdida_consciencia"),
+            _llm_bool(resultado, "irradiacion"),
+            _llm_bool(resultado, "antecedentes_cardiacos"),
+            _llm_bool(resultado, "fumador"),
             resultado.get("motivo_consulta"),
             resultado.get("justificacion"),
             resultado.get("score_urgencia"),

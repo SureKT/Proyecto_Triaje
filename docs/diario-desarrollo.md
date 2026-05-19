@@ -5,9 +5,9 @@
 
 | Campo | Valor |
 |-------|--------|
-| Última actualización | 2026-05-18 (sesión 3) |
+| Última actualización | 2026-05-19 |
 | Equipo | Persona A (Gerard) · Persona B (compañero/a) |
-| Checkpoint | **6 ENRICHED · 266 INGESTED** (~2 % del batch LLM); **Ollama `llama3.1:8b`** en producción local |
+| Checkpoint | **272 EVALUATED**; Fase 1 ML hecha (RF acc. 85.5 %, CV F1 0.69). **Ollama `llama3.1:8b`** |
 
 ---
 
@@ -59,9 +59,10 @@ Sistema que clasifica el **nivel de triaje hospitalario (SET, 1–5)** a partir 
 | DAGs y servicios FastAPI | Código presente y probado parcialmente |
 | Cliente LLM dual (`client.py`: OpenRouter + Ollama) | Implementado |
 | Ingesta 272 (`dag_text_ingestion`) | **Hecho** |
-| Enriquecimiento LLM (`dag_llm_enrichment`) | **En curso** — 6/272 ENRICHED |
-| Dataset CSV + entrenamiento ML + evaluación | **Pendiente** (tras completar enriquecimiento) |
-| Fase 2 `/predecir` con modelo entrenado | **Pendiente** |
+| Enriquecimiento LLM (`dag_llm_enrichment`) | **Hecho** — 272/272 ENRICHED |
+| Dataset CSV + entrenamiento ML + evaluación | **Hecho** (`dataset_*`, `modelo_*`, eval JSON en MinIO) |
+| Codificación edad/sexo desconocidos (`-1`) | **Hecho** — ver §10 entrada 2026-05-19 |
+| Fase 2 `/predecir` con modelo entrenado | **Pendiente** (probar con `.txt` nuevo) |
 
 ---
 
@@ -250,6 +251,29 @@ LLM_DELAY_SEC=4
 ## 10. Bitácora — nuevas entradas
 
 *(Más reciente arriba)*
+
+### 2026-05-19 — Fase 1 ML: dataset, entrenamiento y evaluación
+
+**Qué:** `dag_dataset_builder` → 272 filas CSV; `dag_model_training` → `modelo_20260519_132951.pkl`; `dag_evaluation` → CV F1 macro 0.692, 2 under-triage.  
+**Fix:** Airflow sin `joblib` → `_PIP_ADDITIONAL_REQUIREMENTS` ampliado en `docker-compose.yml`.  
+**Estado:** hecho. Siguiente: Fase 2 `POST /predecir/`.
+
+### 2026-05-19 — Edad/sexo no mencionados → feature `-1` (no descartar filas)
+
+**Quién:** Gerard (A)  
+**Qué:** Muchas transcripciones no incluyen edad ni sexo (no se pregunta en la entrevista). El LLM debe devolver `null`, no inventar.  
+**Por qué:** Es dato faltante real del dominio, no error de ingesta ni del enriquecimiento. Descartar esas filas en `ml_trainer` (`dropna` en todas las features) dejaba ~4/272 casos entrenables.  
+**Solución:**
+- Módulo `services/ml_features.py`: `edad`, `sexo` y `dolor_intensidad` null → **-1** (desconocido); booleanos null → **false**.
+- `dataset_builder`, `ml_trainer`, `ml_predictor` y prompt LLM alineados.
+- Entrenamiento solo exige `nivel_triaje` + `score_urgencia`; el resto puede ser -1.
+- Documentado para defensa: “-1 = no consta en la transcripción”.  
+**Estado:** hecho. Siguiente: `dag_dataset_builder`.
+
+### 2026-05-19 — Enriquecimiento completo + reintentos ERROR_ENRICHMENT
+
+**Qué:** 272/272 `ENRICHED`. ~99 fallos por API/Ollama caídos (`Connection refused`); reset a `INGESTED` + segundo batch. DAG actualizado para reintentar `ERROR_ENRICHMENT`.  
+**Estado:** hecho.
 
 ### 2026-05-18 — Sincronización README, ROADMAP y arquitectura
 

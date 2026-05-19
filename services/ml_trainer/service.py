@@ -18,19 +18,12 @@ import numpy as np
 
 from common import (pg_execute, minio_download_bytes, minio_upload_bytes,
                     minio_list_objects, now)
+from ml_features import FEATURES, TARGET, prepare_training_df
 
 logger = logging.getLogger(__name__)
 
 BUCKET_DATASETS = os.environ.get("MINIO_BUCKET_DATASETS", "datasets")
 BUCKET_MODELOS  = os.environ.get("MINIO_BUCKET_MODELOS",  "modelos")
-
-FEATURES = [
-    "edad", "sexo", "dolor_intensidad", "disnea", "fiebre",
-    "perdida_consciencia", "irradiacion", "antecedentes_cardiacos",
-    "fumador", "score_urgencia",
-]
-TARGET = "nivel_triaje"
-
 
 def get_latest_dataset() -> pd.DataFrame:
     objects = sorted(minio_list_objects(BUCKET_DATASETS, prefix="dataset_entrenamiento_"))
@@ -44,10 +37,9 @@ def get_latest_dataset() -> pd.DataFrame:
 def train() -> dict:
     t_inicio = now()
 
-    df = get_latest_dataset()
-    df = df.dropna(subset=FEATURES + [TARGET])
+    df = prepare_training_df(get_latest_dataset())
 
-    X = df[FEATURES].fillna(-1)
+    X = df[FEATURES]
     y = df[TARGET].astype(int)
 
     # Class weights para proteger C1/C2

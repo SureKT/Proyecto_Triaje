@@ -2,7 +2,7 @@
 x-airflow-common: &airflow-common
   image: apache/airflow:2.9.1
   environment: &airflow-env
-    _PIP_ADDITIONAL_REQUIREMENTS: "minio psycopg2-binary"
+    _PIP_ADDITIONAL_REQUIREMENTS: "minio psycopg2-binary joblib scikit-learn pandas numpy"
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres/${POSTGRES_DB}
     AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}

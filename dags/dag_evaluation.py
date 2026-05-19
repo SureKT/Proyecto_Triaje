@@ -34,12 +34,6 @@ def _evaluate():
     BUCKET_MODELOS  = os.environ["MINIO_BUCKET_MODELOS"]
     BUCKET_DATASETS = os.environ["MINIO_BUCKET_DATASETS"]
 
-    FEATURES = [
-        "edad", "sexo", "dolor_intensidad", "disnea", "fiebre",
-        "perdida_consciencia", "irradiacion", "antecedentes_cardiacos",
-        "fumador", "score_urgencia",
-    ]
-
     # ── Cargar modelo ──────────────────────────────────────────────────────────
     models = sorted(minio_list_objects(BUCKET_MODELOS, prefix="modelo_"))
     if not models:
@@ -50,9 +44,21 @@ def _evaluate():
     # ── Cargar dataset ─────────────────────────────────────────────────────────
     datasets = sorted(minio_list_objects(BUCKET_DATASETS, prefix="dataset_entrenamiento_"))
     csv_bytes = minio_download_bytes(BUCKET_DATASETS, datasets[-1])
-    df = pd.read_csv(io.BytesIO(csv_bytes)).dropna(subset=FEATURES + ["nivel_triaje"])
-
-    X = df[FEATURES].fillna(-1)
+    FEATURES = [
+        "edad", "sexo", "dolor_intensidad", "disnea", "fiebre",
+        "perdida_consciencia", "irradiacion", "antecedentes_cardiacos",
+        "fumador", "score_urgencia",
+    ]
+    UNKNOWN = -1
+    df = pd.read_csv(io.BytesIO(csv_bytes))
+    bool_cols = ["disnea", "fiebre", "perdida_consciencia",
+                 "irradiacion", "antecedentes_cardiacos", "fumador"]
+    for col in bool_cols:
+        df[col] = df[col].fillna(0).astype(int)
+    for col in ("edad", "dolor_intensidad", "sexo"):
+        df[col] = df[col].fillna(UNKNOWN)
+    df = df.dropna(subset=["nivel_triaje", "score_urgencia"])
+    X = df[FEATURES]
     y = df["nivel_triaje"].astype(int)
 
     # ── Validación cruzada 5-fold ──────────────────────────────────────────────

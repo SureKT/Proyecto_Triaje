@@ -97,6 +97,7 @@ En la implementación actual, el microservicio `llm_enrichment` ejecuta el prepr
 
 - Consolida todos los registros `ENRICHED` de Postgres en un CSV.
 - Columnas: `GUID`, `especialidad`, `edad`, `sexo`, `dolor_intensidad`, `disnea`, `fiebre`, `perdida_consciencia`, `irradiacion`, `antecedentes_cardiacos`, `fumador`, `score_urgencia`, `nivel_triaje`.
+- Codificación para ML (`ml_features.py`): booleanos → 0/1; `sexo` M/F → 1/0; **-1 = desconocido** si edad, sexo o dolor no constan en la transcripción (el LLM devuelve `null`, no se inventan).
 - Guarda el CSV en MinIO con nombre versionado (`datasets/dataset_entrenamiento_<timestamp>.csv`).
 - Actualiza estado a `DATASET_READY`.
 

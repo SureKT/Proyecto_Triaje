@@ -13,6 +13,7 @@ from datetime import datetime
 from common import (pg_execute, update_estado, minio_download_bytes,
                     minio_list_objects, minio_upload_text, new_guid, now)
 from llm_enrichment.service import enrich
+from ml_features import FEATURES, row_from_llm_result
 
 logger = logging.getLogger(__name__)
 
@@ -21,13 +22,6 @@ BUCKET_TEXTOS   = os.environ.get("MINIO_BUCKET_TEXTOS",   "textos-originales")
 AIRFLOW_BASE    = os.environ.get("AIRFLOW_BASE_URL",       "http://airflow-webserver:8080")
 AIRFLOW_USER    = os.environ.get("AIRFLOW_USER",           "admin")
 AIRFLOW_PASS    = os.environ.get("AIRFLOW_PASSWORD",       "admin")
-
-FEATURES = [
-    "edad", "sexo", "dolor_intensidad", "disnea", "fiebre",
-    "perdida_consciencia", "irradiacion", "antecedentes_cardiacos",
-    "fumador", "score_urgencia",
-]
-
 
 def load_latest_model():
     objects = sorted(minio_list_objects(BUCKET_MODELOS, prefix="modelo_"))
@@ -72,19 +66,7 @@ def predict(texto: str) -> dict:
     # ── 5. Cargar modelo y predecir ────────────────────────────────────────────
     model, model_name = load_latest_model()
 
-    fila = {
-        "edad":                  resultado_llm.get("edad")               or -1,
-        "sexo":                  1 if resultado_llm.get("sexo") == "M" else (0 if resultado_llm.get("sexo") == "F" else -1),
-        "dolor_intensidad":      resultado_llm.get("dolor_intensidad")   or -1,
-        "disnea":                int(resultado_llm.get("disnea", False)),
-        "fiebre":                int(resultado_llm.get("fiebre", False)),
-        "perdida_consciencia":   int(resultado_llm.get("perdida_consciencia", False)),
-        "irradiacion":           int(resultado_llm.get("irradiacion", False)),
-        "antecedentes_cardiacos":int(resultado_llm.get("antecedentes_cardiacos", False)),
-        "fumador":               int(resultado_llm.get("fumador", False)),
-        "score_urgencia":        resultado_llm.get("score_urgencia", 50),
-    }
-    X        = pd.DataFrame([fila])[FEATURES]
+    X = pd.DataFrame([row_from_llm_result(resultado_llm)])[FEATURES]
     pred     = int(model.predict(X)[0])
     proba    = model.predict_proba(X)[0]
     confianza = float(max(proba))
