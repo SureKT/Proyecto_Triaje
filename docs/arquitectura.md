@@ -17,7 +17,7 @@
 │                 [service: llm_enrichment]                           │
 │                        │                                            │
 │                        ▼                                            │
-│               Ollama local ◄── GPU (4060 Ti 16 GB)                  │
+│               LLM (Ollama host / OpenRouter API)                    │
 │                        │                                            │
 │         entidades + nivel_triaje + score_urgencia                   │
 │                        │                                            │
@@ -34,23 +34,15 @@
 ┌─────────────────────────────────────────────────────────────────────┐
 │                       FASE 2 — a demanda                            │
 │                                                                     │
-│  Cliente ──► POST /predecir (FastAPI)                               │
+│  Cliente ──► POST /predecir/ (FastAPI, ml_predictor)                  │
 │                   │                                                 │
 │                   ├──► MinIO (guarda .txt)                          │
 │                   ├──► Postgres (crea registro GUID)                │
-│                   └──► Airflow REST API                             │
-│                              │                                      │
-│                              ▼                                      │
-│                    [dag_prediction]                                  │
-│                    │              │                                  │
-│              [llm_enrichment]  [ml_predictor]                       │
-│              (features)        (modelo.pkl)                         │
-│                    │                                                │
-│                    ▼                                                │
-│             Postgres (guarda predicción)                            │
-│                    │                                                │
-│                    ▼                                                │
-│         FastAPI devuelve resultado al cliente                       │
+│                   ├──► llm_enrichment (preprocess + LLM)            │
+│                   ├──► carga modelo .pkl desde MinIO                │
+│                   └──► Postgres (predicción, estado PREDICTED)      │
+│                                                                     │
+│  (Opcional) dag_prediction + Airflow REST para orquestación async   │
 └─────────────────────────────────────────────────────────────────────┘
 
 Capa de persistencia transversal:
@@ -70,13 +62,13 @@ Capa de persistencia transversal:
 Cada texto arrastra un `GUID_Entrevista` desde la ingesta hasta la valoración final. Los estados posibles son:
 
 ```
-INGESTED → PREPROCESSED → ENRICHED → DATASET_READY → MODEL_TRAINED → EVALUATED
+INGESTED → (PREPROCESSING / PREPROCESSED dentro de enrich) → ENRICHED → DATASET_READY → MODEL_TRAINED → EVALUATED
                                                                           │
                                                            (Fase 2)       ▼
-                                                                    PREDICTED → COMPLETED
+                                                                    PREDICTED → (COMPLETED, si se implementa)
 ```
 
-Cada transición registra `timestamp_inicio` y `timestamp_fin` en la tabla `Entrevista`.
+En la implementación actual, el microservicio `llm_enrichment` ejecuta el preprocesado antes del LLM; los estados intermedios `PREPROCESSING` / `PREPROCESSED` se registran en columnas de timestamp de `Entrevista`. Cada transición relevante actualiza `Estado` y los timestamps en Postgres.
 
 ---
 
@@ -105,7 +97,7 @@ Cada transición registra `timestamp_inicio` y `timestamp_fin` en la tabla `Entr
 
 - Consolida todos los registros `ENRICHED` de Postgres en un CSV.
 - Columnas: `GUID`, `especialidad`, `edad`, `sexo`, `dolor_intensidad`, `disnea`, `fiebre`, `perdida_consciencia`, `irradiacion`, `antecedentes_cardiacos`, `fumador`, `score_urgencia`, `nivel_triaje`.
-- Guarda el CSV en MinIO (`datasets/dataset_entrenamiento.csv`).
+- Guarda el CSV en MinIO con nombre versionado (`datasets/dataset_entrenamiento_<timestamp>.csv`).
 - Actualiza estado a `DATASET_READY`.
 
 ### Paso 4: Entrenamiento del modelo (`dag_model_training`)
@@ -130,11 +122,16 @@ Cada transición registra `timestamp_inicio` y `timestamp_fin` en la tabla `Entr
 
 ## Explicación del pipeline — Fase 2
 
-1. **Cliente** envía `POST /predecir` al servicio FastAPI con el fichero `.txt`.
-2. **FastAPI** sube el fichero a MinIO, crea un registro con nuevo GUID en Postgres (estado `INGESTED`) y llama a la API REST de Airflow para disparar `dag_prediction`.
-3. **`dag_prediction`** llama al servicio `llm_enrichment` para extraer features, carga el modelo desde MinIO y genera la predicción de nivel de triaje.
-4. El resultado se guarda en `ResultadoML` (estado `PREDICTED`).
-5. **FastAPI** consulta el resultado en Postgres y lo devuelve al cliente (estado final `COMPLETED`).
+**Implementación actual del endpoint `POST /predecir/`**
+
+1. **Cliente** envía el fichero `.txt` (multipart) o texto en formulario.
+2. **FastAPI** (`ml_predictor`) crea un nuevo `GUID_Entrevista`, sube el texto a MinIO (`fase2/<guid>.txt`) y llama a **`enrich()`** (preprocesado + LLM + persistencia en `Entidad` / `ResultadoML`).
+3. Carga el **modelo más reciente** desde MinIO (`modelo_*.pkl`), calcula la predicción y actualiza `ResultadoML` y `Entrevista` (estado `PREDICTED`).
+4. Devuelve al cliente un JSON con `nivel_triaje_predicho`, `nivel_triaje_llm`, `score_urgencia`, `confianza`, etc.
+
+**DAG `dag_prediction`**
+
+Existe para disparar el flujo vía Airflow (p. ej. con `dag_run.conf`); la integración completa con que el DAG use el mismo GUID que devuelve la API puede requerir ajuste (trazabilidad). El camino principal de prueba en desarrollo es la llamada directa a `/predecir/`.
 
 ---
 
@@ -193,51 +190,17 @@ P: 67 años.
 
 ## Modelo de datos
 
-```sql
-CREATE TABLE Entrevista (
-    GUID_Entrevista             VARCHAR(255) PRIMARY KEY,
-    URL_Texto_Original          VARCHAR(255),
-    URL_Dataset_Generado        VARCHAR(255),
-    URL_Modelo_Entrenado        VARCHAR(255),
-    Inicio_Solicitud            TIMESTAMP,
-    Fin_Solicitud               TIMESTAMP,
-    Inicio_Preprocesamiento     TIMESTAMP,
-    Fin_Preprocesamiento        TIMESTAMP,
-    Inicio_Extraccion_Entidades TIMESTAMP,
-    Fin_Extraccion_Entidades    TIMESTAMP,
-    Inicio_Normalizacion        TIMESTAMP,
-    Fin_Normalizacion           TIMESTAMP,
-    Inicio_Etiquetado           TIMESTAMP,
-    Fin_Etiquetado              TIMESTAMP,
-    Inicio_Score                TIMESTAMP,
-    Fin_Score                   TIMESTAMP,
-    Inicio_Entrenamiento        TIMESTAMP,
-    Fin_Entrenamiento           TIMESTAMP,
-    Motor_Workflow              VARCHAR(50),   -- 'airflow'
-    Workflow_Id                 VARCHAR(255),
-    Estado                      VARCHAR(50)
-);
+La **fuente de verdad** del esquema es el fichero `sql/schema.sql` del repositorio (init de Postgres). Resumen:
 
-CREATE TABLE Entidad (
-    id                  SERIAL PRIMARY KEY,
-    GUID_Entrevista     VARCHAR(255) REFERENCES Entrevista(GUID_Entrevista),
-    entidad_raw         TEXT,
-    entidad_normalizada TEXT,
-    tipo                VARCHAR(100)
-);
+| Tabla | Rol |
+|-------|-----|
+| **Entrevista** | GUID, URLs (texto, dataset, modelo), timestamps de pipeline, `Estado`, `nombre_fichero`, `especialidad` |
+| **Entidad** | Pares entidad cruda / normalizada por entrevista |
+| **ResultadoML** | Features del LLM (`edad`, `sexo`, booleanos clínicos, `motivo_consulta`, `justificacion`), `score_urgencia`, `nivel_triaje` (etiqueta LLM en Fase 1), `prediccion_modelo` y `confianza` (Fase 2) |
 
-CREATE TABLE ResultadoML (
-    id                  SERIAL PRIMARY KEY,
-    GUID_Entrevista     VARCHAR(255) REFERENCES Entrevista(GUID_Entrevista),
-    nivel_triaje        INT,
-    score_urgencia      FLOAT,
-    etiqueta_llm        INT,
-    prediccion_modelo   INT,
-    confianza           FLOAT,
-    valoracion          FLOAT,
-    timestamp_pred      TIMESTAMP
-);
-```
+Índice único: `ResultadoML(GUID_Entrevista)` (`idx_resultado_guid_unique`) para permitir UPSERT al re-enriquecer.
+
+Para el DDL completo y los índices, ver `sql/schema.sql`.
 
 ---
 
@@ -245,9 +208,9 @@ CREATE TABLE ResultadoML (
 
 Las transcripciones son texto clínico no estructurado con variabilidad léxica alta: el paciente describe "me ahogo" y el término médico es "disnea". Un parser de reglas no puede cubrir esa variabilidad de forma fiable.
 
-El LLM (Llama 3.1 70B ejecutado localmente con Ollama) actúa como extractor y anotador clínico: normaliza entidades, aplica criterios del Sistema Español de Triaje y devuelve un JSON estructurado que alimenta directamente al modelo ML. Esto separa la comprensión del lenguaje natural (LLM) de la decisión estadística (ML), haciendo el pipeline más interpretable y auditable.
+El LLM actúa como **extractor y anotador clínico** (modelo instruct configurable: p. ej. **Llama 3.1 8B** u otro vía **Ollama** en el host, o un modelo remoto vía **OpenRouter**): normaliza entidades, aplica criterios del Sistema Español de Triaje y devuelve un JSON estructurado que alimenta al modelo ML. Esto separa la comprensión del lenguaje natural (LLM) de la decisión estadística (ML), haciendo el pipeline más interpretable y auditable.
 
-Ollama se usa en lugar de una API externa para eliminar costes y dependencias de red.
+**Ollama** evita límites de cuota en el batch y no envía datos a terceros si todo corre en local. **OpenRouter** (u otra API compatible) es válida cuando el profesor o el equipo priorizan no depender de la GPU local.
 
 ---
 

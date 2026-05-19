@@ -3,3 +3,11 @@
 skills-lock.json
 .vscode/
 .env
+__pycache__/
+*.pyc
+*.pyo
+logs/
+plugins/
+*.pkl
+*.egg-info/
+.DS_Store

@@ -1,0 +1,190 @@
+
+x-airflow-common: &airflow-common
+  image: apache/airflow:2.9.1
+  environment: &airflow-env
+    _PIP_ADDITIONAL_REQUIREMENTS: "minio psycopg2-binary"
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres/${POSTGRES_DB}
+    AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "false"
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.basic_auth
+    AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW__WEBSERVER__SECRET_KEY}
+    AIRFLOW_UID: ${AIRFLOW_UID:-50000}
+    # Variables de proyecto disponibles en todos los DAGs
+    POSTGRES_USER: ${POSTGRES_USER}
+    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    POSTGRES_DB: ${POSTGRES_DB}
+    POSTGRES_HOST: postgres
+    POSTGRES_PORT: 5432
+    MINIO_ENDPOINT: ${MINIO_ENDPOINT}
+    MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+    MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    MINIO_BUCKET_TEXTOS: ${MINIO_BUCKET_TEXTOS}
+    MINIO_BUCKET_DATASETS: ${MINIO_BUCKET_DATASETS}
+    MINIO_BUCKET_MODELOS: ${MINIO_BUCKET_MODELOS}
+    LLM_PROVIDER: ${LLM_PROVIDER:-openrouter}
+    OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+    OPENROUTER_MODEL: ${OPENROUTER_MODEL:-google/gemini-2.0-flash-001}
+    OPENROUTER_BASE_URL: ${OPENROUTER_BASE_URL:-https://openrouter.ai/api/v1}
+    LLM_BATCH_LIMIT: ${LLM_BATCH_LIMIT:-0}
+    LLM_DELAY_SEC: ${LLM_DELAY_SEC:-0}
+    LLM_TIMEOUT: ${LLM_TIMEOUT:-300}
+    OLLAMA_BASE_URL: ${OLLAMA_BASE_URL}
+    OLLAMA_MODEL: ${OLLAMA_MODEL}
+    API_BASE_URL: ${API_BASE_URL}
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+    - ./plugins:/opt/airflow/plugins
+    - ./text:/opt/airflow/text
+  depends_on:
+    postgres:
+      condition: service_healthy
+  extra_hosts:
+    - "host.docker.internal:host-gateway"
+
+services:
+
+  # ── Postgres ────────────────────────────────────────────────────────────────
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "${POSTGRES_USER}"]
+      interval: 10s
+      retries: 5
+
+  # ── MinIO ───────────────────────────────────────────────────────────────────
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    volumes:
+      - minio_data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      retries: 5
+
+  # ── MinIO init: crea los buckets al arrancar ────────────────────────────────
+  minio-init:
+    image: minio/mc:latest
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      mc alias set local http://minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD};
+      mc mb --ignore-existing local/${MINIO_BUCKET_TEXTOS};
+      mc mb --ignore-existing local/${MINIO_BUCKET_DATASETS};
+      mc mb --ignore-existing local/${MINIO_BUCKET_MODELOS};
+      echo 'Buckets creados';
+      "
+    environment:
+      MINIO_BUCKET_TEXTOS: ${MINIO_BUCKET_TEXTOS}
+      MINIO_BUCKET_DATASETS: ${MINIO_BUCKET_DATASETS}
+      MINIO_BUCKET_MODELOS: ${MINIO_BUCKET_MODELOS}
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+
+  # ── Airflow init ────────────────────────────────────────────────────────────
+  airflow-init:
+    <<: *airflow-common
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        airflow db migrate
+        airflow users create \
+          --username admin \
+          --firstname Admin \
+          --lastname User \
+          --role Admin \
+          --email admin@triaje.local \
+          --password admin
+    restart: "no"
+
+  # ── Airflow webserver ───────────────────────────────────────────────────────
+  airflow-webserver:
+    <<: *airflow-common
+    command: webserver
+    ports:
+      - "8088:8080"
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      retries: 5
+
+  # ── Airflow scheduler ───────────────────────────────────────────────────────
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    restart: always
+
+  # ── API de microservicios (FastAPI) ─────────────────────────────────────────
+  api:
+    build:
+      context: ./services
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8000"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT}
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      MINIO_BUCKET_TEXTOS: ${MINIO_BUCKET_TEXTOS}
+      MINIO_BUCKET_DATASETS: ${MINIO_BUCKET_DATASETS}
+      MINIO_BUCKET_MODELOS: ${MINIO_BUCKET_MODELOS}
+      LLM_PROVIDER: ${LLM_PROVIDER:-openrouter}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      OPENROUTER_MODEL: ${OPENROUTER_MODEL:-google/gemini-2.0-flash-001}
+      OPENROUTER_BASE_URL: ${OPENROUTER_BASE_URL:-https://openrouter.ai/api/v1}
+      OPENROUTER_APP_NAME: ${OPENROUTER_APP_NAME:-Triaje IA}
+      LLM_MAX_RETRIES: ${LLM_MAX_RETRIES:-4}
+      LLM_RETRY_BASE_SEC: ${LLM_RETRY_BASE_SEC:-15}
+      LLM_BATCH_LIMIT: ${LLM_BATCH_LIMIT:-0}
+      LLM_DELAY_SEC: ${LLM_DELAY_SEC:-0}
+      LLM_TIMEOUT: ${LLM_TIMEOUT:-300}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL}
+      OLLAMA_MODEL: ${OLLAMA_MODEL}
+      AIRFLOW_BASE_URL: http://airflow-webserver:8080
+      AIRFLOW_USER: admin
+      AIRFLOW_PASSWORD: admin
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
+
+volumes:
+  postgres_data:
+  minio_data:

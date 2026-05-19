@@ -2,6 +2,8 @@
 
 Documento de trabajo interno. No es un entregable. Recoge decisiones de diseño, división de tareas y borradores técnicos.
 
+**Diario de desarrollo (defensa, fallos, cronología):** [`docs/diario-desarrollo.md`](docs/diario-desarrollo.md)
+
 ---
 
 ## Decisiones tomadas
@@ -9,7 +11,7 @@ Documento de trabajo interno. No es un entregable. Recoge decisiones de diseño,
 | Decisión | Elección | Razón |
 |---|---|---|
 | Orquestador | **Solo Airflow** | Un orquestador único simplifica la arquitectura sin perder funcionalidad. Fase 2 se dispara via API REST de Airflow desde FastAPI. |
-| LLM | Ollama local (`llama3.1:70b-instruct-q4_K_M`) | 4060 Ti 16 GB disponible, sin coste de API. API compatible con OpenAI en `localhost:11434`. |
+| LLM | **Ollama en host** (p. ej. `llama3.1:8b`) **u OpenRouter** | Batch sin 429 con Ollama; el profesor permite cualquier API para columnas del dataset. `LLM_PROVIDER` en `.env`. |
 | Modelo ML | Random Forest + features del LLM | Simple, interpretable, adecuado para ~272 casos con desbalance de clases. |
 | Score del dominio | `score_urgencia` (0–100) | Equivalente al `score_ansiedad` genérico de la spec, adaptado al dominio clínico. |
 | Entrada Fase 2 | FastAPI `/predecir` → Airflow REST API | Sin n8n. FastAPI hace de API Gateway y delega la ejecución a Airflow. |
@@ -123,8 +125,9 @@ TRANSCRIPCIÓN:
 
 ## Notas técnicas
 
-- Ollama debe correr en el **host** (no en Docker) para acceder a la GPU. Los contenedores lo alcanzan via `host.docker.internal:11434`.
-- Para disparar `dag_prediction` desde FastAPI: `POST http://airflow-webserver:8080/api/v1/dags/dag_prediction/dagRuns` con autenticación básica.
+- **LLM:** en `.env`, `LLM_PROVIDER=openrouter` o `ollama`. Si no se define y existe `OPENROUTER_API_KEY`, se usa OpenRouter; si no, Ollama. Ollama debe correr en el **host**; los contenedores usan `host.docker.internal:11434`.
+- **OpenRouter:** definir `OPENROUTER_API_KEY` y `OPENROUTER_MODEL`. Los modelos gratuitos pueden devolver HTTP 429 (rate limit).
+- **Fase 2:** el endpoint `POST /predecir/` ejecuta hoy el pipeline **síncrono** (enrich + modelo) en `ml_predictor`. Para disparar solo `dag_prediction` vía Airflow: `POST http://airflow-webserver:8080/api/v1/dags/dag_prediction/dagRuns` con autenticación básica (integración con el mismo GUID puede requerir ajuste).
 - El modelo `.pkl` se versiona con timestamp en el nombre (`modelo_20260514_143022.pkl`) para no sobreescribir versiones anteriores. `dag_prediction` carga siempre el más reciente.
 - Airflow necesita `AIRFLOW_UID` configurado correctamente en Linux para evitar problemas de permisos en volúmenes montados.
 - MinIO en modo standalone es suficiente para desarrollo; no hace falta cluster distribuido.
