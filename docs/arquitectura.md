@@ -40,9 +40,10 @@
 │                   ├──► Postgres (crea registro GUID)                │
 │                   ├──► llm_enrichment (preprocess + LLM)            │
 │                   ├──► carga modelo .pkl desde MinIO                │
-│                   └──► Postgres (predicción, estado PREDICTED)      │
+│                   ├──► valoración automática (0-10)                  │
+                   └──► Postgres (predicción, estado COMPLETADA)     │
 │                                                                     │
-│  (Opcional) dag_prediction + Airflow REST para orquestación async   │
+│  (Opcional) dag_prediction_phase_2 + Airflow REST para async        │
 └─────────────────────────────────────────────────────────────────────┘
 
 Capa de persistencia transversal:
@@ -62,10 +63,10 @@ Capa de persistencia transversal:
 Cada texto arrastra un `GUID_Entrevista` desde la ingesta hasta la valoración final. Los estados posibles son:
 
 ```
-INGESTED → (PREPROCESSING / PREPROCESSED dentro de enrich) → ENRICHED → DATASET_READY → MODEL_TRAINED → EVALUATED
-                                                                          │
-                                                           (Fase 2)       ▼
-                                                                    PREDICTED → (COMPLETED, si se implementa)
+INGESTED → ENRICHING → ENRICHED → DATASET_READY → MODEL_TRAINED → EVALUATED
+                                                                │
+                                                 (Fase 2)       ▼
+                                                          INGESTED → ENRICHING → ENRICHED → PREDICTED → COMPLETADA
 ```
 
 En la implementación actual, el microservicio `llm_enrichment` ejecuta el preprocesado antes del LLM; los estados intermedios `PREPROCESSING` / `PREPROCESSED` se registran en columnas de timestamp de `Entrevista`. Cada transición relevante actualiza `Estado` y los timestamps en Postgres.
@@ -96,7 +97,7 @@ En la implementación actual, el microservicio `llm_enrichment` ejecuta el prepr
 ### Paso 3: Construcción del dataset (`dag_dataset_builder`)
 
 - Consolida todos los registros `ENRICHED` de Postgres en un CSV.
-- Columnas: `GUID`, `especialidad`, `edad`, `sexo`, `dolor_intensidad`, `disnea`, `fiebre`, `perdida_consciencia`, `irradiacion`, `antecedentes_cardiacos`, `fumador`, `score_urgencia`, `nivel_triaje`.
+- Columnas: `GUID`, `especialidad`, `origen`, `edad`, `sexo`, `dolor_intensidad`, `disnea`, `fiebre`, `perdida_consciencia`, `irradiacion`, `antecedentes_cardiacos`, `fumador`, `score_urgencia`, `nivel_triaje`.
 - Codificación para ML (`ml_features.py`): booleanos → 0/1; `sexo` M/F → 1/0; **-1 = desconocido** si edad, sexo o dolor no constan en la transcripción (el LLM devuelve `null`, no se inventan).
 - Guarda el CSV en MinIO con nombre versionado (`datasets/dataset_entrenamiento_<timestamp>.csv`).
 - Actualiza estado a `DATASET_READY`.
@@ -127,12 +128,18 @@ En la implementación actual, el microservicio `llm_enrichment` ejecuta el prepr
 
 1. **Cliente** envía el fichero `.txt` (multipart) o texto en formulario.
 2. **FastAPI** (`ml_predictor`) crea un nuevo `GUID_Entrevista`, sube el texto a MinIO (`fase2/<guid>.txt`) y llama a **`enrich()`** (preprocesado + LLM + persistencia en `Entidad` / `ResultadoML`).
-3. Carga el **modelo más reciente** desde MinIO (`modelo_*.pkl`), calcula la predicción y actualiza `ResultadoML` y `Entrevista` (estado `PREDICTED`).
-4. Devuelve al cliente un JSON con `nivel_triaje_predicho`, `nivel_triaje_llm`, `score_urgencia`, `confianza`, etc.
+3. Carga el **modelo más reciente** desde MinIO (`modelo_*.pkl`), calcula la predicción.
+4. Calcula **valoración automática** (0-10): `max(0, confianza - |pred_RF - nivel_LLM| × 0.25) × 10`. Penaliza discrepancias entre RF y LLM.
+5. Guarda predicción y valoración en `ResultadoML`; actualiza estado a `COMPLETADA`.
+6. Devuelve al cliente un JSON con `nivel_triaje_predicho`, `nivel_triaje_llm`, `score_urgencia`, `confianza`, `valoracion`, etc.
 
-**DAG `dag_prediction`**
+**DAG `dag_prediction_phase_2`**
 
-Existe para disparar el flujo vía Airflow (p. ej. con `dag_run.conf`); la integración completa con que el DAG use el mismo GUID que devuelve la API puede requerir ajuste (trazabilidad). El camino principal de prueba en desarrollo es la llamada directa a `/predecir/`.
+Alternativa orquestada vía Airflow. Acepta en `dag_run.conf`:
+- `filename` + `especialidad`: descarga el `.txt` de MinIO y llama a `/predecir/` como file upload.
+- `texto`: envía texto directo (útil para pruebas).
+
+El GUID lo genera internamente la API; el DAG registra el GUID devuelto en sus logs.
 
 ---
 
@@ -183,7 +190,10 @@ P: 67 años.
   "nivel_triaje_llm": 2,
   "score_urgencia": 91.0,
   "confianza": 0.87,
-  "valoracion": null
+  "valoracion": 8.7,
+  "motivo_consulta": "Dolor torácico intenso con disnea en paciente con antecedente de infarto",
+  "justificacion": "Alta sospecha de SCA. Nivel 2 según SET.",
+  "entidades_normalizadas": ["dolor torácico", "disnea", "taquicardia"]
 }
 ```
 
@@ -195,13 +205,40 @@ La **fuente de verdad** del esquema es el fichero `sql/schema.sql` del repositor
 
 | Tabla | Rol |
 |-------|-----|
-| **Entrevista** | GUID, URLs (texto, dataset, modelo), timestamps de pipeline, `Estado`, `nombre_fichero`, `especialidad` |
+| **Entrevista** | GUID, URLs (texto, dataset, modelo), timestamps de pipeline, `Estado`, `nombre_fichero`, `especialidad`, `origen` (`dataset`\|`simulacion`) |
 | **Entidad** | Pares entidad cruda / normalizada por entrevista |
 | **ResultadoML** | Features del LLM (`edad`, `sexo`, booleanos clínicos, `motivo_consulta`, `justificacion`), `score_urgencia`, `nivel_triaje` (etiqueta LLM en Fase 1), `prediccion_modelo` y `confianza` (Fase 2) |
 
 Índice único: `ResultadoML(GUID_Entrevista)` (`idx_resultado_guid_unique`) para permitir UPSERT al re-enriquecer.
 
 Para el DDL completo y los índices, ver `sql/schema.sql`.
+
+---
+
+## Gestión de errores
+
+### Si falla un servicio (API, Postgres, MinIO)
+
+- El DAG de Airflow reintenta la tarea automáticamente (3 reintentos con backoff exponencial, configurado en `DEFAULT_ARGS` de cada DAG).
+- Si el fallo persiste, la tarea queda en estado `failed` y Airflow notifica en su UI. El registro en Postgres mantiene el último estado conocido (`INGESTED`, `ENRICHING`, etc.) y se puede relanzar el DAG sin duplicar filas gracias al `ON CONFLICT DO UPDATE` en `ResultadoML`.
+
+### Si el LLM no responde (Ollama / OpenRouter)
+
+- El cliente LLM (`llm_enrichment/client.py`) aplica un timeout configurable (`LLM_TIMEOUT`, por defecto 120 s).
+- OpenRouter: reintentos con backoff exponencial ante errores 429 (rate limit), hasta `LLM_MAX_RETRIES` (por defecto 4).
+- Si la llamada falla, el estado de la entrevista se actualiza a `ERROR_ENRICHMENT`. El DAG `dag_llm_enrichment` está configurado para reintentar también los registros en `ERROR_ENRICHMENT`, de modo que un simple re-trigger del DAG basta para recuperar los casos fallidos.
+
+### Si una tarea del workflow no se puede ejecutar
+
+- Airflow registra el error en sus logs por tarea y lo expone en su UI (`:8088`).
+- El estado en Postgres refleja el último paso completado con éxito, permitiendo reanudar desde ese punto sin reprocesar lo ya completado.
+- Los errores de las entrevistas individuales se registran como `ERROR_ENRICHMENT` en `Entrevista.Estado`, evitando que un fallo puntual bloquee el resto del batch.
+
+### En Fase 2 (`/predecir/`)
+
+- Si el modelo no existe en MinIO → HTTP 503 con mensaje `MODEL_NOT_FOUND`.
+- Si el texto está vacío → HTTP 422.
+- Si el LLM falla durante el enriquecimiento → HTTP 500 con detalle del error; el registro en Postgres queda en estado `ENRICHING` y se puede consultar por GUID.
 
 ---
 
