@@ -5,9 +5,9 @@
 
 | Campo | Valor |
 |-------|--------|
-| Última actualización | 2026-05-19 |
+| Última actualización | 2026-05-24 |
 | Equipo | Persona A (Gerard) · Persona B (compañero/a) |
-| Checkpoint | **272 EVALUATED**; Fase 1 ML hecha (RF acc. 85.5 %, CV F1 0.69). **Ollama `llama3.1:8b`** |
+| Checkpoint | **272 EVALUATED + 18 COMPLETADA**; RF acc. 96.4 %, CV F1 0.904; Fase 2 operativa con valoración 0-10 |
 
 ---
 
@@ -174,13 +174,16 @@ Sistema que clasifica el **nivel de triaje hospitalario (SET, 1–5)** a partir 
 
 | ID | Descripción | Estado |
 |----|-------------|--------|
-| D1 | README puertos ≠ compose | Abierto |
-| D2 | `arquitectura.md` SQL desactualizado | Abierto |
-| D3 | `dag_prediction` / `guid` inconsistente | Abierto |
+| D1 | README puertos ≠ compose | **Resuelto** — 2026-05-18 |
+| D2 | `arquitectura.md` SQL desactualizado | **Resuelto** — 2026-05-24 |
+| D3 | `dag_prediction` / `guid` inconsistente | **Resuelto** — reescrito como `dag_prediction_phase_2` |
 | D4 | Rate limit API free | **Mitigado** — Ollama local |
 | D5 | `UNIQUE` en `ResultadoML` | **Resuelto** |
 | D6 | Buckets MinIO tras primer `compose up` | **Resuelto** — ejecutar `minio-init` |
 | D7 | OpenRouter 429 | **Evitado** — `LLM_PROVIDER=ollama` |
+| D8 | Valoración ausente en Fase 2 | **Resuelto** — 2026-05-24 |
+| D9 | Estado `PREDICTED` sin `COMPLETADA` final | **Resuelto** — 2026-05-24 |
+| D10 | `validate_dataset_columns.py` filtraba solo `ENRICHED` | **Resuelto** — 2026-05-24 |
 
 ---
 
@@ -202,11 +205,11 @@ Sistema que clasifica el **nivel de triaje hospitalario (SET, 1–5)** a partir 
 
 ## 8. Próximos pasos
 
-1. **En curso:** Repetir `dag_llm_enrichment` hasta `INGESTED = 0` (~54 triggers × 5 entrevistas).
-2. `dag_dataset_builder` → CSV en MinIO.
-3. `dag_model_training` + `dag_evaluation`.
-4. Prueba Fase 2 con `/predecir`.
-5. Pulir README y `arquitectura.md`.
+~~En curso: enriquecimiento batch~~ **Completado** (272 EVALUATED).
+
+1. (Opcional) Presentación 8-10 diapositivas para la defensa oral.
+2. Push a origin/main cuando el equipo lo decida.
+3. No hay deuda técnica crítica abierta (ver §6).
 
 ---
 
@@ -251,6 +254,42 @@ LLM_DELAY_SEC=4
 ## 10. Bitácora — nuevas entradas
 
 *(Más reciente arriba)*
+
+### 2026-05-24 — Campo `origen`, endpoint `/metricas/` y `dag_prediction_phase_2`
+
+**Quién:** Gerard (A)  
+**Qué:** Tres gaps del enunciado cerrados en una sesión.
+
+**1. Campo `origen` en `Entrevista`**
+- `schema.sql`: nueva columna `origen VARCHAR(20)` (`'dataset'` | `'simulacion'`).
+- `dag_text_ingestion`: inserta `origen='dataset'` para las 272 transcripciones batch.
+- `ml_predictor/service.py`: inserta `origen='simulacion'` en cada solicitud Fase 2.
+- `dataset_builder/service.py`: incluye `e.origen` en el SELECT para el CSV de entrenamiento.
+- **Motivación:** el enunciado distingue explícitamente entre datos de entrenamiento y predicciones a demanda; el campo permite filtrar y auditar.
+
+**2. Endpoint `GET /metricas/`**
+- Nuevo módulo `services/metricas/` montado en `main.py` como `/metricas/`.
+- Agrega desde Postgres y MinIO:
+  - Textos procesados por estado y total.
+  - Latencia end-to-end y tiempo LLM (promedio/min/max, solo registros `COMPLETADA`).
+  - Tiempo de entrenamiento promedio.
+  - Throughput del último batch (ventana 3 h): textos/min.
+  - Errores por estado (`ERROR_*`).
+  - Métricas del modelo ML (último JSON de evaluación en MinIO: accuracy, F1, matriz de confusión).
+- Resultado observado: latencia E2E ~15 s, throughput ~2 txt/min, F1 macro 0.904.
+
+**3. DAG `dag_prediction_phase_2`**
+- Renombrado/reescrito desde `dag_prediction.py` con `dag_id="dag_prediction_phase_2"`.
+- Acepta en `dag_run.conf`:
+  - `{"filename": "CAR0001.txt", "especialidad": "CAR"}` → descarga de MinIO y POST como multipart.
+  - `{"texto": "..."}` → POST texto directo.
+- El GUID lo genera la API; el DAG lo registra en sus logs.
+- Eliminado el param `guid` huérfano del diseño anterior.
+
+**Migración BD:** 14 registros `PREDICTED` (predicciones pre-COMPLETADA) migrados a `COMPLETADA` → total 18 `COMPLETADA`.  
+**Estado:** hecho.
+
+---
 
 ### 2026-05-24 — Valoración automática Fase 2 + estado COMPLETADA
 

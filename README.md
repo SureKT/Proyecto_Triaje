@@ -75,6 +75,7 @@ Respuesta esperada (campos principales):
   "nivel_triaje_llm": 3,
   "score_urgencia": 62.5,
   "confianza": 0.85,
+  "valoracion": 8.5,
   "motivo_consulta": "...",
   "justificacion": "..."
 }
@@ -121,7 +122,7 @@ Proyecto_Triaje/
 Orquestador único del sistema. Ejecuta todos los DAGs (Fase 1 y Fase 2), gestiona dependencias entre tareas, registra logs por tarea y ejecuta reintentos automáticos. Cada tarea actualiza el estado de la entrevista en Postgres con timestamps de inicio y fin.
 
 ### API Python / FastAPI (puerto **8002** en el host)
-Conjunto de microservicios invocados por los DAGs de Airflow. Cada servicio cubre una única etapa del pipeline: preprocesado de texto, llamada al LLM, construcción del dataset, entrenamiento del modelo y predicción. El endpoint **`POST /predecir/`** (Fase 2) recibe el fichero, crea el registro en Postgres, ejecuta **preprocesado + LLM + modelo ML** de forma síncrona y devuelve el JSON de resultado. Existe además el DAG `dag_prediction` para orquestación vía Airflow si se integra con la API REST de Airflow.
+Conjunto de microservicios invocados por los DAGs de Airflow. Cada servicio cubre una única etapa del pipeline: preprocesado de texto, llamada al LLM, construcción del dataset, entrenamiento del modelo y predicción. El endpoint **`POST /predecir/`** (Fase 2) recibe el fichero, crea el registro en Postgres, ejecuta **preprocesado + LLM + modelo ML** de forma síncrona y devuelve el JSON de resultado. Existe además el DAG `dag_prediction_phase_2` para orquestación vía Airflow si se integra con la API REST de Airflow.
 
 ### Postgres (puerto **5433** en el host → 5432 en el contenedor)
 Fuente de verdad del estado del sistema. Almacena el estado de cada entrevista a lo largo de todo el pipeline, las entidades extraídas, las etiquetas asignadas por el LLM, los scores de urgencia, las predicciones del modelo y las valoraciones finales.
@@ -149,7 +150,7 @@ Si `LLM_PROVIDER=openrouter`, el servicio `llm_enrichment` llama a `https://open
 | `dag_dataset_builder` | Consolida los datos de Postgres en CSV y lo guarda en MinIO | `DATASET_READY` |
 | `dag_model_training` | Carga el CSV, entrena Random Forest, serializa el modelo en MinIO, registra métricas | `MODEL_TRAINED` |
 | `dag_evaluation` | Valida el modelo con validación cruzada, genera matriz de confusión | `EVALUATED` |
-| `dag_prediction` | Carga el modelo entrenado, predice el nivel de triaje de una nueva entrevista | `PREDICTED` |
+| `dag_prediction_phase_2` | Descarga el texto de MinIO (o acepta texto directo), llama a `/predecir/` y registra el resultado | `COMPLETADA` |
 
 ---
 
@@ -198,7 +199,7 @@ API_BASE_URL=http://api:8000
 |---|---|
 | El LLM no responde | La tarea de Airflow reintenta hasta 3 veces con backoff exponencial. Si agota reintentos, el estado queda en `ERROR_ENRICHMENT` y se registra en Postgres. |
 | Un microservicio Python no está disponible | Airflow marca la tarea como `failed`, registra el error en sus logs y en Postgres. |
-| El modelo no está entrenado al llegar Fase 2 | `dag_prediction` comprueba la existencia del modelo en MinIO antes de ejecutar. Si no existe, responde con error controlado `MODEL_NOT_FOUND`. |
+| El modelo no está entrenado al llegar Fase 2 | `dag_prediction_phase_2` y el endpoint `/predecir/` comprueban la existencia del modelo en MinIO antes de ejecutar. Si no existe, responden con error controlado `MODEL_NOT_FOUND` (HTTP 503). |
 | Fallo en la ingesta de un fichero concreto | El fichero se marca individualmente como `ERROR_INGESTION` sin detener el resto del batch. |
 | Buckets MinIO inexistentes (`NoSuchBucket`) | Ejecutar `docker compose run --rm minio-init` antes de `dag_text_ingestion`. |
 | API LLM remota en rate limit (429) | Reintentos en `client.py`; usar **Ollama** local o modelo/créditos distintos. |

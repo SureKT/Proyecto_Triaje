@@ -54,16 +54,16 @@ def main():
                r.fumador, r.score_urgencia, r.nivel_triaje, r.motivo_consulta
         FROM Entrevista e
         JOIN ResultadoML r ON e.GUID_Entrevista = r.GUID_Entrevista
-        WHERE e.Estado = 'ENRICHED'
+        WHERE e.Estado IN ('ENRICHED', 'EVALUATED', 'DATASET_READY', 'MODEL_TRAINED')
         """,
         fetch=True,
     )
     if not rows:
-        print("NO HAY FILAS ENRICHED — no se puede validar el dataset aún.")
+        print("NO HAY FILAS ENRICHED/EVALUATED — no se puede validar el dataset aún.")
         return
 
     df = pd.DataFrame([dict(r) for r in rows])
-    print(f"=== FILAS ENRICHED: {len(df)} ===\n")
+    print(f"=== FILAS ENRIQUECIDAS: {len(df)} ===\n")
     issues = []
 
     df_csv = prepare_dataset_export_df(df.copy())
@@ -117,7 +117,7 @@ def main():
         """
         SELECT COUNT(*) AS n FROM Entidad e
         JOIN Entrevista i ON e.GUID_Entrevista = i.GUID_Entrevista
-        WHERE i.Estado = 'ENRICHED'
+        WHERE i.Estado IN ('ENRICHED', 'EVALUATED', 'DATASET_READY', 'MODEL_TRAINED')
         """,
         fetch=True,
     )
@@ -126,7 +126,7 @@ def main():
         SELECT AVG(cnt)::float AS avg FROM (
             SELECT COUNT(*) AS cnt FROM Entidad e
             JOIN Entrevista i ON e.GUID_Entrevista = i.GUID_Entrevista
-            WHERE i.Estado = 'ENRICHED'
+            WHERE i.Estado IN ('ENRICHED', 'EVALUATED', 'DATASET_READY', 'MODEL_TRAINED')
             GROUP BY e.GUID_Entrevista
         ) t
         """,
@@ -153,7 +153,7 @@ def main():
         """
         SELECT COUNT(*) AS n FROM Entrevista e
         LEFT JOIN ResultadoML r ON e.GUID_Entrevista = r.GUID_Entrevista
-        WHERE e.Estado = 'ENRICHED' AND r.GUID_Entrevista IS NULL
+        WHERE e.Estado IN ('ENRICHED', 'EVALUATED', 'DATASET_READY', 'MODEL_TRAINED') AND r.GUID_Entrevista IS NULL
         """,
         fetch=True,
     )
