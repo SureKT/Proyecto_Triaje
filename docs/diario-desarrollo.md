@@ -158,8 +158,8 @@ Sistema que clasifica el **nivel de triaje hospitalario (SET, 1–5)** a partir 
 
 ### Fase 2
 
-- [ ] Modelo `.pkl` en MinIO
-- [ ] Prueba `/predecir` end-to-end
+- [x] Modelo `.pkl` en MinIO
+- [x] Prueba `/predecir` end-to-end — **2026-05-24, ~15 s, confianza 0.96**
 - [ ] Revisar `guid` en `dag_prediction` vs `/predecir` (deuda D3)
 
 ### Documentación
@@ -251,6 +251,59 @@ LLM_DELAY_SEC=4
 ## 10. Bitácora — nuevas entradas
 
 *(Más reciente arriba)*
+
+### 2026-05-24 — Mejora prompt LLM: criterios SET más precisos
+
+**Quién:** Gerard (A)  
+**Qué:** Reescritura de criterios SET en `services/llm_enrichment/prompt.py`.  
+**Por qué:** El prompt original restringía SET 2 a "dolor torácico + disnea + edad >40". Casos como RES0028 (joven con sospecha SCA) no encajaban y el LLM bajaba a SET 3.  
+**Cambios:**
+- SET 2 ahora incluye sospecha SCA/TEP **independientemente de la edad**, además de sepsis, hemorragia activa, saturación <90 %.
+- Añadida "regla de oro": ante duda entre dos niveles, asignar el más urgente.
+- Temperaturas LLM: Ollama `options.temperature=0`, OpenRouter `temperature=0` (antes 0.1). Respuestas deterministas.
+
+**Resultado:** RES0028 → LLM ahora devuelve SET 2 (score 95); antes SET 3 (score 85). MSK0020 (leve) sigue siendo SET 4. El RF aún predice SET 3 para RES0028 — entrenado con datos del prompt viejo; requiere re-enriquecimiento batch + reentrenamiento para alinear.
+
+**Experimento fallido (revertido):** `especialidad` (CAR/MSK/RES…) añadida como feature RF → accuracy bajó 85.5 %→83.6 %, F1 macro 0.692→0.674. Revertido. Con solo 9 SET 2 y 213 RES de todos los niveles, la feature añadía ruido.
+
+**Re-enriquecimiento y reentrenamiento (2026-05-24):**
+- Reset 272 EVALUATED → INGESTED; backup previo en `resultadoml_backup_20260524` (tabla + CSV).
+- DAG re-enriqueció 272/272 con prompt nuevo y temperature=0.
+- Nuevo dataset + reentrenamiento RF:
+
+| Métrica | Antes | Después |
+|---------|-------|---------|
+| RF accuracy | 85.5% | **96.4%** |
+| CV F1 macro | 0.692 | **0.904** |
+| SET 2 recall | 0.0 | **1.0** |
+| SET 3 F1 | 0.937 | 0.987 |
+| SET 4 F1 | 0.737 | 0.952 |
+
+- RES0028 (sospecha SCA, joven): antes SET 3, ahora **SET 2** predicho con confianza 0.93.
+
+**Estado:** pipeline completo con datos mejorados. Modelo `modelo_20260524_184636.pkl` en MinIO.
+
+---
+
+### 2026-05-24 — Fase 2 `/predecir/` validada end-to-end
+
+**Quién:** Gerard (A)  
+**Qué:** Prueba exitosa `POST /predecir/` con `text/CAR0001.txt` contra la API en localhost:8002.  
+**Resultado:**
+- GUID: `487025be-3ac9-4623-bd51-fc2be03ac5ea`
+- `nivel_triaje_predicho`: 3 (RF) = `nivel_triaje_llm`: 3 — coincidencia perfecta.
+- `score_urgencia`: 83.0 · `confianza`: 0.96
+- Tiempo de respuesta: ~15 s (Ollama `llama3.1:8b` local)
+- Estado en Postgres: `PREDICTED`
+
+**Comando usado:**
+```bash
+curl.exe -X POST http://localhost:8002/predecir/ -F "file=@text/CAR0001.txt"
+```
+
+**Estado:** hecho. Fase 2 demostrable.
+
+---
 
 ### 2026-05-19 — Fase 1 ML: dataset, entrenamiento y evaluación
 

@@ -6,6 +6,8 @@ import pandas as pd
 
 UNKNOWN = -1
 
+ESPECIALIDAD_MAP = {"CAR": 0, "DER": 1, "GAS": 2, "GEN": 3, "MSK": 4, "RES": 5, "UNK": 6}
+
 FEATURES = [
     "edad", "sexo", "dolor_intensidad", "disnea", "fiebre",
     "perdida_consciencia", "irradiacion", "antecedentes_cardiacos",
@@ -17,6 +19,12 @@ BOOL_COLS = [
     "disnea", "fiebre", "perdida_consciencia",
     "irradiacion", "antecedentes_cardiacos", "fumador",
 ]
+
+
+def encode_especialidad(value) -> int:
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return ESPECIALIDAD_MAP["UNK"]
+    return ESPECIALIDAD_MAP.get(str(value).upper().strip(), ESPECIALIDAD_MAP["UNK"])
 
 
 def as_bool(value) -> bool:
@@ -52,7 +60,7 @@ def prepare_dataset_export_df(df: pd.DataFrame) -> pd.DataFrame:
     out["sexo"] = out["sexo"].map(encode_sexo)
     out["dolor_intensidad"] = out["dolor_intensidad"].map(encode_optional_int)
     if "especialidad" in out.columns:
-        out["especialidad"] = out["especialidad"].fillna("UNK")
+        out["especialidad"] = out["especialidad"].map(encode_especialidad)
     return out
 
 
@@ -79,14 +87,23 @@ def prepare_training_df(df: pd.DataFrame) -> pd.DataFrame:
                 lambda v: UNKNOWN if pd.isna(v) else int(v)
             )
 
+    if "especialidad" in out.columns:
+        if out["especialidad"].dtype == object:
+            out["especialidad"] = out["especialidad"].map(encode_especialidad)
+        else:
+            out["especialidad"] = out["especialidad"].fillna(ESPECIALIDAD_MAP["UNK"]).astype(int)
+    else:
+        out["especialidad"] = ESPECIALIDAD_MAP["UNK"]
+
     out = out.dropna(subset=[TARGET, "score_urgencia"])
     out[FEATURES] = out[FEATURES].fillna(UNKNOWN)
     return out
 
 
-def row_from_llm_result(resultado: dict) -> dict:
+def row_from_llm_result(resultado: dict, especialidad: str = "UNK") -> dict:
     """Vector de features alineado con el modelo (Fase 2)."""
     return {
+        "especialidad": encode_especialidad(especialidad),
         "edad": encode_optional_int(resultado.get("edad")),
         "sexo": encode_sexo(resultado.get("sexo")),
         "dolor_intensidad": encode_optional_int(resultado.get("dolor_intensidad")),

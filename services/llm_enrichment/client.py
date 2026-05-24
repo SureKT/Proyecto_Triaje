@@ -52,6 +52,7 @@ def call_ollama(transcripcion: str) -> dict:
         "messages": messages,
         "stream": False,
         "format": "json",
+        "options": {"temperature": 0},
     }
     resp = httpx.post(
         f"{OLLAMA_BASE_URL}/api/chat",
@@ -96,7 +97,7 @@ def call_openrouter(transcripcion: str) -> dict:
     payload = {
         "model": OPENROUTER_MODEL,
         "messages": messages,
-        "temperature": 0.1,
+        "temperature": 0,
         "response_format": {"type": "json_object"},
     }
     headers = {

@@ -29,12 +29,14 @@ Reglas de extracción:
 - dolor_intensidad: null si no hay escala de dolor explícita.
 - Booleanos clínicos (disnea, fiebre, etc.): true solo si se menciona; si no, false (nunca null).
 
-Criterios SET:
-- Nivel 1 (Rojo/Inmediato):   parada cardiorrespiratoria, pérdida de consciencia, compromiso vital inmediato
-- Nivel 2 (Naranja/10 min):   dolor torácico + disnea + edad >40, sospecha SCA/TEP, deterioro neurológico agudo
-- Nivel 3 (Amarillo/60 min):  dolor moderado-severo ≥7/10, fiebre alta, primer episodio agudo sin compromiso vital
-- Nivel 4 (Verde/120 min):    dolor leve-moderado <7/10, crónico reagudizado, sin signos de alarma
-- Nivel 5 (Azul/240 min):     consulta no urgente, síntomas leves, sin factores de riesgo
+Criterios SET (aplica el más alto que corresponda):
+- Nivel 1 (Rojo/Inmediato):   parada cardiorrespiratoria, pérdida de consciencia, compromiso vital inmediato, distress respiratorio severo
+- Nivel 2 (Naranja/10 min):   sospecha SCA/TEP (dolor torácico + disnea, o dolor irradiado, independientemente de la edad), deterioro neurológico agudo, sepsis, hemorragia activa, saturación <90 %, fractura con compromiso vascular
+- Nivel 3 (Amarillo/60 min):  dolor moderado-severo (≥7/10) sin compromiso vital, disnea leve-moderada, fiebre ≥39 °C, primer episodio agudo, traumatismo significativo sin inestabilidad
+- Nivel 4 (Verde/120 min):    dolor leve-moderado (<7/10), cuadro crónico reagudizado sin signos de alarma, síntomas subagudos
+- Nivel 5 (Azul/240 min):     consulta no urgente, síntomas leves de >72 h, sin factores de riesgo ni deterioro
+
+Regla de oro: si hay duda entre dos niveles, asigna el más urgente (menor número).
 
 No incluyas nada antes ni después del JSON.
 

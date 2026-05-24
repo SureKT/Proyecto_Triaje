@@ -24,8 +24,10 @@ async def predecir(
     """
     if file is not None:
         contenido = (await file.read()).decode("utf-8", errors="replace")
+        filename  = file.filename or ""
     elif texto:
         contenido = texto
+        filename  = ""
     else:
         raise HTTPException(status_code=422,
                             detail="Se requiere 'file' o 'texto'.")
@@ -34,7 +36,7 @@ async def predecir(
         raise HTTPException(status_code=422, detail="El texto está vacío.")
 
     try:
-        return predict(contenido)
+        return predict(contenido, filename=filename)
     except FileNotFoundError as e:
         raise HTTPException(status_code=503, detail=str(e))
     except Exception as e:

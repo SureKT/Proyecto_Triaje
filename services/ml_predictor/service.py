@@ -33,7 +33,14 @@ def load_latest_model():
     return joblib.load(buf), latest
 
 
-def predict(texto: str) -> dict:
+def _especialidad_from_filename(filename: str) -> str:
+    """Extrae código de especialidad del nombre de fichero (ej. CAR0001.txt → CAR)."""
+    prefix = "".join(c for c in filename[:3] if c.isalpha()).upper()
+    from ml_features import ESPECIALIDAD_MAP
+    return prefix if prefix in ESPECIALIDAD_MAP else "UNK"
+
+
+def predict(texto: str, filename: str = "") -> dict:
     """
     Pipeline completo Fase 2:
     1. Crea registro en Postgres
@@ -62,11 +69,12 @@ def predict(texto: str) -> dict:
 
     # ── 3. Preprocesar + enriquecer con LLM ────────────────────────────────────
     resultado_llm = enrich(guid, texto)
+    especialidad  = _especialidad_from_filename(filename)
 
     # ── 5. Cargar modelo y predecir ────────────────────────────────────────────
     model, model_name = load_latest_model()
 
-    X = pd.DataFrame([row_from_llm_result(resultado_llm)])[FEATURES]
+    X = pd.DataFrame([row_from_llm_result(resultado_llm, especialidad)])[FEATURES]
     pred     = int(model.predict(X)[0])
     proba    = model.predict_proba(X)[0]
     confianza = float(max(proba))
