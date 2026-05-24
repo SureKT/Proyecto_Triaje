@@ -1,7 +1,13 @@
 """
 dags/dag_prediction.py
-DAG de predicción (Fase 2). Disparado por FastAPI via Airflow REST API.
-Recibe el GUID por conf y ejecuta el pipeline completo de predicción.
+DAG de predicción Fase 2. Acepta 'filename' (objeto en MinIO) o 'texto' en conf.
+El GUID lo genera internamente la API — no se pasa en conf.
+
+Uso:
+    airflow dags trigger dag_prediction_phase_2 \
+        --conf '{"filename": "CAR0001.txt", "especialidad": "CAR"}'
+    airflow dags trigger dag_prediction_phase_2 \
+        --conf '{"texto": "Paciente con dolor torácico..."}'
 """
 import os
 import logging
@@ -23,34 +29,55 @@ DEFAULT_ARGS = {
 
 
 def _predict(**context):
-    """
-    Recibe el GUID y el texto desde conf (params pasados por FastAPI).
-    Llama al servicio de predicción.
-    """
     import httpx
-    params = context["dag_run"].conf or {}
-    guid   = params.get("guid")
-    texto  = params.get("texto")
+    import sys
+    sys.path.insert(0, "/opt/airflow/dags")
+    from common import minio_download_bytes
 
-    if not guid or not texto:
-        raise ValueError("Se requieren 'guid' y 'texto' en dag_run.conf")
+    params   = context["dag_run"].conf or {}
+    filename = params.get("filename", "").strip()
+    texto    = params.get("texto", "").strip()
 
-    resp = httpx.post(
-        f"{API_BASE}/predecir/",
-        data={"texto": texto},
-        timeout=180,
-    )
+    if not filename and not texto:
+        raise ValueError("dag_run.conf debe incluir 'filename' o 'texto'.")
+
+    if filename:
+        bucket = os.environ.get("MINIO_BUCKET_TEXTOS", "textos-originales")
+        especialidad = params.get("especialidad", filename[:3].upper())
+        object_key   = f"{especialidad}/{filename}"
+        try:
+            raw   = minio_download_bytes(bucket, object_key)
+            texto = raw.decode("utf-8", errors="replace")
+        except Exception as e:
+            raise RuntimeError(f"No se pudo descargar {object_key} de MinIO: {e}")
+
+        resp = httpx.post(
+            f"{API_BASE}/predecir/",
+            files={"file": (filename, texto.encode("utf-8"), "text/plain")},
+            timeout=300,
+        )
+    else:
+        resp = httpx.post(
+            f"{API_BASE}/predecir/",
+            data={"texto": texto},
+            timeout=300,
+        )
+
     resp.raise_for_status()
     result = resp.json()
 
-    logger.info(f"[{guid}] Predicción: nivel={result['nivel_triaje_predicho']}  "
-                f"confianza={result['confianza']}")
-    print(f"Resultado: {result}")
+    logger.info(
+        f"GUID={result['GUID']}  "
+        f"nivel_predicho={result['nivel_triaje_predicho']}  "
+        f"nivel_llm={result['nivel_triaje_llm']}  "
+        f"confianza={result['confianza']}  "
+        f"valoracion={result.get('valoracion', 'N/A')}"
+    )
     return result
 
 
 with DAG(
-    dag_id="dag_prediction",
+    dag_id="dag_prediction_phase_2",
     description="Predicción de triaje para nuevas entrevistas (Fase 2)",
     start_date=datetime(2024, 1, 1),
     schedule_interval=None,
