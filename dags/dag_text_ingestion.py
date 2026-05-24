@@ -79,9 +79,9 @@ def _ingest_texts():
                     cur.execute(
                         """INSERT INTO Entrevista
                            (GUID_Entrevista, URL_Texto_Original, Estado, Motor_Workflow,
-                            Inicio_Solicitud, nombre_fichero, especialidad)
-                           VALUES (%s, %s, %s, %s, %s, %s, %s)""",
-                        (guid, url, "INGESTED", "airflow", now(), txt.name, especialidad),
+                            Inicio_Solicitud, nombre_fichero, especialidad, origen)
+                           VALUES (%s, %s, %s, %s, %s, %s, %s, %s)""",
+                        (guid, url, "INGESTED", "airflow", now(), txt.name, especialidad, "dataset"),
                     )
                     ingested += 1
                     logger.info(f"INGESTED {txt.name} → {guid}")

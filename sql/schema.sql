@@ -23,7 +23,8 @@ CREATE TABLE IF NOT EXISTS Entrevista (
     Workflow_Id                 VARCHAR(255),
     Estado                      VARCHAR(50),
     nombre_fichero              VARCHAR(255),
-    especialidad                VARCHAR(10)
+    especialidad                VARCHAR(10),
+    origen                      VARCHAR(20)   -- 'dataset' | 'simulacion'
 );
 
 CREATE TABLE IF NOT EXISTS Entidad (

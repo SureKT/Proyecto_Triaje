@@ -55,9 +55,9 @@ def predict(texto: str, filename: str = "") -> dict:
     # ── 1. Registro inicial ────────────────────────────────────────────────────
     pg_execute(
         """INSERT INTO Entrevista
-           (GUID_Entrevista, Estado, Motor_Workflow, Inicio_Solicitud)
-           VALUES (%s, %s, %s, %s)""",
-        (guid, "INGESTED", "airflow", t0),
+           (GUID_Entrevista, Estado, Motor_Workflow, Inicio_Solicitud, origen)
+           VALUES (%s, %s, %s, %s, %s)""",
+        (guid, "INGESTED", "airflow", t0, "simulacion"),
     )
 
     # ── 2. Subir texto a MinIO ─────────────────────────────────────────────────

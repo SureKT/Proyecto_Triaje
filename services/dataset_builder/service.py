@@ -27,6 +27,7 @@ def build_dataset() -> str:
         SELECT
             e.GUID_Entrevista  AS guid,
             e.especialidad,
+            e.origen,
             r.edad,
             r.sexo,
             r.dolor_intensidad,
