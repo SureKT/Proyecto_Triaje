@@ -252,6 +252,24 @@ LLM_DELAY_SEC=4
 
 *(Más reciente arriba)*
 
+### 2026-05-24 — Valoración automática Fase 2 + estado COMPLETADA
+
+**Quién:** Gerard (A)  
+**Qué:** Gap crítico del enunciado: `/predecir/` no calculaba valoración ni usaba estado `COMPLETADA`.  
+**Solución:**
+- Valoración automática (escala 0-10): `max(0, confianza - |pred_RF - nivel_LLM| * 0.25) * 10`
+  - Concordancia perfecta + alta confianza → valoración ~9-10
+  - Discrepancia de 1 nivel → penalización -2.5 puntos
+  - Justificación para defensa: mide fiabilidad del modelo ponderada por acuerdo con el criterio LLM
+- `valoracion` guardada en `ResultadoML`
+- Estado final: `PREDICTED` → **`COMPLETADA`** (alineado con flujo conceptual del PDF §4.1)
+- Campo `valoracion` añadido a la respuesta JSON de `/predecir/`
+
+**Ejemplos:** CAR0001 → valoración 8.7 (SET 2, confianza 0.865); MSK0020 → 5.8 (SET 4, confianza 0.575).  
+**Estado:** hecho.
+
+---
+
 ### 2026-05-24 — Mejora prompt LLM: criterios SET más precisos
 
 **Quién:** Gerard (A)  

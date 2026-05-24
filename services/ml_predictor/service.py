@@ -75,20 +75,26 @@ def predict(texto: str, filename: str = "") -> dict:
     model, model_name = load_latest_model()
 
     X = pd.DataFrame([row_from_llm_result(resultado_llm, especialidad)])[FEATURES]
-    pred     = int(model.predict(X)[0])
-    proba    = model.predict_proba(X)[0]
+    pred      = int(model.predict(X)[0])
+    proba     = model.predict_proba(X)[0]
     confianza = float(max(proba))
 
-    # ── 6. Guardar predicción ──────────────────────────────────────────────────
+    # ── 6. Valoración automática ───────────────────────────────────────────────
+    # Confianza del RF penalizada por discrepancia con nivel LLM (escala 0-10).
+    nivel_llm   = resultado_llm.get("nivel_triaje") or pred
+    discrepancia = abs(pred - nivel_llm)
+    valoracion   = round(max(0.0, confianza - discrepancia * 0.25) * 10, 1)
+
+    # ── 7. Guardar predicción y valoración → COMPLETADA ───────────────────────
     pg_execute(
         """UPDATE ResultadoML
-           SET prediccion_modelo = %s, confianza = %s
+           SET prediccion_modelo = %s, confianza = %s, valoracion = %s
            WHERE GUID_Entrevista = %s""",
-        (pred, confianza, guid),
+        (pred, confianza, valoracion, guid),
     )
     pg_execute(
         """UPDATE Entrevista
-           SET Estado = 'PREDICTED', URL_Modelo_Entrenado = %s, Fin_Solicitud = %s
+           SET Estado = 'COMPLETADA', URL_Modelo_Entrenado = %s, Fin_Solicitud = %s
            WHERE GUID_Entrevista = %s""",
         (model_name, now(), guid),
     )
@@ -96,9 +102,10 @@ def predict(texto: str, filename: str = "") -> dict:
     return {
         "GUID":                   guid,
         "nivel_triaje_predicho":  pred,
-        "nivel_triaje_llm":       resultado_llm.get("nivel_triaje"),
+        "nivel_triaje_llm":       nivel_llm,
         "score_urgencia":         resultado_llm.get("score_urgencia"),
         "confianza":              round(confianza, 3),
+        "valoracion":             valoracion,
         "motivo_consulta":        resultado_llm.get("motivo_consulta"),
         "justificacion":          resultado_llm.get("justificacion"),
         "entidades_normalizadas": resultado_llm.get("entidades_normalizadas", []),
