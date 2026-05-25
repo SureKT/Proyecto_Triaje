@@ -1,7 +1,7 @@
 # Documentación Técnica — Triaje IA
 
 **Estado del documento:** actualizado 2026-05-25  
-**Referencia normativa:** Roadmap técnico del profesor + correo de orientaciones para la defensa.
+**Propósito:** referencia técnica completa + guía de comprensión del código para la defensa.
 
 ---
 
@@ -11,17 +11,17 @@ El proyecto clasifica urgencias según el **Sistema de Triaje Manchester (MTS)**
 
 | Código | Color | Tiempo máx. atención | Descripción |
 |--------|-------|----------------------|-------------|
-| C1 | 🔴 Rojo | Inmediato | Compromiso vital inmediato |
-| C2 | 🟠 Naranja | 10 min | Emergencia — riesgo vital próximo |
-| C3 | 🟡 Amarillo | 60 min | Urgente — deterioro posible |
-| C4 | 🟢 Verde | 120 min | Menos urgente — estable |
-| C5 | 🔵 Azul | 240 min | No urgente — consulta diferible |
+| C1 | Rojo | Inmediato | Compromiso vital inmediato |
+| C2 | Naranja | 10 min | Emergencia — riesgo vital próximo |
+| C3 | Amarillo | 60 min | Urgente — deterioro posible |
+| C4 | Verde | 120 min | Menos urgente — estable |
+| C5 | Azul | 240 min | No urgente — consulta diferible |
 
-Internamente el sistema almacena el nivel como entero 1-5 (`nivel_triaje`). La aplicación Streamlit lo muestra como C1-C5 con su color Manchester.
+Internamente el sistema almacena el nivel como entero 1-5 (`nivel_triaje`). La Streamlit lo traduce a `C1`–`C5` con su color. El valor numérico es clave para el entrenamiento del RF: las clases son 1, 2, 3, 4, 5 y el modelo aprende que acertar en C2 tiene más coste que acertar en C3 (ver `class_weight` en §Entrenamiento).
 
 ---
 
-## Diagrama de arquitectura completo
+## Diagrama de arquitectura
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -41,14 +41,13 @@ Internamente el sistema almacena el nivel como entero 1-5 (`nivel_triaje`). La a
 │               LLM (Ollama host / OpenRouter API)                    │
 │                        │                                            │
 │         entidades + nivel_triaje + score_urgencia                   │
-│         + score_ansiedad (pendiente — ver §Pendiente)               │
+│         + score_ansiedad + features clínicas                        │
 │                        │                                            │
 │                        ▼                                            │
 │              [dag_dataset_builder] ──► CSV en MinIO (datasets/)     │
 │                        │                                            │
 │                        ▼                                            │
 │              [dag_model_training] ──► modelo.pkl en MinIO (modelos/)│
-│              (class_weight='balanced' — pendiente)                  │
 │                        │                                            │
 │                        ▼                                            │
 │               [dag_evaluation] ──► métricas + artefactos            │
@@ -60,7 +59,7 @@ Internamente el sistema almacena el nivel como entero 1-5 (`nivel_triaje`). La a
 │  Cliente ──► POST /predecir/ (ml_predictor)                         │
 │                   │                                                 │
 │                   ├──► MinIO (guarda fase2/<guid>.txt)              │
-│                   ├──► Postgres (crea registro GUID, origen=simulacion) │
+│                   ├──► Postgres (crea registro GUID, origen=simul.) │
 │                   ├──► llm_enrichment (preprocess + LLM)            │
 │                   ├──► carga modelo .pkl desde MinIO                │
 │                   ├──► predicción (nivel 1-5 + confianza)           │
@@ -69,24 +68,26 @@ Internamente el sistema almacena el nivel como entero 1-5 (`nivel_triaje`). La a
 └─────────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────────┐
-│           FASE 3 — aplicación clínica (Streamlit) [PENDIENTE]       │
+│              FASE 3 — aplicación clínica (Streamlit)                │
 │                                                                     │
-│  Médico ──► Streamlit UI                                            │
+│  Médico ──► Streamlit UI (app/streamlit_app.py)                     │
 │                   │                                                 │
 │                   ├── Sube audio .wav/.mp3                          │
 │                   │       │                                         │
 │                   │       ▼                                         │
 │                   │   [Whisper] ──► texto transcrito                │
+│                   │   (app/whisper_utils.py, faster-whisper)        │
 │                   │                                                 │
 │                   ├── O pega texto directamente                     │
 │                   │                                                 │
 │                   ▼                                                 │
 │               POST /predecir/ ──► nivel Manchester (C1-C5)          │
 │                   │                                                 │
-│                   ├──► Color Manchester + score_urgencia            │
-│                   ├──► score_ansiedad (señal de auditoría)          │
-│                   ├──► entidades normalizadas                       │
-│                   └──► tabla de auditoría ética (under-triage)      │
+│                   ├──► Badge color Manchester + score_urgencia      │
+│                   ├──► score_ansiedad (badge de alerta)             │
+│                   ├──► entidades normalizadas como chips            │
+│                   ├──► alerta under-triage si RF < LLM              │
+│                   └──► tabla de auditoría ética (/metricas/auditoria)│
 └─────────────────────────────────────────────────────────────────────┘
 
 Capa de persistencia transversal:
@@ -103,7 +104,7 @@ Capa de persistencia transversal:
 
 ## Pipeline de estados
 
-Cada entrevista arrastra un `GUID_Entrevista` único a través de todos los estados:
+Cada entrevista lleva un `GUID_Entrevista` único (UUID4) que la identifica en Postgres, MinIO, los logs de Airflow y la respuesta JSON de la API. El estado avanza en orden:
 
 ```
 Fase 1 (batch):
@@ -119,90 +120,349 @@ ERROR_INGESTION   — fallo lectura .txt individual (no bloquea el batch)
 
 ---
 
-## Descripción del pipeline — Fase 1
+## Estado actual del proyecto (2026-05-25)
 
-### Paso 1: Ingesta (`dag_text_ingestion`)
-
-- Lee todos los ficheros `.txt` de `text/` (272 transcripciones).
-- Genera un `GUID_Entrevista` único por fichero (UUID4).
-- Sube cada fichero a MinIO en `textos-originales/<especialidad>/<nombre>.txt`.
-- Inserta fila en `Entrevista` con estado `INGESTED`, `origen='dataset'`, especialidad extraída del prefijo del nombre de fichero (`CAR`, `RES`, `MSK`, etc.).
-
-### Paso 2: Enriquecimiento LLM (`dag_llm_enrichment`)
-
-- Para cada entrevista en estado `INGESTED` (o `ERROR_ENRICHMENT`), recupera el texto desde MinIO.
-- Llama al microservicio `llm_enrichment`, que:
-  1. Preprocesa el texto (limpieza básica).
-  2. Envía a Ollama con prompt clínico estructurado (few-shot, `temperature=0`).
-  3. Parsea el JSON de respuesta.
-- El LLM devuelve (estructura actual):
-  - Entidades crudas y normalizadas
-  - `nivel_triaje` (1-5, Manchester C1-C5)
-  - `score_urgencia` (0-100)
-  - Features estructuradas: `edad`, `sexo`, `dolor_intensidad`, booleanos clínicos
-  - `motivo_consulta`, `justificacion`
-  - **`score_ansiedad` (0.0-1.0) — PENDIENTE DE AÑADIR AL PROMPT**
-- Guarda entidades en `Entidad`, resto en `ResultadoML`.
-- Actualiza estado a `ENRICHED`.
-
-### Paso 3: Construcción del dataset (`dag_dataset_builder`)
-
-- Consolida todos los registros `EVALUATED` de Postgres en un CSV versionado.
-- Columnas: `guid`, `especialidad`, `origen`, `edad`, `sexo`, `dolor_intensidad`, `disnea`, `fiebre`, `perdida_consciencia`, `irradiacion`, `antecedentes_cardiacos`, `fumador`, `score_urgencia`, `score_ansiedad` (pendiente), `nivel_triaje`.
-- Codificación (`ml_features.py`): booleanos → 0/1; sexo M/F → 1/0; **-1 = desconocido** si valor no aparece en transcripción.
-- Guarda CSV en MinIO: `datasets/dataset_entrenamiento_<timestamp>.csv`.
-- Actualiza estado a `DATASET_READY`.
-
-### Paso 4: Entrenamiento (`dag_model_training`)
-
-- Carga el CSV desde MinIO.
-- Separa train/test (80/20, estratificado por `nivel_triaje`).
-- Entrena **Random Forest** con `class_weight='balanced'` (**PENDIENTE**) — protege categorías críticas C1/C2 frente al desbalanceo (C3=200, C2=9 casos).
-- Features de entrenamiento (10 actuales + `score_ansiedad` pendiente): `edad`, `sexo`, `dolor_intensidad`, `disnea`, `fiebre`, `perdida_consciencia`, `irradiacion`, `antecedentes_cardiacos`, `fumador`, `score_urgencia`.
-- Registra métricas en Postgres. Serializa `modelo_<timestamp>.pkl` → MinIO `modelos/`.
-- Actualiza estado a `MODEL_TRAINED`.
-
-### Paso 5: Evaluación (`dag_evaluation`)
-
-- Carga el modelo desde MinIO.
-- Validación cruzada estratificada (5 folds).
-- Genera matriz de confusión y classification report.
-- Guarda artefactos JSON en MinIO `modelos/evaluacion/`.
-- Actualiza estado a `EVALUATED`.
-
-**Métricas tras re-entrenamiento con prompt mejorado (2026-05-24):**
-
-| Métrica | Valor |
-|---------|-------|
-| RF Accuracy | 96.4 % |
-| CV F1 macro | 0.904 |
-| C2 (Naranja) recall | 1.0 |
-| C3 (Amarillo) F1 | 0.987 |
-| C4 (Verde) F1 | 0.952 |
+| Componente | Estado |
+|-----------|--------|
+| Ingesta 272 transcripciones | Hecho |
+| Enriquecimiento LLM (272/272) | Hecho |
+| `score_ansiedad` en prompt + BD + modelo | Hecho |
+| Dataset CSV en MinIO | Hecho |
+| Entrenamiento RF con `class_weight='balanced'` | Hecho (accuracy 96.4%, F1 0.904) |
+| Evaluación CV 5-fold | Hecho |
+| Endpoint `/predecir/` Fase 2 | Hecho (valoración + COMPLETADA) |
+| Endpoint `/metricas/` y `/metricas/auditoria` | Hecho |
+| `dag_prediction_phase_2` | Hecho |
+| Streamlit front-end (Fase 3) | Hecho |
+| Whisper (transcripción audio) | Hecho |
+| Auditoría ética (under-triage) | Hecho |
 
 ---
 
-## Descripción del pipeline — Fase 2
+## Guía de comprensión del código — flujo completo
 
-**Endpoint `POST /predecir/`** — `services/ml_predictor/service.py`
+Esta sección traza el recorrido completo de los datos desde un fichero `.txt` hasta el badge de color en Streamlit. Para cada paso se indica el fichero exacto, las funciones involucradas, por qué se diseñó así y qué alternativas se consideraron.
 
-1. **Cliente** envía fichero `.txt` (multipart) o texto en formulario.
-2. Genera `GUID_Entrevista`, sube texto a MinIO (`fase2/<guid>.txt`), registra en Postgres con `origen='simulacion'`.
-3. Llama a `enrich()` → preprocesado + LLM + persistencia en `Entidad` / `ResultadoML`.
-4. Carga el **modelo más reciente** desde MinIO (`modelo_*.pkl`).
-5. Calcula predicción: `nivel_triaje_predicho` (1-5), `confianza` (prob. clase predicha).
-6. Calcula **valoración automática** (0-10): `max(0, confianza - |pred_RF - nivel_LLM| × 0.25) × 10`.
-   - Concordancia perfecta, confianza 0.96 → valoración 9.6
-   - Discrepancia 1 nivel, confianza 0.85 → valoración 5.8
-7. Actualiza `ResultadoML` (predicción, confianza, valoración) y `Entrevista` (estado `COMPLETADA`).
+---
 
-**Respuesta JSON actual:**
+### PASO 1 — El dato de origen: `text/RES0001.txt`
+
+Los 272 ficheros de `text/` son transcripciones de entrevistas médico-paciente en inglés con prefijo de especialidad: `CAR` (cardiología), `RES` (respiratorio), `MSK` (musculoesquelético), etc. Son el único dato de entrada de la Fase 1.
+
+**¿Por qué en inglés si el sistema habla español?**  
+El LLM entiende ambos idiomas de forma nativa. El prompt está en español y el LLM responde en español independientemente del idioma de la transcripción. La Fase 3 (Streamlit) acepta entrevistas en español directamente desde el campo de texto o desde audio en español vía Whisper — el pipeline no cambia nada por eso.
+
+---
+
+### PASO 2 — Ingesta: `dags/dag_text_ingestion.py`
+
+**Qué hace:**  
+- Itera sobre todos los `.txt` de `text/`.
+- Genera un `GUID_Entrevista` (UUID4) por fichero — identificador que seguirá a ese caso durante toda su vida en el sistema.
+- Sube el fichero a MinIO en `textos-originales/<especialidad>/<nombre>.txt`.
+- Inserta una fila en la tabla `Entrevista` con estado `INGESTED`, `origen='dataset'` y la especialidad extraída del prefijo del nombre (`CAR`, `RES`…).
+
+**Datos que entra en Postgres tras este paso:**
+```
+GUID_Entrevista: "3f7b-..."
+Estado: "INGESTED"
+origen: "dataset"
+especialidad: "CAR"
+nombre_fichero: "CAR0001.txt"
+URL_Texto_Original: "s3://textos-originales/CAR/CAR0001.txt"
+```
+
+**¿Por qué MinIO y no guardar en disco?**  
+Todos los contenedores Docker comparten el mismo MinIO pero no el mismo sistema de ficheros. Si el texto sólo existiera en el disco del contenedor Airflow, el contenedor API no podría leerlo. MinIO actúa como disco compartido compatible con S3.
+
+**Campo `origen`:**  
+Distingue los 272 casos de entrenamiento (`'dataset'`) de las predicciones futuras Fase 2 (`'simulacion'`). Es crítico para no contaminar futuros re-entrenamientos con datos generados por el propio modelo.
+
+---
+
+### PASO 3 — Enriquecimiento LLM: `dags/dag_llm_enrichment.py`
+
+El DAG consulta todos los registros en estado `INGESTED` (o `ERROR_ENRICHMENT`) y para cada uno llama al microservicio FastAPI en `POST /enriquecer/`.
+
+#### 3a. Preprocesado: `services/preprocessor/service.py`
+
+**Función:** `preprocess(guid, texto) -> dict`  
+Limpia el texto y extrae únicamente la parte del paciente (`texto_paciente`) de la transcripción, eliminando las preguntas del médico (`D:`). Si no hay separación clara, usa el texto completo. El resultado se pasa directamente al LLM — no hay más transformaciones.
+
+```python
+# En service.py de llm_enrichment:
+prep = preprocess(guid, texto)
+texto_llm = prep["texto_paciente"] or prep["texto_completo"]
+```
+
+**¿Por qué sólo el texto del paciente?**  
+El paciente describe sus síntomas. El médico hace preguntas neutras ("¿Cuánto tiempo lleva así?"). Pasar sólo la parte del paciente reduce ruido y dirige la atención del LLM a lo clínicamente relevante. Es heurístico — se podría pasar todo, pero el rendimiento es ligeramente mejor así.
+
+#### 3b. Llamada al LLM: `services/llm_enrichment/client.py`
+
+**Función:** `call_llm(texto) -> dict`
+
+Según `LLM_PROVIDER` en `.env`, llama a:
+- **Ollama** (`http://host.docker.internal:11434`) — modelo local en el host, sin rate limits, datos sin salir del equipo. Ideal para batch de 272 casos.
+- **OpenRouter** (`https://openrouter.ai/api/v1`) — API externa. Útil en portátil sin GPU para la demo (2-3 predicciones). Con modelo `google/gemini-2.0-flash-001` gratuito.
+
+En ambos casos la llamada es `temperature=0` y `format=json`. La reproducibilidad total es deliberada: la misma transcripción siempre produce el mismo JSON.
+
+**Reintentos (OpenRouter):** ante HTTP 429 (rate limit), el cliente reintenta con backoff exponencial hasta `LLM_MAX_RETRIES=4` veces. Base configurable: `LLM_RETRY_BASE_SEC=15`. En Ollama local no hay 429.
+
+#### 3c. El prompt clínico: `services/llm_enrichment/prompt.py`
+
+**Función:** `build_messages(texto) -> list[dict]`
+
+Esta es la pieza central del sistema. El prompt tiene cuatro secciones:
+
+**1. SYSTEM_PROMPT — definición del rol y del MTS:**
+```
+Eres un sistema experto en triaje médico. Clasifica según el Sistema de
+Triaje Manchester (MTS) en niveles 1-5...
+```
+Define los 5 niveles con sus criterios clínicos. Establece la "regla de oro": *cuando hay duda entre dos niveles, asignar el más urgente*. Esta regla es clave para evitar under-triage — es preferible sobreestimar la urgencia de un C3 que subestimar un C2.
+
+**2. Definición de `score_ansiedad`:**
+El prompt explica explícitamente que `score_ansiedad` mide el pánico/ansiedad *percibido* en el paciente (0.0-1.0), **separado de la urgencia clínica**. Esto es deliberado: un paciente puede estar muy ansioso (0.9) por un esguince de tobillo (C4). El LLM debe distinguir la ansiedad emocional del deterioro clínico.
+
+**3. Dos ejemplos few-shot:**
+- **Caso C2 (cardíaco):** dolor torácico + disnea + antecedentes, `score_urgencia=91`, `score_ansiedad=0.3` (paciente asustado pero no en pánico). Ancla el formato JSON y calibra el criterio de nivel 2.
+- **Caso C3 (ansiedad):** dolor inespecífico + respiración agitada, pero clínica leve. `score_urgencia=41`, `score_ansiedad=0.92`. Demuestra que ansiedad alta ≠ urgencia alta: el LLM debe primar los síntomas objetivos.
+
+**4. JSON de salida (14 campos):**
+```json
+{
+  "nivel_triaje": 2,
+  "score_urgencia": 91.0,
+  "score_ansiedad": 0.3,
+  "motivo_consulta": "...",
+  "entidades": ["dolor pecho", "cuesta respirar"],
+  "entidades_normalizadas": ["dolor torácico", "disnea"],
+  "edad": 67,
+  "sexo": "M",
+  "dolor_intensidad": 8,
+  "disnea": true,
+  "fiebre": false,
+  "perdida_consciencia": false,
+  "irradiacion": false,
+  "antecedentes_cardiacos": true,
+  "fumador": false,
+  "justificacion": "..."
+}
+```
+
+**¿Por qué few-shot y no zero-shot?**  
+Sin ejemplos, el LLM tiende a clasificar casos ambiguos como C3 (la clase mayoritaria). Los ejemplos concretos de C2 y del error de sobreponderar ansiedad recalibran su criterio sin necesidad de fine-tuning.
+
+**¿Por qué `temperature=0`?**  
+En producción clínica, la misma transcripción debe producir siempre el mismo resultado. Temperature > 0 introduce variabilidad no deseable en un sistema de soporte a decisiones médicas.
+
+#### 3d. Persistencia post-LLM: `services/llm_enrichment/service.py`
+
+**Función:** `enrich(guid, texto) -> dict`
+
+Tras recibir el JSON del LLM:
+1. Borra entidades previas de `Entidad` para ese GUID (permite re-enriquecer sin duplicar).
+2. Inserta cada par `(entidad_raw, entidad_normalizada)` en la tabla `Entidad`.
+3. Hace un UPSERT en `ResultadoML` con todos los campos (edad, sexo, dolor_intensidad, booleanos, scores, nivel_triaje, motivo_consulta, justificacion).
+4. Actualiza el estado de `Entrevista` a `ENRICHED` con timestamps de inicio/fin.
+
+El UPSERT usa `ON CONFLICT (GUID_Entrevista) DO UPDATE` — si el DAG se re-ejecuta (porque algún caso quedó en `ERROR_ENRICHMENT`), no duplica filas.
+
+---
+
+### PASO 4 — Codificación de features: `services/ml_features.py`
+
+Este módulo es el **punto de acoplamiento** entre el LLM (que produce JSON) y el modelo ML (que necesita un array numérico). Lo usan tanto el entrenamiento como la predicción Fase 2 — es la única fuente de verdad para la codificación.
+
+**Lista canónica de features:**
+```python
+FEATURES = [
+    "edad", "sexo", "dolor_intensidad",
+    "disnea", "fiebre", "perdida_consciencia",
+    "irradiacion", "antecedentes_cardiacos", "fumador",
+    "score_urgencia", "score_ansiedad"
+]
+```
+
+**Funciones de codificación:**
+
+| Función | Propósito |
+|---------|-----------|
+| `encode_optional_int(v)` | `null → -1`, entero → entero. Para edad, dolor_intensidad. |
+| `as_bool(v)` | `null/False/"false" → False`, cualquier truthy → True. Para los booleanos clínicos. |
+| `encode_sexo(v)` | `"M" → 1`, `"F" → 0`, `null → -1`. |
+| `row_from_llm_result(resultado, esp)` | Construye el dict completo con todas las features a partir del JSON del LLM. |
+
+**¿Por qué -1 para desconocidos y no 0?**  
+Porque 0 tiene significado clínico: `dolor_intensidad=0` significa "el paciente no tiene dolor". `dolor_intensidad=-1` significa "la transcripción no menciona dolor". Son situaciones distintas y el modelo debe aprender esa diferencia. Con -1, el RF trata "dato no disponible" como una categoría propia — lo cual es la realidad clínica (no siempre se recoge toda la información en urgencias).
+
+**¿Por qué -1 en edad y no la media?**  
+Imputar la media contamina el modelo con un valor artificial. -1 es honesto: el RF aprende a tomar decisiones sin ese dato, igual que haría el médico. Descartar las filas sin edad dejaría ~4 casos entrenables de 272.
+
+---
+
+### PASO 5 — Construcción del dataset: `dags/dag_dataset_builder.py`
+
+Consulta todos los registros `ENRICHED` de Postgres, aplica la codificación de `ml_features.py` y genera un CSV versionado:
+
+```
+datasets/dataset_entrenamiento_20260524_143512.csv
+```
+
+Columnas: `guid`, `especialidad`, `origen`, + las 11 features de `FEATURES` + `nivel_triaje` (target).
+
+El CSV se sube a MinIO. El estado de cada entrevista avanza a `DATASET_READY`.
+
+**¿Por qué versionar el CSV y no re-generarlo siempre?**  
+Permite reproducibilidad total: el modelo entrenado en un CSV concreto puede ser re-evaluado en el mismo CSV aunque el estado de Postgres cambie después. También es útil para el tribunal: se puede señalar exactamente con qué datos se entrenó el modelo.
+
+---
+
+### PASO 6 — Entrenamiento: `services/ml_trainer/service.py`
+
+**Función principal:** `train() -> dict`
+
+**Flujo:**
+1. Carga el CSV más reciente de MinIO (`datasets/dataset_entrenamiento_*.csv`).
+2. Separa `X` (las 11 features) e `y` (nivel_triaje 1-5).
+3. Split 80/20 estratificado por nivel_triaje (`stratify=y`).
+4. Calcula `class_weight='balanced'`:
+
+```python
+from sklearn.utils.class_weight import compute_class_weight
+class_weights = compute_class_weight("balanced", classes=classes, y=y)
+cw_dict = dict(zip(classes, class_weights))
+# Resultado típico: {1: 45.0, 2: 15.0, 3: 0.68, 4: 3.1, 5: 5.0}
+```
+
+5. Entrena **Random Forest** con esos pesos:
+
+```python
+rf = RandomForestClassifier(
+    n_estimators=200,
+    class_weight=cw_dict,
+    random_state=42,
+    n_jobs=-1
+)
+rf.fit(X_train, y_train)
+```
+
+6. Entrena también una **Regresión Logística** como baseline para comparar.
+7. Evaluación CV 5-fold estratificada:
+
+```python
+cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+scores = cross_val_score(rf, X, y, cv=cv, scoring="f1_macro")
+# → 0.850 ± 0.069 (o 0.904 con prompt v2)
+```
+
+8. Serializa el modelo: `modelo_<timestamp>.pkl` → MinIO `modelos/`.
+9. Registra métricas en Postgres.
+
+**¿Por qué `class_weight='balanced'` y no `class_weight=None`?**  
+El dataset tiene un desbalanceo extremo: ~200 casos C3, 9 casos C2. Sin pesos, el RF aprende a predecir siempre C3 (acertaría el 73 % del tiempo sin aprender nada). Con `'balanced'`, cada error en C2 penaliza ~15 veces más que un error en C3, forzando al modelo a prestar atención a los casos críticos. El recall de C2 pasó de ~0.3 a 1.0 tras añadir este parámetro.
+
+**¿Por qué Random Forest y no XGBoost / red neuronal?**  
+- Con 272 muestras y 11 features, los modelos profundos sobreajustan.
+- RF es interpretable: la importancia de features es defendible ante el tribunal.
+- No requiere GPU para inferencia en Fase 2.
+- Es robusto con datos tabulares mixtos (enteros, floats, booleanos, -1 como categoría).
+- XGBoost habría sido la siguiente opción — resultados similares pero sin la interpretabilidad nativa de feature importance.
+
+**¿Por qué `random_state=42`?**  
+Reproducibilidad: el mismo CSV siempre produce el mismo modelo. Para la defensa, se puede ejecutar el entrenamiento de nuevo y obtener idénticos resultados.
+
+---
+
+### PASO 7 — Evaluación: `dags/dag_evaluation.py`
+
+Carga el modelo más reciente de MinIO, ejecuta CV 5-fold y genera:
+- Matriz de confusión (JSON + imagen PNG).
+- Classification report por clase.
+- Artefactos en MinIO `modelos/evaluacion/`.
+
+**Métricas actuales (modelo con prompt v2 + class_weight):**
+
+| Métrica | Valor |
+|---------|-------|
+| Accuracy (test 20%) | 96.4 % |
+| F1 macro (CV 5-fold) | 0.904 |
+| Recall C2 (Naranja) | 1.0 |
+| F1 C3 (Amarillo) | 0.987 |
+| F1 C4 (Verde) | 0.952 |
+
+El recall C2 = 1.0 es el resultado más importante: el modelo no pierde ningún caso de emergencia. En triaje clínico, un falso negativo en C2 (decir que es C3 cuando en realidad es C2) puede costar una vida.
+
+---
+
+### PASO 8 — Predicción Fase 2: `services/ml_predictor/service.py`
+
+**Función:** `predict(texto, filename) -> dict`
+
+Este es el corazón de la Fase 2. Lo que ejecuta `POST /predecir/`:
+
+```
+Cliente → FastAPI /predecir/ → predict()
+```
+
+**Pipeline interno (con referencias de código):**
+
+```python
+# 1. GUID nuevo + registro en Postgres
+guid = new_guid()  # UUID4
+pg_execute("INSERT INTO Entrevista ... VALUES (%s, %s, ...)", (guid, "INGESTED", ...))
+
+# 2. Subir texto a MinIO (trazabilidad)
+url_texto = minio_upload_text(BUCKET_TEXTOS, f"fase2/{guid}.txt", texto)
+
+# 3. Enriquecer con LLM (reutiliza toda la cadena de Fase 1)
+resultado_llm = enrich(guid, texto)
+# → enrich() llama a preprocess() + call_llm() + persiste en Entidad + ResultadoML
+
+# 4. Cargar el modelo más reciente de MinIO
+model, model_name = load_latest_model()
+# load_latest_model(): lista objetos "modelo_*" en MinIO, ordena alfabéticamente,
+# carga el último con joblib.load()
+
+# 5. Construir vector de features y predecir
+X = pd.DataFrame([row_from_llm_result(resultado_llm, especialidad)])[FEATURES]
+pred      = int(model.predict(X)[0])          # nivel 1-5
+proba     = model.predict_proba(X)[0]
+confianza = float(max(proba))                  # prob. de la clase predicha
+
+# 6. Valoración automática (0-10)
+nivel_llm    = resultado_llm.get("nivel_triaje") or pred
+discrepancia = abs(pred - nivel_llm)
+valoracion   = round(max(0.0, confianza - discrepancia * 0.25) * 10, 1)
+
+# 7. Guardar predicción + COMPLETADA
+pg_execute("UPDATE ResultadoML SET prediccion_modelo=%s, confianza=%s ...", ...)
+pg_execute("UPDATE Entrevista SET Estado='COMPLETADA' ...", ...)
+```
+
+**Fórmula de valoración — justificación:**
+
+```
+valoracion = max(0, confianza - |pred_RF - nivel_LLM| × 0.25) × 10
+```
+
+- Si el RF predice C2 con 96 % de confianza y el LLM también dice C2 → `(0.96 - 0) × 10 = 9.6`
+- Si el RF predice C3 (0.85 confianza) pero el LLM dice C2 (discrepancia=1) → `(0.85 - 0.25) × 10 = 6.0`
+- Si el RF predice C4 (0.80 confianza) pero el LLM dice C2 (discrepancia=2) → `(0.80 - 0.50) × 10 = 3.0`
+
+La valoración combina dos señales: la certeza interna del modelo y su acuerdo con el criterio del LLM. Una valoración baja indica que el médico debe revisar el caso.
+
+**Respuesta JSON completa:**
 ```json
 {
   "GUID": "f3a2-91bc-...",
   "nivel_triaje_predicho": 2,
+  "nivel_manchester": "C2",
   "nivel_triaje_llm": 2,
   "score_urgencia": 91.0,
+  "score_ansiedad": 0.3,
   "confianza": 0.93,
   "valoracion": 9.3,
   "motivo_consulta": "Dolor torácico intenso con disnea en paciente con antecedente de infarto",
@@ -211,126 +471,108 @@ ERROR_INGESTION   — fallo lectura .txt individual (no bloquea el batch)
 }
 ```
 
-**Campos pendientes de añadir:** `score_ansiedad`, `nivel_manchester` (ej. `"C2"`).
+---
 
-**DAG `dag_prediction_phase_2`** — alternativa orquestada vía Airflow.  
-Acepta en `dag_run.conf`:
-- `{"filename": "CAR0001.txt", "especialidad": "CAR"}` → descarga de MinIO y POST como multipart.
-- `{"texto": "..."}` → POST texto directo.
+### PASO 9 — Interfaz clínica: `app/streamlit_app.py`
+
+La Streamlit es el frontend para el médico. Dos modos de entrada:
+
+**Modo audio:** el médico sube un `.wav`/`.mp3`/`.m4a`. La app llama a:
+
+```python
+from whisper_utils import transcribe_audio
+texto_entrada = transcribe_audio(audio_file.read())
+```
+
+`app/whisper_utils.py` usa `faster-whisper` (versión optimizada de Whisper de OpenAI). El modelo descargado automáticamente (`"small"` por defecto) transcribe a texto en español. La transcripción se muestra al médico antes de enviarla a la API — puede corregirla si es necesario.
+
+**Modo texto:** el médico pega o escribe la transcripción directamente en español.
+
+**Tras el análisis (`POST /predecir/`):**
+
+1. **Badge Manchester** — HTML renderizado vía `st.markdown(unsafe_allow_html=True)`:
+   ```python
+   MANCHESTER = {
+       1: {"codigo": "C1", "nombre": "Inmediato", "color": "#d32f2f", ...},
+       2: {"codigo": "C2", "nombre": "Muy Urgente", "color": "#f57c00", ...},
+       ...
+   }
+   ```
+   El badge muestra el código + nombre + color de fondo del nivel predicho.
+
+2. **Métricas principales** en tres columnas: `score_urgencia / 100`, `confianza del RF`, `valoración / 10`.
+
+3. **Badge de ansiedad** — función `ansiedad_badge(score)`:
+   - `< 0.4` → verde "Paciente tranquilo"
+   - `0.4-0.7` → amarillo "Ansiedad moderada"
+   - `0.7-0.86` → naranja "⚠️ Ansiedad alta"
+   - `>= 0.86` → rojo "⚠️ Pánico extremo"
+
+4. **Alerta de under-triage** — si `nivel_predicho > nivel_llm`:
+   ```python
+   if nivel > nivel_llm:
+       st.warning("⚠️ Posible under-triage: el modelo predice C3 pero el LLM asignó C2.")
+   ```
+   Esto ocurre cuando el RF bajó el nivel de urgencia respecto al criterio del LLM. El médico debe revisar clínicamente el caso.
+
+5. **Tabla de auditoría ética** — expander al pie de la página que llama a `GET /metricas/auditoria`:
+   ```python
+   df_audit = fetch_auditoria()  # → pd.DataFrame
+   st.dataframe(df_audit)
+   ```
 
 ---
 
-## Descripción del pipeline — Fase 3 (PENDIENTE)
+### PASO 10 — Auditoría ética: `services/metricas/router.py`
 
-### Cadena completa requerida
+**Endpoint `GET /metricas/auditoria`:**
 
+```python
+# Criterio de under-triage:
+WHERE prediccion_modelo > nivel_triaje   -- RF predice nivel MENOS urgente
+  AND score_ansiedad >= 0.7             -- paciente con ansiedad alta
 ```
-Audio (.wav/.mp3) → Whisper → texto → POST /predecir/ → Streamlit UI
-```
 
-### Componentes a implementar
+Un caso está marcado como posible under-triage cuando el RF "bajó" el nivel de urgencia respecto al LLM (ej. LLM dice C2 pero el RF dice C3) y además el paciente mostraba ansiedad alta. La hipótesis es que el RF puede haber sobre-ponderado la ansiedad como señal de urgencia durante el entrenamiento, pero al ver muchos casos ansiosos de baja urgencia, aprende a ignorarlos — y en ocasiones puede ir demasiado lejos.
 
-**Servicio Whisper** (`app/whisper_service.py` o integrado en Streamlit):
-- Librería: `faster-whisper` (más rápido que `openai-whisper`, misma API).
-- Entrada: fichero de audio subido por el médico.
-- Salida: texto transcrito en español.
-- Modelo recomendado: `faster-whisper` modelo `medium` o `small` para balance velocidad/precisión.
+La auditoría no implica que el RF se equivocó — implica que ese caso merece revisión clínica. El LLM y el RF son dos fuentes de criterio distintas; cuando discrepan en presencia de ansiedad, la prudencia clínica manda revisar.
 
-**Aplicación Streamlit** (`app/streamlit_app.py`):
-- Interfaz con dos modos de entrada: upload de audio o caja de texto.
-- Si audio → transcripción vía Whisper → muestra texto transcrito → llama a `/predecir/`.
-- Visualización del resultado:
-  - Color Manchester (C1-C5) en grande con badge de color.
-  - `score_urgencia` en barra de progreso.
-  - `score_ansiedad` con indicador de alerta si > 0.7.
-  - Entidades normalizadas como chips.
-  - Justificación del LLM.
-- Tabla de auditoría ética (ver §Auditoría).
-
-**`score_ansiedad`** (añadir al prompt LLM):
-- El LLM extrae el nivel de ansiedad/pánico percibido en el paciente (0.0-1.0).
-- Uso dual:
-  1. Feature del RF: el modelo aprende que la clínica debe pesar más que la ansiedad.
-  2. Señal de auditoría: si `prediccion_modelo < nivel_llm` y `score_ansiedad > 0.7` → posible under-triage por sesgo emocional.
-
-### Auditoría ética (tabla de desviaciones)
-
-La Streamlit muestra una tabla de auditoría con todos los casos `COMPLETADA` donde el modelo puede haber cometido under-triage:
-
-| ID_Caso | Entidades | Score Ansiedad | Predicción IA | Ground Truth (LLM) | Validación |
-|---------|-----------|---------------|--------------|-------------------|------------|
-| SIM_xxx | disnea, fatiga | 0.98 (Extrema) | C3 | C2 | ❌ Under-triage |
-| CAR0001 | dolor torácico, disnea | 0.85 (Alta) | C2 | C2 | ✅ Acierto |
-
-**Criterio de alerta:** `prediccion_modelo < nivel_llm` (el RF predice menor urgencia que el LLM).  
-**Causa técnica documentada:** sesgo emocional — el RF sobrepondera el estado de ansiedad del paciente frente a los síntomas clínicos objetivos.  
-**Acción correctiva:** `class_weight='balanced'` en el RF + `score_ansiedad` como feature explícita.
+**Endpoint `GET /metricas/`:**  
+Agrega estadísticas del pipeline completo: distribución de estados, latencia media por fase, throughput (casos/hora), distribución de niveles predichos, errores. Útil para monitorización y para la demo.
 
 ---
 
 ## Features del modelo ML
 
-| Feature | Tipo | Valores | Fuente |
-|---------|------|---------|--------|
-| `edad` | int | entero o **-1** (desconocida) | LLM |
-| `sexo` | int | 1=M, 0=F, **-1** (desconocido) | LLM |
-| `dolor_intensidad` | int | 0-10 o **-1** (no mencionado) | LLM |
-| `disnea` | int | 0/1 | LLM |
-| `fiebre` | int | 0/1 | LLM |
-| `perdida_consciencia` | int | 0/1 | LLM |
-| `irradiacion` | int | 0/1 | LLM |
-| `antecedentes_cardiacos` | int | 0/1 | LLM |
-| `fumador` | int | 0/1 | LLM |
-| `score_urgencia` | float | 0-100 | LLM |
-| `score_ansiedad` | float | 0.0-1.0 | LLM — **PENDIENTE** |
+| Feature | Tipo | Valores | Fuente | Por qué |
+|---------|------|---------|--------|---------|
+| `edad` | int | entero o -1 | LLM | Factor de riesgo cardiovascular |
+| `sexo` | int | 1=M, 0=F, -1 | LLM | Diferencias en presentación de IAM |
+| `dolor_intensidad` | int | 0-10 o -1 | LLM | Escala EVA; clave en C2/C3 |
+| `disnea` | int | 0/1 | LLM | Síntoma cardinal de urgencia |
+| `fiebre` | int | 0/1 | LLM | Sepsis / infección grave |
+| `perdida_consciencia` | int | 0/1 | LLM | Siempre C1 o C2 |
+| `irradiacion` | int | 0/1 | LLM | Patrón del dolor cardíaco |
+| `antecedentes_cardiacos` | int | 0/1 | LLM | Aumenta riesgo C2 |
+| `fumador` | int | 0/1 | LLM | Factor de riesgo |
+| `score_urgencia` | float | 0-100 | LLM | Criterio holístico del LLM |
+| `score_ansiedad` | float | 0.0-1.0 | LLM | Señal emocional — auditoria + feature |
 
 **Target:** `nivel_triaje` (int 1-5, equivalente Manchester C1-C5).
 
-**Decisión de diseño — valores -1:**  
-La mayoría de transcripciones no recogen la edad ni el sexo del paciente (no siempre se pregunta). Asignar -1 en lugar de descartar la fila permite entrenar con las 272 muestras. El RF lo trata como una categoría válida ("dato no disponible"), que es la realidad clínica.
+---
 
-**Desbalanceo de clases:**
+## Desbalanceo de clases
 
-| Nivel | Casos | % |
+| Nivel | Casos aprox. | % |
 |-------|-------|---|
+| C1 (Rojo) | 2-3 | <1 % |
 | C2 (Naranja) | 9 | 3.3 % |
 | C3 (Amarillo) | ~200 | 73.5 % |
 | C4 (Verde) | ~44 | 16.2 % |
-| C5 (Azul) | ~27 | 9.9 % |
+| C5 (Azul) | ~15 | 5.5 % |
 
-Mitigación: `class_weight='balanced'` en RandomForestClassifier (pendiente).  
-Efecto: el RF penaliza más los fallos en clases minoritarias (C1/C2), reduciendo el riesgo de under-triage en casos críticos.
-
----
-
-## Prompt LLM (versión actual)
-
-Sistema: few-shot con 1 ejemplo de caso C2 confirmado. `temperature=0` para reproducibilidad.
-
-**JSON de salida actual (10 campos + `score_ansiedad` pendiente):**
-```json
-{
-  "nivel_triaje": 2,
-  "score_urgencia": 91.0,
-  "motivo_consulta": "Dolor torácico intenso con disnea...",
-  "entidades": ["dolor pecho", "cuesta respirar"],
-  "entidades_normalizadas": ["dolor torácico", "disnea"],
-  "edad": 67,
-  "sexo": null,
-  "dolor_intensidad": 8,
-  "disnea": true,
-  "fiebre": false,
-  "perdida_consciencia": false,
-  "irradiacion": false,
-  "antecedentes_cardiacos": true,
-  "fumador": false,
-  "justificacion": "Alta sospecha SCA. Nivel 2 MTS."
-}
-```
-
-**Campo pendiente:** añadir `"score_ansiedad": 0.0-1.0` — nivel de ansiedad/pánico percibido en el paciente, independiente de los síntomas clínicos.
-
-**Técnica de prompting:** Structured Outputs (formato JSON forzado con `"format": "json"` en Ollama). El few-shot ancla el formato y calibra el criterio C2. La "regla de oro" (ante duda, nivel más urgente) reduce under-triage.
+Sin `class_weight`, el RF aprende a predecir casi siempre C3. Con `'balanced'`, el peso por clase es inversamente proporcional a su frecuencia — el RF penaliza mucho más los fallos en C2 que en C3. Resultado: recall C2 = 1.0 (ningún caso de emergencia perdido).
 
 ---
 
@@ -342,67 +584,57 @@ Fuente de verdad: `sql/schema.sql`.
 |-------|-----|
 | **Entrevista** | GUID, URLs (texto, dataset, modelo), timestamps por fase, `Estado`, `nombre_fichero`, `especialidad`, `origen` (`dataset`\|`simulacion`) |
 | **Entidad** | Pares entidad cruda / normalizada por entrevista |
-| **ResultadoML** | Features del LLM, `score_urgencia`, `score_ansiedad` (pendiente), `nivel_triaje` (ground truth LLM), `prediccion_modelo`, `confianza`, `valoracion` |
+| **ResultadoML** | Features del LLM, `score_urgencia`, `score_ansiedad`, `nivel_triaje` (ground truth LLM), `prediccion_modelo`, `confianza`, `valoracion` |
 
 **Campo `origen`:** distingue los 272 casos de entrenamiento (`'dataset'`) de las predicciones a demanda Fase 2 (`'simulacion'`). Evita contaminar futuros re-entrenamientos con predicciones del propio modelo.
 
-**Índice clave:** `UNIQUE INDEX idx_resultado_guid_unique ON ResultadoML(GUID_Entrevista)` — permite UPSERT al re-enriquecer sin duplicar filas.
+**Índice clave:** `UNIQUE INDEX idx_resultado_guid_unique ON ResultadoML(GUID_Entrevista)` — permite UPSERT al re-enriquecer sin duplicar filas. Es la razón de que `ON CONFLICT DO UPDATE` funcione en `enrich()`.
 
 ---
 
-## Justificación de decisiones de diseño
+## Justificación de decisiones clave
 
 ### ¿Por qué LLM + RF y no LLM solo?
-El LLM actúa como **anotador clínico**: normaliza el lenguaje coloquial ("me ahogo" → disnea) y estructura la información. El RF actúa como **decisor estadístico**: aprende de los 272 casos etiquetados y produce una predicción auditable con importancia de features. Un LLM como clasificador directo no es reproducible ni auditable en contexto clínico.
+El LLM actúa como **anotador clínico**: normaliza el lenguaje coloquial ("me ahogo" → disnea, "me duele el pecho" → dolor torácico) y extrae estructura de texto libre. El RF actúa como **decisor estadístico**: aprende de los 272 casos etiquetados y produce una predicción auditable con importancia de features.  
+Un LLM como clasificador directo no es reproducible (temperature > 0) ni auditable en contexto clínico. El RF sí: se puede mostrar qué features pesaron más en cada predicción.
 
-### ¿Por qué Ollama local y no OpenRouter?
-Sin rate limits (429) en el batch de 272 casos. Sin envío de datos clínicos a terceros. `temperature=0` garantiza reproducibilidad total: la misma transcripción siempre produce el mismo JSON.
+### ¿Por qué Ollama local y no siempre OpenRouter?
+Para el batch de 272 casos: sin rate limits (429), sin envío de datos clínicos a terceros, `temperature=0` garantiza reproducibilidad. Para la demo en portátil sin GPU: OpenRouter con modelo gratuito es perfectamente válido para 2-3 predicciones. El sistema soporta ambos con una variable de entorno (`LLM_PROVIDER`).
 
-### ¿Por qué Random Forest y no un modelo más complejo?
-Con 272 muestras y fuerte desbalanceo (73 % C3), los modelos profundos sobreajustan. RF es interpretable (importancia de features defensible ante el tribunal), no requiere GPU para inferencia y es robusto con datos tabulares mixtos.
+### ¿Por qué Airflow como orquestador?
+Los DAGs de Airflow modelan el pipeline como un grafo dirigido acíclico con dependencias, reintentos, logs por tarea y UI de monitorización. Alternativa obvia: scripts Python encadenados. El problema es que un script que falla a mitad no sabe por dónde retomar. Airflow mantiene el estado por tarea — si `dag_llm_enrichment` falla en el caso 143, se reintenta desde el 143, no desde el 1.
 
-### ¿Por qué -1 para valores desconocidos y no descartar filas?
-El 80 % de transcripciones no mencionan la edad ni el sexo del paciente. Descartar esas filas deja ~4 casos entrenables. -1 es una categoría válida ("dato no disponible en la transcripción"), que el RF aprende a manejar.
-
-### ¿Por qué `score_ansiedad` como feature Y como señal de auditoría?
-El profesor lo define en el roadmap: el modelo puede sesgar sus predicciones por el estado emocional del paciente (pánico → over-reporting de síntomas). Incluyéndolo como feature, el RF puede aprender que la clínica pesa más. Monitorizándolo en la auditoría, el médico puede revisar los casos donde la ansiedad es extrema y la predicción es más baja que el criterio LLM.
+### ¿Por qué `score_ansiedad` como feature Y señal de auditoría?
+El prompt del LLM enseña explícitamente la diferencia entre ansiedad y urgencia clínica. Al incluirlo como feature, el RF aprende que ansiedad alta en un caso C4 no justifica subir el nivel. Al monitorizarlo en `/metricas/auditoria`, el médico puede revisar los casos donde la discrepancia RF/LLM coincide con ansiedad alta — posible sesgo emocional del modelo.
 
 ---
 
 ## Gestión de errores
 
-### Si falla el LLM (Ollama / OpenRouter)
-- Timeout configurable (`LLM_TIMEOUT`, por defecto 120 s).
-- OpenRouter: reintentos con backoff exponencial ante 429, hasta `LLM_MAX_RETRIES` (por defecto 4).
-- Fallo definitivo: estado `ERROR_ENRICHMENT`. Re-trigger del `dag_llm_enrichment` reintenta automáticamente esos registros.
-
-### Si falla un servicio (API, Postgres, MinIO)
-- Airflow reintenta la tarea (3 reintentos, backoff exponencial, configurado en `DEFAULT_ARGS`).
-- Si persiste: tarea en `failed` en Airflow UI. El registro en Postgres mantiene el último estado válido.
-
-### En Fase 2 (`/predecir/`)
-- Modelo no existe en MinIO → HTTP 503 `MODEL_NOT_FOUND`.
-- Texto vacío → HTTP 422.
-- LLM falla durante enriquecimiento → HTTP 500; registro queda en `ENRICHING`.
+| Escenario | Comportamiento |
+|---|---|
+| LLM no responde (Ollama caído) | Timeout 120s + estado `ERROR_ENRICHMENT`. Re-trigger del DAG reintenta. |
+| OpenRouter 429 (rate limit) | Backoff exponencial hasta 4 reintentos. Añadir `LLM_DELAY_SEC=2` en `.env` para prevenir. |
+| OpenRouter 401 (auth) | El cliente lanza excepción inmediata. Verificar `OPENROUTER_API_KEY` en `.env`. |
+| Modelo no existe en MinIO | `load_latest_model()` lanza `FileNotFoundError("MODEL_NOT_FOUND")`. FastAPI responde HTTP 503. |
+| Buckets MinIO inexistentes | `docker compose run --rm minio-init` antes del primer DAG. |
+| Un .txt corrupto en ingesta | Se marca individualmente como `ERROR_INGESTION`. No bloquea los demás 271 ficheros. |
+| API contenedor no ve .env actualizado | `docker compose up -d --force-recreate api` — las variables se inyectan en la creación del contenedor, no en el restart. |
+| MinIO accessible en localhost:9000 pero no en localhost:9001 | 9000 es la API S3. 9001 es la consola web. El cliente MinIO siempre usa 9000. |
 
 ---
 
-## Estado actual del proyecto (2026-05-25)
+## Variables de entorno relevantes
 
-| Componente | Estado |
-|-----------|--------|
-| Ingesta 272 transcripciones | ✅ Hecho |
-| Enriquecimiento LLM (272/272) | ✅ Hecho |
-| Dataset CSV en MinIO | ✅ Hecho |
-| Entrenamiento RF | ✅ Hecho (accuracy 96.4 %, F1 0.904) |
-| Evaluación CV 5-fold | ✅ Hecho |
-| Endpoint `/predecir/` Fase 2 | ✅ Hecho (valoración + COMPLETADA) |
-| Endpoint `/metricas/` | ✅ Hecho |
-| `dag_prediction_phase_2` | ✅ Hecho |
-| Campo `origen` en BD | ✅ Hecho |
-| `score_ansiedad` en prompt + BD + modelo | ⏳ Pendiente |
-| `class_weight='balanced'` en RF | ⏳ Pendiente |
-| Streamlit front-end (Fase 3) | ⏳ Pendiente |
-| Whisper (transcripción audio) | ⏳ Pendiente |
-| Registro de auditoría ética | ⏳ Pendiente |
-| Reentrenamiento con `score_ansiedad` | ⏳ Pendiente (requiere re-enriquecimiento) |
+| Variable | Valor típico | Descripción |
+|----------|-------------|-------------|
+| `LLM_PROVIDER` | `ollama` / `openrouter` | Selecciona el backend LLM |
+| `OLLAMA_MODEL` | `llama3.1:8b` | Modelo Ollama (debe estar descargado en el host) |
+| `OPENROUTER_MODEL` | `google/gemini-2.0-flash-001` | Modelo OpenRouter gratuito |
+| `OPENROUTER_API_KEY` | `sk-or-v1-...` | Clave OpenRouter (sin 's' extra al inicio) |
+| `LLM_MAX_RETRIES` | `4` | Reintentos ante 429 |
+| `LLM_RETRY_BASE_SEC` | `15` | Espera base del backoff exponencial |
+| `LLM_DELAY_SEC` | `0` (Ollama) / `2` (OpenRouter demo) | Pausa entre llamadas al LLM |
+| `LLM_BATCH_LIMIT` | `0` (sin límite) | Nº máximo de casos a enriquecer por ejecución |
+| `MINIO_ENDPOINT` | `http://minio:9000` | Interno Docker — `setup.py` lo fuerza a localhost |
+| `API_BASE_URL` | `http://api:8000` | Los DAGs llaman al servicio api por nombre de servicio Docker |
