@@ -91,6 +91,50 @@ El proyecto clasifica urgencias según el **Sistema de Triaje Manchester (MTS)**
 
 Internamente el sistema almacena el nivel como entero 1-5 (`nivel_triaje`). La Streamlit lo traduce a `C1`–`C5` con su color. El valor numérico es clave para el entrenamiento del RF: las clases son 1, 2, 3, 4, 5 y el modelo aprende que acertar en C2 tiene más coste que acertar en C3 (ver `class_weight` en §Entrenamiento).
 
+### Cómo se distingue un nivel de otro en la práctica
+
+Memorizar los colores no es suficiente — lo importante es entender qué señales clínicas separan un nivel del siguiente, porque eso es exactamente lo que el LLM tiene que detectar en el texto.
+
+**C1 — Inmediato:** compromiso vital activo ahora mismo. Parada cardíaca, parada respiratoria, inconsciencia, convulsión en curso. Si no actúas en segundos, hay muerte o daño irreversible. Es el nivel más infrecuente en los datos (casi inexistente entre las 272 transcripciones) pero el más crítico.
+
+**C2 — 10 minutos:** riesgo vital *próximo*, no inmediato. El paciente puede hablar, pero el deterioro puede llegar rápido. El patrón más frecuente: dolor torácico + disnea + antecedentes cardíacos → posible síndrome coronario agudo (infarto). Solo hay 9 casos C2 en los 272. Es el nivel más peligroso de clasificar mal: si el modelo lo trata como C3, el paciente puede deteriorarse en la sala de espera.
+
+**C3 — 60 minutos:** urgente pero estable. Puede esperar sin deterioro significativo. Es el nivel más común en urgencias reales y en los datos: ~200 de 272 casos (73%). Un esguince moderado, fiebre sin signos de sepsis, dolor abdominal leve. El paciente puede estar asustado, pero clínicamente no hay riesgo inminente.
+
+**C4/C5 — puede esperar:** patología leve. Podría haber ido al médico de cabecera.
+
+### El problema clínico que complica la clasificación
+
+Un paciente C2 muy ansioso puede *parecer* C3 porque describe su pánico más que sus síntomas objetivos. Un paciente C3 que exagera el dolor puede *parecer* C2. El LLM tiene que aprender a separar la señal emocional (ansiedad) de la señal clínica (síntomas objetivos), y el prompt tiene ejemplos concretos de ambas situaciones para calibrar ese criterio.
+
+Esta dificultad es también la razón de la auditoría ética: cuando el RF baja el nivel respecto al LLM en un paciente con ansiedad alta, no está claro quién tiene razón — y eso merece revisión clínica.
+
+---
+
+## Airflow — el orquestador del pipeline
+
+### El problema que resuelve
+
+Imagina que el procesamiento de las 272 transcripciones fuera un script Python que va una a una. Si el script falla en la número 143 (porque el LLM tardó demasiado y dio timeout), tienes dos opciones malas: relanzas todo desde el 1 perdiendo el trabajo hecho, o añades lógica manual de checkpointing al script.
+
+Airflow resuelve esto. Un **DAG** (Directed Acyclic Graph) es un conjunto de tareas con dependencias entre ellas. Airflow ejecuta cada tarea, guarda su estado (éxito, fallo, en ejecución), y si una falla puede reintentarla o dejarte relanzarla manualmente desde ese punto exacto — sin tocar las que ya terminaron.
+
+### Los DAGs del proyecto y su orden
+
+```
+dag_text_ingestion  →  dag_llm_enrichment  →  dag_dataset_builder  →  dag_model_training  →  dag_evaluation
+
+dag_prediction_phase_2   (independiente, Fase 2 a demanda)
+```
+
+Cada DAG llama a microservicios FastAPI vía HTTP. Airflow no procesa los datos él mismo — coordina quién los procesa y en qué orden.
+
+### Por qué no un script Python normal
+
+1. **Reintentos automáticos.** Si OpenRouter devuelve 429 en el caso 87, Airflow reintenta con backoff sin intervención manual.
+2. **Estado por entrevista.** Postgres registra el estado de cada transcripción. Si relanzas `dag_llm_enrichment`, solo procesa las que están en `INGESTED` o `ERROR_ENRICHMENT`, no las que ya están `ENRICHED`.
+3. **UI de monitorización.** En `http://localhost:8088` ves qué tareas están corriendo, cuáles fallaron y sus logs individuales.
+
 ---
 
 ## Diagrama de arquitectura
@@ -219,22 +263,28 @@ Esta sección traza el recorrido completo de los datos desde un fichero `.txt` h
 
 ### PASO 1 — El dato de origen: `text/RES0001.txt`
 
-Los 272 ficheros de `text/` son transcripciones de entrevistas médico-paciente en inglés con prefijo de especialidad: `CAR` (cardiología), `RES` (respiratorio), `MSK` (musculoesquelético), etc. Son el único dato de entrada de la Fase 1.
+Los 272 ficheros de `text/` son transcripciones de entrevistas médico-paciente en inglés con prefijo de especialidad: `CAR` (cardiología), `RES` (respiratorio), `MSK` (musculoesquelético), etc. Son el único dato de entrada de la Fase 1. Texto plano, sin etiquetas, sin estructura.
 
 **¿Por qué en inglés si el sistema habla español?**  
-El LLM entiende ambos idiomas de forma nativa. El prompt está en español y el LLM responde en español independientemente del idioma de la transcripción. La Fase 3 (Streamlit) acepta entrevistas en español directamente desde el campo de texto o desde audio en español vía Whisper — el pipeline no cambia nada por eso.
+El LLM entiende ambos idiomas de forma nativa. El prompt está en español y el LLM responde en español independientemente del idioma de la transcripción. La Fase 3 acepta entrevistas en español directamente — el pipeline no cambia nada.
 
 ---
 
 ### PASO 2 — Ingesta: `dags/dag_text_ingestion.py`
 
-**Qué hace:**  
-- Itera sobre todos los `.txt` de `text/`.
-- Genera un `GUID_Entrevista` (UUID4) por fichero — identificador que seguirá a ese caso durante toda su vida en el sistema.
-- Sube el fichero a MinIO en `textos-originales/<especialidad>/<nombre>.txt`.
-- Inserta una fila en la tabla `Entrevista` con estado `INGESTED`, `origen='dataset'` y la especialidad extraída del prefijo del nombre (`CAR`, `RES`…).
+**El GUID: el hilo que atraviesa todo el sistema**
 
-**Datos que entra en Postgres tras este paso:**
+Lo primero que hace el DAG es generar un **GUID** (UUID4) por fichero, algo como `3f7b-a291-4dc8-91bc-...`. Este identificador acompaña al caso durante toda su vida: en Postgres, en MinIO, en los logs de Airflow y en la respuesta JSON de la API. Es el hilo que conecta todas las piezas.
+
+¿Por qué UUID4 y no el nombre del fichero? Porque en la Fase 2 llegan casos sin nombre de fichero — el médico pega texto directamente. Con UUID4, todos los casos tienen el mismo tipo de identificador y el sistema los trata de forma uniforme.
+
+**Lo que hace el DAG:**
+- Itera sobre todos los `.txt` de `text/`.
+- Genera un `GUID_Entrevista` (UUID4) por fichero.
+- Sube el fichero a MinIO en `textos-originales/<especialidad>/<nombre>.txt`.
+- Inserta una fila en `Entrevista` con estado `INGESTED`, `origen='dataset'` y la especialidad del prefijo (`CAR`, `RES`…).
+
+**Estado de Postgres tras este paso:**
 ```
 GUID_Entrevista: "3f7b-..."
 Estado: "INGESTED"
@@ -244,43 +294,56 @@ nombre_fichero: "CAR0001.txt"
 URL_Texto_Original: "s3://textos-originales/CAR/CAR0001.txt"
 ```
 
-**¿Por qué MinIO y no guardar en disco?**  
-Todos los contenedores Docker comparten el mismo MinIO pero no el mismo sistema de ficheros. Si el texto sólo existiera en el disco del contenedor Airflow, el contenedor API no podría leerlo. MinIO actúa como disco compartido compatible con S3.
+**¿Por qué MinIO y no disco?**  
+Todos los contenedores Docker comparten MinIO pero no el sistema de ficheros. Si el texto solo existiera en el disco del contenedor Airflow, el contenedor API no podría leerlo. MinIO actúa como disco compartido compatible con S3.
 
-**Campo `origen`:**  
-Distingue los 272 casos de entrenamiento (`'dataset'`) de las predicciones futuras Fase 2 (`'simulacion'`). Es crítico para no contaminar futuros re-entrenamientos con datos generados por el propio modelo.
+**El campo `origen` — por qué importa**  
+Distingue los 272 casos de entrenamiento (`'dataset'`) de las predicciones Fase 2 (`'simulacion'`). Si algún día re-entrenas el modelo, no quieres incluir predicciones que el propio modelo generó — sería aprender de sí mismo. El campo `origen` permite filtrar esos casos fuera del dataset.
 
 ---
 
 ### PASO 3 — Enriquecimiento LLM: `dags/dag_llm_enrichment.py`
 
+Este es el paso más importante del proyecto. El DAG consulta todos los registros en estado `INGESTED` (o `ERROR_ENRICHMENT`) y para cada uno llama al microservicio FastAPI en `POST /enriquecer/`. Ese microservicio hace tres cosas en cadena:
+
+```
+texto bruto → preprocesado → LLM → persistencia en Postgres
+```
+
 El DAG consulta todos los registros en estado `INGESTED` (o `ERROR_ENRICHMENT`) y para cada uno llama al microservicio FastAPI en `POST /enriquecer/`.
 
 #### 3a. Preprocesado: `services/preprocessor/service.py`
 
-**Función:** `preprocess(guid, texto) -> dict`  
-Limpia el texto y extrae únicamente la parte del paciente (`texto_paciente`) de la transcripción, eliminando las preguntas del médico (`D:`). Si no hay separación clara, usa el texto completo. El resultado se pasa directamente al LLM — no hay más transformaciones.
+**Función:** `preprocess(guid, texto) -> dict`
+
+Una transcripción típica tiene esta forma:
+```
+D: ¿Cuánto tiempo lleva con el dolor?
+P: Dos horas, es muy fuerte, en el pecho...
+D: ¿Tiene dificultad para respirar?
+P: Sí, me cuesta mucho...
+```
+
+El preprocesador extrae solo las líneas `P:` (el paciente). El médico hace preguntas neutras que no aportan información clínica; el paciente describe sus síntomas. Si no hay separación clara, usa el texto completo. El resultado se pasa directamente al LLM.
 
 ```python
-# En service.py de llm_enrichment:
 prep = preprocess(guid, texto)
 texto_llm = prep["texto_paciente"] or prep["texto_completo"]
 ```
-
-**¿Por qué sólo el texto del paciente?**  
-El paciente describe sus síntomas. El médico hace preguntas neutras ("¿Cuánto tiempo lleva así?"). Pasar sólo la parte del paciente reduce ruido y dirige la atención del LLM a lo clínicamente relevante. Es heurístico — se podría pasar todo, pero el rendimiento es ligeramente mejor así.
 
 #### 3b. Llamada al LLM: `services/llm_enrichment/client.py`
 
 **Función:** `call_llm(texto) -> dict`
 
 Según `LLM_PROVIDER` en `.env`, llama a:
-- **Ollama** (`http://host.docker.internal:11434`) — modelo local en el host, sin rate limits, datos sin salir del equipo. Ideal para batch de 272 casos.
-- **OpenRouter** (`https://openrouter.ai/api/v1`) — API externa. Útil en portátil sin GPU para la demo (2-3 predicciones). Con modelo `google/gemini-2.0-flash-001` gratuito.
+- **Ollama** (`http://host.docker.internal:11434`) — modelo local en el host, sin rate limits, datos sin salir del equipo. Ideal para el batch de 272 casos.
+- **OpenRouter** (`https://openrouter.ai/api/v1`) — API externa. Útil en portátil sin GPU para la demo. Modelo `google/gemini-2.0-flash-001` gratuito.
 
-En ambos casos la llamada es `temperature=0` y `format=json`. La reproducibilidad total es deliberada: la misma transcripción siempre produce el mismo JSON.
+En ambos casos: `temperature=0` (sin aleatoriedad — la misma entrada siempre produce el mismo JSON) y `format=json` (el LLM está obligado a responder con JSON válido).
 
-**Reintentos (OpenRouter):** ante HTTP 429 (rate limit), el cliente reintenta con backoff exponencial hasta `LLM_MAX_RETRIES=4` veces. Base configurable: `LLM_RETRY_BASE_SEC=15`. En Ollama local no hay 429.
+`temperature=0` es una decisión de diseño clínica: en un sistema de soporte a decisiones médicas, el mismo texto no puede producir resultados distintos según el momento del día. La reproducibilidad es un requisito, no una optimización.
+
+**Reintentos (OpenRouter):** ante HTTP 429 (rate limit), el cliente reintenta con backoff exponencial hasta `LLM_MAX_RETRIES=4` veces con base `LLM_RETRY_BASE_SEC=15`. En Ollama local no hay 429.
 
 #### 3c. El prompt clínico: `services/llm_enrichment/prompt.py`
 
