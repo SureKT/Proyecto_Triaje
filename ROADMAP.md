@@ -8,19 +8,26 @@ Para la arquitectura técnica completa: [`docs/arquitectura.md`](docs/arquitectu
 
 ---
 
-## Estado actual (2026-05-25)
+## Estado actual (2026-05-25) — PIPELINE COMPLETO ✅
 
-| Fase | Estado |
-|------|--------|
-| F1: 272 transcripciones ingestadas y enriquecidas | ✅ |
-| F1: Dataset CSV + RF entrenado (acc 96.4 %, F1 0.904) | ✅ |
-| F2: `/predecir/` con valoración + estado COMPLETADA | ✅ |
-| F2: `dag_prediction_phase_2` | ✅ |
-| F2: `/metricas/` endpoint | ✅ |
-| F3: `score_ansiedad` en LLM + BD + modelo | ⏳ |
-| F3: `class_weight='balanced'` en RF | ⏳ |
-| F3: Streamlit + Whisper | ⏳ |
-| F3: Auditoría ética (tabla under-triage) | ⏳ |
+| Fase | Estado | Detalle |
+|------|--------|---------|
+| F1: 272 transcripciones ingestadas y enriquecidas | ✅ | Re-enriquecidas con prompt Manchester + score_ansiedad |
+| F1: Dataset CSV + RF entrenado | ✅ | **CV F1 macro = 0.850 ± 0.069** (272 casos, 5-fold) |
+| F2: `/predecir/` con valoración + COMPLETADA | ✅ | Devuelve nivel_manchester + score_ansiedad |
+| F2: `/metricas/` + `/metricas/auditoria` | ✅ | Auditoría under-triage operativa |
+| F3: `score_ansiedad` en LLM + BD + modelo | ✅ | 2ª feature más importante (13.9%) |
+| F3: `class_weight='balanced'` en RF | ✅ | Protege C1/C2 (minoría) |
+| F3: Streamlit + Whisper | ✅ | `app/streamlit_app.py` funcional |
+| F3: Auditoría ética (tabla under-triage) | ✅ | Endpoint + UI implementados |
+| Modelo exportado para portátil | ✅ | `models/modelo_latest.pkl` + `setup_laptop.py` |
+
+### Resultados demo (2026-05-25)
+| Caso | Esperado | Obtenido | score_ansiedad | Nota |
+|------|----------|----------|----------------|------|
+| caso_urgente_C2.txt | C2 | **C2** ✅ | 0.85 | — |
+| caso_leve_C4.txt | C4 | **C4** ✅ | 0.20 | — |
+| caso_ansiedad_C3.txt | C3 | **C2** ⚠️ | 0.95 | LLM aplica Manchester estricto: presión+disnea=C2 |
 
 ---
 
