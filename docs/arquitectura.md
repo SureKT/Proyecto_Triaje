@@ -5,6 +5,78 @@
 
 ---
 
+## Visión general — antes de entrar en el código
+
+### El problema que resuelve
+
+Cuando alguien llega a urgencias, un enfermero tiene que decidir en segundos si esa persona necesita atención inmediata o puede esperar. Ese proceso se llama **triaje**. El Sistema de Triaje Manchester tiene 5 niveles: desde C1 (actuación inmediata, riesgo vital) hasta C5 (puede esperar 4 horas, consulta leve).
+
+Tu proyecto automatiza ese triaje a partir de la conversación entre el médico y el paciente.
+
+### El problema de los datos
+
+El proyecto parte de **272 transcripciones** de entrevistas médico-paciente (ficheros `.txt` en `text/`). El problema fundamental: **nadie les puso etiqueta**. No hay ningún fichero que diga "este caso es C2, este es C3". Son texto libre, sin más.
+
+Para entrenar un modelo de Machine Learning necesitas ejemplos etiquetados. Como no los tienes, los generas tú: usas un **LLM para leer cada transcripción y asignarle un nivel Manchester** junto con las características clínicas del caso. A partir de esas etiquetas automáticas, entrenas un Random Forest que aprende a clasificar casos nuevos.
+
+### Las tres fases del sistema
+
+```
+FASE 1 — "Aprende" (batch, se ejecuta una sola vez)
+   272 textos → LLM los etiqueta y extrae features → Random Forest aprende
+
+FASE 2 — "Predice" (a demanda, vía API)
+   Texto nuevo → LLM extrae features → RF predice el nivel → respuesta JSON
+
+FASE 3 — "Muéstralo" (interfaz clínica)
+   Audio o texto → Whisper transcribe → Streamlit muestra el resultado con colores
+```
+
+La Fase 1 ya está ejecutada: el modelo entrenado vive en MinIO. Las Fases 2 y 3 son las que usa el médico.
+
+### Qué hace exactamente el LLM (y qué no)
+
+El LLM no clasifica directamente el caso. Hace algo más concreto: **lee la transcripción en lenguaje coloquial y rellena un formulario estructurado**.
+
+Le das texto libre:
+> "Llevo dos horas con un dolor muy fuerte en el pecho, me cuesta respirar, ya tuve un infarto hace tres años..."
+
+Y devuelve un JSON con los datos extraídos:
+```json
+{
+  "nivel_triaje": 2,
+  "score_urgencia": 91,
+  "score_ansiedad": 0.3,
+  "dolor_intensidad": 8,
+  "disnea": true,
+  "antecedentes_cardiacos": true,
+  "edad": 67
+}
+```
+
+Eso es normalización: "me cuesta respirar" → `disnea: true`, "dolor muy fuerte" → `dolor_intensidad: 8`. El LLM actúa como un médico que rellena una ficha clínica estandarizada a partir de lo que el paciente describió con sus propias palabras.
+
+### ¿Para qué el Random Forest si el LLM ya da el nivel?
+
+Es la pregunta más importante del proyecto. El LLM sí asigna un `nivel_triaje`, pero ese valor tiene tres limitaciones en un contexto clínico real:
+
+1. **No es reproducible.** Con temperatura > 0, el mismo texto puede producir resultados distintos en llamadas distintas. En medicina necesitas que el sistema sea determinista.
+2. **No es auditable.** En clínica, cuando el sistema dice C2, debes poder explicar *por qué*. El RF tiene importancia de features: "decidió C2 principalmente por `dolor_intensidad=8` y `antecedentes_cardiacos=true`". Un LLM no te da eso.
+3. **No aprende de los datos históricos.** El RF entrena con los 272 casos y aprende los patrones estadísticos reales: si históricamente los pacientes de 65+ con disnea y antecedentes casi siempre son C2, el RF interioriza ese patrón sin que nadie se lo diga explícitamente.
+
+En resumen: el **LLM entiende el texto y extrae estructura**, el **RF toma la decisión estadística y auditable**.
+
+### La infraestructura — por qué tantas piezas
+
+El proyecto no es un script Python. Es un sistema con varios servicios que necesitan coordinarse:
+
+- **Airflow** — orquesta el pipeline. Si el procesamiento de la transcripción número 143 falla, Airflow lo reintenta desde el 143, no desde el 1. También gestiona dependencias: el entrenamiento no puede empezar hasta que todas las transcripciones estén enriquecidas.
+- **FastAPI** — expone los microservicios (preprocesado, LLM, entrenamiento, predicción) como endpoints HTTP. Así Airflow y la Streamlit pueden llamarlos sin acoplar el código.
+- **Postgres** — fuente de verdad del estado de cada caso. Cada transcripción tiene un estado (`INGESTED → ENRICHED → COMPLETADA`) y un historial de timestamps.
+- **MinIO** — almacenamiento de objetos (como S3 de AWS pero local). Guarda los textos originales, los datasets CSV y los modelos `.pkl`. Todos los contenedores Docker lo comparten — si el texto estuviera en disco, el contenedor API no podría leerlo.
+
+---
+
 ## Sistema de Triaje Manchester (MTS)
 
 El proyecto clasifica urgencias según el **Sistema de Triaje Manchester (MTS)**, estándar internacional de 5 niveles codificados por color:
@@ -141,7 +213,7 @@ ERROR_INGESTION   — fallo lectura .txt individual (no bloquea el batch)
 
 ## Guía de comprensión del código — flujo completo
 
-Esta sección traza el recorrido completo de los datos desde un fichero `.txt` hasta el badge de color en Streamlit. Para cada paso se indica el fichero exacto, las funciones involucradas, por qué se diseñó así y qué alternativas se consideraron.
+Esta sección traza el recorrido completo de los datos desde un fichero `.txt` hasta el badge de color en Streamlit. Para cada paso: primero la explicación conceptual de qué está pasando y por qué, luego el fichero exacto y las funciones concretas.
 
 ---
 
@@ -212,6 +284,8 @@ En ambos casos la llamada es `temperature=0` y `format=json`. La reproducibilida
 
 #### 3c. El prompt clínico: `services/llm_enrichment/prompt.py`
 
+**Concepto clave antes del código:** el LLM no sabe por defecto qué es el Sistema de Triaje Manchester ni cuándo algo es C2 en lugar de C3. Hay que enseñárselo en el propio prompt, igual que le darías un manual a un médico nuevo antes de que empiece a trabajar. El prompt es ese manual: define los criterios de cada nivel, da ejemplos concretos y establece reglas de comportamiento ante la incertidumbre.
+
 **Función:** `build_messages(texto) -> list[dict]`
 
 Esta es la pieza central del sistema. El prompt tiene cuatro secciones:
@@ -274,6 +348,8 @@ El UPSERT usa `ON CONFLICT (GUID_Entrevista) DO UPDATE` — si el DAG se re-ejec
 
 ### PASO 4 — Codificación de features: `services/ml_features.py`
 
+**Concepto clave antes del código:** el LLM devuelve un JSON con valores como `"edad": 67`, `"disnea": true` o `"edad": null` (si no se mencionó). El Random Forest no entiende JSON ni valores nulos — necesita un array de números. Este módulo hace esa traducción, y las reglas de traducción son decisiones de diseño importantes: ¿qué pones cuando falta un dato? ¿Cómo codificas el sexo? Estas decisiones afectan directamente a lo que aprende el modelo.
+
 Este módulo es el **punto de acoplamiento** entre el LLM (que produce JSON) y el modelo ML (que necesita un array numérico). Lo usan tanto el entrenamiento como la predicción Fase 2 — es la única fuente de verdad para la codificación.
 
 **Lista canónica de features:**
@@ -321,6 +397,8 @@ Permite reproducibilidad total: el modelo entrenado en un CSV concreto puede ser
 ---
 
 ### PASO 6 — Entrenamiento: `services/ml_trainer/service.py`
+
+**Concepto clave antes del código:** el problema más difícil del entrenamiento no es el algoritmo — es el desbalanceo de datos. Tienes ~200 casos C3 y solo 9 casos C2. Si entrenas sin más, el modelo aprende un atajo: "si digo siempre C3 acierto el 73% de las veces". Acertaría mucho, pero sería inútil clínicamente — precisamente los casos C2 (los más peligrosos) los ignoraría. La solución es decirle al modelo que cada error en C2 cuenta mucho más que un error en C3.
 
 **Función principal:** `train() -> dict`
 
@@ -524,6 +602,8 @@ texto_entrada = transcribe_audio(audio_file.read())
 ---
 
 ### PASO 10 — Auditoría ética: `services/metricas/router.py`
+
+**Concepto clave antes del código:** un paciente muy ansioso describe sus síntomas de forma más dramática. El LLM puede captar esa ansiedad y asignar C2; el RF puede ver que clínicamente los síntomas objetivos no justifican C2 y predecir C3. ¿Quién tiene razón? No lo sabemos — pero sí sabemos que ese caso merece una segunda mirada. La auditoría no acusa al modelo de estar equivocado; le dice al médico "aquí hay una discrepancia, revísalo tú".
 
 **Endpoint `GET /metricas/auditoria`:**
 
