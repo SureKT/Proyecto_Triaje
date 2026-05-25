@@ -6,7 +6,7 @@
 | Campo | Valor |
 |-------|--------|
 | Última actualización | 2026-05-25 |
-| Equipo | Persona A (Gerard) · Persona B (compañero/a) |
+| Equipo | Persona A (Gerard) · Persona B (Braulio) |
 | Checkpoint | **PIPELINE COMPLETO** — CV F1 macro 0.850 ± 0.069 · Streamlit + Whisper operativos · sistema validado en portátil con OpenRouter |
 
 ---
