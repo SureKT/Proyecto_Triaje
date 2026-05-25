@@ -129,7 +129,7 @@ Proyecto_Triaje/
 └── README.md
 ```
 
-### Lanzar la aplicación Streamlit — Fase 3 (pendiente de implementar)
+### Lanzar la aplicación Streamlit — Fase 3
 
 ```bash
 # Instalar dependencias de la app
@@ -139,6 +139,36 @@ pip install streamlit faster-whisper requests
 streamlit run app/streamlit_app.py
 # Acceder en: http://localhost:8501
 ```
+
+---
+
+## Configuración en portátil / sin GPU (OpenRouter)
+
+Si el equipo **no tiene GPU** o no se puede ejecutar Ollama localmente, usar **OpenRouter** como proveedor LLM:
+
+1. Obtener API key gratuita en [openrouter.ai/keys](https://openrouter.ai/keys)
+2. En el `.env`, configurar:
+   ```env
+   LLM_PROVIDER=openrouter
+   OPENROUTER_API_KEY=sk-or-v1-...
+   OPENROUTER_MODEL=google/gemini-2.0-flash-001
+   ```
+3. Levantar los servicios normalmente (`docker compose up -d`)
+4. Subir el modelo pre-entrenado a MinIO ejecutando **una sola vez**:
+   ```bash
+   python setup_laptop.py
+   ```
+   Este script detecta automáticamente el endpoint correcto de MinIO y sube
+   `models/modelo_latest.pkl` al bucket `modelos/`, habilitando `/predecir/` sin
+   necesidad de re-entrenar.
+
+5. Lanzar Streamlit:
+   ```bash
+   streamlit run app/streamlit_app.py
+   ```
+
+> **Nota:** Con OpenRouter gratuito y uso de demo (2-3 predicciones), no hay riesgo de rate limit.
+> Para lotes grandes, añadir `LLM_DELAY_SEC=2` en el `.env`.
 
 ---
 

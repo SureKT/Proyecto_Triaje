@@ -1,12 +1,26 @@
 """
-setup_laptop.py — Sube el modelo pre-entrenado a MinIO en el portátil.
-Ejecutar UNA VEZ tras `docker compose up -d` en el portátil.
+setup_laptop.py — Configuración inicial para equipos sin GPU (portátil / demo).
+
+Sube el modelo pre-entrenado (models/modelo_latest.pkl) al bucket MinIO del
+sistema, habilitando el endpoint /predecir/ sin necesidad de re-entrenar.
+
+Ejecutar UNA SOLA VEZ tras `docker compose up -d`:
 
     python setup_laptop.py
+
+Requisitos:
+  - Docker corriendo con los servicios del compose levantados
+  - LLM_PROVIDER=openrouter y OPENROUTER_API_KEY configurados en .env
+  - El fichero models/modelo_latest.pkl debe existir (viene en el repositorio)
+
+Ver README.md sección "Configuracion en portatil / sin GPU" para instrucciones completas.
 """
 import os, sys, time
 
-MINIO_ENDPOINT = os.environ.get("MINIO_ENDPOINT", "http://localhost:9001")
+MINIO_ENDPOINT = os.environ.get("MINIO_ENDPOINT", "http://localhost:9000")
+# setup_laptop corre fuera de Docker → siempre usar localhost:9000 (puerto API S3)
+if "minio:" in MINIO_ENDPOINT:
+    MINIO_ENDPOINT = "http://localhost:9000"
 MINIO_USER     = os.environ.get("MINIO_ROOT_USER", "minioadmin")
 MINIO_PASS     = os.environ.get("MINIO_ROOT_PASSWORD", "minioadmin123")
 BUCKET         = os.environ.get("MINIO_BUCKET_MODELOS", "modelos")
@@ -42,8 +56,8 @@ if not client.bucket_exists(BUCKET):
     print(f"Bucket '{BUCKET}' creado.")
 
 # Subir modelo
-print(f"Subiendo {MODEL_FILE} → {BUCKET}/{MODEL_OBJECT} ...")
+print(f"Subiendo {MODEL_FILE} -> {BUCKET}/{MODEL_OBJECT} ...")
 client.fput_object(BUCKET, MODEL_OBJECT, MODEL_FILE)
-print("✓ Modelo cargado en MinIO.")
+print("OK Modelo cargado en MinIO.")
 print("\nAhora puedes lanzar Streamlit:")
 print("  streamlit run app/streamlit_app.py")

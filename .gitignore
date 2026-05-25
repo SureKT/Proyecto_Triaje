@@ -1,14 +1,35 @@
+# ── Herramientas de desarrollo ─────────────────────────────────────────────────
 .agents/
 .claude/
 skills-lock.json
 .vscode/
+
+# ── Secretos ───────────────────────────────────────────────────────────────────
 .env
+
+# ── Python ─────────────────────────────────────────────────────────────────────
 __pycache__/
 *.pyc
 *.pyo
+*.egg-info/
+
+# ── Airflow runtime ────────────────────────────────────────────────────────────
 logs/
 plugins/
+
+# ── Modelos (ignorar todos excepto el exportado para el portátil) ───────────────
 *.pkl
 !models/*.pkl
-*.egg-info/
+
+# ── Datos runtime (Postgres → MinIO → estos dirs solo se usan en desarrollo) ───
+data/labeled/
+data/processed/
+data/raw/
+cleantext/
+
+# ── Backups y artefactos temporales ────────────────────────────────────────────
+scripts/backup_*.csv
+
+# ── Sistema ────────────────────────────────────────────────────────────────────
 .DS_Store
+Thumbs.db
