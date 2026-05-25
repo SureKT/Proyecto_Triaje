@@ -1,0 +1,14 @@
+D: Dígame, ¿qué le ocurre?
+P: ¡Por favor, ayúdenme! No puedo respirar, me estoy muriendo, lo noto. El corazón se me va a salir del pecho, llevo media hora así y no se me pasa. ¡Necesito que hagan algo ahora!
+D: Intente calmarse. ¿Tiene dolor en el pecho?
+P: No sé, como una presión, pero es que no puedo respirar, me falta el aire. ¡Me voy a morir!
+D: ¿La presión es fuerte, del uno al diez?
+P: Un cuatro quizás, pero es que el ahogo es horrible, noto como que me voy.
+D: ¿Le ha pasado algo parecido antes?
+P: Sí, varias veces este año. El médico me dijo que eran crisis de ansiedad pero esta se nota diferente, mucho peor. ¡Estoy segura de que es el corazón!
+D: ¿Tiene alguna enfermedad cardíaca conocida o antecedentes familiares?
+P: No, ninguna. Pero mi madre tuvo un infarto y por eso me preocupa tanto.
+D: ¿Cuántos años tiene?
+P: Veintisiete.
+D: ¿Ha tenido fiebre, pérdida de consciencia, o el dolor se extiende al brazo?
+P: No, nada de eso. Solo el ahogo y las palpitaciones. Pero es que tengo mucho miedo, no puedo más.

@@ -1,0 +1,14 @@
+D: Buenas tardes, ¿qué le trae por urgencias hoy?
+P: Vengo por la rodilla derecha. La tengo fastidiada desde hace como una semana, me duele al subir escaleras y cuando llevo mucho rato de pie.
+D: ¿Cómo de intenso es el dolor del uno al diez?
+P: Un tres, quizás un cuatro cuando me doblo mucho. En reposo no me molesta.
+D: ¿Ha tenido algún golpe o caída?
+P: No, no me he caído ni nada. Creo que fue de tanto caminar el fin de semana pasado, hice una ruta larga.
+D: ¿Le ha pasado antes con esta rodilla?
+P: Sí, de vez en cuando me da la lata. El médico de cabecera me dijo que tengo un poco de condromalacia.
+D: ¿Tiene fiebre o la rodilla la nota muy caliente o muy hinchada?
+P: No, está un pelín inflamada pero nada exagerado. Sin fiebre.
+D: ¿Cuántos años tiene y a qué se dedica?
+P: Treinta y cuatro años, trabajo en una oficina.
+D: ¿Toma algún medicamento habitualmente?
+P: Solo ibuprofeno cuando me duele mucho, y me va bien.

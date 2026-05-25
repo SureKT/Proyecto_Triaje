@@ -1,0 +1,14 @@
+D: Buenos días, ¿cuál es el motivo de su consulta hoy?
+P: Llevo desde esta mañana con un dolor muy fuerte en el pecho. Me cuesta respirar y noto como si el corazón me fuera muy rápido.
+D: ¿Puede decirme cuánto le duele del uno al diez?
+P: Un ocho, no me deja ni moverme. Es un dolor que aprieta, como si me pusieran un peso encima.
+D: ¿El dolor se extiende a algún otro sitio?
+P: Sí, me llega hasta el brazo izquierdo y un poco al cuello.
+D: ¿Tiene usted alguna enfermedad del corazón conocida?
+P: Sí, tuve un infarto hace cuatro años. Desde entonces tomo medicación para el corazón y para la tensión.
+D: ¿Cuántos años tiene?
+P: Setenta y uno.
+D: ¿Ha tenido fiebre o algún otro síntoma?
+P: No, solo esto. Pero me encuentro muy mal, peor que otras veces.
+D: ¿Fuma usted?
+P: Dejé hace diez años, pero fumé durante muchos años.
