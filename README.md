@@ -156,7 +156,7 @@ Si el equipo **no tiene GPU** o no se puede ejecutar Ollama localmente, usar **O
 3. Levantar los servicios normalmente (`docker compose up -d`)
 4. Subir el modelo pre-entrenado a MinIO ejecutando **una sola vez**:
    ```bash
-   python setup_laptop.py
+   python setup.py
    ```
    Este script detecta automáticamente el endpoint correcto de MinIO y sube
    `models/modelo_latest.pkl` al bucket `modelos/`, habilitando `/predecir/` sin

@@ -5,9 +5,9 @@
 
 | Campo | Valor |
 |-------|--------|
-| Última actualización | 2026-05-24 |
+| Última actualización | 2026-05-25 |
 | Equipo | Persona A (Gerard) · Persona B (compañero/a) |
-| Checkpoint | **272 EVALUATED + 18 COMPLETADA**; RF acc. 96.4 %, CV F1 0.904; Fase 2 operativa con valoración 0-10 |
+| Checkpoint | **PIPELINE COMPLETO** — CV F1 macro 0.850 ± 0.069 · Streamlit + Whisper operativos · sistema validado en portátil con OpenRouter |
 
 ---
 
@@ -16,7 +16,6 @@
 | Otro doc | Para qué sirve | Este diario |
 |----------|----------------|-------------|
 | `README.md` | Cómo levantar y ejecutar el sistema | No duplica comandos; enlaza si hace falta |
-| `ROADMAP.md` | División de tareas, orden semanal, borrador de prompt | Registra **decisiones ya tomadas** y **por qué** |
 | `docs/arquitectura.md` | Diagramas y flujo funcional (entregable técnico) | Registra **historia**, fallos, cambios de rumbo |
 | `Proyecto Triage IA.pdf` | Especificación del profesor | Referencia de requisitos |
 
@@ -151,22 +150,30 @@ Sistema que clasifica el **nivel de triaje hospitalario (SET, 1–5)** a partir 
 ### Fase 1 — Pipeline batch
 
 - [x] `dag_text_ingestion`
-- [ ] `dag_llm_enrichment` — **6/272** `ENRICHED` (en curso)
-- [ ] `dag_dataset_builder`
-- [ ] `dag_model_training`
-- [ ] `dag_evaluation`
+- [x] `dag_llm_enrichment` — **272/272 ENRICHED** (re-enriquecido con prompt Manchester + score_ansiedad)
+- [x] `dag_dataset_builder`
+- [x] `dag_model_training` — CV F1 macro 0.850 ± 0.069, `class_weight='balanced'`
+- [x] `dag_evaluation`
 
 ### Fase 2
 
-- [x] Modelo `.pkl` en MinIO
-- [x] Prueba `/predecir` end-to-end — **2026-05-24, ~15 s, confianza 0.96**
-- [ ] Revisar `guid` en `dag_prediction` vs `/predecir` (deuda D3)
+- [x] Modelo `.pkl` en MinIO + `models/modelo_latest.pkl` en repo
+- [x] `/predecir/` end-to-end con `score_ansiedad` + `valoracion` + estado `COMPLETADA`
+- [x] `/metricas/` + `/metricas/auditoria` (detección under-triage)
+- [x] `dag_prediction_phase_2` (reescrito desde `dag_prediction.py`)
+
+### Fase 3
+
+- [x] `app/streamlit_app.py` — badge Manchester, score ansiedad, tabla auditoría
+- [x] `app/whisper_utils.py` — transcripción audio con faster-whisper
+- [x] 3 casos demo en `demo/`
+- [x] `setup.py` — configuración en portátil sin GPU
 
 ### Documentación
 
-- [x] `docs/arquitectura.md` (borrador)
+- [x] `docs/arquitectura.md`
 - [x] Este diario
-- [ ] Sincronizar SQL en `arquitectura.md` con `schema.sql`
+- [x] `README.md` con sección portátil/OpenRouter
 
 ---
 
@@ -254,6 +261,92 @@ LLM_DELAY_SEC=4
 ## 10. Bitácora — nuevas entradas
 
 *(Más reciente arriba)*
+
+### 2026-05-25 — Puesta en marcha en portátil + limpieza final del repo
+
+**Quién:** Gerard (A)  
+**Qué:** Primera ejecución completa del sistema en el portátil (sin GPU). Identificación y resolución de 5 bugs de entorno. Limpieza del repositorio para entrega.
+
+**Bugs encontrados y resueltos:**
+
+| Bug | Causa | Solución |
+|-----|-------|----------|
+| `setup.py` falla con "MinIO no responde" | Script conectaba a puerto `9001` (UI web) en vez de `9000` (API S3). Además leía `MINIO_ENDPOINT=http://minio:9000` del `.env` (red Docker interna, inaccesible desde el host) | Forzar `localhost:9000` cuando el endpoint contiene `minio:` |
+| `UnicodeEncodeError` en `setup.py` | Consola Windows usa cp1252; los caracteres `→` y `✓` no están en cp1252 | Sustituidos por `->` y `OK` |
+| API devuelve `Connection refused` en `/predecir/` | `LLM_PROVIDER=ollama` pero el portátil no tiene GPU ni Ollama instalado | Cambiar a `LLM_PROVIDER=openrouter` en `.env` |
+| API devuelve `401 Unauthorized` de OpenRouter | API key pegada con `ssk-or-v1-` (una `s` extra) en vez de `sk-or-v1-` | Corregir la key en `.env` |
+| `docker compose restart` no aplica cambios del `.env` | `restart` reutiliza la configuración del contenedor anterior | Usar `docker compose up -d --force-recreate api` |
+
+**Decisión — OpenRouter como proveedor en portátil:**  
+El portátil no tiene GPU. Ollama con `llama3.1:8b` en CPU tarda ~4 min/transcripción (inaceptable en demo). OpenRouter con `google/gemini-2.0-flash-001` responde en ~3-5 s. Para 3 predicciones de demo no hay riesgo de rate limit con la cuenta gratuita. Documentado en `README.md` como "Configuración en portátil / sin GPU".
+
+**Validación end-to-end en portátil:**
+```
+texto: "Presión fuerte en el pecho, cuesta respirar, brazo izquierdo dormido, 58 años, hipertenso"
+→ LLM (OpenRouter/Gemini): nivel_triaje=2, score_urgencia=90, score_ansiedad=0.6
+→ RF: predicción C2, confianza 0.475
+→ Streamlit: badge C2 naranja, alerta ansiedad moderada
+→ Tiempo respuesta: ~5 s
+```
+
+**Limpieza del repositorio (entrega):**
+
+| Eliminado | Motivo |
+|-----------|--------|
+| `translated_texts/` (272 ficheros) | Pre-traducciones al español generadas durante el desarrollo. El pipeline usa `text/` (inglés original) y el LLM hace la extracción en español internamente. Cero referencias en el código. |
+| `scripts/test_enrich.py` | Script de prueba manual durante el sprint. La API está validada y no se necesita. |
+| `scripts/validate_dataset_columns.py` | Script de validación de datos durante el desarrollo. Irrelevante post-entrega. |
+| `ROADMAP.md` | Documento de sprint interno ya completado. La información relevante para la defensa está en `docs/arquitectura.md` y en este diario. |
+| `scripts/backup_resultadoml_20260524.csv` | Dato de BD exportado durante el re-enriquecimiento. No debe estar en el repo. Añadido `scripts/backup_*.csv` al `.gitignore`. |
+| `data/labeled|processed|raw` | Directorios vacíos de runtime. Ya cubiertos por `.gitignore`. |
+| `cleantext/` | Carpeta vacía sin uso. |
+
+**Mejoras al `.gitignore`:** reorganizado con categorías, añadidas entradas para `data/`, `cleantext/`, `scripts/backup_*.csv`, `Thumbs.db`.
+
+**Estado:** sistema operativo en portátil, repo limpio, listo para entrega y defensa.
+
+---
+
+### 2026-05-25 — Sprint defensa: Fase 3 completa + score_ansiedad + Manchester
+
+**Quién:** Gerard (A) — sesión en PC de casa  
+**Qué:** Implementación completa del sprint de cierre (commits `691ada4` → `b6edf14`).
+
+**1. Terminología Manchester (commits `691ada4`, `31758ab`)**  
+- Prompt LLM actualizado: referencias a "SET" → "Manchester (MTS)", criterios C1-C5 con colores.  
+- `score_ansiedad` añadido al JSON de salida del LLM (0.0-1.0), al schema SQL (`ResultadoML`), a `ml_features.py` como feature del RF, y al endpoint `/predecir/`.  
+- Re-enriquecimiento de 272 transcripciones con el prompt actualizado y reentrenamiento del RF con `class_weight='balanced'`. Resultado: **CV F1 macro 0.850 ± 0.069**.  
+- `score_ansiedad` es la **2ª feature más importante** del RF (13.9%), solo por detrás de `score_urgencia`.
+
+**Decisión — `class_weight='balanced'` en RandomForest:**  
+El dataset tiene 9 casos C1/C2 frente a ~200 C3. Sin balanceo el RF ignoraba las minorías (recall C2 = 0.0 antes). `class_weight='balanced'` asigna pesos inversamente proporcionales a la frecuencia de clase: penaliza más un fallo en C2 (9 casos) que en C3 (200). Recall C2 pasa de 0.0 a 1.0 tras el reentrenamiento.
+
+**Decisión — ansiedad como feature Y como auditoría:**  
+El `score_ansiedad` entra al RF como variable numérica (aprende que ansiedad alta no implica urgencia alta) Y se usa en `/metricas/auditoria` para detectar under-triage: si `prediccion_RF < nivel_LLM` y `score_ansiedad > 0.7`, el caso se marca como posible sesgo emocional.
+
+**2. Fase 3: Streamlit + Whisper (commit `e0de700`)**  
+- `app/streamlit_app.py`: interfaz clínica con badge Manchester por color, barra de urgencia, alerta de ansiedad, tabla de auditoría ética.  
+- `app/whisper_utils.py`: transcripción de audio con `faster-whisper` modelo `small` en CPU (equilibrio velocidad/precisión para español).  
+- Flujo completo: audio `.wav/.mp3` → Whisper → texto → `POST /predecir/` → resultado visual.
+
+**3. Casos demo defensa (commit `caa04ee`)**  
+Creados 3 casos en `demo/` para la presentación:
+
+| Fichero | Caso | Esperado | Resultado | score_ansiedad |
+|---------|------|----------|-----------|----------------|
+| `caso_urgente_C2.txt` | Dolor torácico + disnea + historial cardíaco | C2 | C2 ✅ | 0.85 |
+| `caso_leve_C4.txt` | Dolor de rodilla leve | C4 | C4 ✅ | 0.20 |
+| `caso_ansiedad_C3.txt` | Ansiedad extrema + síntomas ambiguos | C3 | C2 ⚠️ | 0.95 |
+
+El caso de ansiedad devuelve C2 porque el LLM aplica Manchester estricto: presión torácica + disnea = C2 independientemente del estado emocional. Demuestra que **la clínica prevalece sobre la emoción** — exactamente el comportamiento correcto según el enunciado.
+
+**4. Exportación modelo para portátil (commit `b6edf14`)**  
+- `models/modelo_latest.pkl` añadido al repo (excepción en `.gitignore`: `!models/*.pkl`).  
+- `setup.py` creado para subir el modelo a MinIO en equipos sin GPU.
+
+**Estado:** pipeline 100% completo. Listo para defensa 2026-05-28.
+
+---
 
 ### 2026-05-25 — Correo defensa: Fase 3 obligatoria + Manchester + ansiedad
 

@@ -1,12 +1,12 @@
 """
-setup_laptop.py — Configuración inicial para equipos sin GPU (portátil / demo).
+setup.py — Configuración inicial para equipos sin GPU (portátil / demo).
 
 Sube el modelo pre-entrenado (models/modelo_latest.pkl) al bucket MinIO del
 sistema, habilitando el endpoint /predecir/ sin necesidad de re-entrenar.
 
 Ejecutar UNA SOLA VEZ tras `docker compose up -d`:
 
-    python setup_laptop.py
+    python setup.py
 
 Requisitos:
   - Docker corriendo con los servicios del compose levantados
