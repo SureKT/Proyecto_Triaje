@@ -38,6 +38,7 @@ def build_dataset() -> str:
             r.antecedentes_cardiacos,
             r.fumador,
             r.score_urgencia,
+            r.score_ansiedad,
             r.nivel_triaje
         FROM Entrevista e
         JOIN ResultadoML r ON e.GUID_Entrevista = r.GUID_Entrevista

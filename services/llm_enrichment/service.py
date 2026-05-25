@@ -51,8 +51,9 @@ def enrich(guid: str, texto: str) -> dict:
         """INSERT INTO ResultadoML
            (GUID_Entrevista, edad, sexo, dolor_intensidad, disnea, fiebre,
             perdida_consciencia, irradiacion, antecedentes_cardiacos, fumador,
-            motivo_consulta, justificacion, score_urgencia, nivel_triaje, timestamp_pred)
-           VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+            motivo_consulta, justificacion, score_urgencia, score_ansiedad,
+            nivel_triaje, timestamp_pred)
+           VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
            ON CONFLICT (GUID_Entrevista) DO UPDATE SET
             edad = EXCLUDED.edad, sexo = EXCLUDED.sexo,
             dolor_intensidad = EXCLUDED.dolor_intensidad, disnea = EXCLUDED.disnea,
@@ -60,6 +61,7 @@ def enrich(guid: str, texto: str) -> dict:
             irradiacion = EXCLUDED.irradiacion, antecedentes_cardiacos = EXCLUDED.antecedentes_cardiacos,
             fumador = EXCLUDED.fumador, motivo_consulta = EXCLUDED.motivo_consulta,
             justificacion = EXCLUDED.justificacion, score_urgencia = EXCLUDED.score_urgencia,
+            score_ansiedad = EXCLUDED.score_ansiedad,
             nivel_triaje = EXCLUDED.nivel_triaje, timestamp_pred = EXCLUDED.timestamp_pred""",
         (
             guid,
@@ -75,6 +77,7 @@ def enrich(guid: str, texto: str) -> dict:
             resultado.get("motivo_consulta"),
             resultado.get("justificacion"),
             resultado.get("score_urgencia"),
+            resultado.get("score_ansiedad"),
             resultado.get("nivel_triaje"),
             now(),
         ),

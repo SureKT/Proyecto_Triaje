@@ -52,7 +52,8 @@ CREATE TABLE IF NOT EXISTS ResultadoML (
     justificacion       TEXT,
     -- Etiquetas y scores
     score_urgencia      FLOAT,
-    nivel_triaje        INT,          -- Ground Truth asignado por LLM (F1)
+    score_ansiedad      FLOAT,        -- Nivel de ansiedad del paciente detectado por LLM (0.0-1.0)
+    nivel_triaje        INT,          -- Ground Truth asignado por LLM (F1) — equivale a Manchester C1-C5
     -- Predicción del modelo ML (F2)
     prediccion_modelo   INT,
     confianza           FLOAT,

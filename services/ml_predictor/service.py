@@ -99,11 +99,15 @@ def predict(texto: str, filename: str = "") -> dict:
         (model_name, now(), guid),
     )
 
+    nivel_manchester = f"C{pred}"
+
     return {
         "GUID":                   guid,
         "nivel_triaje_predicho":  pred,
+        "nivel_manchester":       nivel_manchester,
         "nivel_triaje_llm":       nivel_llm,
         "score_urgencia":         resultado_llm.get("score_urgencia"),
+        "score_ansiedad":         resultado_llm.get("score_ansiedad"),
         "confianza":              round(confianza, 3),
         "valoracion":             valoracion,
         "motivo_consulta":        resultado_llm.get("motivo_consulta"),

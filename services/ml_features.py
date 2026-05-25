@@ -11,7 +11,7 @@ ESPECIALIDAD_MAP = {"CAR": 0, "DER": 1, "GAS": 2, "GEN": 3, "MSK": 4, "RES": 5, 
 FEATURES = [
     "edad", "sexo", "dolor_intensidad", "disnea", "fiebre",
     "perdida_consciencia", "irradiacion", "antecedentes_cardiacos",
-    "fumador", "score_urgencia",
+    "fumador", "score_urgencia", "score_ansiedad",
 ]
 TARGET = "nivel_triaje"
 
@@ -59,6 +59,10 @@ def prepare_dataset_export_df(df: pd.DataFrame) -> pd.DataFrame:
     out["edad"] = out["edad"].map(encode_optional_int)
     out["sexo"] = out["sexo"].map(encode_sexo)
     out["dolor_intensidad"] = out["dolor_intensidad"].map(encode_optional_int)
+    if "score_ansiedad" in out.columns:
+        out["score_ansiedad"] = out["score_ansiedad"].fillna(0.0).astype(float)
+    else:
+        out["score_ansiedad"] = 0.0
     if "especialidad" in out.columns:
         out["especialidad"] = out["especialidad"].map(encode_especialidad)
     return out
@@ -86,6 +90,10 @@ def prepare_training_df(df: pd.DataFrame) -> pd.DataFrame:
             out["sexo"] = out["sexo"].apply(
                 lambda v: UNKNOWN if pd.isna(v) else int(v)
             )
+        if "score_ansiedad" in out.columns:
+            out["score_ansiedad"] = out["score_ansiedad"].fillna(0.0).astype(float)
+        else:
+            out["score_ansiedad"] = 0.0
 
     if "especialidad" in out.columns:
         if out["especialidad"].dtype == object:
@@ -114,4 +122,5 @@ def row_from_llm_result(resultado: dict, especialidad: str = "UNK") -> dict:
         "antecedentes_cardiacos": int(as_bool(resultado.get("antecedentes_cardiacos"))),
         "fumador": int(as_bool(resultado.get("fumador"))),
         "score_urgencia": resultado.get("score_urgencia", 50),
+        "score_ansiedad": float(resultado.get("score_ansiedad") or 0.0),
     }
