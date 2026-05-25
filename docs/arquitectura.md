@@ -351,29 +351,37 @@ En ambos casos: `temperature=0` (sin aleatoriedad — la misma entrada siempre p
 
 **Función:** `build_messages(texto) -> list[dict]`
 
-Esta es la pieza central del sistema. El prompt tiene cuatro secciones:
+El prompt tiene cuatro secciones. El orden importa: primero el contexto (quién es el LLM y qué criterios usa), luego la calibración (ejemplos concretos), luego la pregunta (clasifica esto).
 
-**1. SYSTEM_PROMPT — definición del rol y del MTS:**
-```
-Eres un sistema experto en triaje médico. Clasifica según el Sistema de
-Triaje Manchester (MTS) en niveles 1-5...
-```
-Define los 5 niveles con sus criterios clínicos. Establece la "regla de oro": *cuando hay duda entre dos niveles, asignar el más urgente*. Esta regla es clave para evitar under-triage — es preferible sobreestimar la urgencia de un C3 que subestimar un C2.
+**Sección 1 — Rol y criterios Manchester:**
 
-**2. Definición de `score_ansiedad`:**
-El prompt explica explícitamente que `score_ansiedad` mide el pánico/ansiedad *percibido* en el paciente (0.0-1.0), **separado de la urgencia clínica**. Esto es deliberado: un paciente puede estar muy ansioso (0.9) por un esguince de tobillo (C4). El LLM debe distinguir la ansiedad emocional del deterioro clínico.
+Le dice al LLM quién es ("eres un sistema experto en triaje médico de urgencias hospitalarias") y le da los criterios clínicos de cada nivel. Esto ancla su criterio al estándar MTS en lugar de dejarlo operar con el conocimiento difuso de sus datos de entrenamiento.
 
-**3. Dos ejemplos few-shot:**
-- **Caso C2 (cardíaco):** dolor torácico + disnea + antecedentes, `score_urgencia=91`, `score_ansiedad=0.3` (paciente asustado pero no en pánico). Ancla el formato JSON y calibra el criterio de nivel 2.
-- **Caso C3 (ansiedad):** dolor inespecífico + respiración agitada, pero clínica leve. `score_urgencia=41`, `score_ansiedad=0.92`. Demuestra que ansiedad alta ≠ urgencia alta: el LLM debe primar los síntomas objetivos.
+Al final está la **"regla de oro"**: *cuando hay duda entre dos niveles, asigna siempre el más urgente.* Decisión clínica deliberada: un falso positivo (tratar algo como más urgente de lo que es) tiene consecuencias leves. Un falso negativo puede ser fatal. La regla hace que el LLM sea conservador por defecto.
 
-**4. JSON de salida (14 campos):**
+**Sección 2 — Definición de `score_ansiedad`:**
+
+El prompt define explícitamente que `score_ansiedad` mide el pánico percibido en el paciente (0.0-1.0), **independientemente de la gravedad clínica**. Y añade: *un paciente puede estar muy ansioso (0.9) por un problema leve (C4). La ansiedad no determina el nivel de triaje — los síntomas clínicos objetivos sí.*
+
+Sin esta instrucción, el LLM tiende a correlacionar ansiedad con urgencia. Eso es un sesgo que hay que corregir de forma explícita.
+
+**Sección 3 — Dos ejemplos few-shot:**
+
+En lugar de describir los criterios en abstracto, le das al LLM dos casos ya resueltos. No son aleatorios — están elegidos para enseñar la distinción más peligrosa del sistema:
+
+- **Caso C2 (cardíaco):** paciente de 67 años, dolor torácico intenso, disnea, antecedente de infarto. `score_urgencia=91`, `score_ansiedad=0.3`. El paciente está algo asustado pero la urgencia viene de la clínica, no de la ansiedad.
+- **Caso C3 (ansiedad alta, clínica leve):** paciente joven, dolor inespecífico, respiración agitada, muy nervioso. `score_urgencia=41`, `score_ansiedad=0.92`. Ansiedad extrema pero síntomas leves → C3, no C2.
+
+Juntos enseñan que la misma sensación de ahogo puede ser C2 (disnea real con antecedentes) o C3 (hiperventilación por pánico). El LLM aprende por contraste, igual que un médico aprende de casos reales. Sin ejemplos (zero-shot), el LLM tiende a clasificar los casos ambiguos como C3 por ser la clase más frecuente.
+
+**Sección 4 — JSON de salida (14 campos):**
+
 ```json
 {
   "nivel_triaje": 2,
   "score_urgencia": 91.0,
   "score_ansiedad": 0.3,
-  "motivo_consulta": "...",
+  "motivo_consulta": "Dolor torácico con disnea y antecedente de infarto",
   "entidades": ["dolor pecho", "cuesta respirar"],
   "entidades_normalizadas": ["dolor torácico", "disnea"],
   "edad": 67,
@@ -385,15 +393,15 @@ El prompt explica explícitamente que `score_ansiedad` mide el pánico/ansiedad 
   "irradiacion": false,
   "antecedentes_cardiacos": true,
   "fumador": false,
-  "justificacion": "..."
+  "justificacion": "Alta sospecha SCA. Nivel 2 según MTS."
 }
 ```
 
-**¿Por qué few-shot y no zero-shot?**  
-Sin ejemplos, el LLM tiende a clasificar casos ambiguos como C3 (la clase mayoritaria). Los ejemplos concretos de C2 y del error de sobreponderar ansiedad recalibran su criterio sin necesidad de fine-tuning.
+Hay dos tipos de datos mezclados en la misma respuesta:
+- **Features del RF**: `edad`, `sexo`, `dolor_intensidad`, los booleanos, `score_urgencia`, `score_ansiedad` → van al modelo ML
+- **Metadatos clínicos**: `motivo_consulta`, `entidades`, `entidades_normalizadas`, `justificacion` → van a Postgres y se muestran en Streamlit
 
-**¿Por qué `temperature=0`?**  
-En producción clínica, la misma transcripción debe producir siempre el mismo resultado. Temperature > 0 introduce variabilidad no deseable en un sistema de soporte a decisiones médicas.
+El LLM rellena todo en una sola llamada. El código los separa después y los guarda donde corresponde.
 
 #### 3d. Persistencia post-LLM: `services/llm_enrichment/service.py`
 
