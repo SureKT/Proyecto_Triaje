@@ -13,6 +13,8 @@ from common import pg_execute, minio_download_bytes, minio_list_objects
 router = APIRouter()
 logger = logging.getLogger(__name__)
 
+MANCHESTER = {1: "C1", 2: "C2", 3: "C3", 4: "C4", 5: "C5"}
+
 BUCKET_MODELOS = os.environ.get("MINIO_BUCKET_MODELOS", "modelos")
 
 
@@ -26,6 +28,50 @@ def _latest_evaluation() -> dict:
     except Exception as e:
         logger.warning(f"No se pudo leer evaluación desde MinIO: {e}")
         return {}
+
+
+@router.get("/auditoria")
+def auditoria():
+    """
+    Casos de posible under-triage: prediccion_modelo > nivel_triaje (RF menos urgente que LLM)
+    con score_ansiedad >= 0.7. Señal de sesgo emocional en la predicción.
+    """
+    rows = pg_execute(
+        """
+        SELECT
+            e.GUID_Entrevista                        AS id_caso,
+            e.nombre_fichero,
+            r.score_ansiedad,
+            r.prediccion_modelo,
+            r.nivel_triaje                           AS ground_truth_llm,
+            r.motivo_consulta,
+            r.justificacion,
+            e.Fin_Solicitud                          AS timestamp_pred
+        FROM Entrevista e
+        JOIN ResultadoML r ON e.GUID_Entrevista = r.GUID_Entrevista
+        WHERE r.prediccion_modelo IS NOT NULL
+          AND r.nivel_triaje      IS NOT NULL
+          AND r.prediccion_modelo > r.nivel_triaje
+          AND r.score_ansiedad   >= 0.7
+        ORDER BY r.score_ansiedad DESC
+        """,
+        fetch=True,
+    )
+
+    result = []
+    for r in rows:
+        pred = r["prediccion_modelo"]
+        gt   = r["ground_truth_llm"]
+        result.append({
+            "ID_Caso":        r["nombre_fichero"] or r["id_caso"][:8],
+            "Motivo":         r["motivo_consulta"] or "—",
+            "Score Ansiedad": round(float(r["score_ansiedad"]), 2) if r["score_ansiedad"] else None,
+            "Pred. IA":       MANCHESTER.get(pred, str(pred)),
+            "Ground Truth":   MANCHESTER.get(gt, str(gt)),
+            "Validación":     "❌ Under-triage",
+            "Causa":          "El modelo RF priorizó ansiedad sobre clínica",
+        })
+    return result
 
 
 @router.get("/")
