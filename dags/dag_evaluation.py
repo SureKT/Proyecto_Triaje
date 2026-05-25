@@ -47,7 +47,7 @@ def _evaluate():
     FEATURES = [
         "edad", "sexo", "dolor_intensidad", "disnea", "fiebre",
         "perdida_consciencia", "irradiacion", "antecedentes_cardiacos",
-        "fumador", "score_urgencia",
+        "fumador", "score_urgencia", "score_ansiedad",
     ]
     UNKNOWN = -1
     df = pd.read_csv(io.BytesIO(csv_bytes))
@@ -57,6 +57,7 @@ def _evaluate():
         df[col] = df[col].fillna(0).astype(int)
     for col in ("edad", "dolor_intensidad", "sexo"):
         df[col] = df[col].fillna(UNKNOWN)
+    df["score_ansiedad"] = df["score_ansiedad"].fillna(0.0)
     df = df.dropna(subset=["nivel_triaje", "score_urgencia"])
     X = df[FEATURES]
     y = df["nivel_triaje"].astype(int)
