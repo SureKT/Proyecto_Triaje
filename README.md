@@ -1,8 +1,12 @@
 # Triaje IA — Sistema de clasificación automática de urgencias
 
-Pipeline de procesamiento de texto con LLM y Machine Learning para clasificar el nivel de triaje (1–5) de pacientes en urgencias a partir de transcripciones de entrevista médico-paciente.
+Pipeline completo de clasificación de urgencias hospitalarias según el **Sistema de Triaje Manchester (C1-C5)** a partir de transcripciones o audios de entrevista médico-paciente.
 
-Orquestado con **Apache Airflow**. El LLM puede ser **Ollama en el host** (recomendado para el batch sin límites de API) u **OpenRouter** (API compatible con OpenAI). Persistencia en **Postgres** y **MinIO**.
+**Fase 1 (batch):** 272 transcripciones → LLM extrae features clínicas → Random Forest aprende a clasificar → modelo evaluado con CV 5-fold.  
+**Fase 2 (a demanda):** `POST /predecir/` → enriquecimiento LLM + RF → nivel Manchester + valoración automática (0-10).  
+**Fase 3 (MVP clínico):** Audio → Whisper → `/predecir/` → Streamlit con colores Manchester + auditoría ética de under-triage.
+
+Orquestado con **Apache Airflow**. LLM: **Ollama en host** (recomendado) u **OpenRouter**. Persistencia: **Postgres** + **MinIO**.
 
 Documentación interna de avance y decisiones: [`docs/diario-desarrollo.md`](docs/diario-desarrollo.md).
 
@@ -74,12 +78,16 @@ Respuesta esperada (campos principales):
   "nivel_triaje_predicho": 3,
   "nivel_triaje_llm": 3,
   "score_urgencia": 62.5,
+  "score_ansiedad": 0.45,
   "confianza": 0.85,
   "valoracion": 8.5,
   "motivo_consulta": "...",
-  "justificacion": "..."
+  "justificacion": "...",
+  "entidades_normalizadas": ["dolor torácico", "disnea"]
 }
 ```
+
+El campo `nivel_triaje_predicho` es un entero 1-5 que equivale a los niveles Manchester C1-C5. La app Streamlit lo muestra con el color correspondiente.
 
 ---
 
@@ -87,31 +95,49 @@ Respuesta esperada (campos principales):
 
 ```
 Proyecto_Triaje/
-├── text/                        # Transcripciones originales (272 ficheros .txt)
-├── dags/                        # DAGs de Airflow
-│   ├── dag_text_ingestion.py    # Ingesta de .txt → Postgres + MinIO
-│   ├── dag_llm_enrichment.py    # Extracción de entidades y etiquetado con LLM
-│   ├── dag_dataset_builder.py   # Construcción del CSV de entrenamiento
-│   ├── dag_model_training.py    # Entrenamiento y guardado del modelo ML
-│   ├── dag_evaluation.py        # Evaluación con métricas y matriz de confusión
-│   └── dag_prediction.py        # Predicción sobre nuevas entrevistas (Fase 2)
-├── services/                    # Microservicios Python (FastAPI)
-│   ├── preprocessor/            # Limpieza y normalización del texto
-│   ├── llm_enrichment/          # Llamadas a Ollama: entidades, etiqueta, score
-│   ├── dataset_builder/         # Generación del CSV estructurado
-│   ├── ml_trainer/              # Entrenamiento y serialización del modelo
-│   └── ml_predictor/            # Endpoint de predicción (Fase 2)
+├── text/                          # Transcripciones originales (272 ficheros .txt)
+├── dags/                          # DAGs de Airflow
+│   ├── dag_text_ingestion.py      # Ingesta .txt → Postgres + MinIO
+│   ├── dag_llm_enrichment.py      # Extracción de entidades + etiquetado LLM
+│   ├── dag_dataset_builder.py     # Construcción del CSV de entrenamiento
+│   ├── dag_model_training.py      # Entrenamiento y guardado del modelo ML
+│   ├── dag_evaluation.py          # Evaluación con CV 5-fold y matriz de confusión
+│   └── dag_prediction_phase_2.py  # Predicción orquestada Fase 2 (dag_id: dag_prediction_phase_2)
+├── services/                      # Microservicios Python (FastAPI, puerto 8002)
+│   ├── preprocessor/              # Limpieza y normalización del texto
+│   ├── llm_enrichment/            # Llamadas al LLM: entidades, triaje, scores
+│   ├── dataset_builder/           # Generación del CSV estructurado
+│   ├── ml_trainer/                # Entrenamiento y serialización del modelo
+│   ├── ml_predictor/              # POST /predecir/ — pipeline completo Fase 2
+│   ├── metricas/                  # GET /metricas/ — métricas agregadas en tiempo real
+│   ├── ml_features.py             # Codificación de features compartida (train + predict)
+│   └── main.py                    # FastAPI app — monta todos los routers
+├── app/                           # [PENDIENTE] Streamlit + Whisper (Fase 3)
+│   ├── streamlit_app.py           # Interfaz clínica: audio/texto → triaje Manchester
+│   └── whisper_utils.py           # Transcripción de audio con faster-whisper
 ├── sql/
-│   └── schema.sql               # Esquema de tablas Postgres
+│   └── schema.sql                 # Esquema de tablas Postgres
 ├── docs/
-│   ├── arquitectura.md          # Documentación funcional completa
-│   └── diario-desarrollo.md   # Cronología, fallos y decisiones (interno)
+│   ├── arquitectura.md            # Documentación técnica completa (referencia para defensa)
+│   └── diario-desarrollo.md       # Cronología, fallos y decisiones (interno)
 ├── scripts/
-│   └── test_enrich.py           # Prueba manual POST /enriquecer/
+│   ├── test_enrich.py             # Prueba manual POST /enriquecer/
+│   └── validate_dataset_columns.py # Validación calidad dataset post-enriquecimiento
 ├── docker-compose.yml
 ├── .env.example
-├── ROADMAP.md                   # Guía interna de desarrollo y división de tareas
+├── ROADMAP.md                     # Sprint de cierre 3 días + preguntas de defensa
 └── README.md
+```
+
+### Lanzar la aplicación Streamlit — Fase 3 (pendiente de implementar)
+
+```bash
+# Instalar dependencias de la app
+pip install streamlit faster-whisper requests
+
+# Lanzar (con los servicios Docker ya activos)
+streamlit run app/streamlit_app.py
+# Acceder en: http://localhost:8501
 ```
 
 ---

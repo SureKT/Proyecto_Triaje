@@ -255,6 +255,29 @@ LLM_DELAY_SEC=4
 
 *(Más reciente arriba)*
 
+### 2026-05-25 — Correo defensa: Fase 3 obligatoria + Manchester + ansiedad
+
+**Quién:** Gerard (A)  
+**Qué:** El profesor envió las orientaciones para la defensa. Revelan tres gaps críticos no contemplados en el desarrollo anterior.
+
+**Gap 1 — Sistema Manchester (no SET)**  
+El enunciado y el roadmap usan etiquetas C1-C5 con colores Manchester. El proyecto usaba "SET (Sistema Español de Triaje)" en el prompt. Son sistemas equivalentes de 5 niveles, pero la terminología correcta para la defensa es Manchester. Corrección: actualizar prompt y documentación.
+
+**Gap 2 — `score_ansiedad` obligatorio**  
+El roadmap define explícitamente que el LLM debe extraer un score de ansiedad del paciente (0.0-1.0), usado como feature del RF Y como señal de auditoría de under-triage. Ejemplo del profesor: paciente con disnea real + ansiedad 0.98 → RF predice C3 en lugar de C2 por sesgo emocional. Esto requiere actualizar prompt + schema + re-enriquecimiento + reentrenamiento.
+
+**Gap 3 — Fase 3 completamente ausente**  
+La defensa incluye demo en vivo de la cadena: Audio → Whisper → LLM → RF → Streamlit. Nada de esto existe. Tarea: crear `app/streamlit_app.py` + `app/whisper_utils.py`, con tabla de auditoría ética.
+
+**Documentación actualizada esta sesión:**
+- `docs/arquitectura.md` — reescritura completa con Fase 3, Manchester, ansiedad, tabla pendientes
+- `ROADMAP.md` — reconvertido en sprint de 3 días con tareas exactas y preguntas de defensa
+- `README.md` — descripción actualizada, estructura con `app/`, JSON con `score_ansiedad`
+
+**Estado:** documentación al día. Desarrollo Fase 3 comienza día 1 del sprint.
+
+---
+
 ### 2026-05-24 — Campo `origen`, endpoint `/metricas/` y `dag_prediction_phase_2`
 
 **Quién:** Gerard (A)  
