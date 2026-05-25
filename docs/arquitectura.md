@@ -775,6 +775,120 @@ El prompt del LLM enseña explícitamente la diferencia entre ansiedad y urgenci
 
 ---
 
+## Preparación para la defensa
+
+La defensa dura 15-20 minutos divididos en tres bloques: Fase 1 (datos y LLM), Fase 2 (modelado y desbalanceo) y Fase 3 (demo en vivo + auditoría). A continuación, las preguntas más probables con la respuesta correcta para cada una.
+
+---
+
+### Antes del día: checklist obligatorio
+
+- [ ] **Tres audios de prueba preparados** — el documento de orientación los pide explícitamente:
+  - *Urgente (C2):* "Llevo dos horas con un dolor muy fuerte en el pecho, me cuesta respirar, ya tuve un infarto hace dos años..."
+  - *Leve (C4):* "Me torcí el tobillo jugando al fútbol, me duele al caminar pero puedo apoyar el pie..."
+  - *Medio (C3):* "Llevo tres días con fiebre de 38 y medio, me duele la garganta y estoy muy cansado..."
+- [ ] Docker corriendo + Streamlit accesible en `localhost:8501`
+- [ ] Hacer una predicción de prueba con cada audio antes de entrar
+- [ ] Coordinarse con el compañero: ambos deben conocer la totalidad del proyecto
+
+---
+
+### FASE 1 — Datos, transcripción y LLM
+
+**"¿Cómo justificáis la elección del LLM?"**
+
+> Para el batch de 272 casos usamos Ollama con `llama3.1:8b`: coste cero, sin rate limits, sin envío de datos clínicos a terceros, latencia baja en local. Para la demo usamos OpenRouter (Gemini Flash) porque el portátil no tiene GPU — el modelo gratuito es suficiente para 2-3 predicciones. El sistema soporta ambos con una sola variable de entorno (`LLM_PROVIDER`) sin cambiar código.
+
+**"¿Qué técnicas de prompting utilizasteis?"**
+
+> Cuatro técnicas combinadas: (1) *role prompting* ("eres un sistema experto en triaje médico"), (2) *few-shot* con dos ejemplos calibrados, (3) *Structured Outputs* (`format=json` fuerza JSON válido en cada respuesta), (4) `temperature=0` para reproducibilidad total. Además, la "regla de oro" en el prompt instrucción: ante duda, asignar el nivel más urgente.
+
+**"¿Es válido usar el LLM como ground truth?"** *(pregunta trampa — la más importante de la Fase 1)*
+
+> Es una limitación conocida del sistema: las etiquetas las genera el LLM, no un médico real. La mitigamos de tres formas: `temperature=0` garantiza que la misma transcripción produce siempre la misma etiqueta; los ejemplos few-shot anclan el criterio clínico al estándar Manchester; y la regla de oro reduce el riesgo de under-triage sistemático. El RF aprende a replicar ese criterio de forma reproducible y auditable — que es exactamente el objetivo del sistema.
+
+**"Explicad la arquitectura de almacenamiento (Data-Lake)"**
+
+> Dos capas complementarias. MinIO actúa como Data-Lake con tres buckets: `textos-originales/` (los `.txt` crudos), `datasets/` (CSVs de entrenamiento versionados con timestamp) y `modelos/` (`.pkl` serializados versionados). Postgres actúa como registro de estado: cada transcripción tiene un GUID único, un estado (`INGESTED → ENRICHED → COMPLETADA`) y timestamps de inicio y fin por fase — trazabilidad completa del pipeline.
+
+**"¿Qué pasa si el LLM falla durante el enriquecimiento?"**
+
+> La transcripción queda en estado `ERROR_ENRICHMENT` en Postgres. Airflow reintenta automáticamente hasta 3 veces con backoff exponencial. Si agota los reintentos, la tarea queda en `failed` en la UI de Airflow y el caso puede re-procesarse relanzando el DAG — que solo procesa los casos en `INGESTED` o `ERROR_ENRICHMENT`, no los ya completados.
+
+---
+
+### FASE 2 — Modelado, normalización y desbalanceo
+
+**"¿Cómo transformasteis texto libre en variables numéricas sin generar redundancias?"**
+
+> En `services/ml_features.py` cada tipo de dato tiene su función de codificación: los booleanos clínicos (`disnea`, `fiebre`…) con `as_bool()` → 0/1; `sexo` con `encode_sexo()` → M=1, F=0; `edad` y `dolor_intensidad` con `encode_optional_int()` → -1 si no se menciona. Las features son clínicamente independientes entre sí — cada una mide un síntoma distinto. La única correlación potencial es entre `score_urgencia` y las features individuales, ya que `score_urgencia` es un resumen holístico del LLM; la incluimos deliberadamente como señal global adicional.
+
+**"¿Por qué -1 para valores desconocidos y no 0 o la media?"**
+
+> 0 tiene significado clínico: `dolor_intensidad=0` significa "el paciente no tiene dolor". `dolor_intensidad=-1` significa "la transcripción no lo menciona". Son situaciones distintas y el modelo debe aprenderlas por separado. Imputar la media sería deshonesto — introduciría un valor artificial que no existe en los datos. Con -1 el RF trata "dato no disponible" como una categoría propia, que es la realidad de las urgencias.
+
+**"¿Por qué class_weight y no SMOTE?"**
+
+> SMOTE genera muestras sintéticas interpolando entre casos existentes. Con solo 9 casos C2 y features mixtas (booleanos + enteros + valores -1), SMOTE generaría casos C2 clínicamente irreales — habría que usar SMOTE-NC, más complejo, y aun así el resultado sería datos inventados. Con `class_weight='balanced'` no tocamos los datos: solo le decimos al modelo que cada error en C2 pesa ~15 veces más que uno en C3. Es más conservador y apropiado con un dataset pequeño. El resultado: recall C2 pasó de ~0.3 a 1.0.
+
+**"¿Por qué Random Forest y no XGBoost o una red neuronal?"**
+
+> Con 272 muestras y 11 features, los modelos profundos sobreajustan. Además, entrenamos una Regresión Logística como baseline para comparar empíricamente — el RF la supera. RF tiene tres ventajas clave aquí: interpretabilidad (importancia de features defendible ante el tribunal), no necesita GPU para inferencia en Fase 2, y es robusto con datos tabulares mixtos incluyendo el -1. XGBoost habría sido la siguiente opción si necesitáramos más rendimiento.
+
+**"¿Por qué F1 macro y no accuracy para evaluar?"**
+
+> Con un dataset donde el 73% de los casos son C3, un modelo que predijera siempre C3 tendría un accuracy del 73% sin aprender nada. F1 macro calcula el F1 por clase y hace la media sin ponderar por frecuencia — penaliza igual un fallo en C2 (9 casos) que en C3 (200 casos). Es la métrica correcta cuando las clases minoritarias son las más importantes clínicamente.
+
+**"¿Qué significa recall C2 = 1.0?"**
+
+> Que el modelo no pierde ningún caso de emergencia. De todos los pacientes que realmente eran C2 en el conjunto de test, el modelo identificó el 100%. Cero falsos negativos en el nivel más peligroso. En triaje clínico ese es el resultado más importante: un falso negativo en C2 (clasificarlo como C3) puede costar una vida.
+
+**"¿Por qué la especialidad no es una feature del modelo si está codificada en ml_features.py?"**
+
+> `ESPECIALIDAD_MAP` existe y `encode_especialidad()` se llama en `row_from_llm_result()`, pero `especialidad` no está en la lista `FEATURES`. La razón: el nivel Manchester es una medida de urgencia clínica objetiva, independiente de la especialidad por la que entró el paciente. Un C2 puede aparecer en cardiología, respiratorio o musculoesquelético. Incluir la especialidad podría introducir un sesgo de departamento que no tiene base clínica.
+
+---
+
+### FASE 3 — Demo y auditoría
+
+**"Explica la cadena completa de inferencia en tiempo real"**
+
+> Audio → `faster-whisper` transcribe a texto en español → el médico ve y puede corregir la transcripción → `POST /predecir/` → preprocesado (extrae texto del paciente) → LLM extrae 14 campos clínicos en JSON → `ml_features.py` codifica el vector → RF predice nivel 1-5 + confianza → se calcula valoración (0-10) → Streamlit muestra badge de color Manchester + score de ansiedad + alerta de under-triage si RF < LLM.
+
+**"¿Cómo se calcula la valoración (0-10)?"**
+
+> `valoracion = max(0, confianza - |pred_RF - nivel_LLM| × 0.25) × 10`. Combina dos señales: la certeza interna del RF (probabilidad de la clase predicha) y su concordancia con el criterio del LLM. Si ambos dicen C2 con confianza 0.96 → valoración 9.6. Si el RF dice C3 pero el LLM dice C2 con confianza 0.85 → valoración 6.0. Una valoración baja es la señal para que el médico revise el caso.
+
+**"¿Cómo funciona la auditoría ética de under-triage?"**
+
+> El endpoint `GET /metricas/auditoria` ejecuta: `WHERE prediccion_modelo > nivel_triaje AND score_ansiedad >= 0.7`. Marca los casos donde el RF predijo un nivel menos urgente que el LLM y el paciente tenía ansiedad alta. La hipótesis: el RF puede haber aprendido a ignorar la ansiedad (correcto) pero en ocasiones infravalora casos donde la ansiedad enmascara síntomas reales. La tabla no acusa al modelo — le dice al médico "aquí hay discrepancia, revísalo tú".
+
+**"¿Qué pasa si Whisper transcribe mal?"**
+
+> La transcripción se muestra al médico antes de enviarse a la API. Puede corregirla en el campo de texto antes de pulsar "Analizar". El sistema no es un autómata — el médico siempre tiene la última palabra.
+
+**"Si RF y LLM discrepan, ¿a cuál hacéis caso?"**
+
+> El sistema muestra ambos niveles y calcula la valoración para capturar esa discrepancia. Ninguno tiene autoridad automática — la decisión final es siempre del médico. La auditoría registra esos casos para revisión posterior. Eso es exactamente lo que debe hacer un sistema de *soporte* a decisiones clínicas: informar, no decidir.
+
+---
+
+### Preguntas de comprensión individual
+
+**"¿Qué limitaciones tiene el sistema?"**
+
+> Tres principales: (1) el ground truth es LLM-generado, no validado por médicos reales; (2) 272 muestras es un dataset pequeño para producción clínica real; (3) el sistema fue entrenado con transcripciones en inglés — aunque funciona en español, no ha sido evaluado específicamente en ese idioma.
+
+**"¿Qué mejorarías si tuvieras más tiempo?"**
+
+> Validación clínica real de las etiquetas por médicos de urgencias; más datos (idealmente miles de casos); evaluar si la especialidad aporta valor como feature con más datos; añadir explicabilidad por caso (qué features concretas llevaron al RF a esa predicción, no solo importancia global).
+
+**"¿Podría el modelo estar aprendiendo del ruido del LLM?"**
+
+> Sí, es un riesgo conocido. Si el LLM comete errores sistemáticos en el etiquetado, el RF los aprenderá. Lo mitigamos con `temperature=0` (errores deterministas y detectables), few-shot calibrado y la regla de oro. En producción real, la validación clínica de una muestra de etiquetas sería el siguiente paso.
+
+---
+
 ## Variables de entorno relevantes
 
 | Variable | Valor típico | Descripción |
