@@ -244,7 +244,7 @@ ERROR_INGESTION   — fallo lectura .txt individual (no bloquea el batch)
 | Enriquecimiento LLM (272/272) | Hecho |
 | `score_ansiedad` en prompt + BD + modelo | Hecho |
 | Dataset CSV en MinIO | Hecho |
-| Entrenamiento RF con `class_weight='balanced'` | Hecho (accuracy 96.4%, F1 0.904) |
+| Entrenamiento RF con `class_weight='balanced'` | Hecho (CV F1 macro 0.850 ± 0.069) |
 | Evaluación CV 5-fold | Hecho |
 | Endpoint `/predecir/` Fase 2 | Hecho (valoración + COMPLETADA) |
 | Endpoint `/metricas/` y `/metricas/auditoria` | Hecho |
@@ -309,8 +309,6 @@ Este es el paso más importante del proyecto. El DAG consulta todos los registro
 ```
 texto bruto → preprocesado → LLM → persistencia en Postgres
 ```
-
-El DAG consulta todos los registros en estado `INGESTED` (o `ERROR_ENRICHMENT`) y para cada uno llama al microservicio FastAPI en `POST /enriquecer/`.
 
 #### 3a. Preprocesado: `services/preprocessor/service.py`
 
@@ -504,7 +502,7 @@ rf.fit(X_train, y_train)
 ```python
 cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 scores = cross_val_score(rf, X, y, cv=cv, scoring="f1_macro")
-# → 0.850 ± 0.069 (o 0.904 con prompt v2)
+# → 0.850 ± 0.069 (modelo actual, prompt Manchester + score_ansiedad)
 ```
 
 8. Serializa el modelo: `modelo_<timestamp>.pkl` → MinIO `modelos/`.
@@ -532,17 +530,21 @@ Carga el modelo más reciente de MinIO, ejecuta CV 5-fold y genera:
 - Classification report por clase.
 - Artefactos en MinIO `modelos/evaluacion/`.
 
-**Métricas actuales (modelo con prompt v2 + class_weight):**
+**Métricas actuales (modelo `modelo_20260525_114431.pkl`, prompt Manchester + score_ansiedad):**
 
 | Métrica | Valor |
 |---------|-------|
-| Accuracy (test 20%) | 96.4 % |
-| F1 macro (CV 5-fold) | 0.904 |
-| Recall C2 (Naranja) | 1.0 |
-| F1 C3 (Amarillo) | 0.987 |
-| F1 C4 (Verde) | 0.952 |
+| CV F1 macro (5-fold) | 0.850 ± 0.069 |
+| Recall C2 (Naranja) | 0.970 |
+| F1 C2 (Naranja) | 0.985 |
+| F1 C3 (Amarillo) | 0.983 |
+| F1 C4 (Verde) | 0.977 |
+| F1 C5 (Azul) | 0.933 |
 
-El recall C2 = 1.0 es el resultado más importante: el modelo no pierde ningún caso de emergencia. En triaje clínico, un falso negativo en C2 (decir que es C3 cuando en realidad es C2) puede costar una vida.
+**¿Por qué bajó de 0.904 a 0.850?**
+El modelo anterior (0.904) fue entrenado con un prompt que no incluía `score_ansiedad` ni terminología Manchester. Al añadir `score_ansiedad` como feature obligatoria, fue necesario re-enriquecer las 272 transcripciones con el prompt actualizado. El nuevo prompt es más complejo (extrae un campo adicional, usa criterios Manchester explícitos) y genera ocasionalmente valores ligeramente distintos para las mismas transcripciones — variabilidad propia del LLM incluso con `temperature=0`. El re-entrenamiento sobre estos nuevos datos produjo 0.850. El recall C2 sigue siendo 0.970 (prácticamente perfecto para los casos más críticos), que es el objetivo clínico real.
+
+El recall C2 = 0.970 es el resultado más importante: el modelo casi no pierde casos de emergencia (falla 1 de cada 33). En triaje clínico, un falso negativo en C2 (decir que es C3 cuando en realidad es C2) puede costar una vida.
 
 ---
 

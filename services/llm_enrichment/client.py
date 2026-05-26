@@ -18,7 +18,7 @@ LLM_MAX_RETRIES = int(os.environ.get("LLM_MAX_RETRIES", "4"))
 LLM_RETRY_BASE_SEC = float(os.environ.get("LLM_RETRY_BASE_SEC", "15"))
 
 OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://host.docker.internal:11434")
-OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:70b-instruct-q4_K_M")
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:8b")
 
 OPENROUTER_BASE_URL = os.environ.get("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")

@@ -18,7 +18,7 @@ Ver README.md sección "Configuracion en portatil / sin GPU" para instrucciones 
 import os, sys, time
 
 MINIO_ENDPOINT = os.environ.get("MINIO_ENDPOINT", "http://localhost:9000")
-# setup_laptop corre fuera de Docker → siempre usar localhost:9000 (puerto API S3)
+# setup.py corre fuera de Docker → siempre usar localhost:9000 (puerto API S3)
 if "minio:" in MINIO_ENDPOINT:
     MINIO_ENDPOINT = "http://localhost:9000"
 MINIO_USER     = os.environ.get("MINIO_ROOT_USER", "minioadmin")

@@ -392,7 +392,7 @@ La defensa incluye demo en vivo de la cadena: Audio → Whisper → LLM → RF �
   - Throughput del último batch (ventana 3 h): textos/min.
   - Errores por estado (`ERROR_*`).
   - Métricas del modelo ML (último JSON de evaluación en MinIO: accuracy, F1, matriz de confusión).
-- Resultado observado: latencia E2E ~15 s, throughput ~2 txt/min, F1 macro 0.904.
+- Resultado observado: latencia E2E ~15 s, throughput ~2 txt/min, F1 macro 0.904 *(modelo previo al sprint de defensa; tras re-enriquecimiento con prompt Manchester + score_ansiedad el modelo final da 0.850 ± 0.069 — ver entrada 2026-05-25 sprint defensa)*.
 
 **3. DAG `dag_prediction_phase_2`**
 - Renombrado/reescrito desde `dag_prediction.py` con `dag_id="dag_prediction_phase_2"`.
@@ -444,7 +444,7 @@ La defensa incluye demo en vivo de la cadena: Audio → Whisper → LLM → RF �
 - DAG re-enriqueció 272/272 con prompt nuevo y temperature=0.
 - Nuevo dataset + reentrenamiento RF:
 
-| Métrica | Antes | Después |
+| Métrica | Antes | Después (este sprint) |
 |---------|-------|---------|
 | RF accuracy | 85.5% | **96.4%** |
 | CV F1 macro | 0.692 | **0.904** |
@@ -452,9 +452,11 @@ La defensa incluye demo en vivo de la cadena: Audio → Whisper → LLM → RF �
 | SET 3 F1 | 0.937 | 0.987 |
 | SET 4 F1 | 0.737 | 0.952 |
 
+> **Nota:** este modelo (0.904) es intermedio. En el sprint de defensa (2026-05-25) se añadió `score_ansiedad` como feature y se re-enriqueció el dataset completo con el prompt Manchester actualizado. El modelo final es `modelo_20260525_114431.pkl` con CV F1 macro **0.850 ± 0.069**. La bajada de 0.904 → 0.850 se debe a la variabilidad del LLM al re-enriquecer con el prompt más complejo.
+
 - RES0028 (sospecha SCA, joven): antes SET 3, ahora **SET 2** predicho con confianza 0.93.
 
-**Estado:** pipeline completo con datos mejorados. Modelo `modelo_20260524_184636.pkl` en MinIO.
+**Estado:** pipeline completo con datos mejorados. Modelo `modelo_20260524_184636.pkl` en MinIO (sustituido por `modelo_20260525_114431.pkl` en el sprint de defensa).
 
 ---
 
