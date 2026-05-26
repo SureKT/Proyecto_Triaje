@@ -842,7 +842,7 @@ La defensa dura 15-20 minutos divididos en tres bloques: Fase 1 (datos y LLM), F
 
 **"¿Por qué class_weight y no SMOTE?"**
 
-> SMOTE genera muestras sintéticas interpolando entre casos existentes. Con solo 9 casos C2 y features mixtas (booleanos + enteros + valores -1), SMOTE generaría casos C2 clínicamente irreales — habría que usar SMOTE-NC, más complejo, y aun así el resultado sería datos inventados. Con `class_weight='balanced'` no tocamos los datos: solo le decimos al modelo que cada error en C2 pesa ~15 veces más que uno en C3. Es más conservador y apropiado con un dataset pequeño. El resultado: recall C2 pasó de ~0.3 a 1.0.
+> SMOTE genera muestras sintéticas interpolando entre casos existentes. Con solo 9 casos C2 y features mixtas (booleanos + enteros + valores -1), SMOTE generaría casos C2 clínicamente irreales — habría que usar SMOTE-NC, más complejo, y aun así el resultado sería datos inventados. Con `class_weight='balanced'` no tocamos los datos: solo le decimos al modelo que cada error en C2 pesa ~15 veces más que uno en C3. Es más conservador y apropiado con un dataset pequeño. El resultado: recall C2 pasó de 0.0 a 0.970.
 
 **"¿Por qué Random Forest y no XGBoost o una red neuronal?"**
 
@@ -852,9 +852,13 @@ La defensa dura 15-20 minutos divididos en tres bloques: Fase 1 (datos y LLM), F
 
 > Con un dataset donde el 73% de los casos son C3, un modelo que predijera siempre C3 tendría un accuracy del 73% sin aprender nada. F1 macro calcula el F1 por clase y hace la media sin ponderar por frecuencia — penaliza igual un fallo en C2 (9 casos) que en C3 (200 casos). Es la métrica correcta cuando las clases minoritarias son las más importantes clínicamente.
 
-**"¿Qué significa recall C2 = 1.0?"**
+**"¿Qué significa recall C2 = 0.970?"**
 
-> Que el modelo no pierde ningún caso de emergencia. De todos los pacientes que realmente eran C2 en el conjunto de test, el modelo identificó el 100%. Cero falsos negativos en el nivel más peligroso. En triaje clínico ese es el resultado más importante: un falso negativo en C2 (clasificarlo como C3) puede costar una vida.
+> Que el modelo detecta el 97% de los casos de emergencia. De todos los pacientes que realmente eran C2, el modelo identificó correctamente 32 de 33 en validación cruzada. En triaje clínico ese es el resultado más importante: un falso negativo en C2 (clasificarlo como C3) puede costar una vida. El 0.970 es prácticamente perfecto dado el dataset de solo 9 casos C2 en entrenamiento.
+
+**"¿Por qué el F1 macro es 0.850 si los F1 por clase son todos ≥ 0.933?"**
+
+> El F1 macro hace la media aritmética de todas las clases sin ponderar. C1 (reanimación inmediata) tiene soporte 0 en el dataset — su F1 es 0.0 — y arrastra la media. C1 no tiene casos porque esos pacientes no generan transcripciones: llegan inconscientes o en parada, el triaje es por observación directa, no por entrevista. Excluyendo C1, el F1 macro sobre las clases operativas es 0.969. La ausencia de C1 no es un gap de datos — es una característica correcta del dominio.
 
 **"¿Por qué la especialidad no es una feature del modelo si está codificada en ml_features.py?"**
 
