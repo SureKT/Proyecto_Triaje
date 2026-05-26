@@ -842,7 +842,7 @@ La defensa dura 15-20 minutos divididos en tres bloques: Fase 1 (datos y LLM), F
 
 **"¿Por qué class_weight y no SMOTE?"**
 
-> SMOTE genera muestras sintéticas interpolando entre casos existentes. Con solo 9 casos C2 y features mixtas (booleanos + enteros + valores -1), SMOTE generaría casos C2 clínicamente irreales — habría que usar SMOTE-NC, más complejo, y aun así el resultado sería datos inventados. Con `class_weight='balanced'` no tocamos los datos: solo le decimos al modelo que cada error en C2 pesa ~15 veces más que uno en C3. Es más conservador y apropiado con un dataset pequeño. El resultado: recall C2 pasó de 0.0 a 0.970.
+> SMOTE genera muestras sintéticas interpolando entre casos existentes. Con solo 9 casos C2 y features mixtas (booleanos + enteros + valores -1), SMOTE generaría casos C2 clínicamente irreales — habría que usar SMOTE-NC, más complejo, y aun así el resultado sería datos inventados. Con `class_weight='balanced'` no tocamos los datos: solo le decimos al modelo que cada error en C2 pesa ~15 veces más que uno en C3. Es más conservador y apropiado con un dataset pequeño. El resultado: recall C2 pasó de 0.0 a 1.0. En el modelo final (tras re-enriquecimiento con prompt Manchester) se mantiene en 0.970.
 
 **"¿Por qué Random Forest y no XGBoost o una red neuronal?"**
 
