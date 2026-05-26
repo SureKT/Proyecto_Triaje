@@ -555,9 +555,6 @@ El F1 macro hace la media aritmética de los F1 de todas las clases sin ponderar
 
 C1 en Manchester es reanimación inmediata: paradas cardiorrespiratorias, traumatismos graves, inconsciencia. Estos pacientes no generan transcripciones porque no hay entrevista posible — llegan sin capacidad de comunicación y el triaje se hace por observación directa. El sistema procesa texto hablado por el paciente, por lo que C1 está fuera del alcance de diseño. La ausencia de C1 en el dataset no es un gap de datos — es una característica correcta del dominio.
 
-**¿Por qué bajó de 0.904 a 0.850?**
-El modelo anterior (0.904) fue entrenado con un prompt que no incluía `score_ansiedad` ni terminología Manchester. Al añadir `score_ansiedad` como feature obligatoria, fue necesario re-enriquecer las 272 transcripciones con el prompt actualizado. El nuevo prompt es más complejo (extrae un campo adicional, usa criterios Manchester explícitos) y genera ocasionalmente valores ligeramente distintos para las mismas transcripciones — variabilidad propia del LLM incluso con `temperature=0`. El re-entrenamiento sobre estos nuevos datos produjo 0.850.
-
 El recall C2 = 0.970 es el resultado más importante: el modelo casi no pierde casos de emergencia (falla 1 de cada 33 en validación cruzada). En triaje clínico, un falso negativo en C2 (clasificar como C3 a un paciente que es C2) puede costar una vida.
 
 ---

@@ -316,6 +316,7 @@ texto: "Presión fuerte en el pecho, cuesta respirar, brazo izquierdo dormido, 5
 - Prompt LLM actualizado: referencias a "SET" → "Manchester (MTS)", criterios C1-C5 con colores.  
 - `score_ansiedad` añadido al JSON de salida del LLM (0.0-1.0), al schema SQL (`ResultadoML`), a `ml_features.py` como feature del RF, y al endpoint `/predecir/`.  
 - Re-enriquecimiento de 272 transcripciones con el prompt actualizado y reentrenamiento del RF con `class_weight='balanced'`. Resultado: **CV F1 macro 0.850 ± 0.069**.  
+- El modelo anterior (entrenado sin `score_ansiedad` ni terminología Manchester) daba F1 macro 0.904. La bajada se debe a que el nuevo prompt es más complejo y genera ocasionalmente valores ligeramente distintos para las mismas transcripciones — variabilidad propia del LLM incluso con `temperature=0`. El modelo actual es el correcto porque incluye `score_ansiedad` como feature y usa criterios Manchester explícitos.  
 - `score_ansiedad` es la **2ª feature más importante** del RF (13.9%), solo por detrás de `score_urgencia`.
 
 **Decisión — `class_weight='balanced'` en RandomForest:**  
