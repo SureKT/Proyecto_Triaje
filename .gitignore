@@ -33,3 +33,4 @@ scripts/backup_*.csv
 # ── Sistema ────────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
+claude.bat
