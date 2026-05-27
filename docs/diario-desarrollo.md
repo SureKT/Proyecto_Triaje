@@ -17,7 +17,6 @@
 |----------|----------------|-------------|
 | `README.md` | Cómo levantar y ejecutar el sistema | No duplica comandos; enlaza si hace falta |
 | `docs/arquitectura.md` | Diagramas y flujo funcional (entregable técnico) | Registra **historia**, fallos, cambios de rumbo |
-| `Proyecto Triage IA.pdf` | Especificación del profesor | Referencia de requisitos |
 
 **Plantilla para nuevas entradas** (copiar en §9, más reciente arriba):
 
@@ -37,7 +36,7 @@
 
 ### Qué es el proyecto
 
-Sistema que clasifica el **nivel de triaje hospitalario (SET, 1–5)** a partir de transcripciones médico-paciente (~272 casos). Pipeline en dos fases:
+Sistema que clasifica el **nivel de triaje hospitalario (Manchester C1–C5)** a partir de transcripciones médico-paciente (~272 casos). Pipeline en dos fases:
 
 - **Fase 1 (batch):** ingesta → LLM extrae columnas estructuradas → CSV → entrena Random Forest → evaluación.
 - **Fase 2 (a demanda):** `POST /predecir` con nueva entrevista → mismo enriquecimiento + modelo ML.
@@ -61,7 +60,9 @@ Sistema que clasifica el **nivel de triaje hospitalario (SET, 1–5)** a partir 
 | Enriquecimiento LLM (`dag_llm_enrichment`) | **Hecho** — 272/272 ENRICHED |
 | Dataset CSV + entrenamiento ML + evaluación | **Hecho** (`dataset_*`, `modelo_*`, eval JSON en MinIO) |
 | Codificación edad/sexo desconocidos (`-1`) | **Hecho** — ver §10 entrada 2026-05-19 |
-| Fase 2 `/predecir` con modelo entrenado | **Pendiente** (probar con `.txt` nuevo) |
+| Fase 2 `/predecir/` end-to-end | **Hecho** — LLM + RF, estado `COMPLETADA`, valoración automática |
+| `/metricas/` + `/metricas/auditoria` + `/metricas/latencias` | **Hecho** — métricas ML, under-triage, tiempos por caso |
+| Fase 3 Streamlit + Whisper | **Hecho** — badge Manchester, barra urgencia, dropdown demos, tabla latencias |
 
 ---
 
@@ -164,10 +165,11 @@ Sistema que clasifica el **nivel de triaje hospitalario (SET, 1–5)** a partir 
 
 ### Fase 3
 
-- [x] `app/streamlit_app.py` — badge Manchester, score ansiedad, tabla auditoría
+- [x] `app/streamlit_app.py` — badge Manchester, barra urgencia, dropdown casos demo, tabla latencias por caso, tema oscuro DM Sans
 - [x] `app/whisper_utils.py` — transcripción audio con faster-whisper
-- [x] 3 casos demo en `demo/`
+- [x] 4 casos demo en `demo/text/` (`caso_urgente_C2`, `caso_leve_C4`, `caso_panico_C2vsC3`, `caso_ansiedad_C3_Oro`)
 - [x] `setup.py` — configuración en portátil sin GPU
+- [x] `/metricas/latencias` — tiempos E2E/LLM/prep por entrevista (filtro <120 s)
 
 ### Documentación
 
@@ -200,23 +202,23 @@ Sistema que clasifica el **nivel de triaje hospitalario (SET, 1–5)** a partir 
 
 **2. Enfoque** — LLM extrae columnas → Random Forest aprende; Airflow orquesta; Postgres audita.
 
-**3. Demo** — Ingesta → JSON LLM en BD → (cuando exista) predicción Fase 2.
+**3. Demo** — Cargar caso demo desde dropdown → Analizar → badge Manchester + score urgencia (barra) + score ansiedad. Abrir "Métricas del modelo" → F1, recall C2, latencias por caso. Abrir "Auditoría ética" → casos de under-triage detectados.
 
-**4. Decisiones** — Tabla §4; separación LLM / ML.
+**4. Decisiones** — Tabla §4; separación LLM / ML; `class_weight='balanced'`; `score_ansiedad` como feature y señal de auditoría.
 
-**5. Dificultades reales** — Carpeta Windows; FK pruebas; MinIO buckets; 429 API → Ollama; batch en lotes.
+**5. Dificultades reales** — Carpeta Windows; FK pruebas; MinIO buckets; 429 API → Ollama; batch en lotes; recall C2 = 0.0 → `class_weight='balanced'`; C1 support=0 arrastra F1 macro (0.969 operativo sin C1).
 
-**6. Pendiente** — Completar 266 enriquecimientos; dataset; train; evaluación.
+**6. Métricas finales** — CV F1 macro 0.850 ± 0.069 · recall C2 0.970 · F1 C3 0.940 · latencia E2E ~10–17 s.
 
 ---
 
 ## 8. Próximos pasos
 
-~~En curso: enriquecimiento batch~~ **Completado** (272 EVALUATED).
+**Sistema completo.** No hay deuda técnica crítica abierta.
 
-1. (Opcional) Presentación 8-10 diapositivas para la defensa oral.
-2. Push a origin/main cuando el equipo lo decida.
-3. No hay deuda técnica crítica abierta (ver §6).
+- **2026-05-28 — Defensa oral.** Ver guion §7.
+- Repo pusheado a `origin/main` (commit `14bb197`).
+- Portátil configurado con OpenRouter (`google/gemini-2.0-flash-001`) para la demo.
 
 ---
 
