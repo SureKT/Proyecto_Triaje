@@ -1,0 +1,14 @@
+D: Dígame, ¿qué le pasa?
+P: ¡Tengo el corazón disparado, no puedo parar de temblar! Llevo veinte minutos así y no se me pasa, me siento fatal, como que me voy a desmayar.
+D: ¿Tiene dolor en el pecho?
+P: No, no me duele el pecho. Es el corazón que va muy rápido y no respiro bien, es horrible.
+D: ¿Puede respirar con normalidad si se concentra?
+P: Sí, supongo que sí, pero es que la sensación es muy angustiosa. Noto como que el aire no llega.
+D: ¿Le ha pasado antes?
+P: Sí, esto me pasa desde hace un año. Mi psiquiatra me diagnosticó trastorno de pánico, tomo medicación pero hoy no la llevaba encima.
+D: ¿Tiene alguna enfermedad del corazón o antecedentes familiares?
+P: No, ninguno. Me han hecho un electrocardiograma hace dos meses y estaba perfecto.
+D: ¿Cuántos años tiene y cuánto lleva con los síntomas de hoy?
+P: Veintitrés años. Empezó hace como media hora, después de una discusión muy fuerte con mi pareja.
+D: ¿Fiebre, pérdida de consciencia, o el malestar se extiende al brazo o la mandíbula?
+P: No, nada de eso. Solo el corazón acelerado, el temblor y que no me puedo calmar. ¡Por favor, dennme algo!
