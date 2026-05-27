@@ -133,6 +133,34 @@ dag_prediction_phase_2   (independiente, Fase 2 a demanda)
 
 Cada DAG llama a microservicios FastAPI vía HTTP. Airflow no procesa los datos él mismo — coordina quién los procesa y en qué orden.
 
+### Cómo sabe cada DAG cuándo puede ejecutarse
+
+Los DAGs **no tienen dependencias automáticas entre ellos** — no hay un orquestador de orquestadores. En su lugar, el estado en Postgres actúa como **contrato implícito**: cada DAG consulta el estado antes de procesar y solo trabaja con los registros que le corresponden.
+
+```sql
+dag_llm_enrichment   → WHERE estado IN ('INGESTED', 'ERROR_ENRICHMENT')
+dag_dataset_builder  → WHERE estado = 'ENRICHED'
+dag_model_training   → lee el CSV más reciente de MinIO
+```
+
+Si se lanza un DAG en orden incorrecto, simplemente no encuentra registros que procesar — no rompe nada. Para saber por dónde continuar en cualquier momento:
+
+```sql
+SELECT estado, COUNT(*) FROM entrevista GROUP BY estado;
+```
+
+### Decisión — sin TriggerDagRunOperator entre DAGs
+
+En producción real se encadenarían con `TriggerDagRunOperator` o **Airflow Datasets** (2.4+), que disparan el siguiente DAG automáticamente al terminar el anterior:
+
+```python
+# Ejemplo productivo (no implementado):
+@dag(schedule=[Dataset("postgres://entrevista/ENRICHED")])
+def dag_dataset_builder(): ...
+```
+
+**Por qué no se hizo así:** el enriquecimiento de 272 casos se ejecutó en lotes de 5 por limitaciones de Ollama (`LLM_BATCH_LIMIT=5`). Un pipeline automático end-to-end habría disparado el entrenamiento antes de que todas las transcripciones estuvieran enriquecidas. El control manual daba flexibilidad para reintentar `ERROR_ENRICHMENT` sin re-lanzar el pipeline completo. Para el proyecto académico, el estado en Postgres era suficiente y más transparente para depurar.
+
 ### Por qué no un script Python normal
 
 1. **Reintentos automáticos.** Si OpenRouter devuelve 429 en el caso 87, Airflow reintenta con backoff sin intervención manual.
@@ -857,6 +885,10 @@ La defensa dura 15-20 minutos divididos en tres bloques: Fase 1 (datos y LLM), F
 **"Explicad la arquitectura de almacenamiento (Data-Lake)"**
 
 > Dos capas complementarias. MinIO actúa como Data-Lake con tres buckets: `textos-originales/` (los `.txt` crudos), `datasets/` (CSVs de entrenamiento versionados con timestamp) y `modelos/` (`.pkl` serializados versionados). Postgres actúa como registro de estado: cada transcripción tiene un GUID único, un estado (`INGESTED → ENRICHED → COMPLETADA`) y timestamps de inicio y fin por fase — trazabilidad completa del pipeline.
+
+**"¿Por qué los DAGs no se encadenan automáticamente?"**
+
+> El estado en Postgres actúa como contrato implícito entre DAGs: cada uno filtra por el estado que le corresponde antes de procesar. Si se lanza en orden incorrecto, simplemente no encuentra registros — no rompe nada. Lo hicimos así porque el enriquecimiento se ejecutó en lotes de 5 por limitaciones de Ollama; un pipeline automático habría disparado el entrenamiento antes de completar el enriquecimiento. En producción usaríamos `TriggerDagRunOperator` o Airflow Datasets para encadenarlos automáticamente.
 
 **"¿Qué pasa si el LLM falla durante el enriquecimiento?"**
 
