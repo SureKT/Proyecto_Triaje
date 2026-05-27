@@ -36,10 +36,11 @@
 
 ### Qué es el proyecto
 
-Sistema que clasifica el **nivel de triaje hospitalario (Manchester C1–C5)** a partir de transcripciones médico-paciente (~272 casos). Pipeline en dos fases:
+Sistema que clasifica el **nivel de triaje hospitalario (Manchester C1–C5)** a partir de transcripciones médico-paciente (~272 casos). Pipeline en tres fases:
 
 - **Fase 1 (batch):** ingesta → LLM extrae columnas estructuradas → CSV → entrena Random Forest → evaluación.
-- **Fase 2 (a demanda):** `POST /predecir` con nueva entrevista → mismo enriquecimiento + modelo ML.
+- **Fase 2 (a demanda):** `POST /predecir/` con nueva entrevista → mismo enriquecimiento LLM + modelo ML → predicción + valoración.
+- **Fase 3 (interfaz):** Streamlit — audio/texto → Whisper → Fase 2 → badge Manchester, score urgencia/ansiedad, auditoría ética, métricas del modelo con latencias por caso.
 
 ### Decisiones clave (mensaje de 30 segundos)
 
