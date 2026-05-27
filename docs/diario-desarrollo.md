@@ -5,7 +5,7 @@
 
 | Campo | Valor |
 |-------|--------|
-| Última actualización | 2026-05-25 |
+| Última actualización | 2026-05-27 |
 | Equipo | Persona A (Gerard) · Persona B (Braulio) |
 | Checkpoint | **PIPELINE COMPLETO** — CV F1 macro 0.850 ± 0.069 · Streamlit + Whisper operativos · sistema validado en portátil con OpenRouter |
 
@@ -478,6 +478,22 @@ curl.exe -X POST http://localhost:8002/predecir/ -F "file=@text/CAR0001.txt"
 ```
 
 **Estado:** hecho. Fase 2 demostrable.
+
+---
+
+### 2026-05-27 — Refactorización frontend + endpoint de latencias por caso
+
+**Qué:**
+- Nuevo endpoint `GET /metricas/latencias` en `services/metricas/router.py`: devuelve las últimas 50 entrevistas completadas con tiempos E2E, LLM, preprocesamiento (filtro E2E < 120 s para excluir outliers de procesamiento batch).
+- Rediseño completo de `app/streamlit_app.py`: layout `wide` con max-width 900 px, fuente DM Sans 17 px, tema oscuro `#0e0e0f`.
+- Barra de progreso visual para score de urgencia LLM (reemplaza métrica plana).
+- Dropdown "Casos demo" que carga automáticamente los ficheros de `demo/text/` en el textarea.
+- Tabla de latencias individuales integrada en el expander "Métricas del modelo".
+- Métrica "Throughput batch" reemplazada por "Casos procesados" (total COMPLETADA en BD) — el throughput era engañoso al medir sesiones de demo individuales.
+
+**Por qué:** Preparación para defensa del 2026-05-28. La tabla de latencias cubre el requisito del correo de seguimiento ("tabla de registro de tiempos por fase del pipeline"). Los casos demo agilizan la demostración en vivo sin copy-paste.
+
+**Estado:** hecho. API rebuildeada con nuevo endpoint.
 
 ---
 

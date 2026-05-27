@@ -74,6 +74,34 @@ def auditoria():
     return result
 
 
+@router.get("/latencias")
+def latencias_por_caso():
+    """
+    Latencias individuales por caso procesado. Últimas 50 entrevistas completadas.
+    Devuelve tiempos E2E, LLM, preprocesamiento y normalización en segundos.
+    """
+    rows = pg_execute(
+        """
+        SELECT
+            nombre_fichero,
+            estado,
+            ROUND(EXTRACT(EPOCH FROM (fin_solicitud       - inicio_solicitud))::numeric, 1)             AS e2e_s,
+            ROUND(EXTRACT(EPOCH FROM (fin_extraccion_entidades - inicio_extraccion_entidades))::numeric, 1) AS llm_s,
+            ROUND(EXTRACT(EPOCH FROM (fin_preprocesamiento - inicio_preprocesamiento))::numeric, 2)      AS prep_s,
+            ROUND(EXTRACT(EPOCH FROM (fin_normalizacion    - inicio_normalizacion))::numeric, 2)         AS norm_s,
+            inicio_solicitud
+        FROM entrevista
+        WHERE fin_solicitud IS NOT NULL
+          AND inicio_solicitud IS NOT NULL
+          AND EXTRACT(EPOCH FROM (fin_solicitud - inicio_solicitud)) < 120
+        ORDER BY inicio_solicitud DESC
+        LIMIT 50
+        """,
+        fetch=True,
+    )
+    return [dict(r) for r in rows]
+
+
 @router.get("/")
 def metricas():
     """

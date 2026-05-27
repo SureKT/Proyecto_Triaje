@@ -6,6 +6,7 @@ Flujo: Audio → Whisper → POST /predecir/ → visualización Manchester + aud
 Lanzar:
     streamlit run app/streamlit_app.py
 """
+import glob
 import os
 import requests
 import streamlit as st
@@ -27,12 +28,20 @@ CSS = """
 
 html, body, [class*="css"] {
     font-family: 'DM Sans', sans-serif;
-    font-size: 16px !important;
+    font-size: 17px !important;
 }
 
 /* Fondo principal */
 .stApp {
     background-color: #0e0e0f;
+}
+
+/* Ancho máximo centrado */
+.block-container {
+    max-width: 900px !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    margin: 0 auto !important;
 }
 
 /* Ocultar chrome de Streamlit */
@@ -71,7 +80,18 @@ h3 { font-weight: 500 !important; color: #c8c8c4 !important; }
     font-family: 'DM Sans', sans-serif !important;
     transition: opacity 150ms ease !important;
 }
-.stButton > button[kind="primary"]:hover { opacity: 0.85 !important; }
+.stButton > button[kind="primary"]:hover {
+    opacity: 0.85 !important;
+    background-color: #c8f0dc !important;
+    color: #0e0e0f !important;
+    border: none !important;
+}
+.stButton > button[kind="primary"]:disabled {
+    background-color: #26262a !important;
+    color: #5a5a56 !important;
+    opacity: 1 !important;
+    cursor: not-allowed !important;
+}
 
 /* Botón secundario */
 .stButton > button {
@@ -132,6 +152,16 @@ h3 { font-weight: 500 !important; color: #c8c8c4 !important; }
 
 /* Divider */
 hr { border-color: rgba(255,255,255,0.07) !important; margin: 24px 0 !important; }
+
+/* Selectbox */
+[data-testid="stSelectbox"] > div > div {
+    background-color: #1e1e21 !important;
+    border: 1px solid rgba(255,255,255,0.07) !important;
+    border-radius: 10px !important;
+    color: #9b9b97 !important;
+}
+[data-testid="stSelectbox"] > div > div:hover { border-color: rgba(255,255,255,0.13) !important; }
+[data-testid="stSelectbox"] svg { fill: #5a5a56 !important; }
 
 /* File uploader */
 [data-testid="stFileUploader"] {
@@ -223,9 +253,9 @@ def stat_card(label: str, value: str, sub: str = "") -> str:
         border-radius: 10px;
         padding: 16px 20px;
     '>
-        <div style='color: #5a5a56; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px;'>{label}</div>
-        <div style='color: #f0f0ee; font-size: 1.5rem; font-weight: 300; line-height: 1;'>{value}</div>
-        {f'<div style="color: #5a5a56; font-size: 0.72rem; margin-top: 4px;">{sub}</div>' if sub else ''}
+        <div style='color: #5a5a56; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;'>{label}</div>
+        <div style='color: #f0f0ee; font-size: 2.2rem; font-weight: 300; line-height: 1;'>{value}</div>
+        {f'<div style="color: #5a5a56; font-size: 0.8rem; margin-top: 6px;">{sub}</div>' if sub else ''}
     </div>"""
 
 
@@ -245,6 +275,28 @@ def fetch_auditoria() -> pd.DataFrame:
     return pd.DataFrame()
 
 
+def fetch_latencias() -> pd.DataFrame:
+    try:
+        resp = requests.get(f"{API_URL}/metricas/latencias", timeout=10)
+        if resp.status_code == 200:
+            data = resp.json()
+            if data:
+                df = pd.DataFrame(data)
+                df = df.drop(columns=["norm_s", "nombre_fichero", "estado"], errors="ignore")
+                df = df.rename(columns={
+                    "e2e_s":            "E2E (s)",
+                    "llm_s":            "LLM (s)",
+                    "prep_s":           "Prep. (s)",
+                    "inicio_solicitud": "Inicio",
+                })
+                if "Inicio" in df.columns:
+                    df["Inicio"] = pd.to_datetime(df["Inicio"]).dt.strftime("%Y-%m-%d %H:%M")
+                return df
+    except Exception:
+        pass
+    return pd.DataFrame()
+
+
 def fetch_metricas() -> dict:
     try:
         resp = requests.get(f"{API_URL}/metricas/", timeout=10)
@@ -256,7 +308,7 @@ def fetch_metricas() -> dict:
 
 
 # ── Config ─────────────────────────────────────────────────────────────────────
-st.set_page_config(page_title="Triaje IA", page_icon="🏥", layout="centered")
+st.set_page_config(page_title="Triaje IA", page_icon="🏥", layout="wide")
 st.markdown(CSS, unsafe_allow_html=True)
 
 # ── Header ─────────────────────────────────────────────────────────────────────
@@ -289,8 +341,34 @@ if modo == "🎤 Audio":
             except Exception as e:
                 st.error(f"Error Whisper: {e}")
 else:
+    _demo_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "demo", "text")
+    _demo_files = sorted(glob.glob(os.path.join(_demo_dir, "*.txt"))) if os.path.isdir(_demo_dir) else []
+    _demo_map = {"— Escribe o pega texto —": None}
+    for _f in _demo_files:
+        _label = os.path.basename(_f).replace(".txt", "").replace("_", " ")
+        _demo_map[_label] = _f
+
+    def _on_preset_change():
+        path = _demo_map.get(st.session_state.get("_preset_sel", ""))
+        if path:
+            with open(path, encoding="utf-8") as fh:
+                st.session_state["_texto_trans"] = fh.read()
+        else:
+            st.session_state["_texto_trans"] = ""
+
+    if "_texto_trans" not in st.session_state:
+        st.session_state["_texto_trans"] = ""
+
+    st.selectbox(
+        "Caso demo",
+        list(_demo_map.keys()),
+        key="_preset_sel",
+        on_change=_on_preset_change,
+        label_visibility="collapsed",
+    )
     texto_entrada = st.text_area(
         "Transcripción",
+        key="_texto_trans",
         height=180,
         placeholder="D: ¿Cuál es el motivo de su consulta?\nP: Llevo dos días con dolor en el pecho...",
         label_visibility="collapsed",
@@ -319,10 +397,23 @@ if analizar and texto_entrada.strip():
     st.markdown(badge_manchester(nivel), unsafe_allow_html=True)
 
     # Métricas de la predicción
+    score_urg = resultado.get("score_urgencia", 0) or 0
+    confianza = resultado.get("confianza", 0) or 0
+    valoracion = resultado.get("valoracion", 0) or 0
     col1, col2, col3 = st.columns(3)
-    col1.metric("Urgencia LLM", f"{resultado.get('score_urgencia', 0):.0f} / 100")
-    col2.metric("Confianza RF",  f"{resultado.get('confianza', 0):.1%}")
-    col3.metric("Valoración",    f"{resultado.get('valoracion', 0):.1f} / 10")
+    with col1:
+        st.markdown(f"""
+        <div style='background:#161618;border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:16px 20px;'>
+            <div style='color:#5a5a56;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;'>Urgencia LLM</div>
+            <div style='color:#f0f0ee;font-size:2.2rem;font-weight:300;line-height:1;margin-bottom:12px;'>{score_urg:.0f}<span style='font-size:1.1rem;color:#5a5a56;'> / 100</span></div>
+            <div style='background:#26262a;border-radius:3px;height:4px;'>
+                <div style='width:{min(score_urg, 100):.0f}%;background:#c8f0dc;height:4px;border-radius:3px;'></div>
+            </div>
+        </div>""", unsafe_allow_html=True)
+    with col2:
+        st.markdown(stat_card("Confianza RF", f"{confianza:.1%}"), unsafe_allow_html=True)
+    with col3:
+        st.markdown(stat_card("Valoración", f"{valoracion:.1f}", "/ 10"), unsafe_allow_html=True)
 
     if ansiedad is not None:
         st.markdown(ansiedad_badge(ansiedad), unsafe_allow_html=True)
@@ -368,11 +459,13 @@ with st.expander("Métricas del modelo"):
 
         st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
 
-        # Latencia y throughput
+        # Latencia y casos procesados
+        textos = metricas.get("textos", {})
+        total_completadas = textos.get("por_estado", {}).get("COMPLETADA", 0)
         c4, c5, c6 = st.columns(3)
         c4.metric("Latencia mínima E2E",  f"{lat.get('min_latencia_e2e_s', 0):.1f} s",  "mejor caso real")
         c5.metric("Tiempo LLM medio",     f"{lat.get('avg_tiempo_llm_s', 0):.1f} s",    "llamada al modelo")
-        c6.metric("Throughput batch",     f"{thr.get('throughput_por_minuto', 0):.2f} txt/min", f"{thr.get('textos_ultimo_batch',0)} casos")
+        c6.metric("Casos procesados",     str(total_completadas),                        "estado COMPLETADA")
 
         st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
 
@@ -403,6 +496,18 @@ with st.expander("Métricas del modelo"):
         modelo_id = m.get("modelo", "—")
         ultimo_ent = ent.get("ultimo_entrenamiento", "—")
         st.markdown(f"<div style='color:#5a5a56;font-size:0.8rem;margin-top:14px;font-family:DM Mono,monospace;'>modelo: {modelo_id} &nbsp;·&nbsp; entrenado: {ultimo_ent}</div>", unsafe_allow_html=True)
+
+        # Latencias por caso
+        st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
+        st.markdown("<div style='color:#5a5a56;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;'>Latencias por caso (últimos 50)</div>", unsafe_allow_html=True)
+        df_lat = fetch_latencias()
+        if df_lat.empty:
+            st.markdown("""
+            <div style='text-align:center;padding:20px 0;'>
+                <div style='color:#5a5a56;font-size:0.85rem;'>Sin datos de latencia disponibles</div>
+            </div>""", unsafe_allow_html=True)
+        else:
+            st.dataframe(df_lat, use_container_width=True, hide_index=True)
     else:
         st.info("Métricas no disponibles.")
 
