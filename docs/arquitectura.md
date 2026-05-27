@@ -728,19 +728,19 @@ Agrega estadísticas del pipeline completo: distribución de estados, latencia m
 ## Features del modelo ML
 
 
-| Feature                  | Tipo  | Valores      | Fuente | Por qué                               |
-| ------------------------ | ----- | ------------ | ------ | ------------------------------------- |
-| `edad`                   | int   | entero o -1  | LLM    | Factor de riesgo cardiovascular       |
-| `sexo`                   | int   | 1=M, 0=F, -1 | LLM    | Diferencias en presentación de IAM    |
-| `dolor_intensidad`       | int   | 0-10 o -1    | LLM    | Escala EVA; clave en C2/C3            |
-| `disnea`                 | int   | 0/1          | LLM    | Síntoma cardinal de urgencia          |
-| `fiebre`                 | int   | 0/1          | LLM    | Sepsis / infección grave              |
-| `perdida_consciencia`    | int   | 0/1          | LLM    | Siempre C1 o C2                       |
-| `irradiacion`            | int   | 0/1          | LLM    | Patrón del dolor cardíaco             |
-| `antecedentes_cardiacos` | int   | 0/1          | LLM    | Aumenta riesgo C2                     |
-| `fumador`                | int   | 0/1          | LLM    | Factor de riesgo                      |
-| `score_urgencia`         | float | 0-100        | LLM    | Criterio holístico del LLM            |
-| `score_ansiedad`         | float | 0.0-1.0      | LLM    | Señal emocional — auditoria + feature |
+| Feature                  | Tipo  | Valores      | Importancia RF | Fuente | Por qué                               |
+| ------------------------ | ----- | ------------ | -------------- | ------ | ------------------------------------- |
+| `score_urgencia`         | float | 0-100        | **54.1 %**     | LLM    | Criterio holístico del LLM — feature dominante |
+| `score_ansiedad`         | float | 0.0-1.0      | **13.9 %**     | LLM    | Señal emocional — auditoría + feature |
+| `dolor_intensidad`       | int   | 0-10 o -1    | 7.2 %          | LLM    | Escala EVA; clave en C2/C3            |
+| `disnea`                 | int   | 0/1          | 6.5 %          | LLM    | Síntoma cardinal de urgencia          |
+| `fumador`                | int   | 0/1          | 4.9 %          | LLM    | Factor de riesgo                      |
+| `edad`                   | int   | entero o -1  | 4.6 %          | LLM    | Factor de riesgo cardiovascular       |
+| `fiebre`                 | int   | 0/1          | 4.2 %          | LLM    | Sepsis / infección grave              |
+| `antecedentes_cardiacos` | int   | 0/1          | 4.1 %          | LLM    | Aumenta riesgo C2                     |
+| `sexo`                   | int   | 1=M, 0=F, -1 | 0.3 %          | LLM    | Diferencias en presentación de IAM    |
+| `irradiacion`            | int   | 0/1          | 0.2 %          | LLM    | Patrón del dolor cardíaco             |
+| `perdida_consciencia`    | int   | 0/1          | 0.0 %          | LLM    | Siempre C1 o C2 — sin casos C1 en dataset |
 
 
 **Target:** `nivel_triaje` (int 1-5, equivalente Manchester C1-C5).
