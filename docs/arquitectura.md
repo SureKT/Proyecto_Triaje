@@ -1,6 +1,6 @@
 # Documentación Técnica — Triaje IA
 
-**Estado del documento:** actualizado 2026-05-25  
+**Estado del documento:** actualizado 2026-05-27  
 **Propósito:** referencia técnica completa + guía de comprensión del código para la defensa.
 
 ---
@@ -252,7 +252,7 @@ ERROR_INGESTION   — fallo lectura .txt individual (no bloquea el batch)
 | Entrenamiento RF con `class_weight='balanced'` | Hecho (CV F1 macro 0.850 ± 0.069) |
 | Evaluación CV 5-fold                           | Hecho                             |
 | Endpoint `/predecir/` Fase 2                   | Hecho (valoración + COMPLETADA)   |
-| Endpoint `/metricas/` y `/metricas/auditoria`  | Hecho                             |
+| Endpoint `/metricas/`, `/metricas/auditoria`, `/metricas/latencias` | Hecho              |
 | `dag_prediction_phase_2`                       | Hecho                             |
 | Streamlit front-end (Fase 3)                   | Hecho                             |
 | Whisper (transcripción audio)                  | Hecho                             |
@@ -671,7 +671,7 @@ texto_entrada = transcribe_audio(audio_file.read())
 
 `app/whisper_utils.py` usa `faster-whisper` (versión optimizada de Whisper de OpenAI). El modelo descargado automáticamente (`"small"` por defecto) transcribe a texto en español. La transcripción se muestra al médico antes de enviarla a la API — puede corregirla si es necesario.
 
-**Modo texto:** el médico pega o escribe la transcripción directamente en español.
+**Modo texto:** el médico pega o escribe la transcripción directamente, o selecciona un caso de prueba del **dropdown de demos** (carga automáticamente los ficheros de `demo/text/`).
 
 **Tras el análisis (`POST /predecir/`):**
 
@@ -696,7 +696,8 @@ texto_entrada = transcribe_audio(audio_file.read())
        st.warning("⚠️ Posible under-triage: el modelo predice C3 pero el LLM asignó C2.")
   ```
    Esto ocurre cuando el RF bajó el nivel de urgencia respecto al criterio del LLM. El médico debe revisar clínicamente el caso.
-5. **Tabla de auditoría ética** — expander al pie de la página que llama a `GET /metricas/auditoria`:
+5. **Expander "Métricas del modelo"** — F1 macro, recall C2, F1 C3, latencia mínima E2E, tiempo LLM medio, casos procesados, importancia de features (barras proporcionales), tabla de latencias individuales por caso (`GET /metricas/latencias`, filtro E2E < 120 s para excluir outliers de batch).
+6. **Tabla de auditoría ética** — expander al pie de la página que llama a `GET /metricas/auditoria`:
   ```python
    df_audit = fetch_auditoria()  # → pd.DataFrame
    st.dataframe(df_audit)
@@ -827,10 +828,12 @@ La defensa dura 15-20 minutos divididos en tres bloques: Fase 1 (datos y LLM), F
 
 ### Antes del día: checklist obligatorio
 
-- **Tres audios de prueba preparados** — el documento de orientación los pide explícitamente:
-  - *Urgente (C2):* "Llevo dos horas con un dolor muy fuerte en el pecho, me cuesta respirar, ya tuve un infarto hace dos años..."
-  - *Leve (C4):* "Me torcí el tobillo jugando al fútbol, me duele al caminar pero puedo apoyar el pie..."
-  - *Medio (C3):* "Llevo tres días con fiebre de 38 y medio, me duele la garganta y estoy muy cansado..."
+- **Cuatro casos demo listos** en `demo/text/` — accesibles desde el dropdown en Streamlit sin copy-paste:
+  - `caso_urgente_C2` — dolor torácico + disnea + antecedente cardíaco → C2 esperado
+  - `caso_leve_C4` — lesión musculoesquelética leve → C4 esperado
+  - `caso_panico_C2vsC3` — crisis de pánico con disnea funcional → LLM C2, RF puede discrepar
+  - `caso_ansiedad_C3_Oro` — ansiedad extrema, clínica ambigua → caso de under-triage para auditoría
+- **Tres audios de prueba en `demo/audio/`** — el documento de orientación los pide explícitamente
 - Docker corriendo + Streamlit accesible en `localhost:8501`
 - Hacer una predicción de prueba con cada audio antes de entrar
 - Coordinarse con el compañero: ambos deben conocer la totalidad del proyecto
