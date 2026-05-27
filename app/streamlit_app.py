@@ -84,6 +84,14 @@ st.set_page_config(
     layout="centered",
 )
 
+st.markdown("""
+<style>
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("🏥 Triaje IA — Sistema de Triaje Manchester")
 st.caption("Pipeline LLM + Random Forest · Clasificación automática de urgencias hospitalarias")
 
@@ -170,6 +178,30 @@ if analizar and texto_entrada.strip():
                 f"**Nivel LLM:** {MANCHESTER[nivel_llm]['codigo']} vs "
                 f"**Nivel RF:** {MANCHESTER[nivel]['codigo']}"
             )
+
+# ── Métricas del modelo ────────────────────────────────────────────────────────
+st.markdown("---")
+with st.expander("📊 Métricas del modelo ML"):
+    try:
+        resp = requests.get(f"{API_URL}/metricas/", timeout=10)
+        if resp.status_code == 200:
+            m = resp.json().get("metricas_modelo", {})
+            if m:
+                col1, col2, col3 = st.columns(3)
+                col1.metric("CV F1 macro", f"{m.get('cv_f1_macro', 0):.3f} ± {m.get('cv_f1_std', 0):.3f}")
+                report = m.get("classification_report", {})
+                col2.metric("Recall C2", f"{report.get('C2', {}).get('recall', 0):.3f}")
+                col3.metric("F1 C3", f"{report.get('C3', {}).get('f1-score', 0):.3f}")
+
+                fi = m.get("feature_importances", {})
+                if fi:
+                    st.caption("Importancia de features (modelo actual)")
+                    fi_sorted = sorted(fi.items(), key=lambda x: x[1], reverse=True)
+                    df_fi = pd.DataFrame(fi_sorted, columns=["Feature", "Importancia"])
+                    df_fi["Importancia"] = df_fi["Importancia"].map("{:.1%}".format)
+                    st.dataframe(df_fi, use_container_width=True, hide_index=True)
+    except Exception as e:
+        st.warning(f"No se pudieron cargar las métricas: {e}")
 
 # ── Tabla de auditoría ─────────────────────────────────────────────────────────
 st.markdown("---")
