@@ -67,7 +67,7 @@ Sistema que clasifica el **nivel de triaje hospitalario (SET, 1–5)** a partir 
 
 ## 2. División del equipo
 
-| Persona A (Gerard) | Persona B |
+| Persona A (Gerard) | Persona B (Braulio) |
 |--------------------|-----------|
 | Prompt y servicio `llm_enrichment` | `docker-compose`, `.env`, SQL |
 | DAGs: `llm_enrichment`, `model_training`, `evaluation` | DAGs: `text_ingestion`, `dataset_builder`, `prediction` |
