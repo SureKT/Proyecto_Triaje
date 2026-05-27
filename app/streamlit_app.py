@@ -261,9 +261,9 @@ st.markdown(CSS, unsafe_allow_html=True)
 
 # ── Header ─────────────────────────────────────────────────────────────────────
 st.markdown("""
-<div style='padding: 8px 0 24px 0;'>
-    <div style='color: #f0f0ee; font-size: 1.8rem; font-weight: 300; letter-spacing: -0.3px;'>Triaje IA</div>
-    <div style='color: #5a5a56; font-size: 0.9rem; margin-top: 4px;'>Sistema de Triaje Manchester · LLM + Random Forest</div>
+<div style='padding: 8px 0 28px 0;'>
+    <div style='color: #f0f0ee; font-size: 2.8rem; font-weight: 300; letter-spacing: -1px; line-height: 1;'>Triaje IA</div>
+    <div style='color: #5a5a56; font-size: 1rem; margin-top: 8px; letter-spacing: 0.01em;'>Sistema de Triaje Manchester · LLM + Random Forest</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -370,9 +370,9 @@ with st.expander("Métricas del modelo"):
 
         # Latencia y throughput
         c4, c5, c6 = st.columns(3)
-        c4.metric("Latencia E2E media",  f"{lat.get('avg_latencia_e2e_s', 0):.1f} s",  f"mín {lat.get('min_latencia_e2e_s', 0):.1f} s")
-        c5.metric("Tiempo LLM medio",    f"{lat.get('avg_tiempo_llm_s', 0):.1f} s")
-        c6.metric("Throughput batch",    f"{thr.get('throughput_por_minuto', 0):.2f} txt/min")
+        c4.metric("Latencia mínima E2E",  f"{lat.get('min_latencia_e2e_s', 0):.1f} s",  "mejor caso real")
+        c5.metric("Tiempo LLM medio",     f"{lat.get('avg_tiempo_llm_s', 0):.1f} s",    "llamada al modelo")
+        c6.metric("Throughput batch",     f"{thr.get('throughput_por_minuto', 0):.2f} txt/min", f"{thr.get('textos_ultimo_batch',0)} casos")
 
         st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
 
@@ -381,16 +381,22 @@ with st.expander("Métricas del modelo"):
         if fi:
             st.markdown("<div style='color:#5a5a56;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;'>Importancia de features</div>", unsafe_allow_html=True)
             fi_sorted = sorted(fi.items(), key=lambda x: x[1], reverse=True)
+            max_pct = fi_sorted[0][1] * 100 if fi_sorted else 1
             for feat, imp in fi_sorted:
                 pct = imp * 100
-                bar_color = "#c8f0dc" if pct > 10 else "#26262a"
+                rel = pct / max_pct  # 0.0-1.0 relativo al máximo
+                # Escala de color: verde menta brillante → verde oscuro
+                g = int(180 + rel * 60)
+                b = int(140 + rel * 80)
+                bar_color = f"rgb(60, {g}, {b})"
+                text_color = "#c8c8c4" if rel > 0.3 else "#9b9b97"
                 st.markdown(f"""
-                <div style='display:flex;align-items:center;gap:12px;margin-bottom:8px;'>
-                    <div style='width:150px;color:#9b9b97;font-size:0.85rem;font-family:DM Mono,monospace;'>{feat}</div>
-                    <div style='flex:1;background:#1e1e21;border-radius:3px;height:4px;'>
-                        <div style='width:{min(pct*1.5,100):.0f}%;background:{bar_color};height:4px;border-radius:3px;'></div>
+                <div style='display:flex;align-items:center;gap:14px;margin-bottom:9px;'>
+                    <div style='width:170px;min-width:170px;color:{text_color};font-size:0.85rem;font-family:DM Mono,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;' title='{feat}'>{feat}</div>
+                    <div style='flex:1;background:#1e1e21;border-radius:3px;height:5px;'>
+                        <div style='width:{min(pct/max_pct*100,100):.1f}%;background:{bar_color};height:5px;border-radius:3px;transition:width 300ms ease;'></div>
                     </div>
-                    <div style='width:48px;text-align:right;color:#5a5a56;font-size:0.82rem;font-family:DM Mono,monospace;'>{pct:.1f}%</div>
+                    <div style='width:44px;text-align:right;color:#9b9b97;font-size:0.82rem;font-family:DM Mono,monospace;'>{pct:.1f}%</div>
                 </div>""", unsafe_allow_html=True)
 
         # Modelo
