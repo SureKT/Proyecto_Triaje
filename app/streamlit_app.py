@@ -92,7 +92,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🏥 Triaje IA — Sistema de Triaje Manchester")
+st.title("🏥 Triaje IA — Sistema Manchester")
 st.caption("Pipeline LLM + Random Forest · Clasificación automática de urgencias hospitalarias")
 
 # ── Entrada ────────────────────────────────────────────────────────────────────
