@@ -894,11 +894,19 @@ La defensa dura 15-20 minutos divididos en tres bloques: Fase 1 (datos y LLM), F
 
 **"¿Qué limitaciones tiene el sistema?"**
 
-> Tres principales: (1) el ground truth es LLM-generado, no validado por médicos reales; (2) 272 muestras es un dataset pequeño para producción clínica real; (3) el sistema fue entrenado con transcripciones en inglés — aunque funciona en español, no ha sido evaluado específicamente en ese idioma.
+> Cuatro principales: (1) el ground truth es LLM-generado, no validado por médicos reales; (2) 272 muestras es un dataset pequeño para producción clínica real; (3) el sistema fue entrenado con transcripciones en inglés — aunque funciona en español, no ha sido evaluado específicamente en ese idioma; (4) pacientes con trastorno de ansiedad conocido pueden ser sobre-triados — la regla de oro asigna C2 ante disnea + malestar torácico aunque el cuadro sea una crisis de pánico con diagnóstico previo confirmado.
 
 **"¿Qué mejorarías si tuvieras más tiempo?"**
 
-> Validación clínica real de las etiquetas por médicos de urgencias; más datos (idealmente miles de casos); evaluar si la especialidad aporta valor como feature con más datos; añadir explicabilidad por caso (qué features concretas llevaron al RF a esa predicción, no solo importancia global).
+> Cuatro mejoras concretas:
+>
+> (1) **`antecedente_ansiedad` como feature.** El LLM ya extrae `antecedentes_cardiacos`; añadir un booleano equivalente para trastorno de ansiedad/pánico permitiría al RF aprender que `antecedente_ansiedad=true + disnea=true + sin dolor torácico real → C3`, evitando el sobre-triaje de crisis de pánico conocidas. Requeriría re-enriquecer las 272 transcripciones y reentrenar.
+>
+> (2) **Tercer ejemplo few-shot calibrado.** El prompt tiene dos ejemplos: SCA claro (C2) y ansiedad sin disnea (C3). Añadir un tercero con disnea funcional real + diagnóstico de pánico confirmado + C3 enseñaría al LLM la distinción más difícil sin tocar el código ni los datos.
+>
+> (3) **Validación clínica de etiquetas.** Una muestra de 30-50 casos revisados por médico de urgencias confirmaría si el LLM etiqueta correctamente los casos límite C2/C3.
+>
+> (4) **Explicabilidad por caso.** Ahora el sistema muestra importancia global de features (score_urgencia > score_ansiedad > edad…). Con SHAP o LIME se podría mostrar qué features concretas llevaron al RF a esa predicción para cada paciente individual — trazabilidad clínica real.
 
 **"¿Podría el modelo estar aprendiendo del ruido del LLM?"**
 
