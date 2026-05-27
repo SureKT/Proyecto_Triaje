@@ -27,6 +27,7 @@ CSS = """
 
 html, body, [class*="css"] {
     font-family: 'DM Sans', sans-serif;
+    font-size: 16px !important;
 }
 
 /* Fondo principal */
@@ -52,7 +53,8 @@ h3 { font-weight: 500 !important; color: #c8c8c4 !important; }
     border-radius: 10px !important;
     color: #f0f0ee !important;
     font-family: 'DM Mono', monospace !important;
-    font-size: 0.82rem !important;
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
 }
 .stTextArea textarea:focus, .stTextInput input:focus {
     border-color: rgba(255,255,255,0.18) !important;
@@ -96,8 +98,8 @@ h3 { font-weight: 500 !important; color: #c8c8c4 !important; }
     border-radius: 10px !important;
     padding: 16px 20px !important;
 }
-[data-testid="stMetricLabel"] { color: #5a5a56 !important; font-size: 0.75rem !important; text-transform: uppercase; letter-spacing: 0.05em; }
-[data-testid="stMetricValue"] { color: #f0f0ee !important; font-weight: 300 !important; font-size: 1.6rem !important; }
+[data-testid="stMetricLabel"] { color: #5a5a56 !important; font-size: 0.8rem !important; text-transform: uppercase; letter-spacing: 0.05em; }
+[data-testid="stMetricValue"] { color: #f0f0ee !important; font-weight: 300 !important; font-size: 1.8rem !important; }
 
 /* Expanders */
 .streamlit-expanderHeader {
@@ -105,7 +107,7 @@ h3 { font-weight: 500 !important; color: #c8c8c4 !important; }
     border: 1px solid rgba(255,255,255,0.07) !important;
     border-radius: 10px !important;
     color: #9b9b97 !important;
-    font-size: 0.875rem !important;
+    font-size: 1rem !important;
     font-weight: 500 !important;
 }
 .streamlit-expanderHeader:hover { border-color: rgba(255,255,255,0.13) !important; color: #f0f0ee !important; }
@@ -173,8 +175,8 @@ def badge_manchester(nivel: int) -> str:
             white-space: nowrap;
         '>{m["codigo"]}</div>
         <div>
-            <div style='color: #f0f0ee; font-size: 1.4rem; font-weight: 300; line-height: 1.2;'>{m["nombre"]}</div>
-            <div style='color: #5a5a56; font-size: 0.75rem; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.06em;'>Nivel de triaje Manchester</div>
+            <div style='color: #f0f0ee; font-size: 1.5rem; font-weight: 300; line-height: 1.2;'>{m["nombre"]}</div>
+            <div style='color: #5a5a56; font-size: 0.82rem; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.06em;'>Nivel de triaje Manchester</div>
         </div>
     </div>"""
 
@@ -195,19 +197,19 @@ def ansiedad_badge(score: float) -> str:
         background: {bg};
         border: 1px solid {color}30;
         border-radius: 8px;
-        padding: 10px 16px;
+        padding: 12px 18px;
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         margin: 4px 0;
     '>
-        <span style='color: {color}; font-size: 0.8rem; font-weight: 500;'>{label}</span>
+        <span style='color: {color}; font-size: 0.92rem; font-weight: 500;'>{label}</span>
         <span style='
             background: {color}20;
             color: {color};
             font-family: DM Mono, monospace;
-            font-size: 0.75rem;
-            padding: 2px 8px;
+            font-size: 0.85rem;
+            padding: 2px 10px;
             border-radius: 4px;
         '>{score:.2f}</span>
     </div>"""
@@ -260,8 +262,8 @@ st.markdown(CSS, unsafe_allow_html=True)
 # ── Header ─────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div style='padding: 8px 0 24px 0;'>
-    <div style='color: #f0f0ee; font-size: 1.6rem; font-weight: 300; letter-spacing: -0.3px;'>Triaje IA</div>
-    <div style='color: #5a5a56; font-size: 0.8rem; margin-top: 4px;'>Sistema de Triaje Manchester · LLM + Random Forest</div>
+    <div style='color: #f0f0ee; font-size: 1.8rem; font-weight: 300; letter-spacing: -0.3px;'>Triaje IA</div>
+    <div style='color: #5a5a56; font-size: 0.9rem; margin-top: 4px;'>Sistema de Triaje Manchester · LLM + Random Forest</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -377,31 +379,31 @@ with st.expander("Métricas del modelo"):
         # Importancia de features
         fi = m.get("feature_importances", {})
         if fi:
-            st.markdown("<div style='color:#5a5a56;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;'>Importancia de features</div>", unsafe_allow_html=True)
+            st.markdown("<div style='color:#5a5a56;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;'>Importancia de features</div>", unsafe_allow_html=True)
             fi_sorted = sorted(fi.items(), key=lambda x: x[1], reverse=True)
             for feat, imp in fi_sorted:
                 pct = imp * 100
                 bar_color = "#c8f0dc" if pct > 10 else "#26262a"
                 st.markdown(f"""
-                <div style='display:flex;align-items:center;gap:12px;margin-bottom:6px;'>
-                    <div style='width:130px;color:#9b9b97;font-size:0.78rem;font-family:DM Mono,monospace;'>{feat}</div>
+                <div style='display:flex;align-items:center;gap:12px;margin-bottom:8px;'>
+                    <div style='width:150px;color:#9b9b97;font-size:0.85rem;font-family:DM Mono,monospace;'>{feat}</div>
                     <div style='flex:1;background:#1e1e21;border-radius:3px;height:4px;'>
                         <div style='width:{min(pct*1.5,100):.0f}%;background:{bar_color};height:4px;border-radius:3px;'></div>
                     </div>
-                    <div style='width:42px;text-align:right;color:#5a5a56;font-size:0.75rem;font-family:DM Mono,monospace;'>{pct:.1f}%</div>
+                    <div style='width:48px;text-align:right;color:#5a5a56;font-size:0.82rem;font-family:DM Mono,monospace;'>{pct:.1f}%</div>
                 </div>""", unsafe_allow_html=True)
 
         # Modelo
         modelo_id = m.get("modelo", "—")
         ultimo_ent = ent.get("ultimo_entrenamiento", "—")
-        st.markdown(f"<div style='color:#5a5a56;font-size:0.72rem;margin-top:12px;font-family:DM Mono,monospace;'>modelo: {modelo_id} &nbsp;·&nbsp; entrenado: {ultimo_ent}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='color:#5a5a56;font-size:0.8rem;margin-top:14px;font-family:DM Mono,monospace;'>modelo: {modelo_id} &nbsp;·&nbsp; entrenado: {ultimo_ent}</div>", unsafe_allow_html=True)
     else:
         st.info("Métricas no disponibles.")
 
 # ── Auditoría ──────────────────────────────────────────────────────────────────
 st.markdown("---")
 with st.expander("Registro de auditoría ética"):
-    st.markdown("<div style='color:#5a5a56;font-size:0.8rem;margin-bottom:12px;'>Casos donde RF predijo nivel menos urgente que LLM con ansiedad ≥ 0.7 — requieren revisión clínica.</div>", unsafe_allow_html=True)
+    st.markdown("<div style='color:#5a5a56;font-size:0.88rem;margin-bottom:12px;'>Casos donde RF predijo nivel menos urgente que LLM con ansiedad ≥ 0.7 — requieren revisión clínica.</div>", unsafe_allow_html=True)
     df = fetch_auditoria()
     if df.empty:
         st.markdown("""
