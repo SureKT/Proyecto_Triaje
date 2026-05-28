@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triaje IA — Defensa 2026</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --c1:#c62828;--c2:#e65100;--c3:#f57f17;--c4:#2e7d32;--c5:#1565c0;
+  --accent:#1a237e;--accent2:#1565c0;
+  --f1:#6a1b9a;--f2:#00695c;--f3:#bf360c;
+}
+html,body{width:100%;height:100%;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#111;overflow:hidden}
+#progress{position:fixed;top:0;left:0;height:5px;background:var(--accent2);transition:width .3s ease;z-index:200}
+#counter{position:fixed;bottom:16px;right:20px;font-size:15px;color:#999;z-index:200;background:rgba(255,255,255,.92);padding:3px 10px;border-radius:20px;font-weight:600}
+#nav-prev,#nav-next{position:fixed;bottom:16px;z-index:200;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:22px;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+#nav-prev:hover,#nav-next:hover{background:rgba(255,255,255,.3)}
+#nav-prev{left:16px}
+#nav-next{right:70px}
+#slides{width:100%;height:100vh;position:relative}
+.slide{display:none;position:absolute;inset:0;background:#fff;overflow:hidden;flex-direction:column}
+.slide.active{display:flex}
+
+/* ── Cover ── */
+.s-cover{background:linear-gradient(140deg,#1a237e 0%,#283593 50%,#1565c0 100%);color:#fff;align-items:center;justify-content:center;text-align:center;gap:0}
+.s-cover .kicker{font-size:17px;letter-spacing:4px;text-transform:uppercase;opacity:.6;margin-bottom:20px}
+.s-cover h1{font-size:86px;font-weight:800;line-height:1;margin-bottom:14px;letter-spacing:-2px}
+.s-cover .sub{font-size:28px;opacity:.85;max-width:720px;line-height:1.4;margin-bottom:44px}
+.s-cover .team{font-size:22px;opacity:.65}
+.s-cover .stats{display:flex;gap:28px;margin-bottom:40px}
+.s-cover .stat{background:rgba(255,255,255,.12);border-radius:14px;padding:20px 28px;text-align:center}
+.s-cover .stat .n{font-size:48px;font-weight:800;line-height:1}
+.s-cover .stat .l{font-size:16px;opacity:.75;margin-top:4px}
+
+/* ── Section separator ── */
+.s-sect{align-items:center;justify-content:center;text-align:center}
+.s-sect .big{font-size:140px;font-weight:900;line-height:1;margin-bottom:-16px}
+.s-sect h2{font-size:58px;font-weight:800;margin-bottom:12px}
+.s-sect p{font-size:26px}
+
+/* ── Normal content ── */
+.s-body{padding:52px 72px 40px}
+.phase-tag{font-size:14px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px}
+.s-body h2{font-size:46px;font-weight:800;color:var(--accent);line-height:1.15;margin-bottom:28px}
+.stripe{position:absolute;left:0;top:0;bottom:0;width:7px;border-radius:0}
+
+/* ── Lists ── */
+ul.bl{list-style:none;display:flex;flex-direction:column;gap:16px}
+ul.bl li{font-size:25px;color:#1a1a1a;padding-left:32px;position:relative;line-height:1.45}
+ul.bl li::before{content:'→';position:absolute;left:0;color:var(--accent2);font-weight:800}
+ul.bl li strong{color:var(--accent)}
+ul.bl li code{font-family:'Courier New',monospace;background:#f0f0f0;padding:1px 6px;border-radius:4px;font-size:22px}
+
+/* ── Two columns ── */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.col-hd{font-size:17px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding-bottom:10px;border-bottom:2px solid;margin-bottom:16px}
+
+/* ── Cards ── */
+.cards{display:flex;flex-direction:column;gap:14px}
+.card{background:#f8f9fa;border-radius:10px;padding:16px 20px;border-left:4px solid var(--accent2)}
+.card h4{font-size:19px;font-weight:700;margin-bottom:4px}
+.card p{font-size:17px;color:#444;line-height:1.4}
+
+/* ── Metric boxes ── */
+.mrow{display:flex;gap:20px;margin-top:20px}
+.mbox{flex:1;background:#f8f9fa;border-radius:14px;padding:24px 20px;text-align:center;border:1px solid #e0e0e0}
+.mbox .n{font-size:56px;font-weight:900;color:var(--accent);line-height:1}
+.mbox .n.g{color:var(--c4)}
+.mbox .lbl{font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#666;margin-top:8px}
+.mbox .s{font-size:17px;color:#555;margin-top:4px}
+
+/* ── Pipeline steps ── */
+.pipe{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:20px}
+.ps{background:#e3f2fd;border:2px solid var(--accent2);border-radius:8px;padding:10px 18px;font-size:20px;font-weight:700;color:var(--accent);white-space:nowrap}
+.pa{font-size:26px;color:var(--accent2);font-weight:700}
+
+/* ── Manchester table ── */
+.mts{width:100%;border-collapse:collapse;margin-top:16px}
+.mts th{font-size:16px;text-transform:uppercase;letter-spacing:2px;color:#666;font-weight:600;padding:10px 14px;border-bottom:2px solid #eee;text-align:left}
+.mts td{font-size:21px;padding:13px 14px;border-bottom:1px solid #f0f0f0;vertical-align:middle}
+.badge{display:inline-block;padding:5px 14px;border-radius:20px;font-weight:700;font-size:18px;color:#fff}
+.bc1{background:var(--c1)}.bc2{background:var(--c2)}.bc3{background:var(--c3);color:#333}.bc4{background:var(--c4)}.bc5{background:var(--c5)}
+
+/* ── Highlight boxes ── */
+.hbox{border-radius:8px;padding:16px 20px;margin-top:16px;border-left:5px solid}
+.hbox p{font-size:22px;line-height:1.5}
+.hb{background:#e3f2fd;border-color:var(--accent2)}
+.hb p{color:#1a237e}
+.hg{background:#e8f5e9;border-color:var(--c4)}
+.hg p{color:#1b5e20}
+.ho{background:#fff3e0;border-color:var(--c2)}
+.ho p{color:#bf360c}
+.hp{background:#f3e5f5;border-color:var(--f1)}
+.hp p{color:#4a148c}
+
+/* ── Feature bars ── */
+.frow{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.fn{font-family:'Courier New',monospace;font-size:18px;width:200px;color:#333}
+.fbg{flex:1;background:#e0e0e0;border-radius:4px;height:24px}
+.fb{height:100%;border-radius:4px;background:var(--accent2)}
+.fpct{font-size:18px;font-weight:700;color:var(--accent);width:58px;text-align:right}
+
+/* ── DAG list ── */
+.dag-item{display:flex;align-items:center;gap:14px;padding:12px 18px;background:#f8f9fa;border-radius:8px;margin-bottom:6px}
+.dn{font-family:'Courier New',monospace;font-size:18px;font-weight:700;color:var(--accent2);width:240px}
+.dd{font-size:17px;color:#555;flex:1}
+.dst{font-size:15px;font-weight:700;padding:3px 10px;border-radius:10px;background:#e3f2fd;color:var(--accent2);white-space:nowrap}
+.darrow{font-size:22px;color:var(--accent2);padding-left:18px;margin:-3px 0}
+
+/* ── Decision table ── */
+.dtbl{width:100%;border-collapse:collapse;margin-top:16px}
+.dtbl th{background:var(--accent);color:#fff;font-size:16px;padding:10px 14px;text-align:left}
+.dtbl td{font-size:18px;padding:11px 14px;border-bottom:1px solid #eee;vertical-align:top}
+.dtbl tr:nth-child(even) td{background:#f8f9fa}
+.chk{color:var(--c4);font-weight:700}
+.dis{color:#aaa;text-decoration:line-through}
+
+/* ── Code block ── */
+.cb{background:#263238;color:#cfd8dc;border-radius:8px;padding:18px 22px;font-family:'Courier New',monospace;font-size:17px;line-height:1.7;margin-top:14px}
+.kw{color:#80cbc4}.str{color:#c3e88d}.nm{color:#f78c6c}.cm{color:#546e7a}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="counter"></div>
+<button id="nav-prev" onclick="prev()">&#8592;</button>
+<button id="nav-next" onclick="next()">&#8594;</button>
+<div id="slides">
+
+<!-- ═══════════════════════════════════════════ 1. COVER ═══ -->
+<div class="slide s-cover active">
+  <div class="kicker">Proyecto Final · IABD · 28 mayo 2026</div>
+  <h1>Triaje IA</h1>
+  <div class="sub">Clasificación automática de urgencias hospitalarias<br>según el Sistema de Triaje Manchester (C1–C5)</div>
+  <div class="stats">
+    <div class="stat"><div class="n">272</div><div class="l">entrevistas procesadas</div></div>
+    <div class="stat"><div class="n">0.850</div><div class="l">F1 macro CV</div></div>
+    <div class="stat"><div class="n">0.970</div><div class="l">recall C2 emergencia</div></div>
+    <div class="stat"><div class="n">~15 s</div><div class="l">latencia E2E</div></div>
+  </div>
+  <div class="team">Gerard &nbsp;·&nbsp; Braulio</div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 2. PROBLEMA ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--accent2)"></div>
+  <div class="phase-tag" style="color:var(--accent2)">El problema</div>
+  <h2>272 entrevistas sin etiquetar</h2>
+  <ul class="bl">
+    <li>Transcripciones de entrevistas médico-paciente en texto libre</li>
+    <li><strong>Ninguna tiene etiqueta de urgencia</strong> asignada por un médico</li>
+    <li>El Sistema de Triaje Manchester exige clasificar en <strong>C1–C5</strong> en segundos</li>
+    <li>Objetivo: <strong>automatizar ese triaje</strong> a partir de la transcripción</li>
+  </ul>
+  <div class="hbox hb" style="margin-top:28px">
+    <p><strong>Solución:</strong> LLM actúa como anotador clínico → genera etiquetas estructuradas → Random Forest entrena sobre esas columnas → sistema desplegable en tiempo real</p>
+  </div>
+  <div class="pipe" style="margin-top:24px">
+    <span class="ps">272 .txt</span><span class="pa">→</span>
+    <span class="ps">LLM etiqueta</span><span class="pa">→</span>
+    <span class="ps">RF aprende</span><span class="pa">→</span>
+    <span class="ps">Inferencia en vivo</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 3. MANCHESTER ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--accent2)"></div>
+  <div class="phase-tag" style="color:var(--accent2)">Marco clínico</div>
+  <h2>Sistema de Triaje Manchester (MTS)</h2>
+  <table class="mts">
+    <thead><tr><th>Nivel</th><th>Color</th><th>Tiempo máx.</th><th>Descripción clínica</th><th>% dataset</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge bc1">C1</span></td><td style="color:var(--c1);font-weight:700">🔴 Rojo</td><td style="font-weight:700">Inmediato</td><td>Parada cardíaca, inconsciente, trauma grave</td><td style="color:#aaa">&lt;1% — sin casos</td></tr>
+      <tr><td><span class="badge bc2">C2</span></td><td style="color:var(--c2);font-weight:700">🟠 Naranja</td><td style="font-weight:700">10 min</td><td>Dolor torácico + disnea, sospecha SCA / infarto</td><td style="color:var(--c2);font-weight:700">3.3% · 9 casos</td></tr>
+      <tr><td><span class="badge bc3">C3</span></td><td style="color:var(--c3);font-weight:700">🟡 Amarillo</td><td style="font-weight:700">60 min</td><td>Urgente pero estable — mayoría de urgencias reales</td><td style="color:var(--c3);font-weight:700">73% · ~200 casos</td></tr>
+      <tr><td><span class="badge bc4">C4</span></td><td style="color:var(--c4);font-weight:700">🟢 Verde</td><td style="font-weight:700">120 min</td><td>Menos urgente — lesión leve, estable</td><td>16% · ~44 casos</td></tr>
+      <tr><td><span class="badge bc5">C5</span></td><td style="color:var(--c5);font-weight:700">🔵 Azul</td><td style="font-weight:700">240 min</td><td>No urgente — podría ir al médico de cabecera</td><td>5% · ~15 casos</td></tr>
+    </tbody>
+  </table>
+  <div class="hbox ho" style="margin-top:20px">
+    <p>⚠️ Clasificar C2 como C3 puede ser fatal. El sistema está diseñado para <strong>minimizar falsos negativos en C2</strong>.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 4. ARQUITECTURA ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--accent2)"></div>
+  <div class="phase-tag" style="color:var(--accent2)">Arquitectura global</div>
+  <h2>Tres fases del sistema</h2>
+  <div class="cards" style="margin-bottom:20px">
+    <div class="card" style="border-color:var(--f1);background:#f3e5f5">
+      <h4 style="color:var(--f1);font-size:21px">FASE 1 — Batch (Airflow) · una sola vez</h4>
+      <p style="font-size:19px">272 .txt → LLM extrae 14 campos clínicos → CSV → Random Forest entrena → modelo.pkl en MinIO</p>
+    </div>
+    <div class="card" style="border-color:var(--f2);background:#e0f2f1">
+      <h4 style="color:var(--f2);font-size:21px">FASE 2 — A demanda (FastAPI) · sincrónico</h4>
+      <p style="font-size:19px">POST /predecir/ → preproceso + LLM + RF → nivel C1-C5 + confianza + valoración 0-10 + GUID en Postgres</p>
+    </div>
+    <div class="card" style="border-color:var(--f3);background:#fff3e0">
+      <h4 style="color:var(--f3);font-size:21px">FASE 3 — Interfaz clínica (Streamlit)</h4>
+      <p style="font-size:19px">Audio → Whisper → texto → Fase 2 → badge Manchester + score urgencia + score ansiedad + auditoría ética</p>
+    </div>
+  </div>
+  <div class="pipe">
+    <span class="ps">Airflow</span><span class="ps">FastAPI</span><span class="ps">Postgres</span>
+    <span class="ps">MinIO (S3)</span><span class="ps">Ollama / OpenRouter</span><span class="ps">Streamlit + Whisper</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 5. FASE 1 SECTION ═══ -->
+<div class="slide s-sect" style="background:linear-gradient(135deg,#f3e5f5,#ede7f6)">
+  <div class="big" style="color:#ce93d8">01</div>
+  <h2 style="color:var(--f1)">Fase 1 — Pipeline de datos</h2>
+  <p style="color:#7b1fa2">Ingesta · LLM · Dataset · Entrenamiento · Evaluación</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ 6. DAGS ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f1)"></div>
+  <div class="phase-tag" style="color:var(--f1)">Fase 1 · Orquestación</div>
+  <h2 style="color:var(--f1)">Los 5 DAGs de Airflow</h2>
+  <div class="dag-item"><span class="dn">dag_text_ingestion</span><span class="dd">Lee 272 .txt → genera GUID UUID4 → sube a MinIO → registro en Postgres</span><span class="dst">INGESTED</span></div>
+  <div class="darrow">↓</div>
+  <div class="dag-item"><span class="dn">dag_llm_enrichment</span><span class="dd">Cada INGESTED → preproceso (extrae líneas P:) → LLM → 14 campos JSON</span><span class="dst">ENRICHED</span></div>
+  <div class="darrow">↓</div>
+  <div class="dag-item"><span class="dn">dag_dataset_builder</span><span class="dd">272 ENRICHED → codifica features → CSV versionado en MinIO</span><span class="dst">DATASET_READY</span></div>
+  <div class="darrow">↓</div>
+  <div class="dag-item"><span class="dn">dag_model_training</span><span class="dd">CSV → Random Forest con class_weight='balanced' → modelo_timestamp.pkl en MinIO</span><span class="dst">MODEL_TRAINED</span></div>
+  <div class="darrow">↓</div>
+  <div class="dag-item"><span class="dn">dag_evaluation</span><span class="dd">CV 5-fold estratificado → F1 macro 0.850 ± 0.069 · matriz de confusión</span><span class="dst">EVALUATED</span></div>
+  <div class="hbox hp" style="margin-top:16px">
+    <p>Si un DAG falla en el caso 143, Airflow reintenta desde el 143, no desde el 1. Estado en Postgres = contrato entre DAGs.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 7. LLM ANOTADOR ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f1)"></div>
+  <div class="phase-tag" style="color:var(--f1)">Fase 1 · Orquestación LLM</div>
+  <h2 style="color:var(--f1)">El LLM como anotador clínico</h2>
+  <div class="two">
+    <div>
+      <div class="col-hd" style="color:var(--f1);border-color:var(--f1)">Técnicas de prompting</div>
+      <ul class="bl" style="gap:13px">
+        <li style="font-size:22px"><strong>Role prompting</strong> — "eres experto en triaje MTS"</li>
+        <li style="font-size:22px"><strong>Few-shot</strong> — 2 casos calibrados (SCA real vs pánico)</li>
+        <li style="font-size:22px"><strong>Structured Outputs</strong> — <code>format=json</code>, JSON obligatorio</li>
+        <li style="font-size:22px"><strong>temperature=0</strong> — reproducibilidad total</li>
+        <li style="font-size:22px"><strong>Regla de oro</strong> — ante duda, nivel más urgente</li>
+      </ul>
+    </div>
+    <div>
+      <div class="col-hd" style="color:var(--f1);border-color:var(--f1)">LLM elegido</div>
+      <div class="card" style="border-color:var(--f1);background:#f3e5f5;margin-bottom:14px">
+        <h4 style="color:var(--f1)">Batch 272 casos — Ollama llama3.1:8b</h4>
+        <p>Sin rate limits · sin datos a terceros · GPU local · determinista</p>
+      </div>
+      <div class="card" style="border-color:var(--f1);background:#f3e5f5">
+        <h4 style="color:var(--f1)">Demo portátil — OpenRouter Gemini Flash</h4>
+        <p>Sin GPU requerida · ~3-5 s/pred · modelo gratuito · misma API</p>
+      </div>
+      <div class="hbox hp" style="margin-top:14px;padding:12px 16px">
+        <p style="font-size:19px">Un solo <code>LLM_PROVIDER</code> en .env cambia el backend sin tocar código</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 8. GROUND TRUTH ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f1)"></div>
+  <div class="phase-tag" style="color:var(--f1)">Fase 1 · Ground Truth</div>
+  <h2 style="color:var(--f1)">¿Es válido el LLM como ground truth?</h2>
+  <div class="hbox ho">
+    <p>⚠️ Limitación conocida: las etiquetas las genera el LLM, no un médico real. El RF aprende de esas etiquetas.</p>
+  </div>
+  <div class="two" style="margin-top:22px">
+    <div>
+      <div class="col-hd" style="color:var(--c1);border-color:var(--c1)">Riesgo</div>
+      <ul class="bl" style="gap:13px">
+        <li style="font-size:22px">LLM comete errores sistemáticos en casos límite C2/C3</li>
+        <li style="font-size:22px">RF hereda ese sesgo durante el entrenamiento</li>
+      </ul>
+    </div>
+    <div>
+      <div class="col-hd" style="color:var(--c4);border-color:var(--c4)">Mitigación</div>
+      <ul class="bl" style="gap:13px">
+        <li style="font-size:22px"><strong>temperature=0</strong> → errores deterministas y detectables</li>
+        <li style="font-size:22px"><strong>Few-shot calibrado</strong> → ancla criterio Manchester</li>
+        <li style="font-size:22px"><strong>Regla de oro</strong> → reduce under-triage sistemático</li>
+      </ul>
+    </div>
+  </div>
+  <div class="hbox hg" style="margin-top:20px">
+    <p>En producción real: validación clínica de una muestra de 30-50 etiquetas por médico de urgencias sería el siguiente paso.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 9. DATA LAKE ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f1)"></div>
+  <div class="phase-tag" style="color:var(--f1)">Fase 1 · Almacenamiento</div>
+  <h2 style="color:var(--f1)">Data Lake: MinIO + Postgres</h2>
+  <div class="two">
+    <div>
+      <div class="col-hd" style="color:var(--f1);border-color:var(--f1)">MinIO (S3 local) — 3 buckets</div>
+      <div class="card" style="border-color:var(--f1);margin-bottom:12px"><h4>textos-originales/</h4><p>272 .txt crudos por especialidad (CAR, RES, MSK…)</p></div>
+      <div class="card" style="border-color:var(--f1);margin-bottom:12px"><h4>datasets/</h4><p>CSV versionados con timestamp — reproducibilidad total</p></div>
+      <div class="card" style="border-color:var(--f1)"><h4>modelos/</h4><p>modelo_&lt;timestamp&gt;.pkl serializados con joblib</p></div>
+    </div>
+    <div>
+      <div class="col-hd" style="color:var(--f1);border-color:var(--f1)">Postgres — Fuente de verdad de estados</div>
+      <div class="card" style="border-color:var(--f1);margin-bottom:12px"><h4>Entrevista</h4><p>GUID · Estado · timestamps por fase · origen (dataset | simulacion)</p></div>
+      <div class="card" style="border-color:var(--f1);margin-bottom:12px"><h4>Entidad</h4><p>Pares entidad_raw / entidad_normalizada por entrevista</p></div>
+      <div class="card" style="border-color:var(--f1)"><h4>ResultadoML</h4><p>11 features · prediccion_modelo · confianza · valoracion</p></div>
+      <div class="hbox hp" style="margin-top:14px;padding:10px 14px">
+        <p style="font-size:19px">GUID (UUID4) = hilo conductor en Postgres, MinIO, Airflow y API</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 10. FASE 2 SECTION ═══ -->
+<div class="slide s-sect" style="background:linear-gradient(135deg,#e0f2f1,#e8f5e9)">
+  <div class="big" style="color:#80cbc4">02</div>
+  <h2 style="color:var(--f2)">Fase 2 — Modelado y ML</h2>
+  <p style="color:#00796b">Normalización semántica · Desbalanceo · Random Forest · Métricas</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ 11. NORMALIZACIÓN ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f2)"></div>
+  <div class="phase-tag" style="color:var(--f2)">Fase 2 · Normalización semántica</div>
+  <h2 style="color:var(--f2)">De texto libre a vector numérico (ml_features.py)</h2>
+  <div class="two">
+    <div>
+      <div class="col-hd" style="color:var(--f2);border-color:var(--f2)">Texto libre → número</div>
+      <ul class="bl" style="gap:12px">
+        <li style="font-size:22px">"me cuesta respirar" → <code>disnea: 1</code></li>
+        <li style="font-size:22px">"dolor muy fuerte" → <code>dolor_intensidad: 8</code></li>
+        <li style="font-size:22px">No mencionado → <strong>-1</strong> (no 0, no media)</li>
+        <li style="font-size:22px">"M" / "F" / null → <code>1</code> / <code>0</code> / <code>-1</code></li>
+      </ul>
+      <div class="hbox hg" style="margin-top:16px">
+        <p><strong>-1 ≠ 0:</strong> <em>dolor=0</em> → sin dolor. <em>dolor=-1</em> → no consta en la transcripción.</p>
+      </div>
+    </div>
+    <div>
+      <div class="col-hd" style="color:var(--f2);border-color:var(--f2)">11 features del modelo</div>
+      <div style="font-size:18px;line-height:2;font-family:'Courier New',monospace;background:#f8f9fa;padding:14px 16px;border-radius:8px">
+        score_urgencia &nbsp;&nbsp;· score_ansiedad<br>
+        dolor_intensidad · disnea<br>
+        fiebre &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· perdida_consciencia<br>
+        antecedentes_cardiacos · irradiacion<br>
+        fumador · edad · sexo
+      </div>
+      <div class="hbox hb" style="margin-top:14px;padding:10px 14px">
+        <p style="font-size:19px">Sin redundancias: cada feature mide un síntoma clínico distinto e independiente</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 12. DESBALANCEO ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f2)"></div>
+  <div class="phase-tag" style="color:var(--f2)">Fase 2 · Desbalanceo</div>
+  <h2 style="color:var(--f2)">El problema: 73% de los casos son C3</h2>
+  <div class="mrow">
+    <div class="mbox" style="flex:.5;border-top:4px solid var(--c1)"><div class="n" style="color:var(--c1);font-size:36px">&lt;1%</div><div class="lbl">C1 Rojo</div><div class="s">~2 casos</div></div>
+    <div class="mbox" style="flex:.5;border-top:4px solid var(--c2)"><div class="n" style="color:var(--c2);font-size:36px">3.3%</div><div class="lbl">C2 Naranja</div><div class="s">9 casos ⚠️</div></div>
+    <div class="mbox" style="flex:2;border-top:4px solid var(--c3)"><div class="n" style="color:var(--c3)">73%</div><div class="lbl">C3 Amarillo</div><div class="s">~200 casos — mayoría absoluta</div></div>
+    <div class="mbox" style="flex:.7;border-top:4px solid var(--c4)"><div class="n" style="color:var(--c4);font-size:36px">16%</div><div class="lbl">C4 Verde</div><div class="s">~44 casos</div></div>
+    <div class="mbox" style="flex:.5;border-top:4px solid var(--c5)"><div class="n" style="color:var(--c5);font-size:36px">5%</div><div class="lbl">C5 Azul</div><div class="s">~15 casos</div></div>
+  </div>
+  <div class="two" style="margin-top:20px">
+    <div class="hbox ho"><p>Sin balanceo: RF predice siempre C3 → accuracy 73% → recall C2 = <strong>0.0</strong> → inutilizable clínicamente</p></div>
+    <div class="hbox hg"><p>Con <code>class_weight='balanced'</code>: error en C2 pesa ×15 más → recall C2 = <strong>0.970</strong></p></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 13. CLASS_WEIGHT VS SMOTE ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f2)"></div>
+  <div class="phase-tag" style="color:var(--f2)">Fase 2 · Técnica de balanceo</div>
+  <h2 style="color:var(--f2)">class_weight='balanced' vs SMOTE</h2>
+  <div class="two" style="margin-top:20px">
+    <div>
+      <div class="col-hd" style="color:var(--c1);border-color:var(--c1)">SMOTE — descartado</div>
+      <ul class="bl" style="gap:13px">
+        <li style="font-size:22px">Genera C2 <em>sintéticos</em> interpolando entre 9 reales</li>
+        <li style="font-size:22px">Features mixtas (bool + int + <strong>-1</strong>) → SMOTE-NC necesario, más complejo</li>
+        <li style="font-size:22px">Resultado: <strong>datos clínicos inventados</strong>, poco realistas</li>
+      </ul>
+    </div>
+    <div>
+      <div class="col-hd" style="color:var(--c4);border-color:var(--c4)">class_weight='balanced' — elegido</div>
+      <ul class="bl" style="gap:13px">
+        <li style="font-size:22px">No toca los datos — solo repondera el criterio de error</li>
+        <li style="font-size:22px">C2: peso ~15×, C3: peso ~0.68× (inversamente proporcional)</li>
+        <li style="font-size:22px"><strong>Recall C2: 0.0 → 0.970</strong> tras añadir este parámetro</li>
+      </ul>
+    </div>
+  </div>
+  <div class="cb" style="margin-top:20px">
+    <span class="cm"># Pesos resultantes (aprox.):</span><br>
+    {<span class="nm">1</span>: <span class="nm">45.0</span>,&nbsp; <span class="nm">2</span>: <span class="nm">15.0</span>,&nbsp; <span class="nm">3</span>: <span class="nm">0.68</span>,&nbsp; <span class="nm">4</span>: <span class="nm">3.1</span>,&nbsp; <span class="nm">5</span>: <span class="nm">5.0</span>}
+    &nbsp;&nbsp;<span class="cm"># C2 vale 15 veces más que un error en C3</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 14. RF + FEATURES ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f2)"></div>
+  <div class="phase-tag" style="color:var(--f2)">Fase 2 · Modelo</div>
+  <h2 style="color:var(--f2)">Random Forest — elección y feature importances</h2>
+  <div class="two">
+    <div>
+      <div class="col-hd" style="color:var(--f2);border-color:var(--f2)">¿Por qué RF y no XGBoost / NN?</div>
+      <ul class="bl" style="gap:12px">
+        <li style="font-size:21px">272 muestras → modelos profundos <strong>sobreajustan</strong></li>
+        <li style="font-size:21px">Feature importance <strong>auditable</strong> ante tribunal clínico</li>
+        <li style="font-size:21px">Robusto con <strong>datos mixtos</strong> y valores -1</li>
+        <li style="font-size:21px">Sin GPU para inferencia en Fase 2</li>
+        <li style="font-size:21px">Logistic Regression como baseline → RF supera empíricamente</li>
+      </ul>
+    </div>
+    <div>
+      <div class="col-hd" style="color:var(--f2);border-color:var(--f2)">Importancia de features (RF)</div>
+      <div class="frow"><div class="fn">score_urgencia</div><div class="fbg"><div class="fb" style="width:54.1%"></div></div><div class="fpct">54.1%</div></div>
+      <div class="frow"><div class="fn">score_ansiedad</div><div class="fbg"><div class="fb" style="width:13.9%;background:var(--c2)"></div></div><div class="fpct" style="color:var(--c2)">13.9%</div></div>
+      <div class="frow"><div class="fn">dolor_intensidad</div><div class="fbg"><div class="fb" style="width:7.2%;background:#555"></div></div><div class="fpct" style="color:#555">7.2%</div></div>
+      <div class="frow"><div class="fn">disnea</div><div class="fbg"><div class="fb" style="width:6.5%;background:#555"></div></div><div class="fpct" style="color:#555">6.5%</div></div>
+      <div class="frow"><div class="fn">fumador · edad</div><div class="fbg"><div class="fb" style="width:9.5%;background:#888"></div></div><div class="fpct" style="color:#888">9.5%</div></div>
+      <div class="frow"><div class="fn">resto features</div><div class="fbg"><div class="fb" style="width:8.8%;background:#bbb"></div></div><div class="fpct" style="color:#bbb">8.8%</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 15. MÉTRICAS ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f2)"></div>
+  <div class="phase-tag" style="color:var(--f2)">Fase 2 · Métricas del modelo</div>
+  <h2 style="color:var(--f2)">Resultados — CV 5-fold estratificado</h2>
+  <div class="mrow">
+    <div class="mbox"><div class="n" style="color:var(--f2)">0.850</div><div class="lbl">CV F1 macro</div><div class="s">± 0.069</div></div>
+    <div class="mbox"><div class="n g">0.970</div><div class="lbl">Recall C2 🟠</div><div class="s">32/33 emergencias detectadas</div></div>
+    <div class="mbox"><div class="n" style="color:var(--f2)">0.969</div><div class="lbl">F1 macro operativo</div><div class="s">Sin C1 (soporte=0)</div></div>
+  </div>
+  <div class="two" style="margin-top:20px">
+    <div class="hbox hb">
+      <p><strong>¿Por qué 0.850 y no 0.969?</strong><br>C1 tiene soporte=0 en el dataset — F1=0.0 arrastra la media. Pacientes C1 no generan entrevistas (llegan inconscientes). Ausencia correcta del dominio.</p>
+    </div>
+    <div class="hbox hg">
+      <p><strong>¿Por qué F1 macro y no accuracy?</strong><br>Con 73% de C3, predecir siempre C3 da accuracy=73% sin aprender nada. F1 macro penaliza igual todos los niveles sin ponderar por frecuencia.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 16. FASE 3 SECTION ═══ -->
+<div class="slide s-sect" style="background:linear-gradient(135deg,#fff3e0,#fbe9e7)">
+  <div class="big" style="color:#ffcc80">03</div>
+  <h2 style="color:var(--f3)">Fase 3 — Interfaz clínica</h2>
+  <p style="color:var(--c2)">Streamlit · Whisper · Auditoría ética · Demo en vivo</p>
+</div>
+
+<!-- ═══════════════════════════════════════════ 17. CADENA INFERENCIA ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f3)"></div>
+  <div class="phase-tag" style="color:var(--f3)">Fase 3 · Cadena de inferencia en tiempo real</div>
+  <h2 style="color:var(--f3)">Audio → Manchester en ~15 segundos</h2>
+  <div class="pipe" style="justify-content:center;gap:10px;margin-top:24px">
+    <span class="ps" style="background:#fff3e0;border-color:var(--f3);color:var(--f3)">🎙️ Audio</span>
+    <span class="pa" style="color:var(--f3)">→</span>
+    <span class="ps" style="background:#fff3e0;border-color:var(--f3);color:var(--f3)">faster-whisper</span>
+    <span class="pa" style="color:var(--f3)">→</span>
+    <span class="ps" style="background:#fff3e0;border-color:var(--f3);color:var(--f3)">texto paciente</span>
+    <span class="pa" style="color:var(--f3)">→</span>
+    <span class="ps" style="background:#fff3e0;border-color:var(--f3);color:var(--f3)">POST /predecir/</span>
+    <span class="pa" style="color:var(--f3)">→</span>
+    <span class="ps" style="background:#fff3e0;border-color:var(--f3);color:var(--f3)">LLM 14 campos</span>
+    <span class="pa" style="color:var(--f3)">→</span>
+    <span class="ps" style="background:#fff3e0;border-color:var(--f3);color:var(--f3)">RF predict</span>
+    <span class="pa" style="color:var(--f3)">→</span>
+    <span class="ps" style="background:#fff3e0;border-color:var(--f3);color:var(--f3)">🏥 Badge C1-C5</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:24px">
+    <div class="card" style="border-color:var(--f3);background:#fff3e0"><h4>Badge Manchester</h4><p>Color + código + nombre del nivel con CSS dinámico por nivel C1-C5</p></div>
+    <div class="card" style="border-color:var(--f3);background:#fff3e0"><h4>Score urgencia / ansiedad</h4><p>Barra de progreso visual + badge de alerta emocional (4 niveles)</p></div>
+    <div class="card" style="border-color:var(--f3);background:#fff3e0"><h4>Valoración 0-10</h4><p>Confianza RF penalizada por discrepancia con criterio LLM</p></div>
+  </div>
+  <div class="hbox ho" style="margin-top:16px">
+    <p>⏱️ Whisper "small": ~2 s/audio &nbsp;·&nbsp; LLM (Gemini Flash): ~5 s &nbsp;·&nbsp; RF: &lt;1 s &nbsp;·&nbsp; E2E total: ~10-17 s</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 18. AUDITORÍA ÉTICA ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f3)"></div>
+  <div class="phase-tag" style="color:var(--f3)">Fase 3 · Auditoría clínico-ética</div>
+  <h2 style="color:var(--f3)">Detección de under-triage por sesgo emocional</h2>
+  <div class="two">
+    <div>
+      <div class="col-hd" style="color:var(--f3);border-color:var(--f3)">El problema clínico</div>
+      <ul class="bl" style="gap:12px">
+        <li style="font-size:21px">Paciente muy ansioso describe <strong>pánico, no síntomas objetivos</strong></li>
+        <li style="font-size:21px">LLM puede asignar C2; RF puede predecir C3</li>
+        <li style="font-size:21px">¿Quién tiene razón? → caso para <strong>revisión médica</strong></li>
+      </ul>
+      <div class="cb" style="margin-top:16px;font-size:15px">
+        <span class="cm">-- Criterio de under-triage (/metricas/auditoria):</span><br>
+        <span class="kw">WHERE</span> prediccion_modelo > nivel_triaje<br>
+        &nbsp;&nbsp;<span class="kw">AND</span> score_ansiedad >= <span class="nm">0.7</span>
+      </div>
+    </div>
+    <div>
+      <div class="col-hd" style="color:var(--f3);border-color:var(--f3)">Doble rol de score_ansiedad</div>
+      <div class="card" style="border-color:var(--c4);background:#e8f5e9;margin-bottom:14px">
+        <h4 style="color:#1b5e20">Feature del RF (2ª más importante, 13.9%)</h4>
+        <p>El RF aprende que ansiedad alta ≠ urgencia alta → corrige sesgo emocional del LLM</p>
+      </div>
+      <div class="card" style="border-color:var(--f3);background:#fff3e0">
+        <h4 style="color:var(--f3)">Señal de auditoría ética</h4>
+        <p>Si RF baja el nivel Y ansiedad &gt; 0.7 → caso marcado para revisión médica obligatoria</p>
+      </div>
+      <div class="hbox hb" style="margin-top:14px;padding:10px 14px">
+        <p style="font-size:19px">No acusa al modelo: informa al médico que hay discrepancia que merece revisión</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 19. VALORACIÓN ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f3)"></div>
+  <div class="phase-tag" style="color:var(--f3)">Fase 3 · Valoración automática</div>
+  <h2 style="color:var(--f3)">Fórmula de valoración (0-10)</h2>
+  <div class="cb" style="font-size:22px;margin-top:20px">
+    valoración&nbsp;=&nbsp;max(<span class="nm">0</span>,&nbsp;confianza_RF&nbsp;−&nbsp;|pred_RF&nbsp;−&nbsp;nivel_LLM|&nbsp;×&nbsp;<span class="nm">0.25</span>)&nbsp;×&nbsp;<span class="nm">10</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:28px">
+    <div class="card" style="border-color:var(--c4);background:#e8f5e9;text-align:center">
+      <h4 style="color:#1b5e20;font-size:32px">9.6</h4>
+      <p style="margin-top:8px">RF=C2 · LLM=C2<br>Confianza 0.96<br>Discrepancia = 0</p>
+    </div>
+    <div class="card" style="border-color:var(--c3);background:#fffde7;text-align:center">
+      <h4 style="color:var(--c3);font-size:32px">6.0</h4>
+      <p style="margin-top:8px">RF=C3 · LLM=C2<br>Confianza 0.85<br>Discrepancia = 1</p>
+    </div>
+    <div class="card" style="border-color:var(--c1);background:#ffebee;text-align:center">
+      <h4 style="color:var(--c1);font-size:32px">3.0</h4>
+      <p style="margin-top:8px">RF=C4 · LLM=C2<br>Confianza 0.80<br>Discrepancia = 2</p>
+    </div>
+  </div>
+  <div class="hbox hb" style="margin-top:20px">
+    <p>Valoración baja → el médico debe revisar el caso. Sistema de <strong>soporte a la decisión</strong>, no sustituto del criterio clínico.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 20. DEMO ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--f3)"></div>
+  <div class="phase-tag" style="color:var(--f3)">Demo en vivo</div>
+  <h2 style="color:var(--f3)">Casos de prueba preparados</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px">
+    <div class="card" style="border-color:var(--c2);background:#fff3e0">
+      <h4 style="color:var(--c2)">caso_urgente_C2 🟠</h4>
+      <p style="margin-top:6px;font-size:19px">Dolor torácico + disnea + antecedente cardíaco<br><strong>Esperado: C2 · Resultado: C2 ✅ · score_ansiedad: 0.85</strong></p>
+    </div>
+    <div class="card" style="border-color:var(--c4);background:#e8f5e9">
+      <h4 style="color:var(--c4)">caso_leve_C4 🟢</h4>
+      <p style="margin-top:6px;font-size:19px">Lesión de rodilla leve, estable, sin urgencia<br><strong>Esperado: C4 · Resultado: C4 ✅ · score_ansiedad: 0.20</strong></p>
+    </div>
+    <div class="card" style="border-color:var(--c3);background:#fffde7">
+      <h4 style="color:var(--c3)">caso_panico_C2vsC3 🟡</h4>
+      <p style="margin-top:6px;font-size:19px">Crisis de pánico + disnea funcional + diagnóstico confirmado<br><strong>LLM: C2 · RF puede discrepar → Auditoría activa</strong></p>
+    </div>
+    <div class="card" style="border-color:var(--f1);background:#f3e5f5">
+      <h4 style="color:var(--f1)">caso_ansiedad_C3_Oro 🔍</h4>
+      <p style="margin-top:6px;font-size:19px">Ansiedad extrema, clínica ambigua, score_ansiedad 0.95<br><strong>Caso para demostrar tabla de auditoría ética</strong></p>
+    </div>
+  </div>
+  <div class="hbox hb" style="margin-top:16px">
+    <p>🖥️ Streamlit en <code>localhost:8501</code> &nbsp;·&nbsp; API en <code>localhost:8002</code> &nbsp;·&nbsp; LLM_PROVIDER=openrouter (Gemini Flash)</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 21. DECISIONES ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--accent2)"></div>
+  <div class="phase-tag" style="color:var(--accent2)">Resumen técnico</div>
+  <h2>Decisiones clave — por qué cada elección</h2>
+  <table class="dtbl">
+    <thead><tr><th>Decisión</th><th>Elegido ✓</th><th>Descartado</th><th>Motivo principal</th></tr></thead>
+    <tbody>
+      <tr><td>Orquestador</td><td class="chk">Airflow DAGs</td><td class="dis">n8n / scripts</td><td>Reintentos por tarea, estado en Postgres, UI de monitorización</td></tr>
+      <tr><td>Modelo ML</td><td class="chk">Random Forest</td><td class="dis">XGBoost, NN</td><td>272 muestras, feature importance auditable, sin GPU</td></tr>
+      <tr><td>Balanceo</td><td class="chk">class_weight</td><td class="dis">SMOTE-NC</td><td>No inventa datos, conservador con solo 9 casos C2</td></tr>
+      <tr><td>LLM batch</td><td class="chk">Ollama llama3.1:8b</td><td class="dis">OpenRouter free</td><td>Sin rate limit 429, sin datos a terceros, GPU local</td></tr>
+      <tr><td>Valores desconocidos</td><td class="chk">-1</td><td class="dis">0 / media</td><td>0 = sin dolor; -1 = no consta. El RF aprende la diferencia.</td></tr>
+      <tr><td>Temperature LLM</td><td class="chk">0 (determinista)</td><td class="dis">0.1+</td><td>Reproducibilidad clínica: mismo texto → mismo resultado siempre</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════════════════════════════════════ 22. LIMITACIONES ═══ -->
+<div class="slide s-body">
+  <div class="stripe" style="background:var(--accent2)"></div>
+  <div class="phase-tag" style="color:var(--accent2)">Honestidad técnica</div>
+  <h2>Limitaciones y mejoras futuras</h2>
+  <div class="two" style="margin-top:20px">
+    <div>
+      <div class="col-hd" style="color:var(--c1);border-color:var(--c1)">Limitaciones conocidas</div>
+      <ul class="bl" style="gap:13px">
+        <li style="font-size:22px">Ground truth LLM-generado, no validado por médico real</li>
+        <li style="font-size:22px">272 muestras — pequeño para producción clínica real</li>
+        <li style="font-size:22px">Entrenado en inglés · demo en español (no evaluado específicamente)</li>
+        <li style="font-size:22px">Crisis de pánico con diagnóstico previo confirmado → posible sobre-triaje</li>
+      </ul>
+    </div>
+    <div>
+      <div class="col-hd" style="color:var(--c4);border-color:var(--c4)">Mejoras futuras</div>
+      <ul class="bl" style="gap:13px">
+        <li style="font-size:22px"><strong>antecedente_ansiedad</strong> como feature booleana adicional</li>
+        <li style="font-size:22px">3.er ejemplo few-shot (pánico + diagnóstico confirmado)</li>
+        <li style="font-size:22px">Validación clínica de 30-50 etiquetas por médico de urgencias</li>
+        <li style="font-size:22px"><strong>SHAP/LIME</strong> — explicabilidad por caso individual (no solo global)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 23. CIERRE ═══ -->
+<div class="slide s-cover">
+  <div class="kicker">Sistema completo · Pipeline validado · Mayo 2026</div>
+  <h1 style="font-size:72px;margin-bottom:20px">Triaje IA</h1>
+  <div class="stats">
+    <div class="stat"><div class="n">272</div><div class="l">entrevistas procesadas</div></div>
+    <div class="stat"><div class="n">0.850</div><div class="l">F1 macro CV 5-fold</div></div>
+    <div class="stat"><div class="n">0.970</div><div class="l">recall C2 emergencia</div></div>
+    <div class="stat"><div class="n">~15 s</div><div class="l">latencia E2E real</div></div>
+  </div>
+  <div style="font-size:22px;opacity:.8;margin-bottom:16px;line-height:1.8">
+    Airflow &nbsp;·&nbsp; FastAPI &nbsp;·&nbsp; Postgres &nbsp;·&nbsp; MinIO &nbsp;·&nbsp; Ollama / OpenRouter &nbsp;·&nbsp; Streamlit &nbsp;·&nbsp; Whisper
+  </div>
+  <div class="team" style="font-size:26px">Gerard &nbsp;·&nbsp; Braulio</div>
+</div>
+
+</div><!-- /slides -->
+
+<script>
+const slides = document.querySelectorAll('.slide');
+let cur = 0;
+const total = slides.length;
+
+function show(n) {
+  slides[cur].classList.remove('active');
+  cur = Math.max(0, Math.min(n, total - 1));
+  slides[cur].classList.add('active');
+  document.getElementById('counter').textContent = (cur+1) + ' / ' + total;
+  document.getElementById('progress').style.width = ((cur+1)/total*100) + '%';
+}
+function next() { show(cur+1); }
+function prev() { show(cur-1); }
+
+document.addEventListener('keydown', e => {
+  if (e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' ') { e.preventDefault(); next(); }
+  if (e.key==='ArrowLeft'||e.key==='ArrowUp') { e.preventDefault(); prev(); }
+  if (e.key==='Home') show(0);
+  if (e.key==='End') show(total-1);
+});
+
+let tx = 0;
+document.addEventListener('touchstart', e => tx = e.touches[0].clientX, {passive:true});
+document.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - tx;
+  if (dx < -60) next();
+  if (dx > 60) prev();
+}, {passive:true});
+
+show(0);
+</script>
+</body>
+</html>

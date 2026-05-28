@@ -199,7 +199,7 @@ Sistema que clasifica el **nivel de triaje hospitalario (Manchester C1–C5)** a
 
 ## 7. Guion breve para la exposición oral
 
-**1. Problema** — Clasificar urgencia (SET 1–5) desde entrevistas en lenguaje natural.
+**1. Problema** — Clasificar urgencia (Manchester C1–C5) desde entrevistas en lenguaje natural.
 
 **2. Enfoque** — LLM extrae columnas → Random Forest aprende; Airflow orquesta; Postgres audita.
 
