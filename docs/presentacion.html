@@ -172,7 +172,7 @@ ul.bl li code{font-family:'Courier New',monospace;background:#f0f0f0;padding:1px
   <table class="mts">
     <thead><tr><th>Nivel</th><th>Color</th><th>Tiempo máx.</th><th>Descripción clínica</th><th>% dataset</th></tr></thead>
     <tbody>
-      <tr><td><span class="badge bc1">C1</span></td><td style="color:var(--c1);font-weight:700">🔴 Rojo</td><td style="font-weight:700">Inmediato</td><td>Parada cardíaca, inconsciente, trauma grave</td><td style="color:#aaa">&lt;1% — sin casos</td></tr>
+      <tr><td><span class="badge bc1">C1</span></td><td style="color:var(--c1);font-weight:700">🔴 Rojo</td><td style="font-weight:700">Inmediato</td><td>Parada cardíaca, inconsciente, trauma grave</td><td style="color:#aaa">0 casos</td></tr>
       <tr><td><span class="badge bc2">C2</span></td><td style="color:var(--c2);font-weight:700">🟠 Naranja</td><td style="font-weight:700">10 min</td><td>Dolor torácico + disnea, sospecha SCA / infarto</td><td style="color:var(--c2);font-weight:700">3.3% · 9 casos</td></tr>
       <tr><td><span class="badge bc3">C3</span></td><td style="color:var(--c3);font-weight:700">🟡 Amarillo</td><td style="font-weight:700">60 min</td><td>Urgente pero estable — mayoría de urgencias reales</td><td style="color:var(--c3);font-weight:700">73% · ~200 casos</td></tr>
       <tr><td><span class="badge bc4">C4</span></td><td style="color:var(--c4);font-weight:700">🟢 Verde</td><td style="font-weight:700">120 min</td><td>Menos urgente — lesión leve, estable</td><td>16% · ~44 casos</td></tr>
@@ -192,7 +192,7 @@ ul.bl li code{font-family:'Courier New',monospace;background:#f0f0f0;padding:1px
   <div class="cards" style="margin-bottom:20px">
     <div class="card" style="border-color:var(--f1);background:#f3e5f5">
       <h4 style="color:var(--f1);font-size:21px">FASE 1 — Batch (Airflow) · una sola vez</h4>
-      <p style="font-size:19px">272 .txt → LLM extrae 14 campos clínicos → CSV → Random Forest entrena → modelo.pkl en MinIO</p>
+      <p style="font-size:19px">272 .txt → LLM extrae 16 campos clínicos → CSV → Random Forest entrena → modelo.pkl en MinIO</p>
     </div>
     <div class="card" style="border-color:var(--f2);background:#e0f2f1">
       <h4 style="color:var(--f2);font-size:21px">FASE 2 — A demanda (FastAPI) · sincrónico</h4>
@@ -369,7 +369,7 @@ ul.bl li code{font-family:'Courier New',monospace;background:#f0f0f0;padding:1px
   <div class="phase-tag" style="color:var(--f2)">Fase 2 · Desbalanceo</div>
   <h2 style="color:var(--f2)">El problema: 73% de los casos son C3</h2>
   <div class="mrow">
-    <div class="mbox" style="flex:.5;border-top:4px solid var(--c1)"><div class="n" style="color:var(--c1);font-size:36px">&lt;1%</div><div class="lbl">C1 Rojo</div><div class="s">~2 casos</div></div>
+    <div class="mbox" style="flex:.5;border-top:4px solid var(--c1)"><div class="n" style="color:var(--c1);font-size:36px">0</div><div class="lbl">C1 Rojo</div><div class="s">sin casos</div></div>
     <div class="mbox" style="flex:.5;border-top:4px solid var(--c2)"><div class="n" style="color:var(--c2);font-size:36px">3.3%</div><div class="lbl">C2 Naranja</div><div class="s">9 casos ⚠️</div></div>
     <div class="mbox" style="flex:2;border-top:4px solid var(--c3)"><div class="n" style="color:var(--c3)">73%</div><div class="lbl">C3 Amarillo</div><div class="s">~200 casos — mayoría absoluta</div></div>
     <div class="mbox" style="flex:.7;border-top:4px solid var(--c4)"><div class="n" style="color:var(--c4);font-size:36px">16%</div><div class="lbl">C4 Verde</div><div class="s">~44 casos</div></div>
@@ -418,13 +418,13 @@ ul.bl li code{font-family:'Courier New',monospace;background:#f0f0f0;padding:1px
   <h2 style="color:var(--f2)">Random Forest — elección y feature importances</h2>
   <div class="two">
     <div>
-      <div class="col-hd" style="color:var(--f2);border-color:var(--f2)">¿Por qué RF y no XGBoost / NN?</div>
+      <div class="col-hd" style="color:var(--f2);border-color:var(--f2)">¿Por qué Random Forest?</div>
       <ul class="bl" style="gap:12px">
         <li style="font-size:21px">272 muestras → modelos profundos <strong>sobreajustan</strong></li>
         <li style="font-size:21px">Feature importance <strong>auditable</strong> ante tribunal clínico</li>
         <li style="font-size:21px">Robusto con <strong>datos mixtos</strong> y valores -1</li>
         <li style="font-size:21px">Sin GPU para inferencia en Fase 2</li>
-        <li style="font-size:21px">Logistic Regression como baseline → RF supera empíricamente</li>
+        <li style="font-size:21px">Logistic Regression como baseline — RF la supera en F1 y recall C2</li>
       </ul>
     </div>
     <div>
@@ -480,7 +480,7 @@ ul.bl li code{font-family:'Courier New',monospace;background:#f0f0f0;padding:1px
     <span class="pa" style="color:var(--f3)">→</span>
     <span class="ps" style="background:#fff3e0;border-color:var(--f3);color:var(--f3)">POST /predecir/</span>
     <span class="pa" style="color:var(--f3)">→</span>
-    <span class="ps" style="background:#fff3e0;border-color:var(--f3);color:var(--f3)">LLM 14 campos</span>
+    <span class="ps" style="background:#fff3e0;border-color:var(--f3);color:var(--f3)">LLM 16 campos</span>
     <span class="pa" style="color:var(--f3)">→</span>
     <span class="ps" style="background:#fff3e0;border-color:var(--f3);color:var(--f3)">RF predict</span>
     <span class="pa" style="color:var(--f3)">→</span>
@@ -596,7 +596,7 @@ ul.bl li code{font-family:'Courier New',monospace;background:#f0f0f0;padding:1px
     <thead><tr><th>Decisión</th><th>Elegido ✓</th><th>Descartado</th><th>Motivo principal</th></tr></thead>
     <tbody>
       <tr><td>Orquestador</td><td class="chk">Airflow DAGs</td><td class="dis">n8n / scripts</td><td>Reintentos por tarea, estado en Postgres, UI de monitorización</td></tr>
-      <tr><td>Modelo ML</td><td class="chk">Random Forest</td><td class="dis">XGBoost, NN</td><td>272 muestras, feature importance auditable, sin GPU</td></tr>
+      <tr><td>Modelo ML</td><td class="chk">Random Forest</td><td class="dis">Redes neuronales</td><td>272 muestras, feature importance auditable, sin GPU</td></tr>
       <tr><td>Balanceo</td><td class="chk">class_weight</td><td class="dis">SMOTE-NC</td><td>No inventa datos, conservador con solo 9 casos C2</td></tr>
       <tr><td>LLM batch</td><td class="chk">Ollama llama3.1:8b</td><td class="dis">OpenRouter free</td><td>Sin rate limit 429, sin datos a terceros, GPU local</td></tr>
       <tr><td>Valores desconocidos</td><td class="chk">-1</td><td class="dis">0 / media</td><td>0 = sin dolor; -1 = no consta. El RF aprende la diferencia.</td></tr>
